@@ -15,7 +15,7 @@ Mọi người làm theo đúng 4 bước sau để môi trường code đồng 
 Mở **PyCharm**, chọn **Get from VCS** và dán đường dẫn sau:
 
 ```
-[https://github.com/nghuongtra/FINAL_KTLT_LIFESTUDENTOS.git](https://github.com/nghuongtra/FINAL_KTLT_LIFESTUDENTOS.git)
+https://github.com/nghuongtra/FINAL_KTLT_LIFESTUDENTOS.git
 ```
 ### Bước 2: Cài đặt thư viện (QUAN TRỌNG)
 Sau khi tải về, PyCharm thường sẽ tự động hỏi tạo môi trường ảo (Virtual Environment), các bạn bấm OK.
