@@ -44,24 +44,17 @@ B1: Luôn lấy code mới nhất về trước khi làm
 git pull origin main
 ```
 
-B2: Chạy test để đảm bảo test không lỗi
-```
-python -m tests.test_database
-```
-✅ Hiện OK: Code an toàn, sang bước 3
 
-❌ Hiện Lỗi: Tuyệt đối không được Push, phải sửa cho đến khi báo OK.
-
-B3: Thêm các file đã sửa vào danh sách chờ
+B2: Thêm các file đã sửa vào danh sách chờ
 ```
 git add .
 ```
-B4: Đóng gói và ghi chú
+B3: Đóng gói và ghi chú
 ```
 git commit -m "Ghi chú rõ ràng nội dung làm"
 ```
 
-B5: Đẩy code lên GitHub
+B4: Đẩy code lên GitHub
 ```
 git push origin main
 ```
