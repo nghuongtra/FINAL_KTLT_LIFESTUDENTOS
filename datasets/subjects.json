@@ -1,0 +1,52 @@
+{
+    "subjects": [
+        {
+            "Subid": "sub1",
+            "Subname": "Toán cao cấp",
+            "credit": 4,
+            "scoreProcess": 9,
+            "scoreMidterm": 9,
+            "scoreFinal": 10
+        },
+        {
+            "Subid": "sub2",
+            "Subname": "Lập trình hướng đối tượng",
+            "credit": 3,
+            "scoreProcess": 8,
+            "scoreMidterm": 7,
+            "scoreFinal": 9
+        },
+        {
+            "Subid": "sub3",
+            "Subname": "Nền tảng công nghệ",
+            "credit": 2,
+            "scoreProcess": 7,
+            "scoreMidterm": 8,
+            "scoreFinal": 9
+        },
+        {
+            "Subid": "sub4",
+            "Subname": "Kinh tế vĩ mô",
+            "credit": 3,
+            "scoreProcess": 6,
+            "scoreMidterm": 7,
+            "scoreFinal": 8
+        },
+        {
+            "Subid": "sub5",
+            "Subname": "Kinh tế vi mô",
+            "credit": 3,
+            "scoreProcess": 8,
+            "scoreMidterm": 9,
+            "scoreFinal": 9
+        },
+        {
+            "Subid": "sub6",
+            "Subname": "năng lực số ",
+            "credit": 2,
+            "scoreProcess": 9,
+            "scoreMidterm": 7,
+            "scoreFinal": 9
+        }
+    ]
+}

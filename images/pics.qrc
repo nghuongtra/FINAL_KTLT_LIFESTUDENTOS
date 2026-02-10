@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="pic">
+    <file>anhnen.jpg</file>
+    <file>ic_study.jpg</file>
+    <file>nenanh.jpg</file>
+  </qresource>
+</RCC>
