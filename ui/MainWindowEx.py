@@ -11,7 +11,7 @@ class MainWindowEx(Ui_MainWindow):
         self.setupSignalAndSlot()
         self.stackedWidget.setCurrentIndex(0)
 
-    def setupSignalAndSlot(self):
+    def setupSignalAndSlot(self): #d15->19: liên kết các nút bấm trên header với các page
         self.pushButtonOverview.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(0))
         self.pushButtonAcademic.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(1))
         self.pushButtonFinanceManagement.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(2))
