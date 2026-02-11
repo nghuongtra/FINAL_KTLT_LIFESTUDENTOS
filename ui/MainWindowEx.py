@@ -5,6 +5,7 @@ from PyQt6.QtCore import Qt, QDateTime
 from PyQt6.QtGui import QIcon, QColor
 from PyQt6.QtWidgets import QListWidgetItem, QMessageBox
 
+from model.comingevents import Upcomingevents
 from model.task import Task
 from model.tasks import Tasks
 from ui.MainWindow import Ui_MainWindow
@@ -26,12 +27,19 @@ class MainWindowEx(Ui_MainWindow):
         self.stackedWidget.setCurrentIndex(0)
         self.updateCountdown()
 
-    def setupSignalAndSlot(self): #d15->19: liên kết các nút bấm trên header với các page
+    def setupSignalAndSlot(self):
+        #liên kết các nút bấm trên header với các page
         self.pushButtonOverview.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(0))
         self.pushButtonAcademic.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(1))
         self.pushButtonFinanceManagement.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(2))
         self.pushButtonTaskScheduler.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(3))
         self.pushButtonInsights.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(4))
+        #Overview
+        self.pushButtonViewDetail.clicked.connect(self.process_viewdetail)
+        self.pushButtonManageFinances.clicked.connect(self.process_managefinance)
+        self.pushButtonViewCalendar.clicked.connect(self.process_calendar)
+        self.pushButtonViewTask.clicked.connect(self.process_task)
+        #Phần của tab finance management
         self.pushButtonNew.clicked.connect(self.processNew)
         self.pushButtonSave.clicked.connect(self.processSave)
         self.pushButtonDeleteTask.clicked.connect(self.processRemove)
@@ -39,6 +47,54 @@ class MainWindowEx(Ui_MainWindow):
         self.dateEditDeadline.dateChanged.connect(self.updateCountdown)
         self.timeEditDeadline.timeChanged.connect(self.updateCountdown)
 
+    def process_viewdetail(self):
+        gpa_text = self.lineEditGPA.text()
+        if gpa_text:
+            gpa_float = float(gpa_text)
+            self.labelGPA.setText(f"{gpa_float}")
+            n = (gpa_float / 4) * 10
+            self.labelGrade.setText(f"{n:.2f}")
+
+    def process_managefinance(self):
+        total = self.label_total_3.text()
+        self.labelTotal.setText(total)
+
+    def process_calendar(self):
+        now = datetime.datetime.now()
+        day_month = now.strftime("%d/%m")
+        today_display = now.strftime("%d/%m/%Y")
+        ucvs = Upcomingevents()
+        ucvs.import_json("../datasets/upcomingevents.json")
+        event_today = "Không có sự kiện đặc biệt"
+        for item in ucvs.list:
+            if item.date_month == day_month:
+                event_today = item.sukien
+                break
+        self.labelComingEvent.setText(f"Hôm nay: {today_display}\nSự kiện: {event_today}")
+
+    def process_task(self):
+        pending_count = 0
+        overdue_count = 0
+        now = datetime.datetime.now()
+        for index in range(self.tasks.size()):
+            task = self.tasks.item(index)
+
+            if isinstance(task.deadline, str):
+                task.deadline = datetime.date.fromisoformat(task.deadline)
+            if isinstance(task.deadlinetime, str):
+                task.deadlinetime = datetime.time.fromisoformat(task.deadlinetime)
+            if not task.isfinish:
+                pending_count += 1
+                dt_deadline = datetime.datetime.combine(task.deadline, task.deadlinetime)
+                if dt_deadline < now:
+                    overdue_count += 1
+        self.labelTaskPending.setText(str(pending_count))
+        self.labelTaskOverdue.setText(str(overdue_count))
+        if overdue_count > 0:
+            self.labelTaskOverdue.setStyleSheet("color: red; font-weight: bold;")
+        else:
+            self.labelTaskOverdue.setStyleSheet("color: green;")
+#{ Phần của tab finance management
     def showTasksIntoQListWidget(self):
         self.listWidgetTask.clear()
         for index in range(self.tasks.size()):
@@ -152,3 +208,4 @@ class MainWindowEx(Ui_MainWindow):
             minutes = (seconds_diff % 3600) // 60
             self.labelCountdown.setText(f"Còn: {days} ngày, {hours} giờ, {minutes} phút")
             self.labelCountdown.setStyleSheet("color: blue; font-weight: bold;")
+#} đóng phần tab finance management

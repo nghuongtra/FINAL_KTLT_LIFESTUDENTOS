@@ -1,0 +1,21 @@
+from model.comingevent import UpcomingEvent
+from model.comingevents import Upcomingevents
+
+ucv=Upcomingevents()
+ucv1=UpcomingEvent("01/01","Tết Dương lịch.")
+ucv2=UpcomingEvent("26/03","Ngày thành lập Đoàn Thanh niên Cộng sản Hồ Chí Minh")
+ucv3=UpcomingEvent("30/04","Ngày Giải phóng miền Nam, thống nhất đất nước.")
+ucv4=UpcomingEvent("01/05","Ngày Quốc tế Lao động.")
+ucv5=UpcomingEvent("07/05","Ngày chiến thắng Điện Biên Phủ.")
+ucv6=UpcomingEvent("19/05","Ngày sinh Chủ tịch Hồ Chí Minh.")
+ucv7=UpcomingEvent("28/06","Ngày Gia đình Việt Nam.")
+ucv8=UpcomingEvent("27/07","Ngày Thương binh - Liệt sĩ.")
+ucv9=UpcomingEvent("02/09","Ngày Quốc khánh nước CHXHCN Việt Nam. ")
+ucv10=UpcomingEvent("10/10","Ngày Giải phóng Thủ đô.")
+ucv11=UpcomingEvent("14/02","Valentine.")
+ucv12=UpcomingEvent("25/12","Giáng sinh.")
+ucv.add_items([ucv1,ucv2,ucv3,ucv4,ucv5,ucv6,ucv7,ucv8,ucv9,ucv10,ucv11,ucv12])
+print("Danh sách các ngày lễ trong năm")
+ucv.print_items()
+print("Xuat ucv ra json")
+ucv.export_json("../datasets/upcomingevents.json")
