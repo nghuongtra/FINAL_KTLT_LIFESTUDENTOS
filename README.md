@@ -25,10 +25,6 @@ Sau đó, mở tab Terminal ở góc dưới bên trái PyCharm (nhìn xem đầ
 pip install -r requirements.txt
 ```
 
-### Bước 3: Chạy chương trình
-```
-python main.py
-```
 ### QUY TẮC LÀM VIỆC (BẮT BUỘC ĐỌC)
 Để tránh xung đột code (Conflict), mọi người nên:
 1. Quy trình Push Code (4 Bước chuẩn)
