@@ -289,8 +289,14 @@ background-color: rgb(255, 255, 255);</string>
                <string>View Details</string>
               </property>
               <property name="icon">
-               <iconset>
-                <normaloff>../images/ic_search.png</normaloff>../images/ic_search.png</iconset>
+               <iconset resource="../resources.qrc">
+                <normaloff>:/icon/images/ic_search.png</normaloff>:/icon/images/ic_search.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
               </property>
              </widget>
              <widget class="QLabel" name="label_4">
@@ -315,7 +321,7 @@ background-color: rgb(255, 255, 255);</string>
                <string/>
               </property>
               <property name="pixmap">
-               <pixmap>../images/ic_ca.png</pixmap>
+               <pixmap resource="../resources.qrc">:/nen/images/ic_ca.png</pixmap>
               </property>
               <property name="scaledContents">
                <bool>true</bool>
@@ -445,7 +451,7 @@ background-color:transparent
                <string/>
               </property>
               <property name="pixmap">
-               <pixmap>../images/ic_hopqua.png</pixmap>
+               <pixmap resource="../resources.qrc">:/nen/images/ic_hopqua.png</pixmap>
               </property>
               <property name="scaledContents">
                <bool>true</bool>
@@ -467,7 +473,7 @@ background-color:transparent
                <string/>
               </property>
               <property name="pixmap">
-               <pixmap>../images/gau.png</pixmap>
+               <pixmap resource="../resources.qrc">:/nen/images/gau.png</pixmap>
               </property>
               <property name="scaledContents">
                <bool>true</bool>
@@ -490,8 +496,14 @@ background-color: rgb(255, 255, 255);</string>
                <string>View Calendar</string>
               </property>
               <property name="icon">
-               <iconset>
-                <normaloff>../images/ic_search.png</normaloff>../images/ic_search.png</iconset>
+               <iconset resource="../resources.qrc">
+                <normaloff>:/icon/images/ic_search.png</normaloff>:/icon/images/ic_search.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
               </property>
              </widget>
              <zorder>label_14</zorder>
@@ -626,8 +638,14 @@ background-color: rgb(255, 255, 255);</string>
                <string>Manage Finances</string>
               </property>
               <property name="icon">
-               <iconset>
-                <normaloff>../images/im_lich.jpg</normaloff>../images/im_lich.jpg</iconset>
+               <iconset resource="../resources.qrc">
+                <normaloff>:/icon/images/im_lich.jpg</normaloff>:/icon/images/im_lich.jpg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
               </property>
               <property name="default">
                <bool>false</bool>
@@ -649,7 +667,7 @@ background-color: rgb(255, 255, 255);</string>
                <string/>
               </property>
               <property name="pixmap">
-               <pixmap>../images/ic_thong.png</pixmap>
+               <pixmap resource="../resources.qrc">:/nen/images/ic_thong.png</pixmap>
               </property>
               <property name="scaledContents">
                <bool>true</bool>
@@ -671,7 +689,7 @@ background-color: rgb(255, 255, 255);</string>
                <string/>
               </property>
               <property name="pixmap">
-               <pixmap>../images/ic_back.png</pixmap>
+               <pixmap resource="../resources.qrc">:/nen/images/ic_back.png</pixmap>
               </property>
               <property name="scaledContents">
                <bool>true</bool>
@@ -830,7 +848,7 @@ background-color:transparent;</string>
                <string/>
               </property>
               <property name="pixmap">
-               <pixmap>../images/ic_tuanloc.png</pixmap>
+               <pixmap resource="../resources.qrc">:/nen/images/ic_tuanloc.png</pixmap>
               </property>
               <property name="scaledContents">
                <bool>true</bool>
@@ -852,7 +870,7 @@ background-color:transparent;</string>
                <string/>
               </property>
               <property name="pixmap">
-               <pixmap>../images/cute.png</pixmap>
+               <pixmap resource="../resources.qrc">:/nen/images/cute.png</pixmap>
               </property>
               <property name="scaledContents">
                <bool>true</bool>
@@ -875,8 +893,14 @@ background-color: rgb(255, 255, 255);</string>
                <string>View Tasks</string>
               </property>
               <property name="icon">
-               <iconset>
-                <normaloff>../images/ic_cal.png</normaloff>../images/ic_cal.png</iconset>
+               <iconset resource="../resources.qrc">
+                <normaloff>:/icon/images/ic_cal.png</normaloff>:/icon/images/ic_cal.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
               </property>
              </widget>
              <zorder>label_13</zorder>
@@ -1627,8 +1651,8 @@ background-color: rgb(255, 255, 255);
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>448</width>
-                        <height>510</height>
+                        <width>109</width>
+                        <height>109</height>
                        </rect>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -2805,7 +2829,6 @@ background-color: rgb(255, 255, 255);</string>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="../images/pics.qrc"/>
   <include location="../resources.qrc"/>
  </resources>
  <connections/>

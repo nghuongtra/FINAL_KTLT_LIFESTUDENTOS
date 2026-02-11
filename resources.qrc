@@ -1,6 +1,23 @@
 <RCC>
   <qresource prefix="nen">
+    <file>images/ic_ca.png</file>
+    <file>images/ic_hopqua.png</file>
+    <file>images/ic_thong.png</file>
+    <file>images/ic_tuanloc.png</file>
+    <file>images/cute.png</file>
+    <file>images/gau.png</file>
+    <file>images/ic_back.png</file>
     <file>images/ic_bear.png</file>
     <file>images/anh.jpg</file>
+  </qresource>
+  <qresource prefix="icon">
+    <file>images/ic_add.png</file>
+    <file>images/ic_cal.png</file>
+    <file>images/ic_delete.png</file>
+    <file>images/ic_luu.png</file>
+    <file>images/ic_pen.png</file>
+    <file>images/ic_save.png</file>
+    <file>images/ic_search.png</file>
+    <file>images/im_lich.jpg</file>
   </qresource>
 </RCC>
