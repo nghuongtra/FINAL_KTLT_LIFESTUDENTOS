@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1452</width>
+    <width>1624</width>
     <height>1142</height>
    </rect>
   </property>
@@ -290,7 +290,7 @@ background-color: rgb(255, 255, 255);</string>
               </property>
               <property name="icon">
                <iconset resource="../resources.qrc">
-                <normaloff>:/icon/images/ic_search.png</normaloff>:/icon/images/ic_search.png</iconset>
+                <normaloff>:/nen/images/ic_search.png</normaloff>:/nen/images/ic_search.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -497,7 +497,7 @@ background-color: rgb(255, 255, 255);</string>
               </property>
               <property name="icon">
                <iconset resource="../resources.qrc">
-                <normaloff>:/icon/images/ic_search.png</normaloff>:/icon/images/ic_search.png</iconset>
+                <normaloff>:/nen/images/ic_search.png</normaloff>:/nen/images/ic_search.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -639,7 +639,7 @@ background-color: rgb(255, 255, 255);</string>
               </property>
               <property name="icon">
                <iconset resource="../resources.qrc">
-                <normaloff>:/icon/images/im_lich.jpg</normaloff>:/icon/images/im_lich.jpg</iconset>
+                <normaloff>:/nen/images/ic_cal.png</normaloff>:/nen/images/ic_cal.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -673,29 +673,26 @@ background-color: rgb(255, 255, 255);</string>
                <bool>true</bool>
               </property>
              </widget>
-             <widget class="QLabel" name="label_24">
+             <widget class="QFrame" name="framefinance">
               <property name="geometry">
                <rect>
-                <x>30</x>
-                <y>70</y>
-                <width>391</width>
-                <height>241</height>
+                <x>10</x>
+                <y>60</y>
+                <width>401</width>
+                <height>261</height>
                </rect>
               </property>
               <property name="styleSheet">
-               <string notr="true">background-color:transparent</string>
+               <string notr="true">#framefinance {border-image: url(:/nen/images/ic_back.png);}</string>
               </property>
-              <property name="text">
-               <string/>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
               </property>
-              <property name="pixmap">
-               <pixmap resource="../resources.qrc">:/nen/images/ic_back.png</pixmap>
-              </property>
-              <property name="scaledContents">
-               <bool>true</bool>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
               </property>
              </widget>
-             <zorder>label_24</zorder>
+             <zorder>framefinance</zorder>
              <zorder>label_71</zorder>
              <zorder>line_37</zorder>
              <zorder>label_72</zorder>
@@ -894,7 +891,7 @@ background-color: rgb(255, 255, 255);</string>
               </property>
               <property name="icon">
                <iconset resource="../resources.qrc">
-                <normaloff>:/icon/images/ic_cal.png</normaloff>:/icon/images/ic_cal.png</iconset>
+                <normaloff>:/nen/images/im_lich.jpg</normaloff>:/nen/images/im_lich.jpg</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -1651,8 +1648,8 @@ background-color: rgb(255, 255, 255);
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>109</width>
-                        <height>109</height>
+                        <width>274</width>
+                        <height>140</height>
                        </rect>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -2821,7 +2818,7 @@ background-color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1452</width>
+     <width>1624</width>
      <height>26</height>
     </rect>
    </property>
