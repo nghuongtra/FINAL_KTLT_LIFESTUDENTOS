@@ -99,7 +99,7 @@ background-color: rgb(255, 255, 255);</string>
 background-color:transparent</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="pageOverview">
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -1154,8 +1154,14 @@ color: rgb(223, 0, 0);</string>
                      <string>Calculate GPA</string>
                     </property>
                     <property name="icon">
-                     <iconset>
-                      <normaloff>../images/ic_cal.png</normaloff>../images/ic_cal.png</iconset>
+                     <iconset resource="../resources.qrc">
+                      <normaloff>:/nen/images/ic_cal.png</normaloff>:/nen/images/ic_cal.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>40</width>
+                      <height>40</height>
+                     </size>
                     </property>
                    </widget>
                   </item>
@@ -1168,8 +1174,14 @@ color: rgb(223, 0, 0);</string>
                      <string>Add Subject</string>
                     </property>
                     <property name="icon">
-                     <iconset>
-                      <normaloff>../images/ic_add.png</normaloff>../images/ic_add.png</iconset>
+                     <iconset resource="../resources.qrc">
+                      <normaloff>:/nen/images/ic_add.png</normaloff>:/nen/images/ic_add.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>40</width>
+                      <height>40</height>
+                     </size>
                     </property>
                    </widget>
                   </item>
@@ -1181,7 +1193,10 @@ color: rgb(223, 0, 0);</string>
                    <string/>
                   </property>
                   <property name="pixmap">
-                   <pixmap>../images/ic_hoa.png</pixmap>
+                   <pixmap resource="../resources.qrc">:/nen/images/ic_hoa.png</pixmap>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>false</bool>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
@@ -1315,8 +1330,8 @@ background-color: rgb(255, 255, 255);</string>
                      <string>Edit</string>
                     </property>
                     <property name="icon">
-                     <iconset>
-                      <normaloff>../images/ic_pen.png</normaloff>../images/ic_pen.png</iconset>
+                     <iconset resource="../resources.qrc">
+                      <normaloff>:/nen/images/ic_pen.png</normaloff>:/nen/images/ic_pen.png</iconset>
                     </property>
                    </widget>
                   </item>
@@ -1326,8 +1341,8 @@ background-color: rgb(255, 255, 255);</string>
                      <string>Delete</string>
                     </property>
                     <property name="icon">
-                     <iconset>
-                      <normaloff>../images/ic_delete.png</normaloff>../images/ic_delete.png</iconset>
+                     <iconset resource="../resources.qrc">
+                      <normaloff>:/nen/images/ic_delete.png</normaloff>:/nen/images/ic_delete.png</iconset>
                     </property>
                    </widget>
                   </item>
@@ -1615,8 +1630,8 @@ background-color: rgb(255, 255, 255);
                       <string>Add Expense</string>
                      </property>
                      <property name="icon">
-                      <iconset>
-                       <normaloff>../images/ic_save.png</normaloff>../images/ic_save.png</iconset>
+                      <iconset resource="../resources.qrc">
+                       <normaloff>:/nen/images/ic_save.png</normaloff>:/nen/images/ic_save.png</iconset>
                      </property>
                     </widget>
                    </item>
@@ -1648,8 +1663,8 @@ background-color: rgb(255, 255, 255);
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>274</width>
-                        <height>140</height>
+                        <width>448</width>
+                        <height>510</height>
                        </rect>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -1887,8 +1902,8 @@ border: none;                 /* Xóa viền */    ; font-weight: bold;
                         <string/>
                        </property>
                        <property name="icon">
-                        <iconset>
-                         <normaloff>../images/ic_search.png</normaloff>../images/ic_search.png</iconset>
+                        <iconset resource="../resources.qrc">
+                         <normaloff>:/nen/images/ic_search.png</normaloff>:/nen/images/ic_search.png</iconset>
                        </property>
                        <property name="iconSize">
                         <size>
@@ -1978,7 +1993,7 @@ border: none;                 /* Xóa viền */    ; font-weight: bold;
                          <string/>
                         </property>
                         <property name="pixmap">
-                         <pixmap>../images/maugradient.png</pixmap>
+                         <pixmap resource="../resources.qrc">:/nen/images/maugradient.png</pixmap>
                         </property>
                         <property name="scaledContents">
                          <bool>true</bool>
@@ -2104,8 +2119,8 @@ color: rgb(130, 114, 188);</string>
                  <string>New</string>
                 </property>
                 <property name="icon">
-                 <iconset>
-                  <normaloff>../images/ic_add.png</normaloff>../images/ic_add.png</iconset>
+                 <iconset resource="../resources.qrc">
+                  <normaloff>:/nen/images/ic_add.png</normaloff>:/nen/images/ic_add.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -2121,8 +2136,8 @@ color: rgb(130, 114, 188);</string>
                  <string>Save</string>
                 </property>
                 <property name="icon">
-                 <iconset>
-                  <normaloff>../images/ic_luu.png</normaloff>../images/ic_luu.png</iconset>
+                 <iconset resource="../resources.qrc">
+                  <normaloff>:/nen/images/ic_luu.png</normaloff>:/nen/images/ic_luu.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -2138,8 +2153,8 @@ color: rgb(130, 114, 188);</string>
                  <string>Delete</string>
                 </property>
                 <property name="icon">
-                 <iconset>
-                  <normaloff>../images/ic_delete.png</normaloff>../images/ic_delete.png</iconset>
+                 <iconset resource="../resources.qrc">
+                  <normaloff>:/nen/images/ic_delete.png</normaloff>:/nen/images/ic_delete.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -2306,7 +2321,7 @@ color: rgb(130, 114, 188);</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>../images/ic_study.jpg</pixmap>
+                    <pixmap resource="../resources.qrc">:/nen/images/ic_study.jpg</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -2319,7 +2334,7 @@ color: rgb(130, 114, 188);</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>../images/ic_hoc.jpg</pixmap>
+                    <pixmap resource="../resources.qrc">:/nen/images/ic_hoc.jpg</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -2415,6 +2430,17 @@ background-color:rgba(239, 225, 238,220);</string>
                    <enum>QFrame::Raised</enum>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_11">
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="gpa_2">
+                     <property name="styleSheet">
+                      <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
+background-color:transparent;</string>
+                     </property>
+                     <property name="text">
+                      <string>GPA:</string>
+                     </property>
+                    </widget>
+                   </item>
                    <item row="0" column="0" colspan="2">
                     <widget class="QLabel" name="label_20">
                      <property name="styleSheet">
@@ -2429,39 +2455,11 @@ background-color:transparent;</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="1" column="0">
-                    <widget class="QLabel" name="gpa_2">
-                     <property name="styleSheet">
-                      <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
-background-color:transparent;</string>
-                     </property>
-                     <property name="text">
-                      <string>GPA:</string>
-                     </property>
-                    </widget>
-                   </item>
                    <item row="1" column="1">
                     <widget class="QLineEdit" name="lineEditInputGPA">
                      <property name="styleSheet">
                       <string notr="true">font: 14pt &quot;Palatino Linotype&quot;;
 background-color: rgb(255, 255, 255);</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="3">
-                    <widget class="QLabel" name="label_49">
-                     <property name="styleSheet">
-                      <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
-background-color:transparent;</string>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="pixmap">
-                      <pixmap>../Downloads/gpa.png</pixmap>
-                     </property>
-                     <property name="scaledContents">
-                      <bool>true</bool>
                      </property>
                     </widget>
                    </item>
@@ -2473,14 +2471,6 @@ background-color: transparent;</string>
                      </property>
                      <property name="text">
                       <string>Tiến độ:</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="1">
-                    <widget class="QLineEdit" name="lineEditInputTienDo">
-                     <property name="styleSheet">
-                      <string notr="true">font: 14pt &quot;Palatino Linotype&quot;;
-background-color: rgb(255, 255, 255);</string>
                      </property>
                     </widget>
                    </item>
@@ -2503,20 +2493,11 @@ background-color: rgb(255, 255, 255);</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="3" column="2">
-                    <widget class="QLabel" name="label_57">
+                   <item row="2" column="1">
+                    <widget class="QLineEdit" name="lineEditInputTienDo">
                      <property name="styleSheet">
-                      <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
-background-color:transparent;</string>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="pixmap">
-                      <pixmap>../Downloads/image-removebg-preview.png</pixmap>
-                     </property>
-                     <property name="scaledContents">
-                      <bool>true</bool>
+                      <string notr="true">font: 14pt &quot;Palatino Linotype&quot;;
+background-color: rgb(255, 255, 255);</string>
                      </property>
                     </widget>
                    </item>
@@ -2554,7 +2535,7 @@ background-color: rgb(255, 255, 255);</string>
                    <string/>
                   </property>
                   <property name="pixmap">
-                   <pixmap>../images/nencuoi.png</pixmap>
+                   <pixmap resource="../resources.qrc">:/nen/images/nencuoi.png</pixmap>
                   </property>
                   <property name="scaledContents">
                    <bool>true</bool>
@@ -2634,28 +2615,6 @@ background-color: rgb(255, 255, 255);</string>
                   <property name="frameShadow">
                    <enum>QFrame::Raised</enum>
                   </property>
-                  <widget class="QLabel" name="label_61">
-                   <property name="geometry">
-                    <rect>
-                     <x>80</x>
-                     <y>120</y>
-                     <width>35</width>
-                     <height>31</height>
-                    </rect>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">font: 8pt &quot;Palatino Linotype&quot;;</string>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="pixmap">
-                    <pixmap>../Downloads/image-removebg-preview (3).png</pixmap>
-                   </property>
-                   <property name="scaledContents">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
                   <widget class="QLabel" name="number1_2">
                    <property name="geometry">
                     <rect>
@@ -2691,28 +2650,6 @@ background-color: rgb(255, 255, 255);</string>
                     <set>Qt::AlignCenter</set>
                    </property>
                   </widget>
-                  <widget class="QLabel" name="label_62">
-                   <property name="geometry">
-                    <rect>
-                     <x>8</x>
-                     <y>31</y>
-                     <width>115</width>
-                     <height>88</height>
-                    </rect>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">font: 8pt &quot;Palatino Linotype&quot;;</string>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="pixmap">
-                    <pixmap>../Downloads/2606584_5920-removebg-preview.png</pixmap>
-                   </property>
-                   <property name="scaledContents">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
                  </widget>
                 </item>
                 <item row="2" column="1" rowspan="3">
@@ -2744,28 +2681,6 @@ background-color: rgb(255, 255, 255);</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                  <widget class="QLabel" name="label_60">
-                   <property name="geometry">
-                    <rect>
-                     <x>8</x>
-                     <y>29</y>
-                     <width>115</width>
-                     <height>96</height>
-                    </rect>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">font: 8pt &quot;Palatino Linotype&quot;;</string>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="pixmap">
-                    <pixmap>../Downloads/shopping.png</pixmap>
-                   </property>
-                   <property name="scaledContents">
-                    <bool>true</bool>
                    </property>
                   </widget>
                   <widget class="QLabel" name="number2_2">
