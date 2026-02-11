@@ -1,0 +1,39 @@
+{
+    "tasks": [
+        {
+            "title": "Cắt tóc đón tết",
+            "content": "Mullet",
+            "deadline": "2009-07-05",
+            "deadlinetime": "00:00:00",
+            "isfinish": true
+        },
+        {
+            "title": "Trộm cây",
+            "content": "Đi trộm cây mai chưng tết",
+            "deadline": "2026-03-14",
+            "deadlinetime": "14:00:00",
+            "isfinish": true
+        },
+        {
+            "title": "Trộm chó",
+            "content": "Trộm chó về nựng",
+            "deadline": "2026-07-05",
+            "deadlinetime": "00:00:00",
+            "isfinish": false
+        },
+        {
+            "title": "Lau bàn",
+            "content": "Lau bộ bàn ghế rồng phượng khủng long",
+            "deadline": "2026-02-12",
+            "deadlinetime": "12:00:00",
+            "isfinish": true
+        },
+        {
+            "title": "Nộp bài ",
+            "content": "môn KTLT",
+            "deadline": "2026-03-01",
+            "deadlinetime": "12:00:00",
+            "isfinish": false
+        }
+    ]
+}

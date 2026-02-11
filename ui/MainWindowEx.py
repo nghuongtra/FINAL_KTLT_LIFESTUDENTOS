@@ -1,3 +1,12 @@
+import datetime
+
+from PyQt6 import QtGui
+from PyQt6.QtCore import Qt, QDateTime
+from PyQt6.QtGui import QIcon, QColor
+from PyQt6.QtWidgets import QListWidgetItem, QMessageBox
+
+from model.task import Task
+from model.tasks import Tasks
 from ui.MainWindow import Ui_MainWindow
 import ui.resources_rc
 
@@ -5,11 +14,17 @@ class MainWindowEx(Ui_MainWindow):
     def setupUi(self, MainWindow):
         super().setupUi((MainWindow))
         self.MainWindow = MainWindow
+        self.tasks = Tasks()
+        self.selectedTask=None
+        self.tasks.import_json("../datasets/tasks.json")
+        self.showTasksIntoQListWidget()
+
 
     def show(self):
         self.MainWindow.show()
         self.setupSignalAndSlot()
         self.stackedWidget.setCurrentIndex(0)
+        self.updateCountdown()
 
     def setupSignalAndSlot(self): #d15->19: liên kết các nút bấm trên header với các page
         self.pushButtonOverview.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(0))
@@ -17,4 +32,123 @@ class MainWindowEx(Ui_MainWindow):
         self.pushButtonFinanceManagement.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(2))
         self.pushButtonTaskScheduler.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(3))
         self.pushButtonInsights.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(4))
+        self.pushButtonNew.clicked.connect(self.processNew)
+        self.pushButtonSave.clicked.connect(self.processSave)
+        self.pushButtonDeleteTask.clicked.connect(self.processRemove)
+        self.listWidgetTask.itemSelectionChanged.connect(self.processItemSelection)
+        self.dateEditDeadline.dateChanged.connect(self.updateCountdown)
+        self.timeEditDeadline.timeChanged.connect(self.updateCountdown)
 
+    def showTasksIntoQListWidget(self):
+        self.listWidgetTask.clear()
+        for index in range(self.tasks.size()):
+            task = self.tasks.item(index)
+            item = QListWidgetItem()
+            item.setData(Qt.ItemDataRole.UserRole, task)
+            item.setText(str(task))
+            item.setCheckState(Qt.CheckState.Unchecked)
+            if task.isfinish == True:
+                item.setIcon(QIcon("../images/ic_finished.png"))
+                item.setBackground(QColor("white"))
+                item.setForeground(QColor("black"))
+            else:
+                item.setIcon(QIcon("../images/ic_notfinished.png"))
+            if isinstance(task.deadline, str):
+                task.deadline = datetime.date.fromisoformat(task.deadline)
+            if isinstance(task.deadlinetime, str):
+                task.deadlinetime = datetime.time.fromisoformat(task.deadlinetime)
+            self.listWidgetTask.addItem(item)
+            if not task.isfinish:
+                dt_deadline = datetime.datetime.combine(task.deadline, task.deadlinetime)
+                dt_now = datetime.datetime.now()
+                diff = (dt_deadline - dt_now).total_seconds() #tính khoảng cách thời gian cho labelcountdown
+                if diff < 0:
+                    # QUÁ HẠN: Nền đỏ nhạt, chữ đỏ
+                    item.setBackground(QColor("#FFCDD2"))
+                    item.setForeground(QColor("#B71C1C"))
+                elif diff <= 86400:
+                    # GẤP: Nền vàng nhạt, chữ cam
+                    item.setBackground(QColor("#FFF9C4"))
+                    item.setForeground(QColor("#F57F17"))
+                else:
+                    item.setBackground(QColor("#E8F5E9"))
+
+    def processNew(self):
+        self.lineEditTitle.setText("")
+        self.textEditContent.setText("")
+        self.dateEditDeadline.setSpecialValueText(None)
+        self.radioButtonFinished.setAutoExclusive(False)
+        self.radioButtonNotFinished.setAutoExclusive(False)
+        self.radioButtonFinished.setChecked(False)
+        self.radioButtonNotFinished.setChecked(False)
+        self.radioButtonFinished.setAutoExclusive(True)
+        self.radioButtonNotFinished.setAutoExclusive(True)
+        self.selectedTask = None
+        self.lineEditTitle.setFocus()
+
+    def processSave(self):
+        title = self.lineEditTitle.text()
+        content = self.textEditContent.toPlainText()
+        date = self.dateEditDeadline.date().toPyDate()
+        time = self.timeEditDeadline.time().toPyTime()
+        isFinished = self.radioButtonFinished.isChecked()
+        task = Task(title, content, date, time, isFinished)
+        if self.selectedTask == None:
+            self.tasks.add_item(task)
+        else:
+            index = self.tasks.index(self.selectedTask)
+            self.tasks.update(index, task)
+        self.selectedTask = task
+        self.showTasksIntoQListWidget()
+        self.tasks.export_json("../datasets/tasks.json")
+
+    def processRemove(self):
+        answer = QMessageBox.question(
+            self.MainWindow,
+            'Xác nhận',
+            'Bạn có chắc chắn muốn xóa công việc này không?',
+            QMessageBox.StandardButton.Yes |
+            QMessageBox.StandardButton.No
+        )
+        if answer == QMessageBox.StandardButton.No:
+            return
+        size = self.listWidgetTask.count()
+        for index in range(size - 1, -1, -1):
+            item = self.listWidgetTask.item(index)
+            if item.checkState() == Qt.CheckState.Checked:
+                self.tasks.removeByIndex(index)
+        self.selectedTask = None
+        self.showTasksIntoQListWidget()
+        self.tasks.export_json("../datasets/tasks.json")
+
+    def processItemSelection(self):
+        row = self.listWidgetTask.currentRow()
+        if row < 0:
+            return
+        task = self.tasks.item(row)
+        self.lineEditTitle.setText(task.title)
+        self.textEditContent.setText(task.content)
+        self.dateEditDeadline.setDate(task.deadline)
+        self.timeEditDeadline.setTime(task.deadlinetime)
+        if task.isfinish:
+            self.radioButtonFinished.setChecked(True)
+            self.radioButtonNotFinished.setChecked(False)
+        else:
+            self.radioButtonFinished.setChecked(False)
+            self.radioButtonNotFinished.setChecked(True)
+        self.selectedTask = task
+    def updateCountdown(self):
+        q_date = self.dateEditDeadline.date()
+        q_time = self.timeEditDeadline.time()
+        deadline_qdt = QDateTime(q_date, q_time)
+        now_qdt = QDateTime.currentDateTime()
+        seconds_diff = now_qdt.secsTo(deadline_qdt)
+        if seconds_diff < 0:
+            self.labelCountdown.setText("Đã quá hạn!")
+            self.labelCountdown.setStyleSheet("color: red; font-weight: bold;")
+        else:
+            days = seconds_diff // 86400
+            hours = (seconds_diff % 86400) // 3600
+            minutes = (seconds_diff % 3600) // 60
+            self.labelCountdown.setText(f"Còn: {days} ngày, {hours} giờ, {minutes} phút")
+            self.labelCountdown.setStyleSheet("color: blue; font-weight: bold;")

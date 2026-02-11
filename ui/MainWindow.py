@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1624, 1142)
+        MainWindow.resize(1188, 1148)
         MainWindow.setStyleSheet("background-color: rgb(250, 247, 238);")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setStyleSheet("#centralwidget {border-image: url(:/nen/images/anh.jpg);}")
@@ -753,7 +753,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 448, 510))
+        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 448, 516))
         self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
         self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_11.setObjectName("verticalLayout_11")
@@ -1013,33 +1013,39 @@ class Ui_MainWindow(object):
         self.groupBox_2.setObjectName("groupBox_2")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.groupBox_2)
         self.gridLayout_3.setObjectName("gridLayout_3")
+        self.label_12 = QtWidgets.QLabel(parent=self.groupBox_2)
+        self.label_12.setObjectName("label_12")
+        self.gridLayout_3.addWidget(self.label_12, 1, 0, 1, 1)
         self.lineEditTitle = QtWidgets.QLineEdit(parent=self.groupBox_2)
         self.lineEditTitle.setStyleSheet("\n"
 "font: 14pt \"Palatino Linotype\";\n"
 "background-color: rgb(255, 255, 255);")
         self.lineEditTitle.setObjectName("lineEditTitle")
         self.gridLayout_3.addWidget(self.lineEditTitle, 0, 1, 1, 2)
-        self.label_12 = QtWidgets.QLabel(parent=self.groupBox_2)
-        self.label_12.setObjectName("label_12")
-        self.gridLayout_3.addWidget(self.label_12, 1, 0, 1, 1)
+        self.label_15 = QtWidgets.QLabel(parent=self.groupBox_2)
+        self.label_15.setObjectName("label_15")
+        self.gridLayout_3.addWidget(self.label_15, 2, 0, 1, 1)
         self.textEditContent = QtWidgets.QTextEdit(parent=self.groupBox_2)
         self.textEditContent.setStyleSheet("\n"
 "font: 14pt \"Palatino Linotype\";\n"
 "background-color: rgb(255, 255, 255);")
         self.textEditContent.setObjectName("textEditContent")
         self.gridLayout_3.addWidget(self.textEditContent, 1, 1, 1, 2)
-        self.label_15 = QtWidgets.QLabel(parent=self.groupBox_2)
-        self.label_15.setObjectName("label_15")
-        self.gridLayout_3.addWidget(self.label_15, 2, 0, 1, 1)
+        self.label_17 = QtWidgets.QLabel(parent=self.groupBox_2)
+        self.label_17.setObjectName("label_17")
+        self.gridLayout_3.addWidget(self.label_17, 3, 0, 1, 1)
         self.dateEditDeadline = QtWidgets.QDateEdit(parent=self.groupBox_2)
         self.dateEditDeadline.setStyleSheet("\n"
 "font: 14pt \"Palatino Linotype\";\n"
 "background-color: rgb(255, 255, 255);")
         self.dateEditDeadline.setObjectName("dateEditDeadline")
         self.gridLayout_3.addWidget(self.dateEditDeadline, 2, 1, 1, 2)
-        self.label_17 = QtWidgets.QLabel(parent=self.groupBox_2)
-        self.label_17.setObjectName("label_17")
-        self.gridLayout_3.addWidget(self.label_17, 3, 0, 1, 1)
+        self.radioButtonFinished = QtWidgets.QRadioButton(parent=self.groupBox_2)
+        self.radioButtonFinished.setStyleSheet("\n"
+"font: 14pt \"Palatino Linotype\";\n"
+"color: rgb(0, 0, 255);")
+        self.radioButtonFinished.setObjectName("radioButtonFinished")
+        self.gridLayout_3.addWidget(self.radioButtonFinished, 5, 0, 1, 2)
         self.timeEditDeadline = QtWidgets.QTimeEdit(parent=self.groupBox_2)
         self.timeEditDeadline.setStyleSheet("\n"
 "font: 14pt \"Palatino Linotype\";\n"
@@ -1049,16 +1055,17 @@ class Ui_MainWindow(object):
         self.label_3 = QtWidgets.QLabel(parent=self.groupBox_2)
         self.label_3.setObjectName("label_3")
         self.gridLayout_3.addWidget(self.label_3, 0, 0, 1, 1)
-        self.radioButtonFinished = QtWidgets.QRadioButton(parent=self.groupBox_2)
-        self.radioButtonFinished.setStyleSheet("\n"
-"font: 14pt \"Palatino Linotype\";\n"
-"color: rgb(0, 0, 255);")
-        self.radioButtonFinished.setObjectName("radioButtonFinished")
-        self.gridLayout_3.addWidget(self.radioButtonFinished, 4, 0, 1, 2)
         self.radioButtonNotFinished = QtWidgets.QRadioButton(parent=self.groupBox_2)
         self.radioButtonNotFinished.setStyleSheet("color: rgb(255, 85, 127);")
         self.radioButtonNotFinished.setObjectName("radioButtonNotFinished")
-        self.gridLayout_3.addWidget(self.radioButtonNotFinished, 4, 2, 1, 1)
+        self.gridLayout_3.addWidget(self.radioButtonNotFinished, 5, 2, 1, 1)
+        self.labelCountdown = QtWidgets.QLabel(parent=self.groupBox_2)
+        self.labelCountdown.setStyleSheet("\n"
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(0, 85, 255);\n"
+"font: 75 14pt \"Palatino Linotype\";")
+        self.labelCountdown.setObjectName("labelCountdown")
+        self.gridLayout_3.addWidget(self.labelCountdown, 4, 0, 1, 3)
         self.gridLayout_2.addWidget(self.groupBox_2, 0, 0, 1, 1)
         self.groupBox_7 = QtWidgets.QGroupBox(parent=self.frame_7)
         self.groupBox_7.setStyleSheet("font: 75 14pt \"Palatino Linotype\";\n"
@@ -1067,13 +1074,13 @@ class Ui_MainWindow(object):
         self.groupBox_7.setObjectName("groupBox_7")
         self.gridLayout_10 = QtWidgets.QGridLayout(self.groupBox_7)
         self.gridLayout_10.setObjectName("gridLayout_10")
-        self.listWidget = QtWidgets.QListWidget(parent=self.groupBox_7)
-        self.listWidget.setStyleSheet("\n"
+        self.listWidgetTask = QtWidgets.QListWidget(parent=self.groupBox_7)
+        self.listWidgetTask.setStyleSheet("\n"
 "    background-color: rgba(255, 255, 255, 180); \n"
 "    border-radius: 10px;\n"
 "    color: #333333; ")
-        self.listWidget.setObjectName("listWidget")
-        self.gridLayout_10.addWidget(self.listWidget, 0, 0, 1, 1)
+        self.listWidgetTask.setObjectName("listWidgetTask")
+        self.gridLayout_10.addWidget(self.listWidgetTask, 0, 0, 1, 1)
         self.frame_8 = QtWidgets.QFrame(parent=self.groupBox_7)
         self.frame_8.setMinimumSize(QtCore.QSize(40, 0))
         self.frame_8.setMaximumSize(QtCore.QSize(500, 16777215))
@@ -1270,7 +1277,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addWidget(self.stackedWidget)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1624, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1188, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
@@ -1278,7 +1285,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(3)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -1383,7 +1390,7 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Số tiền"))
         item = self.tableWidgetlist2_3.horizontalHeaderItem(3)
         item.setText(_translate("MainWindow", "Danh mục"))
-        self.label_2.setText(_translate("MainWindow", "Task Cheduler"))
+        self.label_2.setText(_translate("MainWindow", "Task Scheduler"))
         self.groupBox_3.setTitle(_translate("MainWindow", "Action:"))
         self.pushButtonNew.setText(_translate("MainWindow", "New"))
         self.pushButtonSave.setText(_translate("MainWindow", "Save"))
@@ -1392,9 +1399,11 @@ class Ui_MainWindow(object):
         self.label_12.setText(_translate("MainWindow", "Chi tiết:"))
         self.label_15.setText(_translate("MainWindow", "Deadline:"))
         self.label_17.setText(_translate("MainWindow", "Thời gian:"))
-        self.label_3.setText(_translate("MainWindow", "Nội dung:"))
+        self.dateEditDeadline.setDisplayFormat(_translate("MainWindow", "dd/MM/yyyy"))
         self.radioButtonFinished.setText(_translate("MainWindow", "Đã hoàn thành"))
+        self.label_3.setText(_translate("MainWindow", "Nội dung:"))
         self.radioButtonNotFinished.setText(_translate("MainWindow", "Chưa hoàn thành"))
+        self.labelCountdown.setText(_translate("MainWindow", "Còn..."))
         self.groupBox_7.setTitle(_translate("MainWindow", "Danh sách việc cần làm:"))
         self.label_18.setText(_translate("MainWindow", "Oversight/Insights"))
         self.gpa_2.setText(_translate("MainWindow", "GPA:"))

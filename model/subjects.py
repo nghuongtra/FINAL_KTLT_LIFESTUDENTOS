@@ -31,5 +31,5 @@ class Subjects (MyCollections):
                 scoreProcess=i["scoreProcess"]
                 scoreMidterm=i["scoreMidterm"]
                 scoreFinal=i["scoreFinal"]
-            sub= Subject(Subid,Subname,credit,scoreProcess,scoreMidterm,scoreFinal)
-            self.add_item(sub)
+                sub= Subject(Subid,Subname,credit,scoreProcess,scoreMidterm,scoreFinal)
+                self.add_item(sub)
