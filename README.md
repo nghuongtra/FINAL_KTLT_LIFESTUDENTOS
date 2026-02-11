@@ -24,14 +24,8 @@ Sau đó, mở tab Terminal ở góc dưới bên trái PyCharm (nhìn xem đầ
 ```
 pip install -r requirements.txt
 ```
-### Bước 3: Kiểm tra hệ thống
-Để chắc chắn máy bạn kết nối được Database và không bị lỗi, hãy chạy lệnh test này trước khi bắt tay vào code:
-```
-python -m tests.test_database
-```
-Thành công: Nếu màn hình hiện chữ OK màu xanh lá cây.
 
-### Bước 4: Chạy chương trình
+### Bước 3: Chạy chương trình
 ```
 python main.py
 ```
