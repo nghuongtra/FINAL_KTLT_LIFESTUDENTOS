@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="nen">
+    <file>images/ic_bear.png</file>
+    <file>images/anh.jpg</file>
+  </qresource>
+</RCC>

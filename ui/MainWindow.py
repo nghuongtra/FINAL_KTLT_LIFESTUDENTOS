@@ -15,9 +15,7 @@ class Ui_MainWindow(object):
         MainWindow.resize(1452, 1142)
         MainWindow.setStyleSheet("background-color: rgb(250, 247, 238);")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
-        self.centralwidget.setStyleSheet("#centralwidget {\n"
-"    border-image: url(\"D:/nam1/FINAL_KTLT/images/anh.jpg\") 0 0 0 0 stretch stretch;\n"
-"}")
+        self.centralwidget.setStyleSheet("#centralwidget {border-image: url(:/nen/images/anh.jpg);}")
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
@@ -94,10 +92,11 @@ class Ui_MainWindow(object):
         self.frameBanhmi.setGeometry(QtCore.QRect(0, 60, 411, 271))
         self.frameBanhmi.setMaximumSize(QtCore.QSize(1000, 1000))
         self.frameBanhmi.setStyleSheet("#frameBanhmi {\n"
-"    border-image: url(\"D:/nam1/FINAL_KTLT/images/ic_bear.png\") 0 0 0 0 stretch stretch;\n"
+"    border-image: url(:/nen/images/ic_bear.png)0 0 0 0 stretch stretch;\n"
 "   \n"
 "    border: none; \n"
-"}")
+"}\n"
+"")
         self.frameBanhmi.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frameBanhmi.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frameBanhmi.setObjectName("frameBanhmi")
@@ -748,7 +747,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 448, 507))
+        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 448, 510))
         self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
         self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_11.setObjectName("verticalLayout_11")

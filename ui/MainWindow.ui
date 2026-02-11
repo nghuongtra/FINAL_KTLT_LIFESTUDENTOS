@@ -18,9 +18,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">#centralwidget {
-    border-image: url(&quot;D:/nam1/FINAL_KTLT/images/anh.jpg&quot;) 0 0 0 0 stretch stretch;
-}</string>
+    <string notr="true">#centralwidget {border-image: url(:/nen/images/anh.jpg);}</string>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
@@ -187,10 +185,11 @@ background-color:transparent;</string>
               </property>
               <property name="styleSheet">
                <string notr="true">#frameBanhmi {
-    border-image: url(&quot;D:/nam1/FINAL_KTLT/images/ic_bear.png&quot;) 0 0 0 0 stretch stretch;
+    border-image: url(:/nen/images/ic_bear.png)0 0 0 0 stretch stretch;
    
     border: none; 
-}</string>
+}
+</string>
               </property>
               <property name="frameShape">
                <enum>QFrame::StyledPanel</enum>
@@ -1629,7 +1628,7 @@ background-color: rgb(255, 255, 255);
                         <x>0</x>
                         <y>0</y>
                         <width>448</width>
-                        <height>507</height>
+                        <height>510</height>
                        </rect>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -2807,6 +2806,7 @@ background-color: rgb(255, 255, 255);</string>
  </widget>
  <resources>
   <include location="../images/pics.qrc"/>
+  <include location="../resources.qrc"/>
  </resources>
  <connections/>
 </ui>

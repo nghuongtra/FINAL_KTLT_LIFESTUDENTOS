@@ -1,5 +1,5 @@
 from ui.MainWindow import Ui_MainWindow
-
+import ui.resources_rc
 
 class MainWindowEx(Ui_MainWindow):
     def setupUi(self, MainWindow):
