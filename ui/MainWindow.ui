@@ -1760,7 +1760,7 @@ font-size: 20px;
                         </widget>
                        </item>
                        <item>
-                        <widget class="QTableWidget" name="tableWidgetlist_3">
+                        <widget class="QTableWidget" name="tableExpenselist_3">
                          <property name="styleSheet">
                           <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(82, 65, 173);
@@ -1883,7 +1883,7 @@ border-color: transparent;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_29">
+                    <widget class="QLabel" name="label_soduhientai">
                      <property name="styleSheet">
                       <string notr="true">font-size: 24px;
 font-weight: bold;
@@ -1901,7 +1901,7 @@ border-color: transparent;</string>
                  <item>
                   <layout class="QHBoxLayout" name="horizontalLayout_14">
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_2">
+                    <widget class="QLineEdit" name="lineEditIncome">
                      <property name="styleSheet">
                       <string notr="true">background-color: #ffffff;
 border: 1px solid #dcdcdc;
@@ -1916,7 +1916,7 @@ color: #333333;
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_2">
+                    <widget class="QPushButton" name="pushButton_addincome">
                      <property name="styleSheet">
                       <string notr="true">QPushButton {
     background-color: #6c3483; /* Màu tím đậm */
@@ -2010,7 +2010,7 @@ border-color: transparent;</string>
                          </widget>
                         </item>
                         <item row="2" column="0" colspan="2">
-                         <widget class="QLabel" name="label_11">
+                         <widget class="QLabel" name="label_tanggiam">
                           <property name="styleSheet">
                            <string notr="true">background-color:transparent;
 border-color: transparent;
@@ -2194,7 +2194,7 @@ border: none;                 /* Xóa viền */    ; font-weight: bold;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QTableWidget" name="tableWidgetlist2_3">
+                       <widget class="QTableWidget" name="tablelExpenseist2_3">
                         <property name="styleSheet">
                          <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(82, 65, 173);
