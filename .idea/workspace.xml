@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8687b56a-8ca6-4165-8ef7-5abd828512e8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/images/pic_books.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/pic_car.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/pic_food.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/pic_other.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/pic_shopping.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/MainWindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/MainWindow.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/MainWindowEx.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/MainWindowEx.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,18 +28,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ngocphamkhanh0211-afk"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ngocphamkhanh0211-afk&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/nghuongtra/FINAL_KTLT_LIFESTUDENTOS.git",
-    "accountId": "6c0e62ff-3d67-4c4f-b232-b4bf6d223ddc"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/nghuongtra/FINAL_KTLT_LIFESTUDENTOS.git&quot;,
+    &quot;accountId&quot;: &quot;6c0e62ff-3d67-4c4f-b232-b4bf6d223ddc&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -60,10 +64,15 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "insight",
-    "last_opened_file_path": "D:/nam1/FINAL_KTLT",
+    "last_opened_file_path": "C:/Users/USER/PycharmProject/FINAL_KTLT_LIFESTUDENTOS/images",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\PycharmProject\FINAL_KTLT_LIFESTUDENTOS\images" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

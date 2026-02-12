@@ -1,11 +1,14 @@
 import datetime
 import random
+import os
+import pandas as pd
 
 from PyQt6 import QtGui
 from PyQt6.QtCore import Qt, QDateTime
 from PyQt6.QtGui import QIcon, QColor
 from PyQt6.QtWidgets import QListWidgetItem, QMessageBox
 from PyQt6.QtGui import QPixmap
+from PyQt6.QtWidgets import QMessageBox, QFileDialog
 
 from model.comingevents import Upcomingevents
 from model.task import Task
@@ -51,6 +54,7 @@ class MainWindowEx(Ui_MainWindow):
         self.timeEditDeadline.timeChanged.connect(self.updateCountdown)
         #Phần của tab insights
         self.stackedWidget.currentChanged.connect(self.kiem_tra_trang_hien_tai)
+        self.xuatfileexcel.clicked.connect(self.process_excel_csv)
 
     def process_viewdetail(self):
         gpa_text = self.lineEditGPA.text()
@@ -241,7 +245,11 @@ class MainWindowEx(Ui_MainWindow):
         if NGAN_SACH_BAN_DAU/3 <= money:
             return baodong
 
+        tiendo=
+        self.lineEdit_TienDo.setText(tiendo)
+
         #Nhận xét
+        ghichu=""
         nhanxet=""
         tips=""
         tip_tietkiem=["Dùng 1 tài khoản để tiêu – 1 tài khoản để tiết kiệm, đừng để chung.",
@@ -272,23 +280,34 @@ class MainWindowEx(Ui_MainWindow):
         if GPA >= 3.2 and money >= baodong:
             nhanxet = "Xuất sắc! Con nhà người ta đây rồi: Học giỏi - Tài chính vững!"
             tips=random.choice(tip_hoctot)
+            ghichu = "NOTE:AN TOÀN"
+            self.shortcomment_2.setStyleSheet("background-color:green; color:white; font-weight:bold;")
 
             # 2. HỌC GIỎI (>=3.2) + HẾT TIỀN
         elif GPA >= 3.2 and money < baodong:
             nhanxet = "Học tốt nha! Mà xài tiền hơi lố rồi đó, coi chừng cuối tháng ăn mì gói."
             self.advice_2.setStyleSheet("background-color: yellow; color:black; font-weight:bold;")
             tips =random.choice(tip_tietkiem)+random.choice(tip_hoctot)
+            ghichu="NOTE: CẢNH BÁO"
+            self.shortcomment_2.setStyleSheet("background-color: orange; color:black; font-weight:bold;")
 
             # 3. HỌC KHÁ/TRUNG BÌNH (<3.2) + TIỀN NHIỀU
         elif GPA < 3.2 and money >= baodong:
             nhanxet = "Tài chính rủng rỉnh nhưng việc học cần tập trung hơn nhé!"
             self.advice_2.setStyleSheet("background-color: yellow; color:black; font-weight:bold;")
+            ghichu = "NOTE: CẢNH BÁO"
+            self.shortcomment_2.setStyleSheet("background-color: orange; color:black; font-weight:bold;")
             if GPA >= 2.5:
                 nhanxet = "Học lực Khá! Bạn thử đổi phương pháp học xem sao!!"
                 self.advice_2.setStyleSheet("background-color: yellow; color:black; font-weight:bold;")
+                ghichu = "NOTE: CẢNH BÁO"
+                self.shortcomment_2.setStyleSheet("background-color: orange; color:black; font-weight:bold;")
             else:
                 nhanxet = "Cảnh báo học tập! Đừng để tiền làm mờ mắt kiến thức."
                 self.advice_2.setStyleSheet("background-color: yellow; color:black; font-weight:bold;")
+                ghichu = "NOTE: CẢNH BÁO"
+                self.shortcomment_2.setStyleSheet("background-color: orange; color:black; font-weight:bold;")
+
             tips = random.choice(tip_caithien)
 
             # 4. HỌC KÉM + HẾT TIỀN
@@ -296,8 +315,11 @@ class MainWindowEx(Ui_MainWindow):
             nhanxet = "BÁO ĐỘNG ĐỎ: Cả Tiền và Điểm đều nguy cấp! Cần chấn chỉnh gấp!"
             self.advice_2.setStyleSheet("background-color: red; color:white; font-weight:bold;")
             tips = random.choice(tip_tietkiem)+random.choice(tip_caithien)
+            ghichu = "NOTE: BÁO ĐỘNG ĐỎ"
+            self.shortcomment_2.setStyleSheet("background-color:red; color:white; font-weight:bold;")
         self.advice_2.setText(nhanxet)
         self.input_tips.setText(tips)
+        self.shortcomment_2.setText(ghichu)
 
         ##### GPA TREND ########
         self.insight_GPA.setText(str(GPA))
@@ -315,33 +337,120 @@ class MainWindowEx(Ui_MainWindow):
 
          ###### TOP SPENDING #######
         danh_sach_chi_tieu = {
-            "shopping": 2500000,
-            "food": 1500000,
-            "study": 500000
+            "mua sắm": 2500000,
+            "ăn uống": 1500000,
+            "học tập": 500000,
+            "đi lại": 100000,
+            "chi tiêu cho mục đích khác":300000
         }
         if danh_sach_chi_tieu:
             # Tìm cái tiêu nhiều nhất
             top_cat = max(danh_sach_chi_tieu, key=danh_sach_chi_tieu.get)
             top_val = danh_sach_chi_tieu[top_cat]
             total_spend = sum(danh_sach_chi_tieu.values())
+            if total_spend >0:
+                percent = (top_val / total_spend) * 100
+            else:
+                percent = 0
+            self.number2_2.setText(f"{percent:.1f}%")
+            icon = ""
+            if top_cat == "mua sắm":
+                icon = "../images/pic_shopping.png"
+            elif top_cat == "ăn uống":
+                icon = "../images/pic_food.png"
+            elif top_cat == "học tập":
+                icon= "../images/pic_books.png"
+            elif top_cat == "đi lại":
+                icon = "../images/pic_car.png"
+            elif top_cat == "chi tiêu cho mục đích khác":
+                icon = "../images/pic_other.png"
 
-            percent = (top_val / total_spend) * 100 if total_spend > 0 else 0
+            if icon:
+                self.topspending.setPixmap(QPixmap(icon))
+                self.topspending.setScaledContents(True)
 
-            # Hiện phần trăm
-            self.label_TopSpend_Percent.setText(f"{percent:.1f}%")  # <--- Thay tên label "%"
+    def process_excel_csv(self):
+        msgBox = QMessageBox()
+        msgBox.setIcon(QMessageBox.Icon.Question)
+        msgBox.setWindowTitle("Xuất danh sách")
+        msgBox.setText("Bạn muốn xuất file theo định dạng nào?")
 
-            # Hiện icon (Cần file ảnh trong thư mục images)
-            icon_path = ""
-            if top_cat == "shopping":
-                icon_path = "../images/ic_shopping.png"
-            elif top_cat == "food":
-                icon_path = "../images/ic_food.png"
-            elif top_cat == "study":
-                icon_path = "../images/ic_study.png"
+        btn_excel = msgBox.addButton("EXCEL", QMessageBox.ButtonRole.ActionRole)
+        btn_csv = msgBox.addButton("CSV", QMessageBox.ButtonRole.ActionRole)
+        btn_cancel = msgBox.addButton("Hủy", QMessageBox.ButtonRole.RejectRole)
+        msgBox.exec()
+        if msgBox.clickedButton() == btn_excel:
+            self.export_to_excel()
+        elif msgBox.clickedButton() == btn_csv:
+            self.export_to_csv()
+        elif msgBox.clickedButton() == btn_cancel:
+            return
 
-            if icon_path:
-                self.label_TopSpend_Icon.setPixmap(QPixmap(icon_path))  # <--- Thay tên label Icon
-                self.label_TopSpend_Icon.setScaledContents(True)
+    def lay_du_lieu_oversight(self):
+        val_gpa=self.lineEditInputGPA.text()
+        val_tiendo=self.lineEditInputTiendo.text()
+        val_vitien=self.lineEditInputVitien.text()
+        val_nhanxet=self.lineEditInputNhanxet.text()
+        val_tips=self.lineEditInputTips.text()
+        data = {
+            "HẠNG MỤC": [
+                "GPA Hiện tại",
+                "Tiến độ học tập",
+                "Số dư tài chính",
+                "Đánh giá tổng quan",
+                "Lời khuyên chi tiết"
+            ],
+            "KẾT QUẢ": [
+                val_gpa,
+                val_tiendo,
+                val_vitien,
+                val_nhanxet,
+                val_tips
+            ]
+        }
+        df = pd.DataFrame(data)
+        return df
+
+    def export_to_excel(self):
+        df = self.lay_du_lieu_oversight()
+        if df is None: return
+        #Tạo tên file mặc định
+        thoi_gian = datetime.now().strftime("%Y%m%d_%H%M%S")
+        ten_mac_dinh = f"BaoCao_Oversight_{thoi_gian}.xlsx"
+        #Mở cửa sổ chọn nơi lưu
+        duong_dan, _ = QFileDialog.getSaveFileName(
+            self,
+            "Lưu file Excel",
+            ten_mac_dinh,
+            "Excel Files (*.xlsx)"
+        )
+        #Lưu file
+        if duong_dan:
+            df.to_excel(duong_dan, index=False)
+            QMessageBox.information(self, "Thành công", f"Đã xuất file tại:\n{duong_dan}")
+        except Exception as e:
+        QMessageBox.critical(self, "Lỗi", f"Không lưu được file:\n{e}")
+
+    def export_to_csv(self):
+        df = self.lay_du_lieu_oversight()
+        if df is None: return
+        thoi_gian = datetime.now().strftime("%Y%m%d_%H%M%S")
+        ten_mac_dinh = f"BaoCao_Oversight_{thoi_gian}.csv"
+        duong_dan, _ = QFileDialog.getSaveFileName(
+            self,
+            "Lưu file CSV",
+            ten_mac_dinh,
+            "CSV Files (*.csv)"
+        )
+        if duong_dan:
+            df.to_csv(duong_dan, index=False, encoding='utf-8-sig')
+            QMessageBox.information(self, "Thành công", f"Đã xuất file tại:\n{duong_dan}")
+        except Exception as e:
+        QMessageBox.critical(self, "Lỗi", f"Không lưu được file:\n{e}")
+
+
+
+
 
 
 
