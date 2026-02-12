@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'D:\nam1\FINAL_KTLT\ui\MainWindow.ui'
+# Form implementation generated from reading ui file 'ui/MainWindow.ui'
 #
 # Created by: PyQt6 UI code generator 6.10.2
 #
@@ -625,7 +625,8 @@ class Ui_MainWindow(object):
         self.frame_left_3 = QtWidgets.QFrame(parent=self.groupBox_6)
         self.frame_left_3.setMaximumSize(QtCore.QSize(500, 16777215))
         self.frame_left_3.setStyleSheet("QFrame {\n"
-"    background-color: rgba(255, 255, 255, 50); /* Màu trắng trong suốt 12% */\n"
+"    background-color: transparent; /* Xóa nền trắng/mờ */\n"
+"    border: none;  \n"
 "    border-radius: 20px;\n"
 "    border: 1px solid rgba(255, 255, 255, 50);\n"
 "}")
@@ -638,7 +639,10 @@ class Ui_MainWindow(object):
         self.verticalLayout_15.setObjectName("verticalLayout_15")
         self.frame_Add = QtWidgets.QFrame(parent=self.frame_left_3)
         self.frame_Add.setStyleSheet("color: rgb(0, 0, 0);\n"
-"font: 12pt \"Palatino Linotype\";")
+"font: 12pt \"Palatino Linotype\";\n"
+"background-color: transparent; /* Xóa nền trắng/mờ */\n"
+"\n"
+"border: none;                 /* Xóa viền */  ")
         self.frame_Add.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_Add.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_Add.setObjectName("frame_Add")
@@ -655,7 +659,10 @@ class Ui_MainWindow(object):
         self.label_32.setFont(font)
         self.label_32.setStyleSheet("color: rgb(0, 0, 0);\n"
 "font: 12pt \"Palatino Linotype\";\n"
-"color: rgb(82, 65, 173);")
+"color: rgb(82, 65, 173);\n"
+"background-color: transparent; /* Xóa nền trắng/mờ */\n"
+"\n"
+"border: none;                 /* Xóa viền */    ; ")
         self.label_32.setObjectName("label_32")
         self.gridLayout_5.addWidget(self.label_32, 5, 0, 1, 1)
         self.lineEditGiatri = QtWidgets.QLineEdit(parent=self.frame_Add)
@@ -694,13 +701,16 @@ class Ui_MainWindow(object):
         self.label_33.setFont(font)
         self.label_33.setStyleSheet("color: rgb(0, 0, 0);\n"
 "font: 12pt \"Palatino Linotype\";\n"
-"color: rgb(82, 65, 173);")
+"color: rgb(82, 65, 173);\n"
+"background-color: transparent; /* Xóa nền trắng/mờ */\n"
+"\n"
+"border: none;                 /* Xóa viền */    ; ")
         self.label_33.setObjectName("label_33")
         self.gridLayout_5.addWidget(self.label_33, 7, 0, 1, 2)
         self.label_34 = QtWidgets.QLabel(parent=self.frame_Add)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
-        font.setPointSize(12)
+        font.setPointSize(-1)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
@@ -709,24 +719,11 @@ class Ui_MainWindow(object):
 "\n"
 "border: none;                 /* Xóa viền */    ; font-weight: bold;\n"
 "color: rgb(82, 65, 173);\n"
-"")
+"font-size: 20px;")
         self.label_34.setFrameShadow(QtWidgets.QFrame.Shadow.Plain)
         self.label_34.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_34.setObjectName("label_34")
         self.gridLayout_5.addWidget(self.label_34, 0, 0, 2, 2)
-        self.label_31 = QtWidgets.QLabel(parent=self.frame_Add)
-        font = QtGui.QFont()
-        font.setFamily("Palatino Linotype")
-        font.setPointSize(12)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.label_31.setFont(font)
-        self.label_31.setStyleSheet("color: rgb(0, 0, 0);\n"
-"font: 12pt \"Palatino Linotype\";\n"
-"color: rgb(82, 65, 173);")
-        self.label_31.setObjectName("label_31")
-        self.gridLayout_5.addWidget(self.label_31, 3, 0, 1, 2)
         self.lineEditKhoanchi = QtWidgets.QLineEdit(parent=self.frame_Add)
         self.lineEditKhoanchi.setStyleSheet("background-color: rgb(255, 255, 255);color:rgb(0, 0, 0);\n"
 "border: none;                 /* Xóa viền */    ; font-weight: bold;\n"
@@ -758,9 +755,28 @@ class Ui_MainWindow(object):
         self.pushButtonAddExpense.setIcon(icon6)
         self.pushButtonAddExpense.setObjectName("pushButtonAddExpense")
         self.gridLayout_5.addWidget(self.pushButtonAddExpense, 9, 0, 1, 2)
+        self.label_31 = QtWidgets.QLabel(parent=self.frame_Add)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label_31.setFont(font)
+        self.label_31.setStyleSheet("color: rgb(0, 0, 0);\n"
+"font: 12pt \"Palatino Linotype\";\n"
+"color: rgb(82, 65, 173);\n"
+"background-color: transparent; /* Xóa nền trắng/mờ */\n"
+"\n"
+"border: none;                 /* Xóa viền */    ; ")
+        self.label_31.setObjectName("label_31")
+        self.gridLayout_5.addWidget(self.label_31, 3, 0, 1, 2)
         self.verticalLayout_15.addWidget(self.frame_Add)
         self.frame_List = QtWidgets.QFrame(parent=self.frame_left_3)
         self.frame_List.setMinimumSize(QtCore.QSize(300, 200))
+        self.frame_List.setStyleSheet("background-color: transparent; /* Xóa nền trắng/mờ */\n"
+"\n"
+"border: none;                 /* Xóa viền */   ")
         self.frame_List.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_List.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_List.setObjectName("frame_List")
@@ -770,10 +786,28 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 448, 516))
+        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 472, 764))
         self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
         self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_11.setObjectName("verticalLayout_11")
+        self.label_38 = QtWidgets.QLabel(parent=self.scrollAreaWidgetContents_3)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(-1)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.label_38.setFont(font)
+        self.label_38.setStyleSheet("background-color: transparent; /* Xóa nền trắng/mờ */\n"
+"\n"
+"border: none;                 /* Xóa viền */    ; font-weight: bold;\n"
+"color: rgb(82, 65, 173);\n"
+"font-size: 20px;\n"
+"")
+        self.label_38.setFrameShadow(QtWidgets.QFrame.Shadow.Plain)
+        self.label_38.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_38.setObjectName("label_38")
+        self.verticalLayout_11.addWidget(self.label_38)
         self.tableWidgetlist_3 = QtWidgets.QTableWidget(parent=self.scrollAreaWidgetContents_3)
         self.tableWidgetlist_3.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "color: rgb(82, 65, 173);\n"
@@ -799,30 +833,14 @@ class Ui_MainWindow(object):
         self.verticalLayout_11.addWidget(self.tableWidgetlist_3)
         self.scrollArea.setWidget(self.scrollAreaWidgetContents_3)
         self.verticalLayout_16.addWidget(self.scrollArea)
-        self.label_35 = QtWidgets.QLabel(parent=self.frame_List)
-        font = QtGui.QFont()
-        font.setFamily("Palatino Linotype")
-        font.setPointSize(12)
-        font.setBold(True)
-        font.setItalic(False)
-        font.setWeight(75)
-        self.label_35.setFont(font)
-        self.label_35.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"font: 75 12pt \"Palatino Linotype\";\n"
-"color: rgb(0, 0, 0);\n"
-"border: none;                 /* Xóa viền */    ; font-weight: bold;\n"
-"")
-        self.label_35.setTextFormat(QtCore.Qt.TextFormat.RichText)
-        self.label_35.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_35.setObjectName("label_35")
-        self.verticalLayout_16.addWidget(self.label_35)
         self.verticalLayout_15.addWidget(self.frame_List)
         self.verticalLayout_14.addLayout(self.verticalLayout_15)
         self.verticalLayout_14.setStretch(0, 1)
         self.horizontalLayout_10.addWidget(self.frame_left_3)
         self.frame_right_3 = QtWidgets.QFrame(parent=self.groupBox_6)
         self.frame_right_3.setStyleSheet("QFrame {\n"
-"    background-color: rgba(255, 255, 255, 50); /* Màu trắng trong suốt 12% */\n"
+"   background-color: transparent; /* Xóa nền trắng/mờ */\n"
+"    border: none;  \n"
 "    border-radius: 20px;\n"
 "    border: 1px solid rgba(255, 255, 255, 50);\n"
 "}")
@@ -831,9 +849,77 @@ class Ui_MainWindow(object):
         self.frame_right_3.setObjectName("frame_right_3")
         self.verticalLayout_17 = QtWidgets.QVBoxLayout(self.frame_right_3)
         self.verticalLayout_17.setObjectName("verticalLayout_17")
+        self.frame_12 = QtWidgets.QFrame(parent=self.frame_right_3)
+        self.frame_12.setMinimumSize(QtCore.QSize(100, 100))
+        self.frame_12.setStyleSheet("background-color: rgb(255, 255, 127,65); /* Xóa nền trắng/mờ */\n"
+"border: none;                 /* Xóa viền */    \n"
+"")
+        self.frame_12.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame_12.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame_12.setObjectName("frame_12")
+        self.verticalLayout_23 = QtWidgets.QVBoxLayout(self.frame_12)
+        self.verticalLayout_23.setObjectName("verticalLayout_23")
+        self.horizontalLayout_8 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_8.setObjectName("horizontalLayout_8")
+        self.label_27 = QtWidgets.QLabel(parent=self.frame_12)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(-1)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.label_27.setFont(font)
+        self.label_27.setStyleSheet("font-size: 24px;\n"
+"font-weight: bold;\n"
+"color: rgb(82, 65, 173);\n"
+"background-color:transparent;\n"
+"border-color: transparent;")
+        self.label_27.setObjectName("label_27")
+        self.horizontalLayout_8.addWidget(self.label_27)
+        self.label_29 = QtWidgets.QLabel(parent=self.frame_12)
+        self.label_29.setStyleSheet("font-size: 24px;\n"
+"font-weight: bold;\n"
+"color: rgb(82, 65, 173);\n"
+"background-color:transparent;\n"
+"border-color: transparent;")
+        self.label_29.setObjectName("label_29")
+        self.horizontalLayout_8.addWidget(self.label_29)
+        self.verticalLayout_23.addLayout(self.horizontalLayout_8)
+        self.horizontalLayout_14 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_14.setObjectName("horizontalLayout_14")
+        self.lineEdit_2 = QtWidgets.QLineEdit(parent=self.frame_12)
+        self.lineEdit_2.setStyleSheet("background-color: #ffffff;\n"
+"border: 1px solid #dcdcdc;\n"
+"border-radius: 10px;\n"
+"padding-left: 10px;\n"
+"color: #333333;\n"
+"")
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.horizontalLayout_14.addWidget(self.lineEdit_2)
+        self.pushButton_2 = QtWidgets.QPushButton(parent=self.frame_12)
+        self.pushButton_2.setStyleSheet("QPushButton {\n"
+"    background-color: #6c3483; /* Màu tím đậm */\n"
+"    color: white;\n"
+"    border-radius: 10px;\n"
+"    padding: 5px 15px;\n"
+"    font-weight: bold;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #8e44ad; /* Sáng hơn khi di chuột vào */\n"
+"}\n"
+"")
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.horizontalLayout_14.addWidget(self.pushButton_2)
+        self.verticalLayout_23.addLayout(self.horizontalLayout_14)
+        self.verticalLayout_17.addWidget(self.frame_12)
         self.verticalLayout_18 = QtWidgets.QVBoxLayout()
         self.verticalLayout_18.setObjectName("verticalLayout_18")
         self.frame_content_right = QtWidgets.QFrame(parent=self.frame_right_3)
+        self.frame_content_right.setStyleSheet("background-color: transparent; /* Xóa nền trắng/mờ */\n"
+"\n"
+"border: none;                 /* Xóa viền */    ; font-weight: bold;\n"
+"color: rgb(82, 65, 173);\n"
+"")
         self.frame_content_right.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_content_right.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_content_right.setObjectName("frame_content_right")
@@ -842,6 +928,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_9 = QtWidgets.QVBoxLayout()
         self.verticalLayout_9.setObjectName("verticalLayout_9")
         self.frame_5 = QtWidgets.QFrame(parent=self.frame_content_right)
+        self.frame_5.setStyleSheet("background-color: rgb(255, 255, 127,65); /* Xóa nền trắng/mờ */\n"
+"border: none;                 /* Xóa viền */    ")
         self.frame_5.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_5.setObjectName("frame_5")
@@ -862,16 +950,29 @@ class Ui_MainWindow(object):
         self.label_36.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_36.setObjectName("label_36")
         self.gridLayout.addWidget(self.label_36, 0, 0, 1, 2)
-        self.label_5 = QtWidgets.QLabel(parent=self.frame_5)
-        self.label_5.setMaximumSize(QtCore.QSize(70, 16777215))
-        self.label_5.setObjectName("label_5")
-        self.gridLayout.addWidget(self.label_5, 1, 0, 1, 1)
         self.label_total_3 = QtWidgets.QLabel(parent=self.frame_5)
+        self.label_total_3.setStyleSheet("background-color:transparent;\n"
+"border-color: transparent;")
         self.label_total_3.setObjectName("label_total_3")
         self.gridLayout.addWidget(self.label_total_3, 1, 1, 1, 1)
         self.label_11 = QtWidgets.QLabel(parent=self.frame_5)
+        self.label_11.setStyleSheet("background-color:transparent;\n"
+"border-color: transparent;\n"
+"color:rgb(0, 0, 127)")
         self.label_11.setObjectName("label_11")
         self.gridLayout.addWidget(self.label_11, 2, 0, 1, 2)
+        self.label_24 = QtWidgets.QLabel(parent=self.frame_5)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(14)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.label_24.setFont(font)
+        self.label_24.setStyleSheet("background-color:transparent;\n"
+"border-color: transparent;")
+        self.label_24.setObjectName("label_24")
+        self.gridLayout.addWidget(self.label_24, 1, 0, 1, 1)
         self.verticalLayout_9.addWidget(self.frame_5)
         self.verticalLayout_10.addLayout(self.verticalLayout_9)
         self.horizontalLayout_16 = QtWidgets.QHBoxLayout()
@@ -1294,7 +1395,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addWidget(self.stackedWidget)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1188, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1188, 18))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
@@ -1302,7 +1403,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -1378,8 +1479,9 @@ class Ui_MainWindow(object):
         self.comboBoxLoaigia.setItemText(4, _translate("MainWindow", "Sức khỏe"))
         self.label_33.setText(_translate("MainWindow", "Ghi chú :"))
         self.label_34.setText(_translate("MainWindow", "Add New Expense"))
-        self.label_31.setText(_translate("MainWindow", "Tên khoản chi:"))
         self.pushButtonAddExpense.setText(_translate("MainWindow", "Add Expense"))
+        self.label_31.setText(_translate("MainWindow", "Tên khoản chi:"))
+        self.label_38.setText(_translate("MainWindow", "Expense List"))
         item = self.tableWidgetlist_3.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "Ngày"))
         item = self.tableWidgetlist_3.horizontalHeaderItem(1)
@@ -1390,11 +1492,14 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Danh mục"))
         item = self.tableWidgetlist_3.horizontalHeaderItem(4)
         item.setText(_translate("MainWindow", "Ghi chú"))
-        self.label_35.setText(_translate("MainWindow", "Expense List"))
+        self.label_27.setText(_translate("MainWindow", "Current Balance"))
+        self.label_29.setText(_translate("MainWindow", "10,000,000 đ"))
+        self.lineEdit_2.setPlaceholderText(_translate("MainWindow", "Nhập thu nhập mới"))
+        self.pushButton_2.setText(_translate("MainWindow", "Add Income"))
         self.label_36.setText(_translate("MainWindow", "<html><head/><body><p align=\"justify\"><span style=\" font-weight:600;\">Expense Summary</span></p></body></html>"))
-        self.label_5.setText(_translate("MainWindow", "Total:"))
         self.label_total_3.setText(_translate("MainWindow", "4,800,000đ"))
         self.label_11.setText(_translate("MainWindow", "Tăng 1.500.00đ so với tháng trước"))
+        self.label_24.setText(_translate("MainWindow", "Total:"))
         self.lineEdittimkhoanchi_3.setPlaceholderText(_translate("MainWindow", "Tìm kiếm khoản chi..."))
         self.comboBoxsapxep_2.setItemText(0, _translate("MainWindow", "1"))
         self.comboBoxsapxep_2.setItemText(1, _translate("MainWindow", "2"))
@@ -1438,3 +1543,13 @@ class Ui_MainWindow(object):
         self.gpatrend_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt;\">GPA Trend:</span></p></body></html>"))
         self.topspending_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt;\">Top Spending:</span></p></body></html>"))
         self.number2_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">45%</span></p></body></html>"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec())

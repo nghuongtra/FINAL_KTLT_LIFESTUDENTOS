@@ -99,7 +99,7 @@ background-color: rgb(255, 255, 255);</string>
 background-color:transparent</string>
       </property>
       <property name="currentIndex">
-       <number>4</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="pageOverview">
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -1447,7 +1447,8 @@ color: rgb(130, 114, 188);
              </property>
              <property name="styleSheet">
               <string notr="true">QFrame {
-    background-color: rgba(255, 255, 255, 50); /* Màu trắng trong suốt 12% */
+    background-color: transparent; /* Xóa nền trắng/mờ */
+	border: none;  
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 50);
 }</string>
@@ -1465,7 +1466,10 @@ color: rgb(130, 114, 188);
                  <widget class="QFrame" name="frame_Add">
                   <property name="styleSheet">
                    <string notr="true">color: rgb(0, 0, 0);
-font: 12pt &quot;Palatino Linotype&quot;;</string>
+font: 12pt &quot;Palatino Linotype&quot;;
+background-color: transparent; /* Xóa nền trắng/mờ */
+
+border: none;                 /* Xóa viền */  </string>
                   </property>
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
@@ -1500,7 +1504,10 @@ font: 12pt &quot;Palatino Linotype&quot;;</string>
                      <property name="styleSheet">
                       <string notr="true">color: rgb(0, 0, 0);
 font: 12pt &quot;Palatino Linotype&quot;;
-color: rgb(82, 65, 173);</string>
+color: rgb(82, 65, 173);
+background-color: transparent; /* Xóa nền trắng/mờ */
+
+border: none;                 /* Xóa viền */    ; </string>
                      </property>
                      <property name="text">
                       <string>Số tiền</string>
@@ -1575,7 +1582,10 @@ background-color: rgb(255, 255, 255);</string>
                      <property name="styleSheet">
                       <string notr="true">color: rgb(0, 0, 0);
 font: 12pt &quot;Palatino Linotype&quot;;
-color: rgb(82, 65, 173);</string>
+color: rgb(82, 65, 173);
+background-color: transparent; /* Xóa nền trắng/mờ */
+
+border: none;                 /* Xóa viền */    ; </string>
                      </property>
                      <property name="text">
                       <string>Ghi chú :</string>
@@ -1587,7 +1597,7 @@ color: rgb(82, 65, 173);</string>
                      <property name="font">
                       <font>
                        <family>Palatino Linotype</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>-1</pointsize>
                        <weight>75</weight>
                        <italic>false</italic>
                        <bold>true</bold>
@@ -1598,7 +1608,7 @@ color: rgb(82, 65, 173);</string>
 
 border: none;                 /* Xóa viền */    ; font-weight: bold;
 color: rgb(82, 65, 173);
-</string>
+font-size: 20px;</string>
                      </property>
                      <property name="frameShadow">
                       <enum>QFrame::Plain</enum>
@@ -1608,27 +1618,6 @@ color: rgb(82, 65, 173);
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="0" colspan="2">
-                    <widget class="QLabel" name="label_31">
-                     <property name="font">
-                      <font>
-                       <family>Palatino Linotype</family>
-                       <pointsize>12</pointsize>
-                       <weight>50</weight>
-                       <italic>false</italic>
-                       <bold>false</bold>
-                      </font>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">color: rgb(0, 0, 0);
-font: 12pt &quot;Palatino Linotype&quot;;
-color: rgb(82, 65, 173);</string>
-                     </property>
-                     <property name="text">
-                      <string>Tên khoản chi:</string>
                      </property>
                     </widget>
                    </item>
@@ -1678,6 +1667,30 @@ background-color: rgb(255, 255, 255);
                      </property>
                     </widget>
                    </item>
+                   <item row="3" column="0" colspan="2">
+                    <widget class="QLabel" name="label_31">
+                     <property name="font">
+                      <font>
+                       <family>Palatino Linotype</family>
+                       <pointsize>12</pointsize>
+                       <weight>50</weight>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: rgb(0, 0, 0);
+font: 12pt &quot;Palatino Linotype&quot;;
+color: rgb(82, 65, 173);
+background-color: transparent; /* Xóa nền trắng/mờ */
+
+border: none;                 /* Xóa viền */    ; </string>
+                     </property>
+                     <property name="text">
+                      <string>Tên khoản chi:</string>
+                     </property>
+                    </widget>
+                   </item>
                   </layout>
                  </widget>
                 </item>
@@ -1688,6 +1701,11 @@ background-color: rgb(255, 255, 255);
                     <width>300</width>
                     <height>200</height>
                    </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
+
+border: none;                 /* Xóa viền */   </string>
                   </property>
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
@@ -1706,11 +1724,41 @@ background-color: rgb(255, 255, 255);
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>448</width>
-                        <height>516</height>
+                        <width>472</width>
+                        <height>764</height>
                        </rect>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_11">
+                       <item>
+                        <widget class="QLabel" name="label_38">
+                         <property name="font">
+                          <font>
+                           <family>Palatino Linotype</family>
+                           <pointsize>-1</pointsize>
+                           <weight>75</weight>
+                           <italic>false</italic>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
+
+border: none;                 /* Xóa viền */    ; font-weight: bold;
+color: rgb(82, 65, 173);
+font-size: 20px;
+</string>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Plain</enum>
+                         </property>
+                         <property name="text">
+                          <string>Expense List</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
                        <item>
                         <widget class="QTableWidget" name="tableWidgetlist_3">
                          <property name="styleSheet">
@@ -1764,35 +1812,6 @@ font: 10pt &quot;Palatino Linotype&quot;;</string>
                      </widget>
                     </widget>
                    </item>
-                   <item>
-                    <widget class="QLabel" name="label_35">
-                     <property name="font">
-                      <font>
-                       <family>Palatino Linotype</family>
-                       <pointsize>12</pointsize>
-                       <weight>75</weight>
-                       <italic>false</italic>
-                       <bold>true</bold>
-                      </font>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">background-color: rgb(255, 255, 255);
-font: 75 12pt &quot;Palatino Linotype&quot;;
-color: rgb(0, 0, 0);
-border: none;                 /* Xóa viền */    ; font-weight: bold;
-</string>
-                     </property>
-                     <property name="text">
-                      <string>Expense List</string>
-                     </property>
-                     <property name="textFormat">
-                      <enum>Qt::RichText</enum>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
                   </layout>
                  </widget>
                 </item>
@@ -1805,7 +1824,8 @@ border: none;                 /* Xóa viền */    ; font-weight: bold;
             <widget class="QFrame" name="frame_right_3">
              <property name="styleSheet">
               <string notr="true">QFrame {
-    background-color: rgba(255, 255, 255, 50); /* Màu trắng trong suốt 12% */
+   background-color: transparent; /* Xóa nền trắng/mờ */
+	border: none;  
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 50);
 }</string>
@@ -1818,9 +1838,119 @@ border: none;                 /* Xóa viền */    ; font-weight: bold;
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_17">
               <item>
+               <widget class="QFrame" name="frame_12">
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(255, 255, 127,65); /* Xóa nền trắng/mờ */
+border: none;                 /* Xóa viền */    
+</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_23">
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_8">
+                   <item>
+                    <widget class="QLabel" name="label_27">
+                     <property name="font">
+                      <font>
+                       <family>Palatino Linotype</family>
+                       <pointsize>-1</pointsize>
+                       <weight>75</weight>
+                       <italic>false</italic>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">font-size: 24px;
+font-weight: bold;
+color: rgb(82, 65, 173);
+background-color:transparent;
+border-color: transparent;</string>
+                     </property>
+                     <property name="text">
+                      <string>Current Balance</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_29">
+                     <property name="styleSheet">
+                      <string notr="true">font-size: 24px;
+font-weight: bold;
+color: rgb(82, 65, 173);
+background-color:transparent;
+border-color: transparent;</string>
+                     </property>
+                     <property name="text">
+                      <string>10,000,000 đ</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_14">
+                   <item>
+                    <widget class="QLineEdit" name="lineEdit_2">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: #ffffff;
+border: 1px solid #dcdcdc;
+border-radius: 10px;
+padding-left: 10px;
+color: #333333;
+</string>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Nhập thu nhập mới</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_2">
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+    background-color: #6c3483; /* Màu tím đậm */
+    color: white;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #8e44ad; /* Sáng hơn khi di chuột vào */
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>Add Income</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
                <layout class="QVBoxLayout" name="verticalLayout_18">
                 <item>
                  <widget class="QFrame" name="frame_content_right">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
+
+border: none;                 /* Xóa viền */    ; font-weight: bold;
+color: rgb(82, 65, 173);
+</string>
+                  </property>
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
                   </property>
@@ -1832,6 +1962,10 @@ border: none;                 /* Xóa viền */    ; font-weight: bold;
                     <layout class="QVBoxLayout" name="verticalLayout_9">
                      <item>
                       <widget class="QFrame" name="frame_5">
+                       <property name="styleSheet">
+                        <string notr="true">background-color: rgb(255, 255, 127,65); /* Xóa nền trắng/mờ */
+border: none;                 /* Xóa viền */    </string>
+                       </property>
                        <property name="frameShape">
                         <enum>QFrame::StyledPanel</enum>
                        </property>
@@ -1864,21 +1998,12 @@ border-color: transparent;</string>
                           </property>
                          </widget>
                         </item>
-                        <item row="1" column="0">
-                         <widget class="QLabel" name="label_5">
-                          <property name="maximumSize">
-                           <size>
-                            <width>70</width>
-                            <height>16777215</height>
-                           </size>
-                          </property>
-                          <property name="text">
-                           <string>Total:</string>
-                          </property>
-                         </widget>
-                        </item>
                         <item row="1" column="1">
                          <widget class="QLabel" name="label_total_3">
+                          <property name="styleSheet">
+                           <string notr="true">background-color:transparent;
+border-color: transparent;</string>
+                          </property>
                           <property name="text">
                            <string>4,800,000đ</string>
                           </property>
@@ -1886,8 +2011,33 @@ border-color: transparent;</string>
                         </item>
                         <item row="2" column="0" colspan="2">
                          <widget class="QLabel" name="label_11">
+                          <property name="styleSheet">
+                           <string notr="true">background-color:transparent;
+border-color: transparent;
+color:rgb(0, 0, 127)</string>
+                          </property>
                           <property name="text">
                            <string>Tăng 1.500.00đ so với tháng trước</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="label_24">
+                          <property name="font">
+                           <font>
+                            <family>Palatino Linotype</family>
+                            <pointsize>14</pointsize>
+                            <weight>75</weight>
+                            <italic>false</italic>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">background-color:transparent;
+border-color: transparent;</string>
+                          </property>
+                          <property name="text">
+                           <string>Total:</string>
                           </property>
                          </widget>
                         </item>
@@ -2793,7 +2943,7 @@ background-color: rgb(255, 255, 255);</string>
      <x>0</x>
      <y>0</y>
      <width>1188</width>
-     <height>26</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>
