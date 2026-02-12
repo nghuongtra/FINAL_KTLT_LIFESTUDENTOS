@@ -5,11 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8687b56a-8ca6-4165-8ef7-5abd828512e8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/images/pic_books.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/pic_car.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/pic_food.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/pic_other.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/pic_shopping.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/MainWindowEx.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/MainWindowEx.py" afterDir="false" />
     </list>
@@ -63,7 +58,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "insight",
+    "git-widget-placeholder": "insights",
     "last_opened_file_path": "C:/Users/USER/PycharmProject/FINAL_KTLT_LIFESTUDENTOS/images",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }

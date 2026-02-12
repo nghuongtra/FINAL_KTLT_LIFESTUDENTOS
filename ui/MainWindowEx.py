@@ -428,8 +428,6 @@ class MainWindowEx(Ui_MainWindow):
         if duong_dan:
             df.to_excel(duong_dan, index=False)
             QMessageBox.information(self, "Thành công", f"Đã xuất file tại:\n{duong_dan}")
-        except Exception as e:
-        QMessageBox.critical(self, "Lỗi", f"Không lưu được file:\n{e}")
 
     def export_to_csv(self):
         df = self.lay_du_lieu_oversight()
@@ -445,8 +443,7 @@ class MainWindowEx(Ui_MainWindow):
         if duong_dan:
             df.to_csv(duong_dan, index=False, encoding='utf-8-sig')
             QMessageBox.information(self, "Thành công", f"Đã xuất file tại:\n{duong_dan}")
-        except Exception as e:
-        QMessageBox.critical(self, "Lỗi", f"Không lưu được file:\n{e}")
+
 
 
 
