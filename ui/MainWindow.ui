@@ -99,7 +99,7 @@ background-color: rgb(255, 255, 255);</string>
 background-color:transparent</string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="pageOverview">
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -1163,6 +1163,9 @@ color: rgb(223, 0, 0);</string>
                         <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(223, 0, 0);</string>
                        </property>
+                       <property name="frameShape">
+                        <enum>QFrame::Box</enum>
+                       </property>
                        <property name="text">
                         <string>Xếp Loại:</string>
                        </property>
@@ -1172,7 +1175,7 @@ color: rgb(223, 0, 0);</string>
                       <widget class="QLineEdit" name="lineEditXeploai">
                        <property name="maximumSize">
                         <size>
-                         <width>80</width>
+                         <width>110</width>
                          <height>50</height>
                         </size>
                        </property>
@@ -1254,8 +1257,8 @@ color: rgb(223, 0, 0);</string>
                <property name="title">
                 <string>Subject List</string>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_8">
-                <item>
+               <layout class="QGridLayout" name="gridLayout_4">
+                <item row="0" column="0">
                  <widget class="QLineEdit" name="lineEditTimmon">
                   <property name="styleSheet">
                    <string notr="true">
@@ -1267,7 +1270,37 @@ background-color: rgb(255, 255, 255);</string>
                   </property>
                  </widget>
                 </item>
-                <item>
+                <item row="0" column="1">
+                 <widget class="QPushButton" name="pushButtonSearchSubject">
+                  <property name="font">
+                   <font>
+                    <family>Palatino Linotype</family>
+                    <pointsize>12</pointsize>
+                    <weight>50</weight>
+                    <italic>false</italic>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">font: 12pt &quot;Palatino Linotype&quot;;
+background-color: rgb(255, 250, 217);</string>
+                  </property>
+                  <property name="text">
+                   <string>Search</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="../resources.qrc">
+                    <normaloff>:/nen/images/ic_search.png</normaloff>:/nen/images/ic_search.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>40</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0" colspan="2">
                  <widget class="QTableWidget" name="tableWidgetthongtinmon">
                   <property name="styleSheet">
                    <string notr="true">font: 75 12pt &quot;Palatino Linotype&quot;;
@@ -1365,7 +1398,7 @@ background-color: rgb(255, 255, 255);</string>
                   </column>
                  </widget>
                 </item>
-                <item>
+                <item row="2" column="0" colspan="2">
                  <layout class="QHBoxLayout" name="horizontalLayout_9">
                   <item>
                    <widget class="QPushButton" name="pushButtonEdit">
@@ -1729,8 +1762,8 @@ border: none;                 /* Xóa viền */   </string>
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>472</width>
-                        <height>764</height>
+                        <width>452</width>
+                        <height>562</height>
                        </rect>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -2130,7 +2163,7 @@ border: none;                 /* Xóa viền */    ; font-weight: bold;
                        </property>
                        <item>
                         <property name="text">
-                         <string> </string>
+                         <string/>
                         </property>
                        </item>
                        <item>
@@ -2164,7 +2197,7 @@ border: none;                 /* Xóa viền */    ; font-weight: bold;
                        </property>
                        <item>
                         <property name="text">
-                         <string> </string>
+                         <string/>
                         </property>
                        </item>
                        <item>
@@ -2973,7 +3006,7 @@ background-color: rgb(255, 255, 255);</string>
      <x>0</x>
      <y>0</y>
      <width>1188</width>
-     <height>18</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
@@ -2981,7 +3014,6 @@ background-color: rgb(255, 255, 255);</string>
  </widget>
  <resources>
   <include location="../resources.qrc"/>
-  <include location="C:/Users/TNlap/.designer/resources.qrc"/>
  </resources>
  <connections/>
 </ui>

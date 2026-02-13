@@ -1,13 +1,6 @@
 {
     "tasks": [
         {
-            "title": "Cắt tóc đón tết",
-            "content": "Mullet",
-            "deadline": "2009-07-05",
-            "deadlinetime": "00:00:00",
-            "isfinish": true
-        },
-        {
             "title": "Trộm cây",
             "content": "Đi trộm cây mai chưng tết",
             "deadline": "2026-03-14",

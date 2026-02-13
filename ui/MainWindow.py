@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'ui/MainWindow.ui'
+# Form implementation generated from reading ui file 'D:\nam1\FINAL_KTLT\ui\MainWindow.ui'
 #
 # Created by: PyQt6 UI code generator 6.10.2
 #
@@ -493,10 +493,11 @@ class Ui_MainWindow(object):
         self.label_7.setMaximumSize(QtCore.QSize(110, 50))
         self.label_7.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "color: rgb(223, 0, 0);")
+        self.label_7.setFrameShape(QtWidgets.QFrame.Shape.Box)
         self.label_7.setObjectName("label_7")
         self.horizontalLayout_5.addWidget(self.label_7)
         self.lineEditXeploai = QtWidgets.QLineEdit(parent=self.frame_4)
-        self.lineEditXeploai.setMaximumSize(QtCore.QSize(80, 50))
+        self.lineEditXeploai.setMaximumSize(QtCore.QSize(110, 50))
         self.lineEditXeploai.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.lineEditXeploai.setObjectName("lineEditXeploai")
         self.horizontalLayout_5.addWidget(self.lineEditXeploai)
@@ -529,14 +530,28 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.groupBox_4)
         self.groupBox_5 = QtWidgets.QGroupBox(parent=self.groupBox)
         self.groupBox_5.setObjectName("groupBox_5")
-        self.verticalLayout_8 = QtWidgets.QVBoxLayout(self.groupBox_5)
-        self.verticalLayout_8.setObjectName("verticalLayout_8")
+        self.gridLayout_4 = QtWidgets.QGridLayout(self.groupBox_5)
+        self.gridLayout_4.setObjectName("gridLayout_4")
         self.lineEditTimmon = QtWidgets.QLineEdit(parent=self.groupBox_5)
         self.lineEditTimmon.setStyleSheet("\n"
 "font: 12pt \"Palatino Linotype\";\n"
 "background-color: rgb(255, 255, 255);")
         self.lineEditTimmon.setObjectName("lineEditTimmon")
-        self.verticalLayout_8.addWidget(self.lineEditTimmon)
+        self.gridLayout_4.addWidget(self.lineEditTimmon, 0, 0, 1, 1)
+        self.pushButtonSearchSubject = QtWidgets.QPushButton(parent=self.groupBox_5)
+        font = QtGui.QFont()
+        font.setFamily("Palatino Linotype")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.pushButtonSearchSubject.setFont(font)
+        self.pushButtonSearchSubject.setStyleSheet("font: 12pt \"Palatino Linotype\";\n"
+"background-color: rgb(255, 250, 217);")
+        self.pushButtonSearchSubject.setIcon(icon)
+        self.pushButtonSearchSubject.setIconSize(QtCore.QSize(40, 40))
+        self.pushButtonSearchSubject.setObjectName("pushButtonSearchSubject")
+        self.gridLayout_4.addWidget(self.pushButtonSearchSubject, 0, 1, 1, 1)
         self.tableWidgetthongtinmon = QtWidgets.QTableWidget(parent=self.groupBox_5)
         self.tableWidgetthongtinmon.setStyleSheet("font: 75 12pt \"Palatino Linotype\";\n"
 "font: 75 12pt \"Palatino Linotype\";\n"
@@ -580,7 +595,7 @@ class Ui_MainWindow(object):
         item = QtWidgets.QTableWidgetItem()
         item.setTextAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.tableWidgetthongtinmon.setHorizontalHeaderItem(4, item)
-        self.verticalLayout_8.addWidget(self.tableWidgetthongtinmon)
+        self.gridLayout_4.addWidget(self.tableWidgetthongtinmon, 1, 0, 1, 2)
         self.horizontalLayout_9 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_9.setObjectName("horizontalLayout_9")
         self.pushButtonEdit = QtWidgets.QPushButton(parent=self.groupBox_5)
@@ -595,7 +610,7 @@ class Ui_MainWindow(object):
         self.pushButtonDelete.setIcon(icon5)
         self.pushButtonDelete.setObjectName("pushButtonDelete")
         self.horizontalLayout_9.addWidget(self.pushButtonDelete)
-        self.verticalLayout_8.addLayout(self.horizontalLayout_9)
+        self.gridLayout_4.addLayout(self.horizontalLayout_9, 2, 0, 1, 2)
         self.horizontalLayout_2.addWidget(self.groupBox_5)
         self.verticalLayout_4.addWidget(self.groupBox)
         self.verticalLayout_6.addLayout(self.verticalLayout_4)
@@ -787,7 +802,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 472, 764))
+        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 452, 562))
         self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
         self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_11.setObjectName("verticalLayout_11")
@@ -1019,6 +1034,7 @@ class Ui_MainWindow(object):
 "")
         self.comboBoxsapxep_2.setObjectName("comboBoxsapxep_2")
         self.comboBoxsapxep_2.addItem("")
+        self.comboBoxsapxep_2.setItemText(0, "")
         self.comboBoxsapxep_2.addItem("")
         self.comboBoxsapxep_2.addItem("")
         self.horizontalLayout_16.addWidget(self.comboBoxsapxep_2)
@@ -1036,6 +1052,7 @@ class Ui_MainWindow(object):
 "")
         self.comboBoxloc_2.setObjectName("comboBoxloc_2")
         self.comboBoxloc_2.addItem("")
+        self.comboBoxloc_2.setItemText(0, "")
         self.comboBoxloc_2.addItem("")
         self.comboBoxloc_2.addItem("")
         self.comboBoxloc_2.addItem("")
@@ -1401,7 +1418,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addWidget(self.stackedWidget)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1188, 18))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1188, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
@@ -1409,7 +1426,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -1456,6 +1473,7 @@ class Ui_MainWindow(object):
         self.pushButtonAddSubject.setText(_translate("MainWindow", "Add Subject"))
         self.groupBox_5.setTitle(_translate("MainWindow", "Subject List"))
         self.lineEditTimmon.setText(_translate("MainWindow", "Tìm kiếm môn học..."))
+        self.pushButtonSearchSubject.setText(_translate("MainWindow", "Search"))
         item = self.tableWidgetthongtinmon.verticalHeaderItem(0)
         item.setText(_translate("MainWindow", "Tên môn"))
         item = self.tableWidgetthongtinmon.verticalHeaderItem(1)
@@ -1508,10 +1526,8 @@ class Ui_MainWindow(object):
         self.label_tanggiam.setText(_translate("MainWindow", "Tăng 1.500.00đ so với tháng trước"))
         self.label_24.setText(_translate("MainWindow", "Total:"))
         self.lineEdittimkhoanchi_3.setPlaceholderText(_translate("MainWindow", "Tìm kiếm khoản chi..."))
-        self.comboBoxsapxep_2.setItemText(0, _translate("MainWindow", " "))
         self.comboBoxsapxep_2.setItemText(1, _translate("MainWindow", "Tăng dần"))
         self.comboBoxsapxep_2.setItemText(2, _translate("MainWindow", "Giảm dần"))
-        self.comboBoxloc_2.setItemText(0, _translate("MainWindow", " "))
         self.comboBoxloc_2.setItemText(1, _translate("MainWindow", "Ăn uống"))
         self.comboBoxloc_2.setItemText(2, _translate("MainWindow", "Giải trí"))
         self.comboBoxloc_2.setItemText(3, _translate("MainWindow", "Đi lại"))
@@ -1555,13 +1571,3 @@ class Ui_MainWindow(object):
         self.gpatrend_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt;\">GPA Trend:</span></p></body></html>"))
         self.topspending_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt;\">Top Spending:</span></p></body></html>"))
         self.number2_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">45%</span></p></body></html>"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec())

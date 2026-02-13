@@ -73,7 +73,7 @@ class MainWindowEx(Ui_MainWindow):
         self.pushButtonManageFinances.clicked.connect(self.process_managefinance)
         self.pushButtonViewCalendar.clicked.connect(self.process_calendar)
         self.pushButtonViewTask.clicked.connect(self.process_task)
-        #Phần của tab finance management
+        #Phần của tab task
         self.pushButtonNew.clicked.connect(self.processNew)
         self.pushButtonSave.clicked.connect(self.processSave)
         self.pushButtonDeleteTask.clicked.connect(self.processRemove)
@@ -94,14 +94,24 @@ class MainWindowEx(Ui_MainWindow):
         self.pushButtonsearch_3.clicked.connect(self.TAB3_PROCESS_RIGHT_TABLE)
         self.comboBoxsapxep_2.currentIndexChanged.connect(self.TAB3_PROCESS_RIGHT_TABLE)
         self.comboBoxloc_2.currentIndexChanged.connect(self.TAB3_PROCESS_RIGHT_TABLE)
-
+#########Tab overview
     def process_viewdetail(self):
-        gpa_text = self.lineEditGPA.text()
-        if gpa_text:
-            gpa_float = float(gpa_text)
-            self.labelGPA.setText(f"{gpa_float}")
-            n = (gpa_float / 4) * 10
-            self.labelGrade.setText(f"{n:.2f}")
+        total_credits = 0
+        total_weighted_score_10 = 0
+        for item in self.sub_manager.list:
+                credit = int(item.credit)
+                score_final = float(item.scoreFinal)
+                total_credits += credit
+                total_weighted_score_10 += (score_final * credit)
+        if total_credits > 0:
+            avgScore = total_weighted_score_10 / total_credits
+            gpa_4 = (avgScore/ 10) * 4
+
+            self.labelGPA.setText(f"{gpa_4:.2f}")
+            self.labelGrade.setText(f"{avgScore:.2f}")
+        else:
+            self.labelGPA.setText("0.00")
+            self.labelGrade.setText("Chưa có dữ liệu")
 
     def process_managefinance(self):
         total = self.label_total_3.text()
@@ -142,7 +152,7 @@ class MainWindowEx(Ui_MainWindow):
             self.labelTaskOverdue.setStyleSheet("color: red; font-weight: bold;")
         else:
             self.labelTaskOverdue.setStyleSheet("color: green;")
-#{ Phần của tab finance management
+#{ Phần của tab task scheduler
     def showTasksIntoQListWidget(self):
         self.listWidgetTask.clear()
         for index in range(self.tasks.size()):
@@ -386,7 +396,6 @@ class MainWindowEx(Ui_MainWindow):
             else:
                 QMessageBox.warning(self.MainWindow, "Lỗi", "Không tìm thấy môn học trong dữ liệu!")
 
-#} đóng phần tab finance management
 
 
 
