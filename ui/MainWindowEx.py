@@ -443,6 +443,7 @@ class MainWindowEx(Ui_MainWindow):
         if duong_dan:
             df.to_csv(duong_dan, index=False, encoding='utf-8-sig')
             QMessageBox.information(self, "Thành công", f"Đã xuất file tại:\n{duong_dan}")
+# Đóng phần insights}
 
 
 
