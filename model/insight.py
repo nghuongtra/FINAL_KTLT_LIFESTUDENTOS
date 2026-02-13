@@ -9,4 +9,4 @@ class Insight:
         self.top_spending = top_spending
         self.ngay_thang = ngay_thang
     def __str__(self):
-        return f"[{self.short_comment}] GPA: {self.gpa} | Tiền: {self.so_du}"
+        return f"[{self.ngay_thang}\t {self.tien_do}\t {self.so_du}\t {self.short_comment}]"
