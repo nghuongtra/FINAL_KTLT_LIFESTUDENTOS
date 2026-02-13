@@ -1548,6 +1548,11 @@ background-color: rgb(255, 255, 255);</string>
                      </item>
                      <item>
                       <property name="text">
+                       <string>Học tập</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
                        <string>Giải trí</string>
                       </property>
                      </item>
@@ -2066,7 +2071,7 @@ border-color: transparent;</string>
                         </font>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
+                        <string notr="true">background-color: rgb(255, 255, 127); /* Xóa nền trắng/mờ */
 font: 10pt &quot;Palatino Linotype&quot;;
 color: rgb(0, 0, 0);
 border: none;                 /* Xóa viền */    ; font-weight: bold;
@@ -2100,8 +2105,8 @@ border: none;                 /* Xóa viền */    ; font-weight: bold;
                        </property>
                        <property name="iconSize">
                         <size>
-                         <width>40</width>
-                         <height>40</height>
+                         <width>30</width>
+                         <height>30</height>
                         </size>
                        </property>
                       </widget>
@@ -2125,17 +2130,17 @@ border: none;                 /* Xóa viền */    ; font-weight: bold;
                        </property>
                        <item>
                         <property name="text">
-                         <string>1</string>
+                         <string> </string>
                         </property>
                        </item>
                        <item>
                         <property name="text">
-                         <string>2</string>
+                         <string>Tăng dần</string>
                         </property>
                        </item>
                        <item>
                         <property name="text">
-                         <string>3</string>
+                         <string>Giảm dần</string>
                         </property>
                        </item>
                       </widget>
@@ -2159,12 +2164,37 @@ border: none;                 /* Xóa viền */    ; font-weight: bold;
                        </property>
                        <item>
                         <property name="text">
-                         <string>1</string>
+                         <string> </string>
                         </property>
                        </item>
                        <item>
                         <property name="text">
-                         <string>2</string>
+                         <string>Ăn uống</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Giải trí</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Đi lại</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Học tập</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Mua sắm</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Sức khỏe</string>
                         </property>
                        </item>
                       </widget>

@@ -1,0 +1,58 @@
+[
+    {
+        "ngay": "12/02/2026",
+        "khoan_chi": "Mua giáo trình",
+        "so_tien": 150000,
+        "danh_muc": "Học tập",
+        "ghi_chu": "Sách TMĐT"
+    },
+    {
+        "ngay": "12/02/2026",
+        "khoan_chi": "Trà sữa",
+        "so_tien": 45000,
+        "danh_muc": "Ăn uống",
+        "ghi_chu": "Cùng nhóm"
+    },
+    {
+        "ngay": "12/02/2026",
+        "khoan_chi": "Ăn gà rán",
+        "so_tien": 145000,
+        "danh_muc": "Ăn uống",
+        "ghi_chu": ""
+    },
+    {
+        "ngay": "12/02/2026",
+        "khoan_chi": "Mua đồ makeup",
+        "so_tien": 1000000,
+        "danh_muc": "Mua sắm",
+        "ghi_chu": "Chanel, Dior"
+    },
+    {
+        "ngay": "13/02/2026",
+        "khoan_chi": "Đi khám dạ dày",
+        "so_tien": 500000,
+        "danh_muc": "Sức khỏe",
+        "ghi_chu": "Tái khám sau 2 tuần"
+    },
+    {
+        "ngay": "13/02/2026",
+        "khoan_chi": "Mua đồ nấu lẫu",
+        "so_tien": 300000,
+        "danh_muc": "Ăn uống",
+        "ghi_chu": "chung với nhóm bạn"
+    },
+    {
+        "ngay": "13/02/2026",
+        "khoan_chi": "Mua đồ chơi cho em",
+        "so_tien": 70000,
+        "danh_muc": "Mua sắm",
+        "ghi_chu": "Búp bê"
+    },
+    {
+        "ngay": "13/02/2026",
+        "khoan_chi": "Đổ xăng",
+        "so_tien": 50000,
+        "danh_muc": "Đi lại",
+        "ghi_chu": ""
+    }
+]
