@@ -256,12 +256,26 @@ class MainWindowEx(Ui_MainWindow):
             self.labelCountdown.setStyleSheet("color: blue; font-weight: bold;")
 #} đóng phần tab finance management
 
-<<<<<<< HEAD
-#{Mở phần ínsight
 
+#{Mở phần ínsight
     def kiem_tra_trang_hien_tai(self,index):
         if index == 4:
             self.updateinsight()
+
+    def update_tiendo_hoctap(self):
+        danh_sach_mon = self.adm_subject.list
+        tong_tin_chi_da_hoc = 0
+        for mon_hoc in danh_sach_mon:
+            try:
+                tong_tin_chi_da_hoc += mon_hoc.credit
+            except:
+                continue
+        Tong_tin_chi = 130
+        phan_tram = 0
+        if Tong_tin_chi > 0:
+            phan_tram = (tong_tin_chi_da_hoc / Tong_tin_chi) * 100
+        self.lineEdit_TienDo.setText(f"{phan_tram:.2f}%")
+
     def updateinsight(self):
         text_GPA=self.lineEditGPA.text()
         if text_GPA == '':
@@ -271,20 +285,55 @@ class MainWindowEx(Ui_MainWindow):
         else:
             GPA=float(text_GPA)
 
-        text_money=self.lineEditMoney.text()
+        text_money=self.current_balance.text()
         if text_money == '':
             QMessageBox.warning(self, "Thông báo", "Không có dữ liệu!\nVui lòng thử lại.")
             self.stackWidget.setCurrentIndex(2)
             return
         else:
             money=float(text_money)
-        text_ns = self.lineEdit_NganSach.text()
-        NGAN_SACH_BAN_DAU = float(text_ns)
-        if NGAN_SACH_BAN_DAU/3 <= money:
-            return baodong
+        text_money = self.current_balance.text()
+        clean_money = text_money.replace('.', '').replace(',', '').replace('VNĐ', '').replace('đ', '').strip()
+        money = float(clean_money) if clean_money else 0.0
 
-        tiendo=
-        self.lineEdit_TienDo.setText(tiendo)
+        # Lấy Chi tiêu Tháng này
+        text_chitieu = self.label_10.text()
+        clean_chitieu = text_chitieu.replace('.', '').replace(',', '').replace('VNĐ', '').replace('đ', '').strip()
+        chitieu_thang_nay = float(clean_chitieu) if clean_chitieu else 0.0
+
+        # --- TÍNH CHI TIÊU THÁNG TRƯỚC
+        adm_expense = Expenses()
+        adm_expense.load_json("datasets/expenses.json")
+        today = datetime.now()
+        # 2. Xác định tháng trước
+        if today.month == 1:
+            last_month = 12
+            last_year = today.year - 1
+        else:
+            last_month = today.month - 1
+            last_year = today.year
+
+        # 3.tính tổng tiền
+        chitieu_thang_truoc = 0
+        for item in adm_expense.items:
+            try:
+                # Giả sử ngày lưu dạng "dd/mm/yyyy"
+                # Nếu file json lưu dạng "yyyy-mm-dd" thì sửa lại format nhé
+                date_obj = datetime.strptime(item.ngay, "%d/%m/%Y")
+
+                if date_obj.month == last_month and date_obj.year == last_year:
+                    chitieu_thang_truoc += float(item.so_tien)
+            except:
+                continue  # Bỏ qua nếu lỗi định dạng ngày/tiền
+
+        # --- 3. LOGIC SO SÁNH "LỐ TAY" ---
+        bi_lo_tay = False
+        # Nếu chưa có dữ liệu tháng này (chitieu_thang_nay = 0) thì không tính là lố
+        if chitieu_thang_nay > 0:
+            chenh_lech = chitieu_thang_nay - chitieu_thang_truoc
+            # Lớn hơn 100k mới báo
+            if chenh_lech > 100000:
+                bi_lo_tay = True
 
         #Nhận xét
         ghichu=""
@@ -315,14 +364,14 @@ class MainWindowEx(Ui_MainWindow):
             "Giữ sức khỏe! Ngủ đủ giấc giúp não bộ hoạt động tối ưu."
         ]
             # 1. HỌC GIỎI +NHIỀU TIỀN
-        if GPA >= 3.2 and money >= baodong:
+        if GPA >= 3.2 and bi_lo_tay is True:
             nhanxet = "Xuất sắc! Con nhà người ta đây rồi: Học giỏi - Tài chính vững!"
             tips=random.choice(tip_hoctot)
             ghichu = "NOTE:AN TOÀN"
             self.shortcomment_2.setStyleSheet("background-color:green; color:white; font-weight:bold;")
 
             # 2. HỌC GIỎI (>=3.2) + HẾT TIỀN
-        elif GPA >= 3.2 and money < baodong:
+        elif GPA >= 3.2 and bi_lo_tay is False:
             nhanxet = "Học tốt nha! Mà xài tiền hơi lố rồi đó, coi chừng cuối tháng ăn mì gói."
             self.advice_2.setStyleSheet("background-color: yellow; color:black; font-weight:bold;")
             tips =random.choice(tip_tietkiem)+random.choice(tip_hoctot)
@@ -330,7 +379,7 @@ class MainWindowEx(Ui_MainWindow):
             self.shortcomment_2.setStyleSheet("background-color: orange; color:black; font-weight:bold;")
 
             # 3. HỌC KHÁ/TRUNG BÌNH (<3.2) + TIỀN NHIỀU
-        elif GPA < 3.2 and money >= baodong:
+        elif GPA < 3.2 and bi_lo_tay is True:
             nhanxet = "Tài chính rủng rỉnh nhưng việc học cần tập trung hơn nhé!"
             self.advice_2.setStyleSheet("background-color: yellow; color:black; font-weight:bold;")
             ghichu = "NOTE: CẢNH BÁO"
@@ -482,22 +531,6 @@ class MainWindowEx(Ui_MainWindow):
             df.to_csv(duong_dan, index=False, encoding='utf-8-sig')
             QMessageBox.information(self, "Thành công", f"Đã xuất file tại:\n{duong_dan}")
 # Đóng phần insights}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
-
 
     # ===================================================================
     # LOGIC RIÊNG CHO TAB 3: FINANCE MANAGEMENT

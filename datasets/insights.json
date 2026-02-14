@@ -1,0 +1,64 @@
+{
+    "insights": [
+        {
+            "gpa": 3.2,
+            "tien_do": "50%",
+            "so_du": 500000,
+            "short_comment": "An Toàn",
+            "advice": "Đã học giỏi lại còn qua lí tài chính tốt",
+            "tips": "Tự nấu ăn tại nhà để có thể tiết kiệm thêm tiền",
+            "top_spending": "shopping",
+            "ngay_thang": "2026-02-13"
+        },
+        {
+            "gpa": 3.4,
+            "tien_do": "60%",
+            "so_du": 200000,
+            "short_comment": "Cảnh báo",
+            "advice": "Học tốt nhưng tiêu tiền hơi quá tay nhe!",
+            "tips": "Hãy luôn đặt câu hỏi 'Thực sự mình có cần món đồ đó không?' trước khi mua.",
+            "top_spending": "xe cộ",
+            "ngay_thang": "2026-03-16"
+        },
+        {
+            "gpa": 3.5,
+            "tien_do": "70%",
+            "so_du": 100000,
+            "short_comment": "Cảnh báo",
+            "advice": "Học tốt nhưng tiêu tiền hơi quá tay nhe!",
+            "tips": "Dùng 1 tài khoản để tiêu – 1 tài khoản để tiết kiệm, đừng để chung.",
+            "top_spending": "mục đích khác",
+            "ngay_thang": "2026-04-06"
+        },
+        {
+            "gpa": 4.0,
+            "tien_do": "85%",
+            "so_du": 250000,
+            "short_comment": "An toàn",
+            "advice": "Quản lý chi tiêu khá ổn, tiếp tục duy trì phong độ này!",
+            "tips": "Có thể bắt đầu đầu tư nhỏ hoặc gửi tiết kiệm định kỳ.",
+            "top_spending": "shopping",
+            "ngay_thang": "2026-04-07"
+        },
+        {
+            "gpa": 2.8,
+            "tien_do": "45%",
+            "so_du": 500000,
+            "short_comment": "Báo động",
+            "advice": "Chi tiêu đang vượt mức kiểm soát, cần xem lại các khoản không cần thiết.",
+            "tips": "Ghi chép lại toàn bộ chi tiêu trong 7 ngày để biết tiền đang đi đâu.",
+            "top_spending": "đồ ăn thức uống",
+            "ngay_thang": "2026-04-08"
+        },
+        {
+            "gpa": 3.2,
+            "tien_do": "60%",
+            "so_du": 150000,
+            "short_comment": "An toàn",
+            "advice": "Tình hình tài chính tạm ổn nhưng vẫn có thể tối ưu thêm.",
+            "tips": "Đặt giới hạn chi tiêu tuần để tránh vượt ngân sách.",
+            "top_spending": "cải thiện thói quen",
+            "ngay_thang": "2026-04-09"
+        }
+    ]
+}
