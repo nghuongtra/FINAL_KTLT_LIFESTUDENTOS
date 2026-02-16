@@ -75,5 +75,12 @@
         "so_tien": 20000,
         "danh_muc": "Đi lại",
         "ghi_chu": ""
+    },
+    {
+        "ngay": "16/02/2026",
+        "khoan_chi": "Mua đồ chơi",
+        "so_tien": 2000000,
+        "danh_muc": "Giải trí",
+        "ghi_chu": ""
     }
 ]
