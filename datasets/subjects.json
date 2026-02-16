@@ -1,39 +1,46 @@
 {
     "subjects": [
         {
-            "Subname": "Toán cao cấp",
-            "credit": 4,
-            "scoreProcess": 9.0,
-            "scoreMidterm": 9.0,
-            "scoreFinal": 10.0
-        },
-        {
-            "Subname": "Lập trình hướng đối tượng",
-            "credit": 3,
-            "scoreProcess": 8.0,
-            "scoreMidterm": 7.0,
-            "scoreFinal": 9.0
-        },
-        {
-            "Subname": "Nền tảng công nghệ",
+            "Subname": "bền vững",
             "credit": 2,
-            "scoreProcess": 7.0,
+            "scoreProcess": 9.0,
             "scoreMidterm": 8.0,
             "scoreFinal": 9.0
         },
         {
-            "Subname": "Kinh tế vĩ mô",
+            "Subname": "kĩ thuật lập trình",
+            "credit": 3,
+            "scoreProcess": 8.0,
+            "scoreMidterm": 7.0,
+            "scoreFinal": 5.0
+        },
+        {
+            "Subname": "Nguyên lí kế toán",
             "credit": 3,
             "scoreProcess": 6.0,
-            "scoreMidterm": 7.0,
+            "scoreMidterm": 8.0,
             "scoreFinal": 8.0
         },
         {
-            "Subname": "Kinh tế vi mô",
+            "Subname": "Toán kinh tế",
+            "credit": 4,
+            "scoreProcess": 6.0,
+            "scoreMidterm": 8.0,
+            "scoreFinal": 7.0
+        },
+        {
+            "Subname": "Nền tảng hệ thống thông tin",
             "credit": 2,
-            "scoreProcess": 8.0,
-            "scoreMidterm": 9.0,
-            "scoreFinal": 9.0
+            "scoreProcess": 4.0,
+            "scoreMidterm": 4.0,
+            "scoreFinal": 5.0
+        },
+        {
+            "Subname": "Kinh tế chính trị",
+            "credit": "2",
+            "scoreProcess": "3",
+            "scoreMidterm": "4",
+            "scoreFinal": "5"
         }
     ]
 }

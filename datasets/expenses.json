@@ -54,5 +54,26 @@
         "so_tien": 50000,
         "danh_muc": "Đi lại",
         "ghi_chu": ""
+    },
+    {
+        "ngay": "15/02/2026",
+        "khoan_chi": "Đặt grab",
+        "so_tien": 15000,
+        "danh_muc": "Đi lại",
+        "ghi_chu": "bần cùng lắm mới đi đó"
+    },
+    {
+        "ngay": "15/02/2026",
+        "khoan_chi": "mua quần áo sắm tết",
+        "so_tien": 500000,
+        "danh_muc": "Mua sắm",
+        "ghi_chu": ""
+    },
+    {
+        "ngay": "15/02/2026",
+        "khoan_chi": "bắt xanh SM",
+        "so_tien": 20000,
+        "danh_muc": "Đi lại",
+        "ghi_chu": ""
     }
 ]

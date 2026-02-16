@@ -1,10 +1,18 @@
 from functools import partial
+import random
+import os
+import pandas as pd
+import json
 import datetime
 
 from PyQt6 import QtGui
 from PyQt6.QtCore import Qt, QDateTime
 from PyQt6.QtGui import QIcon, QColor
 from PyQt6.QtWidgets import QListWidgetItem, QMessageBox,QPushButton,QTableWidgetItem
+from PyQt6.QtGui import QPixmap
+from PyQt6.QtWidgets import QFileDialog
+
+
 
 from model.comingevents import Upcomingevents
 from model.task import Task
@@ -54,6 +62,8 @@ class MainWindowEx(Ui_MainWindow):
 
         #--- PHẦN IV: TÌM KIẾM, SẮP XẾP, LỌC ---
         self.TAB3_PROCESS_RIGHT_TABLE()
+#----- TAB 5------------------------------------------
+
 
     def show(self):
         self.MainWindow.show()
@@ -67,7 +77,7 @@ class MainWindowEx(Ui_MainWindow):
         self.pushButtonAcademic.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(1))
         self.pushButtonFinanceManagement.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(2))
         self.pushButtonTaskScheduler.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(3))
-        self.pushButtonInsights.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(4))
+        self.pushButtonInsights.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.pageInsight))
         #Overview
         self.pushButtonViewDetail.clicked.connect(self.process_viewdetail)
         self.pushButtonManageFinances.clicked.connect(self.process_managefinance)
@@ -94,6 +104,20 @@ class MainWindowEx(Ui_MainWindow):
         self.pushButtonsearch_3.clicked.connect(self.TAB3_PROCESS_RIGHT_TABLE)
         self.comboBoxsapxep_2.currentIndexChanged.connect(self.TAB3_PROCESS_RIGHT_TABLE)
         self.comboBoxloc_2.currentIndexChanged.connect(self.TAB3_PROCESS_RIGHT_TABLE)
+
+        # OVERSIGHT & INSIGHTS
+        self.pushButtonInsights.clicked.connect(self.updateinsight)
+        self.xuatfileexcel.clicked.connect(self.process_excel_csv)
+        if hasattr(self, 'lineEditInputGPA'):
+            self.lineEditInputGPA.setReadOnly(True)
+            self.lineEditInputGPA.setPlaceholderText("Đang tính...")
+        if hasattr(self, 'lineEditInputTienDo'):
+            self.lineEditInputTienDo.setPlaceholderText("Đang tính...")
+            self.lineEditInputTienDo.setReadOnly(True)
+        if hasattr(self, 'lineEditInputTienDo_2'):
+            self.lineEditInputTienDo_2.setPlaceholderText("Đang tính...")
+            self.lineEditInputTienDo_2.setReadOnly(True)
+
 #########Tab overview
     def process_viewdetail(self):
         total_credits = 0
@@ -549,3 +573,361 @@ class MainWindowEx(Ui_MainWindow):
             table.setItem(row_index,1,QTableWidgetItem(str(item.khoan_chi)))
             table.setItem(row_index,2,QTableWidgetItem("{:,}".format(item.so_tien)))
             table.setItem(row_index,3,QTableWidgetItem(str(item.danh_muc)))
+
+
+#=================================OVERSIGHT&INSIGHTS=======================================
+    # {Mở phần insight
+    ############################ XỬ LÍ LOGIC GPA ############################################
+    def kiem_tra_trang_hien_tai(self, index):
+        if self.stackedWidget.widget(index) == self.pageInsight:
+            try:
+                self.update_tiendo_hoctap()
+                self.updateinsight()
+            except Exception as e:
+                print(f"LỖI KHI CHUYỂN TAB INSIGHT: {e}")
+                import traceback
+                traceback.print_exc()
+
+    def update_tiendo_hoctap(self):
+        try:
+            if not hasattr(self, 'sub_manager'): return
+
+            danh_sach_mon = self.sub_manager.list
+            tong_tin_chi_da_hoc = 0
+            for mon_hoc in danh_sach_mon:
+                try:
+                    tong_tin_chi_da_hoc += float(mon_hoc.credit)
+                except:
+                    continue
+            Tong_tin_chi = 130
+            phan_tram = 0
+            if Tong_tin_chi > 0:
+                phan_tram = (tong_tin_chi_da_hoc / Tong_tin_chi) * 100
+
+            # Kiểm tra tồn tại widget trước khi gán
+            if hasattr(self, 'lineEdit_TienDo'):
+                self.lineEdit_TienDo.setText(f"{phan_tram:.2f}%")
+        except Exception as e:
+            print(f"Lỗi update_tiendo_hoctap: {e}")
+
+    def lay_tong_chi_tieu_thang(self, thang, nam):
+        tong = 0
+        if not hasattr(self, 'expense_manager'):
+            return 0
+
+        for item in self.expense_manager.items:
+            try:
+                date_obj = datetime.datetime.strptime(item.ngay, "%d/%m/%Y")
+                if date_obj.month == thang and date_obj.year == nam:
+                    tong += item.so_tien
+            except:
+                continue
+        return tong
+
+    def lay_gpa_ky_truoc(self):
+        try:
+            path = "../datasets/gpa_user.json"
+            if not os.path.exists(path): return 0.0
+
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                return float(data.get("gpa_ky_truoc", 0.0))
+        except:
+            return 0.0
+
+    def updateinsight(self):
+        try:
+            # =========================================================================
+            # PHẦN 1: TÍNH TOÁN GPA & TIẾN ĐỘ
+            # =========================================================================
+            tong_tin_chi_tich_luy = 0
+            tong_diem_tich_luy = 0.0
+
+            # 1.1 Quét danh sách môn học
+            if hasattr(self, 'sub_manager') and hasattr(self.sub_manager, 'list'):
+                for mon in self.sub_manager.list:
+                    try:
+                        tin_chi = float(mon.credit)
+                        diem_so = float(mon.scoreFinal)
+
+                        tong_tin_chi_tich_luy += tin_chi
+                        tong_diem_tich_luy += (diem_so * tin_chi)
+                    except (ValueError, AttributeError):
+                        continue
+
+            GPA = 0.0
+            if tong_tin_chi_tich_luy > 0:
+                GPA = tong_diem_tich_luy / tong_tin_chi_tich_luy
+
+            # Hiển thị GPA
+            if hasattr(self, 'lineEditInputGPA'):
+                self.lineEditInputGPA.setText(f"{GPA:.2f}")
+                self.lineEditInputGPA.setReadOnly(True)
+            if hasattr(self, 'insight_GPA'):
+                self.insight_GPA.setText(f"{GPA:.2f}")
+                self.insight_GPA.setStyleSheet("color: #2c3e50; font-weight: bold;")
+
+            # 1.3 Tính & Hiển thị Tiến Độ
+            TONG_TIN_CHI_RA_TRUONG = 130
+            phan_tram_tiendo = 0.0
+
+            if tong_tin_chi_tich_luy > 0:
+                phan_tram_tiendo = (tong_tin_chi_tich_luy / TONG_TIN_CHI_RA_TRUONG) * 100
+
+            if phan_tram_tiendo > 100: phan_tram_tiendo = 100
+
+            text_tiendo = f"{phan_tram_tiendo:.2f}%"
+
+            if hasattr(self, 'lineEditInputTienDo'):
+                self.lineEditInputTienDo.setText(text_tiendo)
+                self.lineEditInputTienDo.setReadOnly(True)
+
+            # 1.4 So sánh GPA cũ
+            gpa_cu = self.lay_gpa_ky_truoc()
+            chenh_lech = GPA - gpa_cu
+
+            if hasattr(self, 'number1_2'):
+                if chenh_lech >= 0:
+                    self.number1_2.setText(f"+{chenh_lech:.2f}")
+                    self.number1_2.setStyleSheet("color: green; font-weight: bold;")
+                else:
+                    self.number1_2.setText(f"-{chenh_lech:.2f}")
+                    self.number1_2.setStyleSheet("color: red; font-weight: bold;")
+
+# ========================================================================================
+            # 2. XỬ LÝ TÀI CHÍNH
+# ==========================================================================================
+            so_du = 0.0
+            if hasattr(self, 'balance_manager'):
+                so_du = self.balance_manager.current_balance
+
+            if hasattr(self, 'lineEditInputTienDo_2'):
+                self.lineEditInputTienDo_2.setText(f"{so_du:,.0f} VNĐ")
+                self.lineEditInputTienDo_2.setReadOnly(True)
+
+# ==============================TOP SPENDING ====================================
+            danh_sach_chi_tieu = {}
+            tong_tien_chi_tieu = 0.0
+            if hasattr(self, 'expense_manager') and hasattr(self.expense_manager, 'items'):
+                for item in self.expense_manager.items:
+                    try:
+                        muc_dich = item.danh_muc.lower() if item.danh_muc else "khác"
+                        # Xử lý số tiền
+                        tien_str = str(item.so_tien).replace(',', '').replace('.', '')
+                        try:
+                            tien = float(item.so_tien)
+                        except:
+                            if tien_str.isdigit():
+                                tien = float(tien_str)
+                            else:
+                                continue
+
+                        if muc_dich in danh_sach_chi_tieu:
+                            danh_sach_chi_tieu[muc_dich] += tien
+                        else:
+                            danh_sach_chi_tieu[muc_dich] = tien
+
+                        tong_tien_chi_tieu += tien
+                    except:
+                        continue
+
+# =======================HIỂN THỊ ICON TOP SPENDING ====================================
+            if danh_sach_chi_tieu:
+                top_cat = max(danh_sach_chi_tieu, key=danh_sach_chi_tieu.get)
+                top_val = danh_sach_chi_tieu[top_cat]
+                # Tính phần trăm
+                percent = (top_val / tong_tien_chi_tieu) * 100 if tong_tien_chi_tieu > 0 else 0
+                if hasattr(self, 'number2_2'):
+                    self.number2_2.setText(f"{percent:.1f}%")
+
+                top_cat = top_cat.lower()
+                icon_map = {
+                    "mua sắm": "../images/pic_shopping.png",
+                    "ăn uống": "../images/pic_food.png",
+                    "học tập": "../images/pic_books.png",
+                    "đi lại": "../images/pic_car.png",
+                    "chi tiêu cho mục đích khác": "../images/pic_other.png"
+                }
+
+                icon = icon_map.get(top_cat, "../images/pic_other.png")
+
+                self.topspending.setPixmap(QPixmap(icon))
+                self.topspending.setScaledContents(True)
+
+#  ===================  PHẦN TIPS & LỜI KHUYÊN ============================================
+            # Tính toán xem có bị lố tay không????
+            today = datetime.datetime.now()
+            chitieu_thang_nay = tong_tien_chi_tieu
+
+            # Logic: Tiêu quá 2 trăm/tháng là cảnh báo
+            bi_lo_tay = False
+            if chitieu_thang_nay > 2000000:
+                bi_lo_tay = True
+
+            tip_tietkiem = ["Dùng 1 tài khoản để tiêu – 1 tài khoản để tiết kiệm, đừng để chung.",
+                        "Bạn hãy thử đặt hạn mức chi tiêu theo tuần thay vì hạn mức chi tiêu theo tháng để dễ kiểm soát hơn nhé!",
+                        "Hãy luôn đặt câu hỏi Thực sự mình có cần món đồ đó không? trước khi mua. Cho bản thân từ 24-48h để suy nghĩ về món đồ đó bạn nhé!",
+                        " Ưu tiên nấu ăn tại gia, vừa an toàn mà còn tiết kiệm bạn nhé!",
+                        "Ghi lại mọi khoản chi nhỏ, vì chính trà sữa, ship đồ ăn mới là “thủ phạm” hao tiền nhất đấy!!!!"]
+
+            tip_caithien = [
+            "GPA không như mong muốn thường do chưa hiểu bản chất và có lỗ hổng kiến thức. Hãy xem lại kiến thức cơ bản và củng cố nhé.",
+            "Thử phương pháp Pomodoro: Học 25p - Nghỉ 5p để tránh mệt mỏi.",
+            "Đừng ngại hỏi giảng viên hoặc bạn bè khi chưa hiểu bài.",
+            "Tắt thông báo điện thoại khi học. Sự tập trung là chìa khóa!",
+            "Hãy ghi chú lại bài giảng bằng sơ đồ tư duy Mindmap.",
+            "Đừng học vẹt! Hãy cố gắng hiểu bản chất vấn đề bạn nheee!!!",
+            "Review lại bài ngay sau khi học xong giúp nhớ lâu gấp 3 lần!!",
+            "Hãy thử phương pháp Feynman!! Đừng chỉ hiểu trong đầu. Hãy thử nói ra giống như giảng bài cho 1 ai đó để bạn nắm kiến thức vững hơn nhé!!"
+        ]
+            tip_hoctot = ["Phong độ rất tốt! Hãy duy trì thói quen hiện tại.",
+                      "Đừng quên cân bằng giữa học và chơi để tránh Burn-out.",
+                      "Bạn có thể bắt đầu tìm kiếm học bổng hoặc tham gia nghiên cứu.",
+                      "Hãy thử thách bản thân với các môn học khó hơn.",
+                      "Chia sẻ kiến thức với bạn bè cũng là cách để ôn bài hiệu quả.",
+                      "Chuẩn bị sớm cho các chứng chỉ ngoại ngữ hoặc kỹ năng mềm.",
+                      "Giữ sức khỏe! Ngủ đủ giấc giúp não bộ hoạt động tối ưu."
+                      ]
+
+            nhanxet = ""
+            tips = ""
+            ghichu = ""
+
+            # Logic chọn lời khuyên
+            if GPA >= 8.0 and bi_lo_tay is False:
+                nhanxet = "Xuất sắc! Học giỏi - Tài chính vững!"
+                tips = random.choice(tip_hoctot)
+                ghichu = "NOTE: AN TOÀN"
+                if hasattr(self, 'shortcomment_2'): self.shortcomment_2.setStyleSheet(
+                    "background-color:green; color:white; font-weight:bold;")
+
+            elif GPA >= 8.0 and bi_lo_tay is True:
+                nhanxet = "Học tốt! Nhưng xài tiền hơi lố."
+                if hasattr(self, 'advice_2'): self.advice_2.setStyleSheet(
+                    "background-color: yellow; color:black; font-weight:bold;")
+                tips = random.choice(tip_tietkiem)
+                ghichu = "NOTE: CẢNH BÁO"
+                if hasattr(self, 'shortcomment_2'): self.shortcomment_2.setStyleSheet(
+                    "background-color: orange; color:black; font-weight:bold;")
+
+            elif GPA < 8.0 and bi_lo_tay is False:
+                if GPA >= 6.5:
+                    nhanxet = "Học lực Khá! Tài chính ổn."
+                else:
+                    nhanxet = "Cảnh báo học tập!"
+                if hasattr(self, 'advice_2'): self.advice_2.setStyleSheet(
+                    "background-color: yellow; color:black; font-weight:bold;")
+                tips = random.choice(tip_caithien)
+                ghichu = "NOTE: CẢNH BÁO"
+                if hasattr(self, 'shortcomment_2'): self.shortcomment_2.setStyleSheet(
+                    "background-color: orange; color:black; font-weight:bold;")
+
+            elif GPA < 8.0 and bi_lo_tay is True:
+                nhanxet = "BÁO ĐỘNG ĐỎ: Tiền và Điểm đều nguy cấp!"
+                if hasattr(self, 'advice_2'): self.advice_2.setStyleSheet(
+                    "background-color: red; color:white; font-weight:bold;")
+                tips = random.choice(tip_tietkiem)
+                ghichu = "NOTE: BÁO ĐỘNG ĐỎ"
+                if hasattr(self, 'shortcomment_2'): self.shortcomment_2.setStyleSheet(
+                    "background-color:red; color:white; font-weight:bold;")
+
+            # In kết quả
+            if hasattr(self, 'advice_2'): self.advice_2.setText(nhanxet)
+            if hasattr(self, 'input_tips'): self.input_tips.setText(tips)
+            if hasattr(self, 'shortcomment_2'): self.shortcomment_2.setText(ghichu)
+
+        except Exception as e:
+            print(f"LỖI NGHIÊM TRỌNG TRONG UPDATE INSIGHT: {e}")
+            import traceback
+            traceback.print_exc()
+
+        ####################### XỬ LÍ XUẤT FILE EXCEL/CSV##############################
+
+    def process_excel_csv(self):
+        try:
+            msgBox = QMessageBox(self.MainWindow)
+            msgBox.setIcon(QMessageBox.Icon.Question)
+            msgBox.setWindowTitle("Xuất danh sách")
+            msgBox.setText("Bạn muốn xuất file theo định dạng nào?")
+
+            btn_excel = msgBox.addButton("EXCEL", QMessageBox.ButtonRole.ActionRole)
+            btn_csv = msgBox.addButton("CSV", QMessageBox.ButtonRole.ActionRole)
+            btn_cancel = msgBox.addButton("Hủy", QMessageBox.ButtonRole.RejectRole)
+
+            msgBox.exec()
+
+            clicked_button = msgBox.clickedButton()
+
+            # Kiểm tra click
+            if clicked_button == btn_excel:
+                self.export_to_excel()
+            elif clicked_button == btn_csv:
+                self.export_to_csv()
+
+        except Exception as e:
+            print(f"Lỗi tại process_excel_csv: {e}")
+
+    def lay_du_lieu_oversight(self):
+        try:
+            val_gpa = self.lineEditInputGPA.text() if hasattr(self, 'lineEditInputGPA') else ""
+            val_tiendo = self.lineEditInputTienDo.text() if hasattr(self, 'lineEditInputTienDo') else ""
+            val_vitien = self.lineEditInputTienDo_2.text() if hasattr(self, 'lineEditInputTienDo_2') else ""
+            val_nhanxet = self.advice_2.text() if hasattr(self, 'advice_2') else ""
+            val_tips = self.input_tips.text() if hasattr(self, 'input_tips') else ""
+
+            data = {
+                "HẠNG MỤC": ["GPA Hiện tại", "Tiến độ học tập", "Số dư tài chính", "Đánh giá tổng quan",
+                             "Lời khuyên chi tiết"],
+                "KẾT QUẢ": [val_gpa, val_tiendo, val_vitien, val_nhanxet, val_tips]
+            }
+            return pd.DataFrame(data)
+        except Exception as e:
+            QMessageBox.critical(self.MainWindow, "Lỗi Dữ Liệu", f"Không thể lấy dữ liệu: {e}")
+            return None
+
+    def export_to_excel(self):
+        try:
+            df = self.lay_du_lieu_oversight()
+            if df is None: return
+
+            # Tạo tên file
+            thoi_gian = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+            ten_mac_dinh = f"BaoCao_Oversight_{thoi_gian}.xlsx"
+            duong_dan, _ = QFileDialog.getSaveFileName(
+                self.MainWindow,
+                "Lưu file Excel",
+                ten_mac_dinh,
+                "Excel Files (*.xlsx)"
+            )
+
+            if duong_dan:
+                df.to_excel(duong_dan, index=False, engine='openpyxl')
+                QMessageBox.information(self.MainWindow, "Thành công", f"Đã xuất file tại:\n{duong_dan}")
+
+        except ImportError:
+            QMessageBox.warning(self.MainWindow, "Thiếu thư viện", "Vui lòng cài đặt thư viện: pip install openpyxl")
+        except Exception as e:
+            QMessageBox.warning(self.MainWindow, "Lỗi", f"Không thể xuất file Excel:\n{e}")
+
+    def export_to_csv(self):
+        try:
+            df = self.lay_du_lieu_oversight()
+            if df is None: return
+
+            thoi_gian = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+            ten_mac_dinh = f"BaoCao_Oversight_{thoi_gian}.csv"
+            duong_dan, _ = QFileDialog.getSaveFileName(
+                self.MainWindow,
+                "Lưu file CSV",
+                ten_mac_dinh,
+                "CSV Files (*.csv)"
+            )
+
+            if duong_dan:
+                # utf-8-sig giúp mở trong Excel không bị lỗi font tiếng Việt
+                df.to_csv(duong_dan, index=False, encoding='utf-8-sig')
+                QMessageBox.information(self.MainWindow, "Thành công", f"Đã xuất file tại:\n{duong_dan}")
+
+        except Exception as e:
+            QMessageBox.warning(self.MainWindow, "Lỗi", f"Không thể xuất file CSV:\n{e}")
+# Đóng phần insights }

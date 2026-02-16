@@ -3,19 +3,10 @@ from model.mycollections import MyCollections
 import json
 
 
-
-
-
-
-
-
 class Subjects(MyCollections):
   def __init__(self, filename="subjects.json"):
       super().__init__()  # Khởi tạo lớp cha MyCollections
       self.filename = filename
-
-
-
 
   def export_json(self, filename=None):
       if filename: self.filename = filename
