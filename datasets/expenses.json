@@ -77,10 +77,18 @@
         "ghi_chu": ""
     },
     {
+<<<<<<< HEAD
         "ngay": "22/02/2026",
         "khoan_chi": "jollibee",
         "so_tien": 145000,
         "danh_muc": "Ăn uống",
         "ghi_chu": "jollibee mãi đỉnhhh"
+=======
+        "ngay": "16/02/2026",
+        "khoan_chi": "Mua đồ chơi",
+        "so_tien": 2000000,
+        "danh_muc": "Giải trí",
+        "ghi_chu": ""
+>>>>>>> 6d3b4836ad780cb59f8edefb77599fd3149505fd
     }
 ]
