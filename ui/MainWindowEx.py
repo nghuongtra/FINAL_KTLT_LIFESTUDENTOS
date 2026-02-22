@@ -29,6 +29,11 @@ from model.expense import Expense
 from model.expenses import Expenses
 from model.balances import Balances
 
+#import của tab insights
+import io
+import matplotlib.pyplot as plt
+from PyQt6.QtGui import QImage, QPixmap
+
 
 from PyQt6.QtWidgets import QMessageBox
 from PyQt6.QtWidgets import QTableWidgetItem
@@ -635,6 +640,29 @@ class MainWindowEx(Ui_MainWindow):
         except:
             return 0.0
 
+    def ve_bieu_do_trend(self, gpa_cu, gpa_hien_tai):
+            fig, ax = plt.subplots(figsize=(4, 1.5), dpi=100)
+            fig.patch.set_alpha(0)
+            ax.set_facecolor('none')
+            x = ["Kỳ trước", "Kỳ này"]
+            y = [gpa_cu, gpa_hien_tai]
+            color = '#27ae60' if gpa_hien_tai >= gpa_cu else '#c0392b'
+            ax.plot(x, y, marker='o', color=color, linewidth=2.5, markersize=8)
+            ax.spines['top'].set_visible(False)
+            ax.spines['right'].set_visible(False)
+            ax.spines['bottom'].set_visible(False)
+            ax.spines['left'].set_visible(False)
+            ax.get_yaxis().set_visible(False)
+            for i, v in enumerate(y):
+                ax.text(i, v + 0.1, f"{v:.2f}", ha='center', color=color, fontweight='bold')
+            plt.tight_layout()
+            buf = io.BytesIO()
+            plt.savefig(buf, format='png', transparent=True)
+            plt.close(fig)
+            buf.seek(0)
+            qimg = QImage.fromData(buf.getvalue())
+            return QPixmap.fromImage(qimg)
+
     def updateinsight(self):
         try:
             # =========================================================================
@@ -663,9 +691,8 @@ class MainWindowEx(Ui_MainWindow):
             if hasattr(self, 'lineEditInputGPA'):
                 self.lineEditInputGPA.setText(f"{GPA:.2f}")
                 self.lineEditInputGPA.setReadOnly(True)
-            if hasattr(self, 'insight_GPA'):
-                self.insight_GPA.setText(f"{GPA:.2f}")
-                self.insight_GPA.setStyleSheet("color: #2c3e50; font-weight: bold;")
+            if hasattr(self, 'insight_GPA_3'):
+                self.insight_GPA_3.setText(f"{GPA:.2f}")
 
             # 1.3 Tính & Hiển thị Tiến Độ
             TONG_TIN_CHI_RA_TRUONG = 130
@@ -686,15 +713,23 @@ class MainWindowEx(Ui_MainWindow):
             gpa_cu = self.lay_gpa_ky_truoc()
             chenh_lech = GPA - gpa_cu
 
-            if hasattr(self, 'number1_2'):
+            if hasattr(self, 'number1_4') and hasattr(self, 'insight_GPA_3'):
                 if chenh_lech >= 0:
-                    self.number1_2.setText(f"+{chenh_lech:.2f}")
-                    self.number1_2.setStyleSheet("color: green; font-weight: bold;")
+                    text = f"↑ Tăng {chenh_lech:.2f} so với kỳ trước"
+                    color = "green"
                 else:
-                    self.number1_2.setText(f"-{chenh_lech:.2f}")
-                    self.number1_2.setStyleSheet("color: red; font-weight: bold;")
+                    text = f"↓ Giảm {abs(chenh_lech):.2f} so với kỳ trước"
+                    color = "red"
 
-# ========================================================================================
+                self.number1_4.setText(text)
+                self.number1_4.setStyleSheet(f"color: {color}; font-weight: bold;")
+            if hasattr(self, 'label_linechart'):
+                pixmap_chart = self.ve_bieu_do_trend(gpa_cu, GPA)
+                self.label_linechart.setPixmap(pixmap_chart)
+                self.label_linechart.setScaledContents(True)
+                self.label_linechart.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+            # ========================================================================================
             # 2. XỬ LÝ TÀI CHÍNH
 # ==========================================================================================
             so_du = 0.0
@@ -737,8 +772,8 @@ class MainWindowEx(Ui_MainWindow):
                 top_val = danh_sach_chi_tieu[top_cat]
                 # Tính phần trăm
                 percent = (top_val / tong_tien_chi_tieu) * 100 if tong_tien_chi_tieu > 0 else 0
-                if hasattr(self, 'number2_2'):
-                    self.number2_2.setText(f"{percent:.1f}%")
+                if hasattr(self, 'number2_6'):
+                    self.number2_6.setText(f"{percent:.1f}%")
 
                 top_cat = top_cat.lower()
                 icon_map = {
@@ -751,8 +786,8 @@ class MainWindowEx(Ui_MainWindow):
 
                 icon = icon_map.get(top_cat, "../images/pic_other.png")
 
-                self.topspending.setPixmap(QPixmap(icon))
-                self.topspending.setScaledContents(True)
+                self.topspending_1.setPixmap(QPixmap(icon))
+                self.topspending_1.setScaledContents(True)
 
 #  ===================  PHẦN TIPS & LỜI KHUYÊN ============================================
             # Tính toán xem có bị lố tay không????

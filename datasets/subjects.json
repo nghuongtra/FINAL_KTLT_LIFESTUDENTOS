@@ -37,10 +37,10 @@
         },
         {
             "Subname": "Kinh tế chính trị",
-            "credit": "2",
-            "scoreProcess": "3",
-            "scoreMidterm": "4",
-            "scoreFinal": "5"
+            "credit": 2,
+            "scoreProcess": 3.0,
+            "scoreMidterm": 4.0,
+            "scoreFinal": 5.0
         }
     ]
 }
