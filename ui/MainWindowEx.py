@@ -848,7 +848,7 @@ class MainWindowEx(Ui_MainWindow):
                 tips = random.choice(tip_tietkiem)
                 ghichu = "NOTE: CẢNH BÁO"
                 if hasattr(self, 'shortcomment_2'): self.shortcomment_2.setStyleSheet(
-                    "background-color:#77DD77; color:black; font-weight:bold;")
+                    "background-color:#FFCAA1; color:black; font-weight:bold;")
 
             elif GPA < 8.0 and bi_lo_tay is False:
                 if GPA >= 6.5:
@@ -860,7 +860,7 @@ class MainWindowEx(Ui_MainWindow):
                 tips = random.choice(tip_caithien)
                 ghichu = "NOTE: CẢNH BÁO"
                 if hasattr(self, 'shortcomment_2'): self.shortcomment_2.setStyleSheet(
-                    "background-color:#77DD77; color:black; font-weight:bold;")
+                    "background-color:#FFCAA1; color:black; font-weight:bold;")
 
             elif GPA < 8.0 and bi_lo_tay is True:
                 nhanxet = "BÁO ĐỘNG ĐỎ: Tiền và Điểm đều nguy cấp!"

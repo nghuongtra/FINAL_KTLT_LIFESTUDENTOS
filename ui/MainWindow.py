@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(971, 1029)
+        MainWindow.resize(1097, 1029)
         MainWindow.setStyleSheet("background-color: rgb(250, 247, 238);")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setStyleSheet("#centralwidget {border-image: url(:/nen/images/anh.jpg);}")
@@ -785,7 +785,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 127, 95))
+        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 437, 645))
         self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
         self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_11.setObjectName("verticalLayout_11")
@@ -1247,6 +1247,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_22.addLayout(self.verticalLayout_20)
         self.verticalLayout_21 = QtWidgets.QVBoxLayout()
         self.verticalLayout_21.setObjectName("verticalLayout_21")
+        self.verticalLayout_22.addLayout(self.verticalLayout_21)
         self.frame_3 = QtWidgets.QFrame(parent=self.pageInsight)
         self.frame_3.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_3.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
@@ -1338,18 +1339,6 @@ class Ui_MainWindow(object):
         self.frame_9.setObjectName("frame_9")
         self.gridLayout_12 = QtWidgets.QGridLayout(self.frame_9)
         self.gridLayout_12.setObjectName("gridLayout_12")
-        self.advice_2 = QtWidgets.QLabel(parent=self.frame_9)
-        self.advice_2.setStyleSheet("font: 10pt \"Palatino Linotype\";\n"
-"color: rgb(255, 255, 255);\n"
-"background-color: rgb(0, 85, 127);")
-        self.advice_2.setObjectName("advice_2")
-        self.gridLayout_12.addWidget(self.advice_2, 1, 0, 1, 2)
-        self.insight_2 = QtWidgets.QLabel(parent=self.frame_9)
-        self.insight_2.setStyleSheet("font: 11pt \"Palatino Linotype\";\n"
-"background-color:transparent;")
-        self.insight_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.insight_2.setObjectName("insight_2")
-        self.gridLayout_12.addWidget(self.insight_2, 0, 0, 1, 2)
         self.input_tips = QtWidgets.QLabel(parent=self.frame_9)
         self.input_tips.setStyleSheet("#input_tips{\n"
 " background-color: #FFFACD;\n"
@@ -1359,7 +1348,7 @@ class Ui_MainWindow(object):
 "    padding: 5px;           \n"
 "}")
         self.input_tips.setObjectName("input_tips")
-        self.gridLayout_12.addWidget(self.input_tips, 5, 0, 1, 2)
+        self.gridLayout_12.addWidget(self.input_tips, 6, 0, 1, 2)
         self.gpa_sta_2 = QtWidgets.QFrame(parent=self.frame_9)
         self.gpa_sta_2.setStyleSheet("font: 8pt \"Palatino Linotype\";\n"
 "background-color: rgb(255, 255, 255);")
@@ -1367,7 +1356,7 @@ class Ui_MainWindow(object):
         self.gpa_sta_2.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.gpa_sta_2.setObjectName("gpa_sta_2")
         self.number1_2 = QtWidgets.QLabel(parent=self.gpa_sta_2)
-        self.number1_2.setGeometry(QtCore.QRect(60, 150, 56, 34))
+        self.number1_2.setGeometry(QtCore.QRect(50, 130, 56, 34))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(8)
@@ -1422,7 +1411,7 @@ class Ui_MainWindow(object):
         self.topspending_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.topspending_2.setObjectName("topspending_2")
         self.number2_2 = QtWidgets.QLabel(parent=self.money_sta_2)
-        self.number2_2.setGeometry(QtCore.QRect(50, 150, 53, 34))
+        self.number2_2.setGeometry(QtCore.QRect(50, 130, 53, 34))
         self.number2_2.setStyleSheet("font: 8pt \"Palatino Linotype\";")
         self.number2_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.number2_2.setObjectName("number2_2")
@@ -1430,16 +1419,42 @@ class Ui_MainWindow(object):
         self.topspending.setGeometry(QtCore.QRect(10, 30, 151, 111))
         self.topspending.setObjectName("topspending")
         self.gridLayout_12.addWidget(self.money_sta_2, 2, 1, 3, 1)
+        self.advice_2 = QtWidgets.QLabel(parent=self.frame_9)
+        self.advice_2.setStyleSheet("font: 10pt \"Palatino Linotype\";\n"
+"color: rgb(255, 255, 255);\n"
+"background-color: rgb(0, 85, 127);")
+        self.advice_2.setObjectName("advice_2")
+        self.gridLayout_12.addWidget(self.advice_2, 1, 0, 1, 2)
+        self.insight_2 = QtWidgets.QLabel(parent=self.frame_9)
+        self.insight_2.setStyleSheet("font: 11pt \"Palatino Linotype\";\n"
+"background-color:transparent;")
+        self.insight_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.insight_2.setObjectName("insight_2")
+        self.gridLayout_12.addWidget(self.insight_2, 0, 0, 1, 2)
+        self.pushButton = QtWidgets.QPushButton(parent=self.frame_9)
+        self.pushButton.setStyleSheet("\n"
+"    background-color: rgba(255, 250, 225, 180);\n"
+"    border: 2px solid rgba(255, 250, 225, 180); /* Viền cùng màu nền, không trong suốt */\n"
+"    border-radius: 15px; /* Bo cong 15px */\n"
+"    color: #AF6E4E;\n"
+"    font-weight: bold;\n"
+"    font-size: 10pt;\n"
+"")
+        icon8 = QtGui.QIcon()
+        icon8.addPixmap(QtGui.QPixmap("../../../Downloads/19381096_6082664-removebg-preview.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButton.setIcon(icon8)
+        self.pushButton.setIconSize(QtCore.QSize(25, 15))
+        self.pushButton.setObjectName("pushButton")
+        self.gridLayout_12.addWidget(self.pushButton, 5, 0, 1, 2)
         self.horizontalLayout_13.addWidget(self.frame_9)
-        self.verticalLayout_21.addWidget(self.frame_3)
-        self.verticalLayout_22.addLayout(self.verticalLayout_21)
+        self.verticalLayout_22.addWidget(self.frame_3)
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.verticalLayout_22.addItem(spacerItem)
         self.stackedWidget.addWidget(self.pageInsight)
         self.verticalLayout_3.addWidget(self.stackedWidget)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 971, 18))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1097, 18))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
@@ -1447,7 +1462,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(4)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -1577,8 +1592,6 @@ class Ui_MainWindow(object):
         self.vi_2.setText(_translate("MainWindow", "Ví tiền:"))
         self.shortcomment_2.setText(_translate("MainWindow", "NOTE: An toàn"))
         self.xuatfileexcel.setText(_translate("MainWindow", "Xuất file Excel/CSV danh sách "))
-        self.advice_2.setText(_translate("MainWindow", " Học tốt nha! Mà xài tiền hơi lố rồi"))
-        self.insight_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:11pt; font-weight:600;\">INSIGHT</span></p></body></html>"))
         self.input_tips.setText(_translate("MainWindow", "......."))
         self.number1_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">+0.2</span></p></body></html>"))
         self.gpatrend_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">GPA Trend:</span></p></body></html>"))
@@ -1586,3 +1599,6 @@ class Ui_MainWindow(object):
         self.topspending_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:11pt; font-weight:600;\">Top Spending:</span></p></body></html>"))
         self.number2_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">45%</span></p></body></html>"))
         self.topspending.setText(_translate("MainWindow", "olala"))
+        self.advice_2.setText(_translate("MainWindow", " Học tốt nha! Mà xài tiền hơi lố rồi"))
+        self.insight_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:11pt; font-weight:600;\">INSIGHT</span></p></body></html>"))
+        self.pushButton.setText(_translate("MainWindow", "TIPS HÀNH ĐỘNG"))
