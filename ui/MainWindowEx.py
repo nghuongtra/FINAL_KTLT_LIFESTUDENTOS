@@ -787,8 +787,8 @@ class MainWindowEx(Ui_MainWindow):
 
                 icon = icon_map.get(top_cat)
 
-                self.topspending_1.setPixmap(QPixmap(icon))
-                self.topspending_1.setScaledContents(True)
+                self.topspending.setPixmap(QPixmap(icon))
+                self.topspending.setScaledContents(True)
 
 #  ===================  PHẦN TIPS & LỜI KHUYÊN ============================================
             # Tính toán xem có bị lố tay không????
@@ -832,19 +832,21 @@ class MainWindowEx(Ui_MainWindow):
             # Logic chọn lời khuyên
             if GPA >= 8.0 and bi_lo_tay is False:
                 nhanxet = "Xuất sắc! Học giỏi - Tài chính vững!"
+                if hasattr(self, 'advice_2'): self.advice_2.setStyleSheet(
+                    "background-color:#63A693; color:black; font-weight:bold;")
                 tips = random.choice(tip_hoctot)
                 ghichu = "NOTE: AN TOÀN"
                 if hasattr(self, 'shortcomment_2'): self.shortcomment_2.setStyleSheet(
-                    "background-color:green; color:white; font-weight:bold;")
+                    "background-color:#63A693; color:white; font-weight:bold;")
 
             elif GPA >= 8.0 and bi_lo_tay is True:
                 nhanxet = "Học tốt! Nhưng xài tiền hơi lố."
                 if hasattr(self, 'advice_2'): self.advice_2.setStyleSheet(
-                    "background-color: yellow; color:black; font-weight:bold;")
+                    "background-color:#FDFD96; color:black; font-weight:bold;")
                 tips = random.choice(tip_tietkiem)
                 ghichu = "NOTE: CẢNH BÁO"
                 if hasattr(self, 'shortcomment_2'): self.shortcomment_2.setStyleSheet(
-                    "background-color: orange; color:black; font-weight:bold;")
+                    "background-color:#77DD77; color:black; font-weight:bold;")
 
             elif GPA < 8.0 and bi_lo_tay is False:
                 if GPA >= 6.5:
@@ -852,20 +854,20 @@ class MainWindowEx(Ui_MainWindow):
                 else:
                     nhanxet = "Cảnh báo học tập!"
                 if hasattr(self, 'advice_2'): self.advice_2.setStyleSheet(
-                    "background-color: yellow; color:black; font-weight:bold;")
+                    "background-color:#FDFD96; color:black; font-weight:bold;")
                 tips = random.choice(tip_caithien)
                 ghichu = "NOTE: CẢNH BÁO"
                 if hasattr(self, 'shortcomment_2'): self.shortcomment_2.setStyleSheet(
-                    "background-color: orange; color:black; font-weight:bold;")
+                    "background-color:#77DD77; color:black; font-weight:bold;")
 
             elif GPA < 8.0 and bi_lo_tay is True:
                 nhanxet = "BÁO ĐỘNG ĐỎ: Tiền và Điểm đều nguy cấp!"
                 if hasattr(self, 'advice_2'): self.advice_2.setStyleSheet(
-                    "background-color: red; color:white; font-weight:bold;")
+                    "background-color:#FF6961; color:white; font-weight:bold;")
                 tips = random.choice(tip_tietkiem)
                 ghichu = "NOTE: BÁO ĐỘNG ĐỎ"
                 if hasattr(self, 'shortcomment_2'): self.shortcomment_2.setStyleSheet(
-                    "background-color:red; color:white; font-weight:bold;")
+                    "background-color:#FF6961; color:white; font-weight:bold;")
 
             # In kết quả
             if hasattr(self, 'advice_2'): self.advice_2.setText(nhanxet)

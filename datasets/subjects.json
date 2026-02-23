@@ -8,13 +8,6 @@
             "scoreFinal": 9.0
         },
         {
-            "Subname": "kĩ thuật lập trình",
-            "credit": 3,
-            "scoreProcess": 8.0,
-            "scoreMidterm": 7.0,
-            "scoreFinal": 5.0
-        },
-        {
             "Subname": "Nguyên lí kế toán",
             "credit": 3,
             "scoreProcess": 6.0,
@@ -29,18 +22,25 @@
             "scoreFinal": 7.0
         },
         {
-            "Subname": "Nền tảng hệ thống thông tin",
-            "credit": 2,
-            "scoreProcess": 4.0,
-            "scoreMidterm": 4.0,
-            "scoreFinal": 5.0
+            "Subname": "Kinh tế chính trị",
+            "credit": "2",
+            "scoreProcess": "9",
+            "scoreMidterm": "9",
+            "scoreFinal": "9"
         },
         {
-            "Subname": "Kinh tế chính trị",
-            "credit": 2,
-            "scoreProcess": 3.0,
-            "scoreMidterm": 4.0,
-            "scoreFinal": 5.0
+            "Subname": "Nền tảng hệ thống thông tin",
+            "credit": "2",
+            "scoreProcess": "9",
+            "scoreMidterm": "9",
+            "scoreFinal": "10"
+        },
+        {
+            "Subname": "kĩ thuật lập trình",
+            "credit": "3",
+            "scoreProcess": "8.0",
+            "scoreMidterm": "7.0",
+            "scoreFinal": "9"
         }
     ]
 }
