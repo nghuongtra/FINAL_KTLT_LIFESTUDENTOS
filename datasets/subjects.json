@@ -1,13 +1,6 @@
 {
     "subjects": [
         {
-            "Subname": "bền vững",
-            "credit": 2,
-            "scoreProcess": 9.0,
-            "scoreMidterm": 8.0,
-            "scoreFinal": 9.0
-        },
-        {
             "Subname": "Nguyên lí kế toán",
             "credit": 3,
             "scoreProcess": 6.0,
@@ -23,24 +16,24 @@
         },
         {
             "Subname": "Kinh tế chính trị",
-            "credit": "2",
-            "scoreProcess": "9",
-            "scoreMidterm": "9",
-            "scoreFinal": "9"
+            "credit": 2,
+            "scoreProcess": 9.0,
+            "scoreMidterm": 9.0,
+            "scoreFinal": 9.0
         },
         {
             "Subname": "Nền tảng hệ thống thông tin",
-            "credit": "2",
-            "scoreProcess": "9",
-            "scoreMidterm": "9",
-            "scoreFinal": "10"
+            "credit": 2,
+            "scoreProcess": 9.0,
+            "scoreMidterm": 9.0,
+            "scoreFinal": 10.0
         },
         {
             "Subname": "kĩ thuật lập trình",
-            "credit": "3",
-            "scoreProcess": "8.0",
-            "scoreMidterm": "7.0",
-            "scoreFinal": "9"
+            "credit": 3,
+            "scoreProcess": 9.0,
+            "scoreMidterm": 7.0,
+            "scoreFinal": 9.0
         }
     ]
 }

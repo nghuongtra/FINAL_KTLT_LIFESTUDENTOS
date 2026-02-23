@@ -5,7 +5,7 @@ import pandas as pd
 import json
 import datetime
 
-from PyQt6 import QtGui
+from PyQt6 import QtGui, QtWidgets
 from PyQt6.QtCore import Qt, QDateTime
 from PyQt6.QtGui import QIcon, QColor
 from PyQt6.QtWidgets import QListWidgetItem, QMessageBox,QPushButton,QTableWidgetItem
@@ -102,6 +102,9 @@ class MainWindowEx(Ui_MainWindow):
         self.pushButtonEdit.clicked.connect(self.process_edit_subject)
         self.pushButtonDelete.clicked.connect(self.process_delete_subject)
         self.tableWidgetthongtinmon.itemSelectionChanged.connect(self.process_selection)
+        # Để ngăn chặn sửa dữ liệu trực tiếp trên bảng
+        self.tableWidgetthongtinmon.setEditTriggers(QtWidgets.QAbstractItemView.EditTrigger.NoEditTriggers)
+        self.lineEditTimmon.textChanged.connect(self.search_subject)
 
         #TAB 3: FINANCE MANAGEMENT.
         self.pushButtonAddExpense.clicked.connect(self.TAB3_PROCESS_ADD) #PHẦN I
@@ -309,10 +312,8 @@ class MainWindowEx(Ui_MainWindow):
         qt = float(self.ProcessLineEdit.text() or 0)
         gk = float(self.MidtermLineEdit.text() or 0)
         ck = float(self.FinalLineEdit.text() or 0)
-
-        # Tạo đối tượng tạm để tính toán
+        # Tạo đối tượng tạm thời để tính toán
         temp_sub = Subject(ten, tin_chi, qt, gk, ck)
-
         # Hiển thị kết quả lên giao diện
         self.lineEditGPA.setText(str(temp_sub.tinh_diem_gpa()))
         self.lineEditXeploai.setText(temp_sub.tinh_xep_loai())
@@ -326,7 +327,7 @@ class MainWindowEx(Ui_MainWindow):
         if Subname == "":
             QMessageBox.warning(self.MainWindow, "Lỗi", "Tên môn không được để trống!")
             return
-        # 1. Kiểm tra xem môn này đã có chưa
+        # Kiểm tra môn này đã có chưa
         if self.sub_manager.find_item(Subname) is not None:
             QMessageBox.warning(self.MainWindow, "Lỗi",
                                 f"Môn '{Subname}' đã tồn tại! Vui lòng dùng nút Edit")
@@ -337,7 +338,6 @@ class MainWindowEx(Ui_MainWindow):
             self.FinalLineEdit.setText("")
             self.NameLineEdit.setFocus()
             return
-
         # Lưu file và cập nhật bảng
         item = Subject(Subname, credit, process, midterm, final)
         self.sub_manager.add_item(item)
@@ -365,32 +365,36 @@ class MainWindowEx(Ui_MainWindow):
         selected_row = self.tableWidgetthongtinmon.currentRow()
         if selected_row < 0:
             return
+        try:
+            Subname = self.tableWidgetthongtinmon.item(selected_row, 0).text()
+            credit = self.tableWidgetthongtinmon.item(selected_row, 1).text()
+            scoreProcess = self.tableWidgetthongtinmon.item(selected_row, 2).text()
+            scoreMidterm = self.tableWidgetthongtinmon.item(selected_row, 3).text()
+            scoreFinal = self.tableWidgetthongtinmon.item(selected_row, 4).text()
 
-        item = self.sub_manager.list[selected_row]
-        self.NameLineEdit.setText(str(item.Subname))
-        self.CreditLineEdit.setText(str(item.credit))
-        self.ProcessLineEdit.setText(str(item.scoreProcess))
-        self.MidtermLineEdit.setText(str(item.scoreMidterm))
-        self.FinalLineEdit.setText(str(item.scoreFinal))
-        self.lineEditGPA.setText("")
-        self.lineEditXeploai.setText("")
+            self.NameLineEdit.setText(Subname)
+            self.CreditLineEdit.setText(str(credit))
+            self.ProcessLineEdit.setText(str(scoreProcess))
+            self.MidtermLineEdit.setText(str(scoreMidterm))
+            self.FinalLineEdit.setText(str(scoreFinal))
+            self.lineEditGPA.setText("")
+            self.lineEditXeploai.setText("")
+        except AttributeError: # Phòng trường hợp ô trống
+            pass
 
     def process_edit_subject(self):
         Subname = self.NameLineEdit.text()
         if Subname == "":
             QMessageBox.warning(self.MainWindow, "Lỗi", "Vui lòng chọn môn cần sửa!")
             return
-
-        # 1. Tìm môn học trong danh sách dựa theo tên
-        # (Lưu ý: Tên môn coi như là ID, không được sửa tên ở đây)
+        # Tìm môn học trong danh sách dựa theo tên
         existing_sub = self.sub_manager.find_item(Subname)
-
         if existing_sub is None:
             QMessageBox.warning(self.MainWindow, "Lỗi",
-                                f"Không tìm thấy môn '{Subname}' để sửa! Vui lòng dùng nút Thêm (Add).")
+                                f"Không tìm thấy môn '{Subname}' để sửa! Vui lòng dùng nút Add (Thêm).")
             return
 
-        # 2. Cập nhật thông tin mới vào đối tượng tìm thấy
+        # Cập nhật thông tin mới vào đối tượng tìm thấy
         try:
             existing_sub.credit = int(self.CreditLineEdit.text() or 0)
             existing_sub.scoreProcess = float(self.ProcessLineEdit.text() or 0)
@@ -399,8 +403,7 @@ class MainWindowEx(Ui_MainWindow):
         except ValueError:
             QMessageBox.warning(self.MainWindow, "Lỗi", "Số liệu nhập vào không hợp lệ!")
             return
-
-        # 3. Lưu file và cập nhật bảng
+        # Lưu file và cập nhật bảng
         self.sub_manager.export_json()
         self.display_subjects()
         QMessageBox.information(self.MainWindow, "Thông báo", f"Đã cập nhật thông tin môn {Subname}!")
@@ -418,14 +421,27 @@ class MainWindowEx(Ui_MainWindow):
         if dlg == QMessageBox.StandardButton.Yes:
             ret = self.sub_manager.delete_item(Subname)
             if ret:
-                # Làm mới giao diện
                 self.sub_manager.delete_item(Subname)
                 self.display_subjects()
                 QMessageBox.information(self.MainWindow, "Thông báo", "Đã xóa thành công!")
             else:
                 QMessageBox.warning(self.MainWindow, "Lỗi", "Không tìm thấy môn học trong dữ liệu!")
 
-
+    def search_subject(self):
+        # Lấy từ khóa từ ô nhập liệu và chuyển về chữ thường để tìm chính xác hơn
+        keyword = self.lineEditTimmon.text().strip().lower()
+        # Xóa sạch bảng hiện tại
+        self.tableWidgetthongtinmon.setRowCount(0)
+        # Lọc và hiển thị; Duyệt qua danh sách môn học
+        for item in self.sub_manager.list:
+            if keyword in item.Subname.lower():
+                row_index = self.tableWidgetthongtinmon.rowCount()
+                self.tableWidgetthongtinmon.insertRow(row_index)
+                self.tableWidgetthongtinmon.setItem(row_index, 0, QTableWidgetItem(str(item.Subname)))
+                self.tableWidgetthongtinmon.setItem(row_index, 1, QTableWidgetItem(str(item.credit)))
+                self.tableWidgetthongtinmon.setItem(row_index, 2, QTableWidgetItem(str(item.scoreProcess)))
+                self.tableWidgetthongtinmon.setItem(row_index, 3, QTableWidgetItem(str(item.scoreMidterm)))
+                self.tableWidgetthongtinmon.setItem(row_index, 4, QTableWidgetItem(str(item.scoreFinal)))
 
 
     # ===================================================================
