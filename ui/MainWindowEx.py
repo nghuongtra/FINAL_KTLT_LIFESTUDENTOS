@@ -800,21 +800,23 @@ class MainWindowEx(Ui_MainWindow):
             if chitieu_thang_nay > 200000:
                 bi_lo_tay = True
 
-            tip_tietkiem = ["Dùng 1 tài khoản để tiêu – 1 tài khoản để tiết kiệm, đừng để chung.",
-                        "Bạn hãy thử đặt hạn mức chi tiêu theo tuần thay vì hạn mức chi tiêu theo tháng để dễ kiểm soát hơn nhé!",
-                        "Hãy luôn đặt câu hỏi Thực sự mình có cần món đồ đó không? trước khi mua. Cho bản thân từ 24-48h để suy nghĩ về món đồ đó bạn nhé!",
-                        " Ưu tiên nấu ăn tại gia, vừa an toàn mà còn tiết kiệm bạn nhé!",
-                        "Ghi lại mọi khoản chi nhỏ, vì chính trà sữa, ship đồ ăn mới là “thủ phạm” hao tiền nhất đấy!!!!"]
+            tip_tietkiem = ["Tách riêng 2 ví: 1 Tiêu dùng - 1 Tiết kiệm. Đừng để chung!",
+                        "Chia nhỏ ngân sách: Đặt hạn mức theo Tuần thay vì Tháng.",
+                        "Quy tắc 24h: Tự hỏi bản thân cần hay muốn? và chờ 1-2 ngày trước khi mua.",
+                        " Ưu tiên cơm nhà: Vừa an toàn, sạch sẽ lại vừa tiết kiệm.",
+                        "Ghi chép chi vặt: Trà sữa, ship đồ ăn chính là thủ phạm gây cháy túi!",
+                            "Đừng quên quyền năng thẻ Sinh Viên: Giảm giá khắp mọi nơi!",
+                            "Quẹt thẻ thì sướng, trả tiền mặt mới thấy xót. Hãy dùng tiền mặt!"]
 
             tip_caithien = [
-            "GPA không như mong muốn thường do chưa hiểu bản chất và có lỗ hổng kiến thức. Hãy xem lại kiến thức cơ bản và củng cố nhé.",
-            "Thử phương pháp Pomodoro: Học 25p - Nghỉ 5p để tránh mệt mỏi.",
+            "Hổng kiến thức khiến GPA thấp. Hãy ôn lại cơ bản ngay!",
+            "Thử Pomodoro: 25 phút Học - 5 phút Nghỉ.",
             "Đừng ngại hỏi giảng viên hoặc bạn bè khi chưa hiểu bài.",
-            "Tắt thông báo điện thoại khi học. Sự tập trung là chìa khóa!",
-            "Hãy ghi chú lại bài giảng bằng sơ đồ tư duy Mindmap.",
-            "Đừng học vẹt! Hãy cố gắng hiểu bản chất vấn đề bạn nheee!!!",
+            "Tập trung tuyệt đối: Tắt thông báo điện thoại khi đang học.",
+            "Ghi chép thông minh: Sử dụng sơ đồ tư duy (Mindmap) để hệ thống bài học.",
+            "Đừng học vẹt! Hãy hiểu rõ bản chất vấn đề!!",
             "Review lại bài ngay sau khi học xong giúp nhớ lâu gấp 3 lần!!",
-            "Hãy thử phương pháp Feynman!! Đừng chỉ hiểu trong đầu. Hãy thử nói ra giống như giảng bài cho 1 ai đó để bạn nắm kiến thức vững hơn nhé!!"
+            "Phương pháp Feynman: Thử giảng lại kiến thức cho người khác để hiểu sâu hơn!"
         ]
             tip_hoctot = ["Phong độ rất tốt! Hãy duy trì thói quen hiện tại.",
                       "Đừng quên cân bằng giữa học và chơi để tránh Burn-out.",

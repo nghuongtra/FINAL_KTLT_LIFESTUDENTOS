@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>971</width>
+    <width>1097</width>
     <height>1029</height>
    </rect>
   </property>
@@ -99,7 +99,7 @@ background-color: rgb(255, 255, 255);</string>
 background-color:transparent</string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="pageOverview">
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -1723,8 +1723,8 @@ border: none;                 /* Xóa viền */   </string>
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>127</width>
-                        <height>95</height>
+                        <width>437</width>
+                        <height>645</height>
                        </rect>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -2619,400 +2619,426 @@ color: rgb(130, 114, 188);</string>
          </layout>
         </item>
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout_21">
-          <item>
-           <widget class="QFrame" name="frame_3">
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_13">
-             <item>
-              <widget class="QFrame" name="frame_6">
-               <property name="maximumSize">
-                <size>
-                 <width>800</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font: 75 14pt &quot;Palatino Linotype&quot;;
+         <layout class="QVBoxLayout" name="verticalLayout_21"/>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_3">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_13">
+           <item>
+            <widget class="QFrame" name="frame_6">
+             <property name="maximumSize">
+              <size>
+               <width>800</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 75 14pt &quot;Palatino Linotype&quot;;
 background-color:rgba(239, 225, 238,220);
 color: rgb(130, 114, 188);</string>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <layout class="QVBoxLayout" name="verticalLayout_24">
-                <item>
-                 <widget class="QFrame" name="left_card">
-                  <property name="styleSheet">
-                   <string notr="true">font: 8pt &quot;Palatino Linotype&quot;;
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_24">
+              <item>
+               <widget class="QFrame" name="left_card">
+                <property name="styleSheet">
+                 <string notr="true">font: 8pt &quot;Palatino Linotype&quot;;
 color: rgb(82, 65, 173);
 background-color:rgba(239, 225, 238,220);</string>
-                  </property>
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                  <layout class="QGridLayout" name="gridLayout_11">
-                   <item row="1" column="0">
-                    <widget class="QLabel" name="gpa_2">
-                     <property name="styleSheet">
-                      <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_11">
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="gpa_2">
+                   <property name="styleSheet">
+                    <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
 background-color:transparent;</string>
-                     </property>
-                     <property name="text">
-                      <string>GPA:</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="0" colspan="2">
-                    <widget class="QLabel" name="label_20">
-                     <property name="styleSheet">
-                      <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
+                   </property>
+                   <property name="text">
+                    <string>GPA:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0" colspan="2">
+                  <widget class="QLabel" name="label_20">
+                   <property name="styleSheet">
+                    <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
 background-color:transparent;</string>
-                     </property>
-                     <property name="text">
-                      <string>OVERSIGHT</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="1">
-                    <widget class="QLineEdit" name="lineEditInputGPA">
-                     <property name="styleSheet">
-                      <string notr="true">font: 14pt &quot;Palatino Linotype&quot;;
+                   </property>
+                   <property name="text">
+                    <string>OVERSIGHT</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLineEdit" name="lineEditInputGPA">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;Palatino Linotype&quot;;
 background-color: rgb(255, 255, 255);</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="0">
-                    <widget class="QLabel" name="tiendo_2">
-                     <property name="styleSheet">
-                      <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="tiendo_2">
+                   <property name="styleSheet">
+                    <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
 background-color: transparent;</string>
-                     </property>
-                     <property name="text">
-                      <string>Tiến độ:</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="0">
-                    <widget class="QLabel" name="vi_2">
-                     <property name="styleSheet">
-                      <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
+                   </property>
+                   <property name="text">
+                    <string>Tiến độ:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="QLabel" name="vi_2">
+                   <property name="styleSheet">
+                    <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
 background-color:transparent;</string>
-                     </property>
-                     <property name="text">
-                      <string>Ví tiền:</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="1">
-                    <widget class="QLineEdit" name="lineEditInputTienDo_2">
-                     <property name="styleSheet">
-                      <string notr="true">font: 14pt &quot;Palatino Linotype&quot;;
+                   </property>
+                   <property name="text">
+                    <string>Ví tiền:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QLineEdit" name="lineEditInputTienDo_2">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;Palatino Linotype&quot;;
 background-color: rgb(255, 255, 255);</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="1">
-                    <widget class="QLineEdit" name="lineEditInputTienDo">
-                     <property name="styleSheet">
-                      <string notr="true">font: 14pt &quot;Palatino Linotype&quot;;
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QLineEdit" name="lineEditInputTienDo">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;Palatino Linotype&quot;;
 background-color: rgb(255, 255, 255);</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="4" column="0" colspan="2">
-                    <widget class="QLabel" name="shortcomment_2">
-                     <property name="styleSheet">
-                      <string notr="true">font: 12pt &quot;Palatino Linotype&quot;;
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="0" colspan="2">
+                  <widget class="QLabel" name="shortcomment_2">
+                   <property name="styleSheet">
+                    <string notr="true">font: 12pt &quot;Palatino Linotype&quot;;
 background-color: rgb(255, 255, 255);</string>
-                     </property>
-                     <property name="text">
-                      <string>NOTE: An toàn</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="5" column="0" colspan="2">
-                    <widget class="QPushButton" name="xuatfileexcel">
-                     <property name="styleSheet">
-                      <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
+                   </property>
+                   <property name="text">
+                    <string>NOTE: An toàn</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="0" colspan="2">
+                  <widget class="QPushButton" name="xuatfileexcel">
+                   <property name="styleSheet">
+                    <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
 background-color: rgb(255, 255, 255);</string>
-                     </property>
-                     <property name="text">
-                      <string>Xuất file Excel/CSV danh sách </string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLabel" name="label_19">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="pixmap">
-                   <pixmap resource="../resources.qrc">:/nen/images/nencuoi.png</pixmap>
-                  </property>
-                  <property name="scaledContents">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="QFrame" name="frame_9">
-               <property name="styleSheet">
-                <string notr="true">
+                   </property>
+                   <property name="text">
+                    <string>Xuất file Excel/CSV danh sách </string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_19">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap resource="../resources.qrc">:/nen/images/nencuoi.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_9">
+             <property name="styleSheet">
+              <string notr="true">
 
 font: 75 14pt &quot;Palatino Linotype&quot;;
 background-color:rgba(239, 225, 238,220);
 color: rgb(130, 114, 188);</string>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <layout class="QGridLayout" name="gridLayout_12">
-                <item row="1" column="0" colspan="2">
-                 <widget class="QLabel" name="advice_2">
-                  <property name="styleSheet">
-                   <string notr="true">font: 10pt &quot;Palatino Linotype&quot;;
-color: rgb(255, 255, 255);
-background-color: rgb(0, 85, 127);</string>
-                  </property>
-                  <property name="text">
-                   <string> Học tốt nha! Mà xài tiền hơi lố rồi</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="0" colspan="2">
-                 <widget class="QLabel" name="insight_2">
-                  <property name="styleSheet">
-                   <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
-background-color:transparent;</string>
-                  </property>
-                  <property name="text">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;INSIGHT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignCenter</set>
-                  </property>
-                 </widget>
-                </item>
-                <item row="5" column="0" colspan="2">
-                 <widget class="QLabel" name="input_tips">
-                  <property name="styleSheet">
-                   <string notr="true">#input_tips{
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_12">
+              <item row="6" column="0" colspan="2">
+               <widget class="QLabel" name="input_tips">
+                <property name="styleSheet">
+                 <string notr="true">#input_tips{
  background-color: #FFFACD;
     color:rgb(0, 0, 0);           
     border: 1px solid #FF69B4;
     border-radius: 5px;        
     padding: 5px;           
 }</string>
-                  </property>
-                  <property name="text">
-                   <string>.......</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="0" rowspan="3">
-                 <widget class="QFrame" name="gpa_sta_2">
-                  <property name="styleSheet">
-                   <string notr="true">font: 8pt &quot;Palatino Linotype&quot;;
+                </property>
+                <property name="text">
+                 <string>.......</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0" rowspan="3">
+               <widget class="QFrame" name="gpa_sta_2">
+                <property name="styleSheet">
+                 <string notr="true">font: 8pt &quot;Palatino Linotype&quot;;
 background-color: rgb(255, 255, 255);</string>
-                  </property>
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                  <widget class="QLabel" name="number1_2">
-                   <property name="geometry">
-                    <rect>
-                     <x>60</x>
-                     <y>150</y>
-                     <width>56</width>
-                     <height>34</height>
-                    </rect>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Palatino Linotype</family>
-                     <pointsize>8</pointsize>
-                     <weight>50</weight>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">font: 8pt &quot;Palatino Linotype&quot;;</string>
-                   </property>
-                   <property name="text">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;+0.2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                   </property>
-                  </widget>
-                  <widget class="QLabel" name="gpatrend_2">
-                   <property name="geometry">
-                    <rect>
-                     <x>0</x>
-                     <y>-10</y>
-                     <width>131</width>
-                     <height>51</height>
-                    </rect>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Palatino Linotype</family>
-                     <pointsize>10</pointsize>
-                     <weight>9</weight>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="number1_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>50</x>
+                   <y>130</y>
+                   <width>56</width>
+                   <height>34</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Palatino Linotype</family>
+                   <pointsize>8</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 8pt &quot;Palatino Linotype&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;+0.2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="gpatrend_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>-10</y>
+                   <width>131</width>
+                   <height>51</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Palatino Linotype</family>
+                   <pointsize>10</pointsize>
+                   <weight>9</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">
 font: 75 10pt &quot;Palatino Linotype&quot;;</string>
-                   </property>
-                   <property name="text">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;GPA Trend:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                  <widget class="QLabel" name="insight_GPA">
-                   <property name="geometry">
-                    <rect>
-                     <x>24</x>
-                     <y>40</y>
-                     <width>101</width>
-                     <height>91</height>
-                    </rect>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Palatino Linotype</family>
-                     <pointsize>20</pointsize>
-                     <weight>50</weight>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">font: 20pt &quot;Palatino Linotype&quot;;</string>
-                   </property>
-                   <property name="text">
-                    <string>olala</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </widget>
-                </item>
-                <item row="2" column="1" rowspan="3">
-                 <widget class="QFrame" name="money_sta_2">
-                  <property name="styleSheet">
-                   <string notr="true">font: 8pt &quot;Palatino Linotype&quot;;
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;GPA Trend:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="insight_GPA">
+                 <property name="geometry">
+                  <rect>
+                   <x>24</x>
+                   <y>40</y>
+                   <width>101</width>
+                   <height>91</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Palatino Linotype</family>
+                   <pointsize>20</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 20pt &quot;Palatino Linotype&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>olala</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+              <item row="2" column="1" rowspan="3">
+               <widget class="QFrame" name="money_sta_2">
+                <property name="styleSheet">
+                 <string notr="true">font: 8pt &quot;Palatino Linotype&quot;;
 background-color: rgb(255, 255, 255);</string>
-                  </property>
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                  <widget class="QLabel" name="topspending_2">
-                   <property name="geometry">
-                    <rect>
-                     <x>8</x>
-                     <y>-2</y>
-                     <width>121</width>
-                     <height>41</height>
-                    </rect>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Palatino Linotype</family>
-                     <pointsize>8</pointsize>
-                     <weight>50</weight>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">font: 8pt &quot;Palatino Linotype&quot;;</string>
-                   </property>
-                   <property name="text">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Top Spending:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                  <widget class="QLabel" name="number2_2">
-                   <property name="geometry">
-                    <rect>
-                     <x>50</x>
-                     <y>150</y>
-                     <width>53</width>
-                     <height>34</height>
-                    </rect>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">font: 8pt &quot;Palatino Linotype&quot;;</string>
-                   </property>
-                   <property name="text">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;45%&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                  <widget class="QLabel" name="topspending">
-                   <property name="geometry">
-                    <rect>
-                     <x>10</x>
-                     <y>30</y>
-                     <width>151</width>
-                     <height>111</height>
-                    </rect>
-                   </property>
-                   <property name="text">
-                    <string>olala</string>
-                   </property>
-                  </widget>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-         </layout>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="topspending_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>8</x>
+                   <y>-2</y>
+                   <width>121</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Palatino Linotype</family>
+                   <pointsize>8</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 8pt &quot;Palatino Linotype&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Top Spending:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="number2_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>50</x>
+                   <y>130</y>
+                   <width>53</width>
+                   <height>34</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 8pt &quot;Palatino Linotype&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;45%&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="topspending">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>30</y>
+                   <width>151</width>
+                   <height>111</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>olala</string>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+              <item row="1" column="0" colspan="2">
+               <widget class="QLabel" name="advice_2">
+                <property name="styleSheet">
+                 <string notr="true">font: 10pt &quot;Palatino Linotype&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(0, 85, 127);</string>
+                </property>
+                <property name="text">
+                 <string> Học tốt nha! Mà xài tiền hơi lố rồi</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0" colspan="2">
+               <widget class="QLabel" name="insight_2">
+                <property name="styleSheet">
+                 <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
+background-color:transparent;</string>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;INSIGHT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0" colspan="2">
+               <widget class="QPushButton" name="pushButton">
+                <property name="styleSheet">
+                 <string notr="true">
+    background-color: rgba(255, 250, 225, 180);
+    border: 2px solid rgba(255, 250, 225, 180); /* Viền cùng màu nền, không trong suốt */
+    border-radius: 15px; /* Bo cong 15px */
+    color: #AF6E4E;
+    font-weight: bold;
+    font-size: 10pt;
+</string>
+                </property>
+                <property name="text">
+                 <string>TIPS HÀNH ĐỘNG</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>../../../Downloads/19381096_6082664-removebg-preview.png</normaloff>../../../Downloads/19381096_6082664-removebg-preview.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>15</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </item>
         <item>
          <spacer name="verticalSpacer">
@@ -3038,7 +3064,7 @@ background-color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>971</width>
+     <width>1097</width>
      <height>18</height>
     </rect>
    </property>
