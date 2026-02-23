@@ -31,7 +31,7 @@ from model.balances import Balances
 
 #import của tab insights
 import io
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 from PyQt6.QtGui import QImage, QPixmap
 
 
@@ -691,8 +691,8 @@ class MainWindowEx(Ui_MainWindow):
             if hasattr(self, 'lineEditInputGPA'):
                 self.lineEditInputGPA.setText(f"{GPA:.2f}")
                 self.lineEditInputGPA.setReadOnly(True)
-            if hasattr(self, 'insight_GPA_3'):
-                self.insight_GPA_3.setText(f"{GPA:.2f}")
+            if hasattr(self, 'insight_GPA'):
+                self.insight_GPA.setText(f"{GPA:.2f}")
 
             # 1.3 Tính & Hiển thị Tiến Độ
             TONG_TIN_CHI_RA_TRUONG = 130
@@ -713,7 +713,7 @@ class MainWindowEx(Ui_MainWindow):
             gpa_cu = self.lay_gpa_ky_truoc()
             chenh_lech = GPA - gpa_cu
 
-            if hasattr(self, 'number1_4') and hasattr(self, 'insight_GPA_3'):
+            if hasattr(self, 'number1_2') and hasattr(self, 'insight_GPA'):
                 if chenh_lech >= 0:
                     text = f"↑ Tăng {chenh_lech:.2f} so với kỳ trước"
                     color = "green"
@@ -721,8 +721,8 @@ class MainWindowEx(Ui_MainWindow):
                     text = f"↓ Giảm {abs(chenh_lech):.2f} so với kỳ trước"
                     color = "red"
 
-                self.number1_4.setText(text)
-                self.number1_4.setStyleSheet(f"color: {color}; font-weight: bold;")
+                self.number1_2.setText(text)
+                self.number1_2.setStyleSheet(f"color: {color}; font-weight: bold; font-size: 12px;")
             if hasattr(self, 'label_linechart'):
                 pixmap_chart = self.ve_bieu_do_trend(gpa_cu, GPA)
                 self.label_linechart.setPixmap(pixmap_chart)
