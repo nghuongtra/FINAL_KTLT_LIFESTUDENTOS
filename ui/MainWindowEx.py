@@ -777,15 +777,14 @@ class MainWindowEx(Ui_MainWindow):
 
                 top_cat = top_cat.lower()
                 icon_map = {
-                    "mua sắm": "../images/mua_sam.png",
-                    "ăn uống": "../images/food.png",
-                    "học tập": "../images/study.png",
-                    "đi lại": "../images/xe_co.png",
-                    "giải trí": "../images/tro_choi.png",
-                    "sức khỏe":"../images/y_te.png"
+                    "mua sắm": "../images/pic_shopping.png",
+                    "ăn uống": "../images/pic_food.png",
+                    "học tập": "../images/pic_books.png",
+                    "đi lại": "../images/pic_car.png",
+                    "chi tiêu cho mục đích khác": "../images/pic_other.png"
                 }
 
-                icon = icon_map.get(top_cat)
+                icon = icon_map.get(top_cat, "../images/pic_other.png")
 
                 self.topspending.setPixmap(QPixmap(icon))
                 self.topspending.setScaledContents(True)
@@ -797,7 +796,7 @@ class MainWindowEx(Ui_MainWindow):
 
             # Logic: Tiêu quá 2 trăm/tháng là cảnh báo
             bi_lo_tay = False
-            if chitieu_thang_nay > 200000:
+            if chitieu_thang_nay > 2000000:
                 bi_lo_tay = True
 
             tip_tietkiem = ["Tách riêng 2 ví: 1 Tiêu dùng - 1 Tiết kiệm. Đừng để chung!",
