@@ -31,7 +31,7 @@ from model.balances import Balances
 
 #import của tab insights
 import io
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 from PyQt6.QtGui import QImage, QPixmap
 
 

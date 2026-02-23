@@ -15,13 +15,13 @@ class Subject:
 
    def tinh_xep_loai(self):
        dtb = self.tinh_diem_gpa()
-       if dtb >= 9.0: return "A+ (Xuất Sắc)"
-       elif 8.0 <= dtb < 9.0: return "A (Giỏi)"
-       elif 7.0 <= dtb < 8.0: return "B+ (Khá)"
-       elif 6.0 <= dtb < 7.0: return "B+ (Trung Bình Khá)"
-       elif 5.0 <= dtb < 6.0: return "C (Trung Bình)"
-       elif 4.0 <= dtb < 5.0: return "D+ (Yếu)"
-       else: return "F (Kém)"
+       if dtb >= 9.0: return "A+"
+       elif 8.0 <= dtb < 9.0: return "A"
+       elif 7.0 <= dtb < 8.0: return "B+"
+       elif 6.0 <= dtb < 7.0: return "B"
+       elif 5.0 <= dtb < 6.0: return "C"
+       elif 4.0 <= dtb < 5.0: return "D"
+       else: return "F"
 
 
    def __str__(self):
