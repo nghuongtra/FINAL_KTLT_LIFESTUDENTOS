@@ -50,6 +50,8 @@ class MainWindowEx(Ui_MainWindow):
         self.sub_manager = Subjects()
         self.sub_manager.import_json("../datasets/subjects.json")
         self.display_subjects()
+        self.lineEditTimmon.setText("")
+        self.lineEditTimmon.setPlaceholderText("Tìm kiếm môn học...")
 
 # --- TAB 3: Khởi tạo Finance ------------------
         # --- KHỞI TẠO DỮ LIỆU CHI TIÊU PHẦN I---

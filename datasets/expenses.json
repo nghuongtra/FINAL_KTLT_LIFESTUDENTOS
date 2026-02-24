@@ -82,5 +82,12 @@
         "so_tien": 145000,
         "danh_muc": "Ăn uống",
         "ghi_chu": "jollibee mãi đỉnhhh"
+    },
+    {
+        "ngay": "24/02/2026",
+        "khoan_chi": "mua thuốc",
+        "so_tien": 12000,
+        "danh_muc": "Sức khỏe",
+        "ghi_chu": ""
     }
 ]
