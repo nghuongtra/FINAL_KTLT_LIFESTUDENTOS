@@ -99,7 +99,7 @@ background-color: rgb(255, 255, 255);</string>
 background-color:transparent</string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="pageOverview">
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -2730,12 +2730,12 @@ background-color: rgb(255, 255, 255);</string>
                    </property>
                    <property name="icon">
                     <iconset>
-                     <normaloff>../../../Downloads/image-removebg-preview (8).png</normaloff>../../../Downloads/image-removebg-preview (8).png</iconset>
+                     <normaloff>../../../Downloads/xuat.png</normaloff>../../../Downloads/xuat.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
-                     <width>22</width>
-                     <height>16</height>
+                     <width>25</width>
+                     <height>20</height>
                     </size>
                    </property>
                   </widget>
@@ -2977,12 +2977,12 @@ background-color: rgb(0, 85, 127);</string>
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>../../../Downloads/19381096_6082664-removebg-preview.png</normaloff>../../../Downloads/19381096_6082664-removebg-preview.png</iconset>
+                  <normaloff>../../../Downloads/bongden.png</normaloff>../../../Downloads/bongden.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
                   <width>30</width>
-                  <height>21</height>
+                  <height>25</height>
                  </size>
                 </property>
                </widget>
