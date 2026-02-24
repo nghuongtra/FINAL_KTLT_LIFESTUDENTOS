@@ -928,7 +928,7 @@ class MainWindowEx(Ui_MainWindow):
             val_tiendo = self.lineEditInputTienDo.text() if hasattr(self, 'lineEditInputTienDo') else ""
             val_vitien = self.lineEditInputTienDo_2.text() if hasattr(self, 'lineEditInputTienDo_2') else ""
             val_nhanxet = self.advice_2.text() if hasattr(self, 'advice_2') else ""
-            val_tips = self.input_tips.text() if hasattr(self, 'input_tips') else ""
+            val_tips = self.input_tips.toPlainText() if hasattr(self, 'input_tips') else ""
 
             data = {
                 "HẠNG MỤC": ["GPA Hiện tại", "Tiến độ học tập", "Số dư tài chính", "Đánh giá tổng quan",
