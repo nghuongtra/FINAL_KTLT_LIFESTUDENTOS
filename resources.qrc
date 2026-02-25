@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="nen">
+    <file>images/bongden.png</file>
+    <file>images/xuat.png</file>
     <file>images/anh.jpg</file>
     <file>images/cute.png</file>
     <file>images/gau.png</file>

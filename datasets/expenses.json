@@ -89,5 +89,12 @@
         "so_tien": 12000,
         "danh_muc": "Sức khỏe",
         "ghi_chu": ""
+    },
+    {
+        "ngay": "24/02/2026",
+        "khoan_chi": "spicy box",
+        "so_tien": 150000,
+        "danh_muc": "Ăn uống",
+        "ghi_chu": "đóii"
     }
 ]

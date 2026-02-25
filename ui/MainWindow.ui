@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1111</width>
+    <width>1129</width>
     <height>1148</height>
    </rect>
   </property>
@@ -1693,8 +1693,8 @@ border: none;                 /* Xóa viền */   </string>
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>472</width>
-                        <height>764</height>
+                        <width>136</width>
+                        <height>141</height>
                        </rect>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -2729,8 +2729,8 @@ background-color: rgb(255, 255, 255);</string>
                     <string>Xuất file Excel/CSV danh sách </string>
                    </property>
                    <property name="icon">
-                    <iconset>
-                     <normaloff>../../../Downloads/xuat.png</normaloff>../../../Downloads/xuat.png</iconset>
+                    <iconset resource="../resources.qrc">
+                     <normaloff>:/nen/images/xuat.png</normaloff>:/nen/images/xuat.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -2976,8 +2976,8 @@ background-color: rgb(0, 85, 127);</string>
                  <string>TIPS HÀNH ĐỘNG</string>
                 </property>
                 <property name="icon">
-                 <iconset>
-                  <normaloff>../../../Downloads/bongden.png</normaloff>../../../Downloads/bongden.png</iconset>
+                 <iconset resource="../resources.qrc">
+                  <normaloff>:/nen/images/bongden.png</normaloff>:/nen/images/bongden.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -3068,8 +3068,8 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1111</width>
-     <height>18</height>
+     <width>1129</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>
