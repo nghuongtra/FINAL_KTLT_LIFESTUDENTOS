@@ -15,25 +15,18 @@
             "scoreFinal": 7.0
         },
         {
-            "Subname": "Kinh tế chính trị",
+            "Subname": "Kinh tế vi mô ",
             "credit": 2,
             "scoreProcess": 9.0,
             "scoreMidterm": 9.0,
             "scoreFinal": 9.0
         },
         {
-            "Subname": "Nền tảng hệ thống thông tin",
+            "Subname": "Kinh tế vi mô",
             "credit": 2,
-            "scoreProcess": 9.0,
+            "scoreProcess": 8.0,
             "scoreMidterm": 9.0,
-            "scoreFinal": 10.0
-        },
-        {
-            "Subname": "kĩ thuật lập trình",
-            "credit": "3",
-            "scoreProcess": "9.0",
-            "scoreMidterm": "7.0",
-            "scoreFinal": "9.0"
+            "scoreFinal": 9.0
         }
     ]
 }
