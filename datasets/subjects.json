@@ -30,10 +30,10 @@
         },
         {
             "Subname": "kĩ thuật lập trình",
-            "credit": 3,
-            "scoreProcess": 9.0,
-            "scoreMidterm": 7.0,
-            "scoreFinal": 9.0
+            "credit": "3",
+            "scoreProcess": "9.0",
+            "scoreMidterm": "7.0",
+            "scoreFinal": "9.0"
         }
     ]
 }

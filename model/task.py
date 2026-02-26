@@ -5,6 +5,5 @@ class Task:
         self.deadline=deadline
         self.deadlinetime=deadlinetime
         self.isfinish=isfinish
-        pass
     def __str__(self):
         return self.title

@@ -96,5 +96,12 @@
         "so_tien": 150000,
         "danh_muc": "Ăn uống",
         "ghi_chu": "đóii"
+    },
+    {
+        "ngay": "25/02/2026",
+        "khoan_chi": "mua chè",
+        "so_tien": 12000,
+        "danh_muc": "Ăn uống",
+        "ghi_chu": ""
     }
 ]

@@ -12,7 +12,7 @@
             "content": "Trộm chó về nựng",
             "deadline": "2026-07-05",
             "deadlinetime": "00:00:00",
-            "isfinish": false
+            "isfinish": true
         },
         {
             "title": "Lau bàn",
@@ -23,17 +23,24 @@
         },
         {
             "title": "Nộp bài ",
-            "content": "môn KTLT",
+            "content": "môn Toán kinh tế",
             "deadline": "2026-03-01",
             "deadlinetime": "12:00:00",
-            "isfinish": false
+            "isfinish": true
         },
         {
             "title": "làm bài tập",
             "content": "làm bài tập môn KTVM",
             "deadline": "2026-02-25",
             "deadlinetime": "00:00:00",
-            "isfinish": true
+            "isfinish": false
+        },
+        {
+            "title": "dọn nhà",
+            "content": "hdvhdv",
+            "deadline": "2028-02-27",
+            "deadlinetime": "00:00:00",
+            "isfinish": false
         }
     ]
 }
