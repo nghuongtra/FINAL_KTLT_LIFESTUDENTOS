@@ -27,4 +27,15 @@
     <file>images/maytinh.jpg</file>
     <file>images/nencuoi.png</file>
   </qresource>
+  <qresource prefix="login">
+    <file>images/anger.png</file>
+    <file>images/anhnendep.png</file>
+    <file>images/hihi.png</file>
+    <file>images/in.png</file>
+    <file>images/log.png</file>
+    <file>images/out.png</file>
+    <file>images/pass.png</file>
+    <file>images/thaotacne.png</file>
+    <file>images/thoaihong.png</file>
+  </qresource>
 </RCC>
