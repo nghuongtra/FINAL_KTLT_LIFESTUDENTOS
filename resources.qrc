@@ -26,6 +26,12 @@
     <file>images/maugradient.png</file>
     <file>images/maytinh.jpg</file>
     <file>images/nencuoi.png</file>
+    <file>images/mua_sam.png</file>
+    <file>images/food.png</file>
+    <file>images/study.png</file>
+    <file>images/xe_co.png</file>
+    <file>images/tro_choi.png</file>
+    <file>images/y_te.png</file>
   </qresource>
   <qresource prefix="login">
     <file>images/anger.png</file>

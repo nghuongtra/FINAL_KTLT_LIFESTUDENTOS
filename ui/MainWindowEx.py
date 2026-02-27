@@ -20,6 +20,8 @@ class MainWindowEx(Ui_MainWindow):
 #TAB 3
         self.finance_controller = FinanceController(self)
         self.finance_controller.setup()
+        self.expense_manager = self.finance_controller.expense_manager
+        self.balance_manager = self.finance_controller.balance_manager
 #TAB 4
         self.task_controller = TaskController(self)
         self.task_controller.setup()

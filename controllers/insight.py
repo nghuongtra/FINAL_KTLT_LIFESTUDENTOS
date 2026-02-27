@@ -205,8 +205,8 @@ class InsightController:
                 top_val = danh_sach_chi_tieu[top_cat]
                 # Tính phần trăm
                 percent = (top_val / tong_tien_chi_tieu) * 100 if tong_tien_chi_tieu > 0 else 0
-                if hasattr(self.view, 'number2_6'):
-                    self.view.number2_6.setText(f"{percent:.1f}%")
+                if hasattr(self.view, 'number2_2'):
+                    self.view.number2_2.setText(f"{percent:.1f}%")
 
                 top_cat = top_cat.lower()
                 icon_map = {

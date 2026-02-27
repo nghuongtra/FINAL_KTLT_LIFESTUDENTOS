@@ -14,10 +14,9 @@ class LoginWindowEx(Ui_MainWindow):
         super().setupUi(MainWindow)
         self.MainWindow = MainWindow
         self.setupSignalAndSlots()
-        self.lineEditUserName.setText("")
         self.lineEditUserName.setPlaceholderText("Username")
-        self.lineEditPassword.setText("")
         self.lineEditPassword.setPlaceholderText("Password")
+        self.process_save()
 
     def show(self):
         self.MainWindow.show()
@@ -28,7 +27,7 @@ class LoginWindowEx(Ui_MainWindow):
         self.pushButtonExit.clicked.connect(self.process_exit)
         self.pushButtonSignup.clicked.connect(self.process_signin)
     def process_save(self):
-        file_path = "../database/remember_me.json"
+        file_path = "../datasets/remember_me.json"
         if os.path.exists(file_path):
             with open(file_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
