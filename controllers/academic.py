@@ -1,3 +1,5 @@
+import os
+
 from PyQt6.QtWidgets import QMessageBox, QTableWidgetItem
 
 from model.subject import Subject
@@ -8,8 +10,11 @@ class AcademicController:
        self.view = main_view
        self.sub_manager = Subjects()
    def setup(self):
+       self.file_subject = f"../datasets/{self.current_acc}_subjects.json"
+       if not os.path.exists(self.file_subject):
+           with open(self.file_subject, "w", encoding="utf-8") as f: f.write('{"subjects": []}')
        self.sub_manager = Subjects()
-       self.sub_manager.import_json("../datasets/subjects.json")
+       self.sub_manager.import_json(self.file_subject)
        self.display_subjects()
        self.view.lineEditGPA.setReadOnly(True)
        self.view.lineEditXeploai.setReadOnly(True)
@@ -85,7 +90,7 @@ class AcademicController:
        # Lưu file và cập nhật bảng
        item = Subject(Subname, credit, process, midterm, final)
        self.sub_manager.add_item(item)
-       self.sub_manager.export_json()
+       self.sub_manager.export_json(self.file_subject)
        self.display_subjects()
        self.clear_inputs()
        QMessageBox.information(self.view.MainWindow, "Thông báo", "Đã thêm môn học mới thành công!")
@@ -132,7 +137,7 @@ class AcademicController:
        except ValueError:
            QMessageBox.warning(self.view.MainWindow, "Lỗi", "Số liệu nhập vào không hợp lệ!")
            return
-       self.sub_manager.export_json()
+       self.sub_manager.export_json(self.file_subject)
        self.display_subjects()
        QMessageBox.information(self.view.MainWindow, "Thông báo", f"Đã cập nhật thông tin môn {Subname}!")
 
@@ -149,7 +154,7 @@ class AcademicController:
        if dlg == QMessageBox.StandardButton.Yes:
            ret = self.sub_manager.delete_item(Subname)
            if ret:
-               self.sub_manager.export_json()
+               self.sub_manager.export_json(self.file_subject)
                self.display_subjects()
                self.clear_inputs()
                QMessageBox.information(self.view.MainWindow, "Thông báo", "Đã xóa thành công!")

@@ -1,4 +1,5 @@
 import datetime
+import os
 
 from PyQt6.QtCore import QDateTime, Qt
 from PyQt6.QtGui import QIcon, QColor
@@ -14,7 +15,11 @@ class TaskController:
         self.tasks = Tasks()
         self.selectedTask = None
     def setup(self):
-        self.tasks.import_json("../datasets/tasks.json")
+        self.file_task = f"../datasets/{self.current_acc}_tasks.json"
+        if not os.path.exists(self.file_task):
+            with open(self.file_task, "w", encoding="utf-8") as f: f.write('{"tasks": []}')
+
+        self.tasks.import_json(self.file_task)
         self.showTasksIntoQListWidget()
 
     # { Phần của tab task scheduler
@@ -80,7 +85,7 @@ class TaskController:
             self.tasks.update(index, task)
         self.selectedTask = task
         self.showTasksIntoQListWidget()
-        self.tasks.export_json("../datasets/tasks.json")
+        self.tasks.export_json(self.file_task)
 
     def processRemove(self):
         answer = QMessageBox.question(
@@ -99,7 +104,7 @@ class TaskController:
                 self.tasks.removeByIndex(index)
         self.selectedTask = None
         self.showTasksIntoQListWidget()
-        self.tasks.export_json("../datasets/tasks.json")
+        self.tasks.export_json(self.file_task)
 
     def processItemSelection(self):
         row = self.view.listWidgetTask.currentRow()

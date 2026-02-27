@@ -64,7 +64,7 @@ class InsightController:
 
     def lay_gpa_ky_truoc(self):
         try:
-            path = "../datasets/gpa_user.json"
+            path = f"../datasets/{self.current_acc}_gpa_user.json"
             if not os.path.exists(path): return 0.0
 
             with open(path, "r", encoding="utf-8") as f:

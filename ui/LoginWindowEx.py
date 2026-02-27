@@ -39,8 +39,8 @@ class LoginWindowEx(Ui_MainWindow):
         pwd=self.lineEditPassword.text()
         le = Users()
         le.import_json("../datasets/users.json")
-        emp=le.login(uid,pwd)
-        if emp is None:
+        usr=le.login(uid,pwd)
+        if usr is None:
             self.msg = QMessageBox()
             self.msg.setText("Sai òi nhập lại đi!")
             self.msg.show()
@@ -56,10 +56,10 @@ class LoginWindowEx(Ui_MainWindow):
                     os.remove(file_path)
             self.user_window = QMainWindow()
             self.as_ui = MainWindowEx()
-            self.as_ui.login_employee = emp
+            self.as_ui.login_employee = usr
+            self.as_ui.current_acc = uid #ghi nhớ tên acc đăng nhập
             self.as_ui.setupUi(self.user_window)
             self.MainWindow.close()
-            # self.user_window.show()
             self.as_ui.show()
     def process_exit(self):
         self.MainWindow.close()
@@ -69,5 +69,5 @@ class LoginWindowEx(Ui_MainWindow):
         self.as_ui_signin = SigninWindowEx()  # Đổi tên biến để tránh nhầm lẫn
         self.as_ui_signin.setupUi(self.signin_window)
         # Đóng cái cũ, mở cái mới
-        self.MainWindow.close()
         self.signin_window.show()
+        self.MainWindow.close()

@@ -15,20 +15,26 @@ class MainWindowEx(Ui_MainWindow):
 
 #TAB 2:
         self.academic_controller = AcademicController(self)
+        self.academic_controller.current_acc = self.current_acc
         self.academic_controller.setup()
         self.sub_manager = self.academic_controller.sub_manager
 #TAB 3
         self.finance_controller = FinanceController(self)
+        self.finance_controller.current_acc = self.current_acc
         self.finance_controller.setup()
         self.expense_manager = self.finance_controller.expense_manager
         self.balance_manager = self.finance_controller.balance_manager
 #TAB 4
         self.task_controller = TaskController(self)
+        self.task_controller.current_acc = self.current_acc
         self.task_controller.setup()
 #TAB 5
         self.insight_controller = InsightController(self)
+        self.insight_controller.current_acc = self.current_acc
+
 #Overview
         self.overview_controller = OverviewController(self)
+        self.overview_controller.current_acc = self.current_acc
 
 
     def show(self):

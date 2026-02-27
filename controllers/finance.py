@@ -1,5 +1,6 @@
 # Phần I: add expense và hiênr thị ở bảng expense list ở frame bên trái:
 import datetime
+import os
 
 from PyQt6.QtWidgets import QMessageBox, QTableWidgetItem
 
@@ -15,11 +16,15 @@ class FinanceController:
         self.balance_manager = Balances()
 
     def setup(self):
-        self.expense_manager.load_json("../datasets/expenses.json")  # Load lại dữ liệu cũ.
+        self.file_expense = f"../datasets/{self.current_acc}_expenses.json"
+        self.file_balance = f"../datasets/{self.current_acc}_balance.json"
+        if not os.path.exists(self.file_expense):
+            with open(self.file_expense, "w", encoding="utf-8") as f: f.write("[]")
+        if not os.path.exists(self.file_balance):
+            with open(self.file_balance, "w", encoding="utf-8") as f: f.write('{"current_balance": 0}')
+        self.expense_manager.load_json(self.file_expense)
+        self.balance_manager.load_json(self.file_balance)
         self.TAB3_UPDATE_TABLE_EXPENSE()
-
-        # ---KHỞI TẠO QUẢN LÝ SỐ DƯ PHẦN II ---
-        self.balance_manager.load_json("../datasets/balance.json")
         self.TAB3_UPDATE_BALANCE_UI()
 
         # -- TÍNH TOÀN KHOẢN CHI VÀ SO SÁNH VS THÁNG TRƯỚC---
@@ -41,10 +46,10 @@ class FinanceController:
             tien = int(tien_str.replace(".", "").replace(",", ""))
             new_item = Expense(ten, tien, loai, ghi_chu)
             self.expense_manager.add_item(new_item)
-            self.expense_manager.export_json("../datasets/expenses.json")
+            self.expense_manager.export_json(self.file_expense)
             # TRỪ TIỀN TRONG VÍ (liên quan phânf II)
             self.balance_manager.current_balance -= tien
-            self.balance_manager.export_json("../datasets/balance.json")
+            self.balance_manager.export_json(self.file_balance)
             # Cập nhật lại bảng và xóa trắng ô nhập, cập nhật số dư ( PHẦN II):
             self.TAB3_UPDATE_TABLE_EXPENSE()
             self.TAB3_CLEAR_INPUTS()
@@ -97,7 +102,7 @@ class FinanceController:
         try:
             tien = int(tien_nhap.replace(".", "").replace(",", ""))
             self.balance_manager.current_balance += tien
-            self.balance_manager.export_json("../datasets/balance.json")
+            self.balance_manager.export_json(self.file_balance)
             # Cập nhật lại giao diện
             self.TAB3_UPDATE_BALANCE_UI()
             self.view.lineEditIncome.clear()
