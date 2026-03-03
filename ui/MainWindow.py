@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'D:\nam1\FINAL_KTLT\ui\MainWindow.ui'
+# Form implementation generated from reading ui file 'ui/MainWindow.ui'
 #
 # Created by: PyQt6 UI code generator 6.10.2
 #
@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1129, 1148)
+        MainWindow.resize(1128, 1148)
         MainWindow.setStyleSheet("background-color: rgb(250, 247, 238);")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setStyleSheet("#centralwidget {border-image: url(:/nen/images/anh.jpg);}")
@@ -771,7 +771,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 136, 141))
+        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 472, 764))
         self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
         self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_11.setObjectName("verticalLayout_11")
@@ -816,6 +816,46 @@ class Ui_MainWindow(object):
         self.tableExpenselist_3.horizontalHeader().setStretchLastSection(True)
         self.tableExpenselist_3.verticalHeader().setVisible(False)
         self.verticalLayout_11.addWidget(self.tableExpenselist_3)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.pushButton_delete = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents_3)
+        self.pushButton_delete.setStyleSheet("QPushButton {\n"
+"    background-color:rgb(255, 0, 127); /* Màu tím đậm */\n"
+"    color: black;\n"
+"    border-radius: 10px;\n"
+"    padding: 5px 15px;\n"
+"    font-weight: bold;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(255, 85, 127); /* Sáng hơn khi di chuột vào */\n"
+"}\n"
+"\n"
+"")
+        icon7 = QtGui.QIcon()
+        icon7.addPixmap(QtGui.QPixmap("C:/Users/HP/Downloads/bin.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButton_delete.setIcon(icon7)
+        self.pushButton_delete.setIconSize(QtCore.QSize(20, 15))
+        self.pushButton_delete.setObjectName("pushButton_delete")
+        self.horizontalLayout_3.addWidget(self.pushButton_delete)
+        self.pushButton_edit = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents_3)
+        self.pushButton_edit.setStyleSheet("QPushButton {\n"
+"    background-color:rgb(0, 170, 255); \n"
+"    color: black;\n"
+"    border-radius: 10px;\n"
+"    padding: 5px 15px;\n"
+"    font-weight: bold;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(85, 170, 255); /* Sáng hơn khi di chuột vào */\n"
+"}\n"
+"")
+        icon8 = QtGui.QIcon()
+        icon8.addPixmap(QtGui.QPixmap("C:/Users/HP/Downloads/edit.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButton_edit.setIcon(icon8)
+        self.pushButton_edit.setIconSize(QtCore.QSize(20, 15))
+        self.pushButton_edit.setObjectName("pushButton_edit")
+        self.horizontalLayout_3.addWidget(self.pushButton_edit)
+        self.verticalLayout_11.addLayout(self.horizontalLayout_3)
         self.scrollArea.setWidget(self.scrollAreaWidgetContents_3)
         self.verticalLayout_16.addWidget(self.scrollArea)
         self.verticalLayout_15.addWidget(self.frame_List)
@@ -1103,9 +1143,9 @@ class Ui_MainWindow(object):
         self.pushButtonNew.setObjectName("pushButtonNew")
         self.horizontalLayout_12.addWidget(self.pushButtonNew)
         self.pushButtonSave = QtWidgets.QPushButton(parent=self.groupBox_3)
-        icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap(":/nen/images/ic_luu.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButtonSave.setIcon(icon7)
+        icon9 = QtGui.QIcon()
+        icon9.addPixmap(QtGui.QPixmap(":/nen/images/ic_luu.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonSave.setIcon(icon9)
         self.pushButtonSave.setIconSize(QtCore.QSize(40, 40))
         self.pushButtonSave.setObjectName("pushButtonSave")
         self.horizontalLayout_12.addWidget(self.pushButtonSave)
@@ -1304,9 +1344,9 @@ class Ui_MainWindow(object):
         self.xuatfileexcel = QtWidgets.QPushButton(parent=self.left_card)
         self.xuatfileexcel.setStyleSheet("font: 11pt \"Palatino Linotype\";\n"
 "background-color: rgb(255, 255, 255);")
-        icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap(":/nen/images/xuat.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.xuatfileexcel.setIcon(icon8)
+        icon10 = QtGui.QIcon()
+        icon10.addPixmap(QtGui.QPixmap(":/nen/images/xuat.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.xuatfileexcel.setIcon(icon10)
         self.xuatfileexcel.setIconSize(QtCore.QSize(25, 20))
         self.xuatfileexcel.setObjectName("xuatfileexcel")
         self.gridLayout_11.addWidget(self.xuatfileexcel, 5, 0, 1, 2)
@@ -1429,9 +1469,9 @@ class Ui_MainWindow(object):
 "    font-weight: bold;\n"
 "    font-size: 10pt;\n"
 "")
-        icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap(":/nen/images/bongden.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButton.setIcon(icon9)
+        icon11 = QtGui.QIcon()
+        icon11.addPixmap(QtGui.QPixmap(":/nen/images/bongden.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButton.setIcon(icon11)
         self.pushButton.setIconSize(QtCore.QSize(30, 25))
         self.pushButton.setObjectName("pushButton")
         self.gridLayout_12.addWidget(self.pushButton, 5, 0, 1, 2)
@@ -1469,7 +1509,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addWidget(self.stackedWidget)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1129, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1128, 18))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
@@ -1477,7 +1517,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -1559,6 +1599,8 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Danh mục"))
         item = self.tableExpenselist_3.horizontalHeaderItem(4)
         item.setText(_translate("MainWindow", "Ghi chú"))
+        self.pushButton_delete.setText(_translate("MainWindow", "Delete"))
+        self.pushButton_edit.setText(_translate("MainWindow", "Edit"))
         self.label_27.setText(_translate("MainWindow", "Current Balance"))
         self.label_soduhientai.setText(_translate("MainWindow", "10,000,000 đ"))
         self.lineEditIncome.setPlaceholderText(_translate("MainWindow", "Nhập thu nhập mới"))
@@ -1619,3 +1661,13 @@ class Ui_MainWindow(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Palatino Linotype\'; font-size:12pt; font-weight:72; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Linotype\'; font-weight:400;\"><br /></p></body></html>"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec())

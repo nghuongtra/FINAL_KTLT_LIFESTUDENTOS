@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1129</width>
+    <width>1128</width>
     <height>1148</height>
    </rect>
   </property>
@@ -99,7 +99,7 @@ background-color: rgb(255, 255, 255);</string>
 background-color:transparent</string>
       </property>
       <property name="currentIndex">
-       <number>4</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="pageOverview">
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -1693,8 +1693,8 @@ border: none;                 /* Xóa viền */   </string>
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>136</width>
-                        <height>141</height>
+                        <width>472</width>
+                        <height>764</height>
                        </rect>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -1776,6 +1776,71 @@ font: 10pt &quot;Palatino Linotype&quot;;</string>
                           </property>
                          </column>
                         </widget>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_3">
+                         <item>
+                          <widget class="QPushButton" name="pushButton_delete">
+                           <property name="styleSheet">
+                            <string notr="true">QPushButton {
+    background-color:rgb(255, 0, 127); /* Màu tím đậm */
+    color: black;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: rgb(255, 85, 127); /* Sáng hơn khi di chuột vào */
+}
+
+</string>
+                           </property>
+                           <property name="text">
+                            <string>Delete</string>
+                           </property>
+                           <property name="icon">
+                            <iconset>
+                             <normaloff>C:/Users/HP/Downloads/bin.png</normaloff>C:/Users/HP/Downloads/bin.png</iconset>
+                           </property>
+                           <property name="iconSize">
+                            <size>
+                             <width>20</width>
+                             <height>15</height>
+                            </size>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="pushButton_edit">
+                           <property name="styleSheet">
+                            <string notr="true">QPushButton {
+    background-color:rgb(0, 170, 255); 
+    color: black;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: rgb(85, 170, 255); /* Sáng hơn khi di chuột vào */
+}
+</string>
+                           </property>
+                           <property name="text">
+                            <string>Edit</string>
+                           </property>
+                           <property name="icon">
+                            <iconset>
+                             <normaloff>C:/Users/HP/Downloads/edit.png</normaloff>C:/Users/HP/Downloads/edit.png</iconset>
+                           </property>
+                           <property name="iconSize">
+                            <size>
+                             <width>20</width>
+                             <height>15</height>
+                            </size>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
                        </item>
                       </layout>
                      </widget>
@@ -3068,8 +3133,8 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1129</width>
-     <height>26</height>
+     <width>1128</width>
+     <height>18</height>
     </rect>
    </property>
   </widget>
