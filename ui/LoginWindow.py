@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(593, 407)
+        MainWindow.resize(593, 423)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(parent=self.centralwidget)
@@ -111,6 +111,12 @@ class Ui_MainWindow(object):
         icon2.addPixmap(QtGui.QPixmap(":/login/images/pass.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButtonSignup.setIcon(icon2)
         self.pushButtonSignup.setObjectName("pushButtonSignup")
+        self.pushButtonfprget = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.pushButtonfprget.setGeometry(QtCore.QRect(90, 260, 121, 31))
+        self.pushButtonfprget.setStyleSheet("background-color: rgb(254, 243, 213);\n"
+"border-radius: 10px; border: 1px solid gray;\n"
+"font: 10pt \"Palatino Linotype\";color:rgb(125, 62, 0)")
+        self.pushButtonfprget.setObjectName("pushButtonfprget")
         self.label.raise_()
         self.label_2.raise_()
         self.label_3.raise_()
@@ -126,6 +132,7 @@ class Ui_MainWindow(object):
         self.label_7.raise_()
         self.radioButtonSaveLogin.raise_()
         self.pushButtonSignup.raise_()
+        self.pushButtonfprget.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 593, 26))
@@ -140,7 +147,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Đăng nhập"))
         self.label_5.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">WELCOME!</span></p></body></html>"))
         self.lineEditUserName.setText(_translate("MainWindow", "username"))
         self.lineEditPassword.setText(_translate("MainWindow", "password"))
@@ -148,3 +155,4 @@ class Ui_MainWindow(object):
         self.pushButtonExit.setText(_translate("MainWindow", "Exit"))
         self.radioButtonSaveLogin.setText(_translate("MainWindow", "Save login"))
         self.pushButtonSignup.setText(_translate("MainWindow", "Sign up"))
+        self.pushButtonfprget.setText(_translate("MainWindow", "Forget Pass"))

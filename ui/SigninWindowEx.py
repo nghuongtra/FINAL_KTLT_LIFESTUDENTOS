@@ -2,6 +2,7 @@ from PyQt6.QtWidgets import QMessageBox, QMainWindow
 
 from model.user import User
 from model.users import Users
+
 from ui.SigninWindow import Ui_MainWindow
 
 
@@ -16,7 +17,14 @@ class SigninWindowEx(Ui_MainWindow):
         self.pushButtonexit.clicked.connect(self.process_back)
 
     def process_back(self):
+        from ui.LoginWindowEx import LoginWindowEx
+
+        self.login_window = QMainWindow()
+        self.login_ui = LoginWindowEx()
+        self.login_ui.setupUi(self.login_window)
+
         self.MainWindow.close()
+        self.login_window.show()
 
     def process_save(self):
         name = self.lineEditname.text()
@@ -25,7 +33,7 @@ class SigninWindowEx(Ui_MainWindow):
 
         if name == "" or uid == "" or pwd == "":
             msg = QMessageBox()
-            msg.setText("Nhập thông tin đi!")
+            msg.setText("Yêu cầu nhập đầy đủ thông tin!")
             msg.exec()
             return
 

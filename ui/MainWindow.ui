@@ -2928,7 +2928,7 @@ font: 75 10pt &quot;Palatino Linotype&quot;;</string>
                     </size>
                    </property>
                    <property name="text">
-                    <string>olala</string>
+                    <string/>
                    </property>
                   </widget>
                  </item>

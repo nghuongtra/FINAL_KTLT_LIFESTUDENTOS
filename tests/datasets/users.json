@@ -12,28 +12,28 @@
             "Name": "Peter",
             "UserName": "peter",
             "Password": "1234",
-            "Bestfriend": "Minh"
+            "Bestfriend": "Nữ"
         },
         {
             "Id": "3",
             "Name": "John",
             "UserName": "john",
             "Password": "1234",
-            "Bestfriend": "Ngọc"
+            "Bestfriend": "Nam"
         },
         {
             "Id": "4",
             "Name": "Cook",
             "UserName": "cook",
             "Password": "1234",
-            "Bestfriend": "Lan"
+            "Bestfriend": "Nữ"
         },
         {
             "Id": "5",
             "Name": "Bright",
             "UserName": "bright",
             "Password": "1234",
-            "Bestfriend": "Trà"
+            "Bestfriend": "Nam"
         }
     ]
 }
