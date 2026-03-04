@@ -14,6 +14,7 @@ class FinanceController:
         self.view = main_view
         self.expense_manager=Expenses()
         self.balance_manager = Balances()
+        self.editing_index = None # dùng cho kiểm tra đang thựuc hiện thao tác sửa hay thêm mới
 
     def setup(self):
         self.file_expense = f"../datasets/{self.current_acc}_expenses.json"
@@ -32,7 +33,12 @@ class FinanceController:
 
         # --- PHẦN IV: TÌM KIẾM, SẮP XẾP, LỌC ---
         self.TAB3_PROCESS_RIGHT_TABLE()
-        
+        # --- Delete + edit---
+        self.view.pushButton_delete.clicked.connect(self.process_delete)
+        self.view.pushButton_edit.clicked.connect(self.process_edit)
+        self.original_btn_style = self.view.pushButtonAddExpense.styleSheet()
+        # Lưu lại chữ gốc ("+ Add Expense")
+        self.original_btn_text= self.view.pushButtonAddExpense.text()
     def TAB3_PROCESS_ADD(self):  # Xử lý khi bấm nút Add Expense
         ten = self.view.lineEditKhoanchi.text().strip()
         tien_str = self.view.lineEditGiatri.text().strip()
@@ -44,6 +50,31 @@ class FinanceController:
             return
         try:
             tien = int(tien_str.replace(".", "").replace(",", ""))
+            # ========================Sửa=======================================
+            if hasattr(self, 'editing_index') and self.editing_index is not None:
+                old_item = self.expense_manager.items[self.editing_index]
+                #Tính lại tiền trong ví (Cộng lại tiền cũ->Trừ đi tiền mới sửa)
+                self.balance_manager.current_balance+=old_item.so_tien- tien
+                #Cập nhật thông tin mới vào item đó
+                old_item.khoan_chi=ten
+                old_item.so_tien=tien
+                old_item.danh_muc=loai
+                old_item.ghi_chu=ghi_chu
+                #Reset trạng thái về "Thêm mới"
+                self.editing_index = None
+                self.view.pushButtonAddExpense.setText(self.original_btn_text)  # Trả lại chữ "+ Add Expense"
+                self.view.pushButtonAddExpense.setStyleSheet(self.original_btn_style)
+                # Lưu file và cập nhật giao diện
+                self.expense_manager.export_json(self.file_expense)
+                self.balance_manager.export_json(self.file_balance)
+                self.TAB3_UPDATE_TABLE_EXPENSE()
+                self.TAB3_CLEAR_INPUTS()
+                self.TAB3_UPDATE_BALANCE_UI()
+                self.TAB3_UPDATE_TOTAL_AND_COMPARE()
+                self.TAB3_PROCESS_RIGHT_TABLE()
+                QMessageBox.information(self.view.MainWindow, "Thành công", "Đã cập nhật khoản chi!")
+                return  # Dừng hàm tại đây để không chạy xuống phần Thêm Mới ở bên dưới
+            # ========================================================================
             new_item = Expense(ten, tien, loai, ghi_chu)
             self.expense_manager.add_item(new_item)
             self.expense_manager.export_json(self.file_expense)
@@ -186,3 +217,82 @@ class FinanceController:
             table.setItem(row_index, 1, QTableWidgetItem(str(item.khoan_chi)))
             table.setItem(row_index, 2, QTableWidgetItem("{:,}".format(item.so_tien)))
             table.setItem(row_index, 3, QTableWidgetItem(str(item.danh_muc)))
+# Thêm chức năng delete và edit cho bảng list
+    def process_delete(self):
+        try: #Kiểm tra thử xem bảng và view có tồn tại không
+            if not hasattr(self.view, 'tableExpenselist_3'):
+                return
+            current_row = self.view.tableExpenselist_3.currentRow()
+            #Kiểm tra dòng hợp lệ
+            if current_row < 0:
+                QMessageBox.warning(self.view.MainWindow, "Chưa chọn dòng", "Vui lòng chọn một dòng để xóa!")
+                return
+            #Kiểm tra danh sách có rỗng kh
+            if not self.expense_manager.items:
+                QMessageBox.warning(self.view.MainWindow, "Lỗi dữ liệu",
+                                    "Danh sách chi tiêu đang trống, không thể xóa!")
+                self.TAB3_UPDATE_TABLE_EXPENSE()
+                return
+            # xác nhận
+            reply = QMessageBox.question(self.view.MainWindow, 'Xác nhận',
+                                         "Bạn có chắc muốn xóa khoản này?\n(Tiền sẽ được hoàn lại vào ví)",
+                                         QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
+            if reply == QMessageBox.StandardButton.Yes:
+                # Tính toán chỉ số thực
+                total_items=len(self.expense_manager.items)
+                real_index=total_items - 1 - current_row
+                # Kiểm tra chỉ số thực có nằm trong danh sách kh
+                if real_index<0 or real_index>=total_items:
+                    QMessageBox.critical(self.view.MainWindow, "Lỗi Nghiêm Trọng",
+                                         f"Lỗi đồng bộ dữ liệu!\nIndex: {real_index}, Total: {total_items}")
+                    self.TAB3_UPDATE_TABLE_EXPENSE()  # Vẽ lại bảng
+                    return
+                item = self.expense_manager.items[real_index]
+                self.expense_manager.items.pop(real_index)
+                # Cập nhật tiền
+                if hasattr(item, 'so_tien'):
+                    self.balance_manager.current_balance += int(item.so_tien)  # Đảm bảo là số int
+                #Lưu file
+                self.expense_manager.export_json(self.file_expense)
+                self.balance_manager.export_json(self.file_balance)
+                # Update giao diện
+                self.TAB3_UPDATE_TABLE_EXPENSE()
+                self.TAB3_UPDATE_BALANCE_UI()
+                self.TAB3_UPDATE_TOTAL_AND_COMPARE()
+                self.TAB3_PROCESS_RIGHT_TABLE()
+                QMessageBox.information(self.view.MainWindow, "Thành công", "Đã xóa và hoàn tiền!")
+        except Exception as e:
+            # In lỗi chi tiết
+            import traceback
+            traceback.print_exc()
+            QMessageBox.critical(self.view.MainWindow, "Lỗi không mong muốn", f"Chi tiết lỗi: {str(e)}")
+
+    def process_edit(self):
+        # Kiểm tra dòng chọn
+        if not hasattr(self.view, 'tableExpenselist_3'): return
+        current_row=self.view.tableExpenselist_3.currentRow()
+        if current_row< 0:
+            QMessageBox.warning(self.view.MainWindow,"Chưa chọn dòng", "Vui lòng chọn dòng để sửa!")
+            return
+        # Tính vị trí thực
+        real_index = len(self.expense_manager.items)-1-current_row
+        # Đánh dấu là đang sửa dòng htai
+        self.editing_index = real_index
+        # Đẩy dữ liệu cũ lên form nhập liệu
+        item = self.expense_manager.items[real_index]
+        self.view.lineEditKhoanchi.setText(item.khoan_chi)
+        self.view.lineEditGiatri.setText(str(item.so_tien))
+        self.view.comboBoxLoaigia.setCurrentText(item.danh_muc)
+        self.view.lineEditGhichu.setText(item.ghi_chu)
+        # Đổi giao diện nút Add thành "Lưu sửa đổi"
+        self.view.pushButtonAddExpense.setText("Lưu sửa đổi")
+        self.view.pushButtonAddExpense.setStyleSheet("""
+                    QPushButton {
+                        background-color: #FF9800; 
+                        color: white;
+                    }
+                    QPushButton:hover {
+                        background-color: #F57C00;
+                    }
+                """)
+        self.view.lineEditKhoanchi.setFocus()

@@ -7,11 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>593</width>
-    <height>407</height>
+    <height>423</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Đăng nhập</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -295,6 +295,24 @@ border-radius: 10px;</string>
       <normaloff>:/login/images/pass.png</normaloff>:/login/images/pass.png</iconset>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButtonfprget">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>260</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(254, 243, 213);
+border-radius: 10px; border: 1px solid gray;
+font: 10pt &quot;Palatino Linotype&quot;;color:rgb(125, 62, 0)</string>
+    </property>
+    <property name="text">
+     <string>Forget Pass</string>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>label_2</zorder>
    <zorder>label_3</zorder>
@@ -310,6 +328,7 @@ border-radius: 10px;</string>
    <zorder>label_7</zorder>
    <zorder>radioButtonSaveLogin</zorder>
    <zorder>pushButtonSignup</zorder>
+   <zorder>pushButtonfprget</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

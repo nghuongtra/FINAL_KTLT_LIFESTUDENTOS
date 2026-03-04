@@ -4,6 +4,8 @@ import json
 import os
 
 from model.users import Users
+from ui.ForgetPassWindowEx import ForgetPassWindowEx
+
 from ui.LoginWindow import Ui_MainWindow
 from ui.MainWindowEx import MainWindowEx
 from ui.SigninWindowEx import SigninWindowEx
@@ -26,6 +28,7 @@ class LoginWindowEx(Ui_MainWindow):
         self.radioButtonSaveLogin.clicked.connect(self.process_save)
         self.pushButtonExit.clicked.connect(self.process_exit)
         self.pushButtonSignup.clicked.connect(self.process_signin)
+        self.pushButtonfprget.clicked.connect(self.process_forget)
     def process_save(self):
         file_path = "../datasets/remember_me.json"
         if os.path.exists(file_path):
@@ -42,7 +45,7 @@ class LoginWindowEx(Ui_MainWindow):
         usr=le.login(uid,pwd)
         if usr is None:
             self.msg = QMessageBox()
-            self.msg.setText("Sai òi nhập lại đi!")
+            self.msg.setText("Tên đăng nhập hoặc mật khẩu không chính xác!")
             self.msg.show()
         else:
             # CHỈ LƯU KHI ĐĂNG NHẬP THÀNH CÔNG
@@ -70,4 +73,12 @@ class LoginWindowEx(Ui_MainWindow):
         self.as_ui_signin.setupUi(self.signin_window)
         # Đóng cái cũ, mở cái mới
         self.signin_window.show()
+        self.MainWindow.close()
+
+    def process_forget(self):
+        from ui.ForgetPassWindowEx import ForgetPassWindowEx
+        self.forget_window = QMainWindow()
+        self.as_ui_forget = ForgetPassWindowEx()
+        self.as_ui_forget.setupUi(self.forget_window)
+        self.forget_window.show()
         self.MainWindow.close()

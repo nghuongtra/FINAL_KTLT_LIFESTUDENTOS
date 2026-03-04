@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Đăng ký</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -37,9 +37,9 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>110</y>
+      <y>90</y>
       <width>251</width>
-      <height>221</height>
+      <height>271</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -54,7 +54,7 @@ border-radius: 10px; border: 1px solid gray</string>
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>160</y>
+      <y>140</y>
       <width>201</width>
       <height>31</height>
      </rect>
@@ -71,7 +71,7 @@ border-radius: 10px; border: 1px solid gray</string>
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>130</y>
+      <y>110</y>
       <width>111</width>
       <height>31</height>
      </rect>
@@ -89,7 +89,7 @@ color: rgb(112, 56, 0);
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>220</y>
+      <y>200</y>
       <width>201</width>
       <height>31</height>
      </rect>
@@ -106,7 +106,7 @@ color: rgb(112, 56, 0);
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>190</y>
+      <y>170</y>
       <width>81</width>
       <height>31</height>
      </rect>
@@ -124,7 +124,7 @@ color: rgb(112, 56, 0);
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>280</y>
+      <y>260</y>
       <width>201</width>
       <height>31</height>
      </rect>
@@ -136,12 +136,18 @@ color: rgb(112, 56, 0);
     <property name="text">
      <string/>
     </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
    </widget>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>250</y>
+      <y>230</y>
       <width>81</width>
       <height>31</height>
      </rect>
@@ -159,7 +165,7 @@ color: rgb(112, 56, 0);
     <property name="geometry">
      <rect>
       <x>160</x>
-      <y>60</y>
+      <y>40</y>
       <width>81</width>
       <height>81</height>
      </rect>
@@ -298,6 +304,59 @@ color: rgb(138, 46, 69);</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; color:#bb3e5d;&quot;&gt;Nhớ lưu !!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>310</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
+color: rgb(112, 56, 0);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditpass_2">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>320</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px; border: 1px solid gray
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>280</y>
+      <width>261</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
+color: rgb(112, 56, 0);
+</string>
+    </property>
+    <property name="text">
+     <string>Your bestfriend:</string>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>label_7</zorder>
    <zorder>label_4</zorder>
@@ -313,6 +372,9 @@ color: rgb(138, 46, 69);</string>
    <zorder>label_8</zorder>
    <zorder>label_9</zorder>
    <zorder>label_10</zorder>
+   <zorder>label_11</zorder>
+   <zorder>lineEditpass_2</zorder>
+   <zorder>label_12</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

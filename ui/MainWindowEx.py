@@ -20,6 +20,16 @@ class MainWindowEx(Ui_MainWindow):
         self.sub_manager = self.academic_controller.sub_manager
 #TAB 3
         self.finance_controller = FinanceController(self)
+        style_vang_nhat = """
+                    QFrame {
+                        background-color: #FFF9C4; 
+                        border-radius: 15px;
+                    }
+                """
+        if hasattr(self, 'frame_12'):
+            self.frame_12.setStyleSheet(style_vang_nhat)
+        if hasattr(self, 'frame_5'):
+            self.frame_5.setStyleSheet(style_vang_nhat)
         self.finance_controller.current_acc = self.current_acc
         self.finance_controller.setup()
         self.expense_manager = self.finance_controller.expense_manager

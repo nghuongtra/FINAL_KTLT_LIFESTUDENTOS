@@ -26,5 +26,12 @@
         "so_tien": 600000,
         "danh_muc": "Mua sắm",
         "ghi_chu": ""
+    },
+    {
+        "ngay": "01/03/2026",
+        "khoan_chi": "đi tàu",
+        "so_tien": 780000,
+        "danh_muc": "Đi lại",
+        "ghi_chu": "đi tàu lên sg"
     }
 ]
