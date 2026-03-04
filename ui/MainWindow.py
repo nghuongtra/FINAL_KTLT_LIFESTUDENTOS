@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'ui/MainWindow.ui'
+# Form implementation generated from reading ui file 'D:\nam1\FINAL_KTLT\ui\MainWindow.ui'
 #
 # Created by: PyQt6 UI code generator 6.10.2
 #
@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1128, 1148)
+        MainWindow.resize(1129, 1148)
         MainWindow.setStyleSheet("background-color: rgb(250, 247, 238);")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setStyleSheet("#centralwidget {border-image: url(:/nen/images/anh.jpg);}")
@@ -771,7 +771,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 472, 764))
+        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 452, 562))
         self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
         self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_11.setObjectName("verticalLayout_11")
@@ -1404,6 +1404,12 @@ class Ui_MainWindow(object):
         self.insight_GPA.setObjectName("insight_GPA")
         self.verticalLayout_8.addWidget(self.insight_GPA)
         self.label_linechart = QtWidgets.QLabel(parent=self.gpa_sta_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_linechart.sizePolicy().hasHeightForWidth())
+        self.label_linechart.setSizePolicy(sizePolicy)
+        self.label_linechart.setMinimumSize(QtCore.QSize(300, 100))
         self.label_linechart.setMaximumSize(QtCore.QSize(300, 300))
         self.label_linechart.setText("")
         self.label_linechart.setObjectName("label_linechart")
@@ -1444,6 +1450,12 @@ class Ui_MainWindow(object):
         self.topspending_2.setObjectName("topspending_2")
         self.verticalLayout_12.addWidget(self.topspending_2)
         self.topspending = QtWidgets.QLabel(parent=self.money_sta_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.topspending.sizePolicy().hasHeightForWidth())
+        self.topspending.setSizePolicy(sizePolicy)
+        self.topspending.setMinimumSize(QtCore.QSize(300, 150))
         self.topspending.setMaximumSize(QtCore.QSize(300, 300))
         self.topspending.setText("")
         self.topspending.setObjectName("topspending")
@@ -1509,7 +1521,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addWidget(self.stackedWidget)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1128, 18))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1129, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
@@ -1517,7 +1529,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(4)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -1661,13 +1673,3 @@ class Ui_MainWindow(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Palatino Linotype\'; font-size:12pt; font-weight:72; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Linotype\'; font-weight:400;\"><br /></p></body></html>"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec())

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1128</width>
+    <width>1129</width>
     <height>1148</height>
    </rect>
   </property>
@@ -99,7 +99,7 @@ background-color: rgb(255, 255, 255);</string>
 background-color:transparent</string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="pageOverview">
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -1693,8 +1693,8 @@ border: none;                 /* Xóa viền */   </string>
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>472</width>
-                        <height>764</height>
+                        <width>452</width>
+                        <height>562</height>
                        </rect>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -2906,6 +2906,18 @@ font: 75 10pt &quot;Palatino Linotype&quot;;</string>
                  </item>
                  <item>
                   <widget class="QLabel" name="label_linechart">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>300</width>
+                     <height>100</height>
+                    </size>
+                   </property>
                    <property name="maximumSize">
                     <size>
                      <width>300</width>
@@ -2986,6 +2998,18 @@ font: 75 10pt &quot;Palatino Linotype&quot;;</string>
                  </item>
                  <item>
                   <widget class="QLabel" name="topspending">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>300</width>
+                     <height>150</height>
+                    </size>
+                   </property>
                    <property name="maximumSize">
                     <size>
                      <width>300</width>
@@ -3133,8 +3157,8 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1128</width>
-     <height>18</height>
+     <width>1129</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>

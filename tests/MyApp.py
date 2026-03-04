@@ -1,3 +1,4 @@
+
 from PyQt6.QtWidgets import QApplication, QMainWindow
 
 from ui.LoginWindowEx import LoginWindowEx
