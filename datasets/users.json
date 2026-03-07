@@ -5,35 +5,35 @@
             "Name": "Mary",
             "UserName": "mary",
             "Password": "1234",
-            "Bestfriend": "Nam"
+            "Phonenumber": "0356142189"
         },
         {
             "Id": "2",
             "Name": "Peter",
             "UserName": "peter",
             "Password": "1234",
-            "Bestfriend": "Minh"
+            "Phonenumber": "0769412117"
         },
         {
             "Id": "3",
             "Name": "John",
             "UserName": "john",
             "Password": "1234",
-            "Bestfriend": "Ngọc"
+            "Phonenumber": "0123456789"
         },
         {
             "Id": "4",
             "Name": "Cook",
             "UserName": "cook",
             "Password": "1234",
-            "Bestfriend": "Lan"
+            "Phonenumber": "0987654321"
         },
         {
             "Id": "5",
             "Name": "Bright",
             "UserName": "bright",
             "Password": "1234",
-            "Bestfriend": "Trà"
+            "Phonenumber": "0845362412"
         }
     ]
 }

@@ -16,9 +16,9 @@ class ForgetPassWindowEx(Ui_MainWindow):
         self.pushButtonsubmit.clicked.connect(self.process_password)
 
     def process_password(self):
-        namefriend = self.lineEditfriend.text().strip()
+        phonenumber = self.lineEditfriend.text().strip()
 
-        if namefriend == "":
+        if phonenumber == "":
             msg = QMessageBox()
             msg.setWindowTitle("Thông báo")
             msg.setText("Vui lòng nhập thông tin để lấy mật khẩu!")
@@ -35,15 +35,16 @@ class ForgetPassWindowEx(Ui_MainWindow):
             return
 
         # 1. Tạo một danh sách để chứa tất cả các user khớp điều kiện
+            # 1. Tạo một danh sách để chứa tất cả các user khớp điều kiện
         found_users_list = []
         for user in all_users.list:
-            if user.Bestfriend.lower() == namefriend.lower():
+            if str(user.Phonenumber).strip() == phonenumber:
                 found_users_list.append(user)
 
         # 2. Kiểm tra xem danh sách có dữ liệu không
         if len(found_users_list) > 0:
             # 3. Duyệt danh sách để nối chuỗi thông tin của tất cả tài khoản
-            message_text = f"Tìm thấy {len(found_users_list)} tài khoản có cùng tên bạn thân:\n\n"
+            message_text = f"Tìm thấy {len(found_users_list)} tài khoản có cùng số điện thoại:\n\n"
 
             for i, user in enumerate(found_users_list, 1):
                 message_text += f"Tài khoản {i}:\n"
@@ -60,7 +61,7 @@ class ForgetPassWindowEx(Ui_MainWindow):
         else:
             msg = QMessageBox()
             msg.setWindowTitle("Lỗi")
-            msg.setText("Không tìm thấy tài khoản nào với tên bạn thân này!")
+            msg.setText("Không tìm thấy tài khoản nào trùng với số điện thoại này!")
             msg.exec()
 
     def go_back_to_login(self):

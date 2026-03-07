@@ -12,47 +12,47 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(564, 441)
+        MainWindow.resize(638, 524)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(0, 0, 561, 411))
+        self.label.setGeometry(QtCore.QRect(0, 0, 641, 471))
         self.label.setText("")
         self.label.setPixmap(QtGui.QPixmap(":/login/images/anhnendep.png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.label_4 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(80, 90, 251, 271))
+        self.label_4.setGeometry(QtCore.QRect(80, 130, 261, 271))
         self.label_4.setStyleSheet("background-color: rgb(254, 243, 213);\n"
 "border-radius: 10px; border: 1px solid gray")
         self.label_4.setText("")
         self.label_4.setObjectName("label_4")
         self.lineEditname = QtWidgets.QLineEdit(parent=self.centralwidget)
-        self.lineEditname.setGeometry(QtCore.QRect(100, 140, 201, 31))
+        self.lineEditname.setGeometry(QtCore.QRect(100, 180, 211, 31))
         self.lineEditname.setStyleSheet("border-radius: 10px; border: 1px solid gray\n"
 "")
         self.lineEditname.setText("")
         self.lineEditname.setObjectName("lineEditname")
         self.label_3 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(100, 110, 111, 31))
+        self.label_3.setGeometry(QtCore.QRect(100, 150, 111, 31))
         self.label_3.setStyleSheet("font: 11pt \"Palatino Linotype\";\n"
 "color: rgb(112, 56, 0);\n"
 "")
         self.label_3.setObjectName("label_3")
         self.lineEditusername = QtWidgets.QLineEdit(parent=self.centralwidget)
-        self.lineEditusername.setGeometry(QtCore.QRect(100, 200, 201, 31))
+        self.lineEditusername.setGeometry(QtCore.QRect(100, 240, 211, 31))
         self.lineEditusername.setStyleSheet("border-radius: 10px; border: 1px solid gray\n"
 "")
         self.lineEditusername.setText("")
         self.lineEditusername.setObjectName("lineEditusername")
         self.label_5 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_5.setGeometry(QtCore.QRect(100, 170, 81, 31))
+        self.label_5.setGeometry(QtCore.QRect(100, 210, 81, 31))
         self.label_5.setStyleSheet("font: 11pt \"Palatino Linotype\";\n"
 "color: rgb(112, 56, 0);\n"
 "")
         self.label_5.setObjectName("label_5")
         self.lineEditpass = QtWidgets.QLineEdit(parent=self.centralwidget)
-        self.lineEditpass.setGeometry(QtCore.QRect(100, 260, 201, 31))
+        self.lineEditpass.setGeometry(QtCore.QRect(100, 300, 211, 31))
         self.lineEditpass.setStyleSheet("border-radius: 10px; border: 1px solid gray\n"
 "")
         self.lineEditpass.setText("")
@@ -60,13 +60,13 @@ class Ui_MainWindow(object):
         self.lineEditpass.setClearButtonEnabled(False)
         self.lineEditpass.setObjectName("lineEditpass")
         self.label_6 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_6.setGeometry(QtCore.QRect(100, 230, 81, 31))
+        self.label_6.setGeometry(QtCore.QRect(100, 270, 81, 31))
         self.label_6.setStyleSheet("font: 11pt \"Palatino Linotype\";\n"
 "color: rgb(112, 56, 0);\n"
 "")
         self.label_6.setObjectName("label_6")
         self.label_2 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(160, 40, 81, 81))
+        self.label_2.setGeometry(QtCore.QRect(170, 80, 81, 81))
         self.label_2.setStyleSheet("border-radius:40px; border: 1px solid gray\n"
 "")
         self.label_2.setText("")
@@ -74,12 +74,12 @@ class Ui_MainWindow(object):
         self.label_2.setScaledContents(True)
         self.label_2.setObjectName("label_2")
         self.label_7 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_7.setGeometry(QtCore.QRect(354, 110, 121, 101))
+        self.label_7.setGeometry(QtCore.QRect(354, 110, 191, 131))
         self.label_7.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.label_7.setText("")
         self.label_7.setObjectName("label_7")
         self.pushButtonsave = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.pushButtonsave.setGeometry(QtCore.QRect(370, 230, 81, 31))
+        self.pushButtonsave.setGeometry(QtCore.QRect(410, 270, 81, 41))
         self.pushButtonsave.setStyleSheet("background-color: rgb(118, 80, 59);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 75 10pt \"Palatino Linotype\";\n"
@@ -91,7 +91,7 @@ class Ui_MainWindow(object):
         self.pushButtonsave.setIcon(icon)
         self.pushButtonsave.setObjectName("pushButtonsave")
         self.pushButtonexit = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.pushButtonexit.setGeometry(QtCore.QRect(370, 270, 81, 31))
+        self.pushButtonexit.setGeometry(QtCore.QRect(410, 320, 81, 41))
         self.pushButtonexit.setStyleSheet("background-color: rgb(118, 80, 59);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 75 10pt \"Palatino Linotype\";\n"
@@ -102,19 +102,19 @@ class Ui_MainWindow(object):
         self.pushButtonexit.setIcon(icon1)
         self.pushButtonexit.setObjectName("pushButtonexit")
         self.label_8 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_8.setGeometry(QtCore.QRect(370, 140, 91, 91))
+        self.label_8.setGeometry(QtCore.QRect(400, 160, 111, 111))
         self.label_8.setText("")
         self.label_8.setPixmap(QtGui.QPixmap(":/login/images/thaotacne.png"))
         self.label_8.setScaledContents(True)
         self.label_8.setObjectName("label_8")
         self.label_9 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_9.setGeometry(QtCore.QRect(420, 120, 81, 51))
+        self.label_9.setGeometry(QtCore.QRect(450, 140, 81, 51))
         self.label_9.setText("")
         self.label_9.setPixmap(QtGui.QPixmap(":/login/images/thoaihong.png"))
         self.label_9.setScaledContents(True)
         self.label_9.setObjectName("label_9")
         self.label_10 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_10.setGeometry(QtCore.QRect(430, 120, 91, 51))
+        self.label_10.setGeometry(QtCore.QRect(460, 140, 91, 51))
         self.label_10.setStyleSheet("font: 75 10pt \"Palatino Linotype\";\n"
 "color: rgb(138, 46, 69);")
         self.label_10.setObjectName("label_10")
@@ -126,13 +126,13 @@ class Ui_MainWindow(object):
         self.label_11.setText("")
         self.label_11.setObjectName("label_11")
         self.lineEditpass_2 = QtWidgets.QLineEdit(parent=self.centralwidget)
-        self.lineEditpass_2.setGeometry(QtCore.QRect(100, 320, 201, 31))
+        self.lineEditpass_2.setGeometry(QtCore.QRect(100, 360, 211, 31))
         self.lineEditpass_2.setStyleSheet("border-radius: 10px; border: 1px solid gray\n"
 "")
         self.lineEditpass_2.setText("")
         self.lineEditpass_2.setObjectName("lineEditpass_2")
         self.label_12 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_12.setGeometry(QtCore.QRect(100, 280, 261, 51))
+        self.label_12.setGeometry(QtCore.QRect(100, 320, 261, 51))
         self.label_12.setStyleSheet("font: 11pt \"Palatino Linotype\";\n"
 "color: rgb(112, 56, 0);\n"
 "")
@@ -157,7 +157,7 @@ class Ui_MainWindow(object):
         self.label_12.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 564, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 638, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
@@ -176,4 +176,4 @@ class Ui_MainWindow(object):
         self.pushButtonsave.setText(_translate("MainWindow", "Save"))
         self.pushButtonexit.setText(_translate("MainWindow", "Exit"))
         self.label_10.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:11pt; color:#bb3e5d;\">Nhớ lưu !!</span></p></body></html>"))
-        self.label_12.setText(_translate("MainWindow", "Your bestfriend:"))
+        self.label_12.setText(_translate("MainWindow", "Your phone number:"))

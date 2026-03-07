@@ -38,7 +38,7 @@ class Ui_MainWindow(object):
         self.label_13.setText("")
         self.label_13.setObjectName("label_13")
         self.label_3 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(200, 140, 231, 51))
+        self.label_3.setGeometry(QtCore.QRect(150, 140, 271, 51))
         self.label_3.setStyleSheet("font: 11pt \"Palatino Linotype\";\n"
 "color: rgb(112, 56, 0);\n"
 "")
@@ -57,6 +57,7 @@ class Ui_MainWindow(object):
 "border-radius: 10px;\n"
 "border: 1px solid white\n"
 "")
+        self.pushButtonsubmit.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("D:\\nam1\\FINAL_KTLT\\ui\\../images/ic_finished.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButtonsubmit.setIcon(icon)
@@ -83,5 +84,4 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Quên mật khẩu"))
-        self.label_3.setText(_translate("MainWindow", "Who is your bestfrend?"))
-        self.pushButtonsubmit.setText(_translate("MainWindow", "Submit"))
+        self.label_3.setText(_translate("MainWindow", "What is your phone number?"))
