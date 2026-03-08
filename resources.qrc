@@ -1,6 +1,24 @@
 <RCC>
   <qresource prefix="nen">
-    <file>images/dog.png</file>
+    <file>images/cute12.jpg</file>
+    <file>images/cute11.png</file>
+    <file>images/cute10.png</file>
+    <file>images/calendar.png</file>
+    <file>images/calculator.png</file>
+    <file>images/magnifying-glass.png</file>
+    <file>images/news.png</file>
+    <file>images/cute8.png</file>
+    <file>images/cute9.png</file>
+    <file>images/cute7.png</file>
+    <file>images/cute6.png</file>
+    <file>images/lichxoa.png</file>
+    <file>images/cute5.png</file>
+    <file>images/cute4.png</file>
+    <file>images/cute2.png</file>
+    <file>images/cute1.png</file>
+    <file>images/cardA.png</file>
+    <file>images/cardAca.png</file>
+    <file>images/nenmoi.jpg</file>
     <file>images/bongden.png</file>
     <file>images/xuat.png</file>
     <file>images/anh.jpg</file>

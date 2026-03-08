@@ -14,7 +14,7 @@ class Users(MyCollections):
                 'Name': item.Name,
                 'UserName': item.UserName,
                 'Password': item.Password,
-                'Bestfriend': item.Bestfriend,
+                'Phonenumber': item.Phonenumber,
         })
 
         with open(filename, 'w', encoding='utf8') as outfile:
@@ -30,8 +30,8 @@ class Users(MyCollections):
                 Name=item['Name']
                 UserName=item['UserName']
                 Password=item['Password']
-                Bestfriend=item['Bestfriend']
-                emp=User(Id,Name,UserName,Password,Bestfriend)
+                Phonenumber=item['Phonenumber']
+                emp=User(Id,Name,UserName,Password,Phonenumber)
                 self.add_item(emp)
 
     def login(self,uid,pwd):

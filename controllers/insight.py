@@ -74,7 +74,7 @@ class InsightController:
             return 0.0
 
     def ve_bieu_do_trend(self, gpa_cu, gpa_hien_tai):
-            fig, ax = plt.subplots(figsize=(4, 1.5), dpi=100)
+            fig, ax = plt.subplots(figsize=(3, 3), dpi=100)
             fig.patch.set_alpha(0)
             ax.set_facecolor('none')
             x = ["Kỳ trước", "Kỳ này"]
