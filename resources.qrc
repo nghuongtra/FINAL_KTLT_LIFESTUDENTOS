@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="nen">
+    <file>images/dog.png</file>
     <file>images/bongden.png</file>
     <file>images/xuat.png</file>
     <file>images/anh.jpg</file>
@@ -32,6 +33,24 @@
     <file>images/xe_co.png</file>
     <file>images/tro_choi.png</file>
     <file>images/y_te.png</file>
+    <file>images/kinhlup.png</file>
+    <file>images/nen_insight.png</file>
+    <file>images/duck.png</file>
+    <file>images/bieudo.png</file>
+    <file>images/vi_tien.png</file>
+    <file>images/animal.png</file>
+    <file>images/banchan.png</file>
+    <file>images/clock.png</file>
+    <file>images/deadline.png</file>
+    <file>images/khunglong.png</file>
+    <file>images/note.png</file>
+    <file>images/bee.png</file>
+    <file>images/status.png</file>
+    <file>images/choleluoi.png</file>
+    <file>images/hamster.png</file>
+    <file>images/meocam.png</file>
+    <file>images/meohoa.png</file>
+    <file>images/thohong.png</file>
   </qresource>
   <qresource prefix="login">
     <file>images/anger.png</file>

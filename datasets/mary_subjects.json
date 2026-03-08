@@ -1,1 +1,11 @@
-{"subjects": []}
+{
+    "subjects": [
+        {
+            "Subname": "kĩ thuật lập trình",
+            "credit": "3",
+            "scoreProcess": "8",
+            "scoreMidterm": "8",
+            "scoreFinal": "8"
+        }
+    ]
+}

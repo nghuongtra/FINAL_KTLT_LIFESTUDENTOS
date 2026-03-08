@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "ngay": "07/03/2026",
+        "khoan_chi": "chô li bi",
+        "so_tien": 95000,
+        "danh_muc": "Ăn uống",
+        "ghi_chu": "thèm lắm rồi"
+    }
+]
