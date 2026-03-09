@@ -6,7 +6,7 @@ from controllers.insight import InsightController
 from controllers.overview import OverviewController
 from controllers.task import TaskController
 from ui.MainWindow import Ui_MainWindow
-import ui.resources_rc
+import resources_rc
 
 class MainWindowEx(Ui_MainWindow):
     def setupUi(self, MainWindow):

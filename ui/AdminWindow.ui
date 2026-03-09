@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>881</width>
-    <height>733</height>
+    <height>644</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -51,7 +51,7 @@ border: 2px solid rgb(255, 250, 192);</string>
      </size>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -553,11 +553,8 @@ QTableWidget, QTableWidget::viewport {
      </item>
     </layout>
    </widget>
+   <zorder>layoutWidget</zorder>
    <zorder>pushButton</zorder>
-   <zorder>frame</zorder>
-   <zorder>frame_2</zorder>
-   <zorder>pushButton_3</zorder>
-   <zorder>frame_user</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

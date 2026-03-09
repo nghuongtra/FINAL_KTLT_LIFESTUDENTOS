@@ -18,7 +18,6 @@
     <file>images/cute1.png</file>
     <file>images/cardA.png</file>
     <file>images/cardAca.png</file>
-    <file>images/nenmoi.jpg</file>
     <file>images/bongden.png</file>
     <file>images/xuat.png</file>
     <file>images/anh.jpg</file>
@@ -71,6 +70,10 @@
     <file>images/thohong.png</file>
     <file>images/dog.png</file>
     <file>images/background.png</file>
+    <file>images/certificate.png</file>
+    <file>images/graduate.png</file>
+    <file>images/nen_academic.jpg</file>
+    <file>images/books.png</file>
   </qresource>
   <qresource prefix="login">
     <file>images/anger.png</file>
