@@ -69,6 +69,8 @@
     <file>images/meocam.png</file>
     <file>images/meohoa.png</file>
     <file>images/thohong.png</file>
+    <file>images/dog.png</file>
+    <file>images/background.png</file>
   </qresource>
   <qresource prefix="login">
     <file>images/anger.png</file>
@@ -80,5 +82,14 @@
     <file>images/pass.png</file>
     <file>images/thaotacne.png</file>
     <file>images/thoaihong.png</file>
+  </qresource>
+  <qresource prefix="admin">
+    <file>images/background_admin.png</file>
+    <file>images/list.png</file>
+    <file>images/log.png</file>
+    <file>images/money.png</file>
+    <file>images/chicken.png</file>
+    <file>images/conmeu.png</file>
+    <file>images/user.png</file>
   </qresource>
 </RCC>
