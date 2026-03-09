@@ -52,6 +52,10 @@ class Ui_MainWindow(object):
         self.pushButtonOverview = QtWidgets.QPushButton(parent=self.frameHeader)
         self.pushButtonOverview.setStyleSheet("font: 14pt \"Palatino Linotype\";\n"
 "font-weight: bold;")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/nen/images/bieudo.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonOverview.setIcon(icon)
+        self.pushButtonOverview.setIconSize(QtCore.QSize(150, 30))
         self.pushButtonOverview.setCheckable(True)
         self.pushButtonOverview.setChecked(True)
         self.pushButtonOverview.setObjectName("pushButtonOverview")
@@ -62,6 +66,10 @@ class Ui_MainWindow(object):
         self.pushButtonAcademic = QtWidgets.QPushButton(parent=self.frameHeader)
         self.pushButtonAcademic.setStyleSheet("font: 14pt \"Palatino Linotype\";\n"
 "font-weight: bold;")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/nen/images/books.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonAcademic.setIcon(icon1)
+        self.pushButtonAcademic.setIconSize(QtCore.QSize(80, 30))
         self.pushButtonAcademic.setCheckable(True)
         self.pushButtonAcademic.setObjectName("pushButtonAcademic")
         self.buttonGroup.addButton(self.pushButtonAcademic)
@@ -69,6 +77,10 @@ class Ui_MainWindow(object):
         self.pushButtonFinanceManagement = QtWidgets.QPushButton(parent=self.frameHeader)
         self.pushButtonFinanceManagement.setStyleSheet("font: 14pt \"Palatino Linotype\";\n"
 "font-weight: bold;")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(":/nen/images/vi_tien.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonFinanceManagement.setIcon(icon2)
+        self.pushButtonFinanceManagement.setIconSize(QtCore.QSize(80, 30))
         self.pushButtonFinanceManagement.setCheckable(True)
         self.pushButtonFinanceManagement.setObjectName("pushButtonFinanceManagement")
         self.buttonGroup.addButton(self.pushButtonFinanceManagement)
@@ -76,6 +88,10 @@ class Ui_MainWindow(object):
         self.pushButtonTaskScheduler = QtWidgets.QPushButton(parent=self.frameHeader)
         self.pushButtonTaskScheduler.setStyleSheet("font: 14pt \"Palatino Linotype\";\n"
 "font-weight: bold;")
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(":/nen/images/note.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonTaskScheduler.setIcon(icon3)
+        self.pushButtonTaskScheduler.setIconSize(QtCore.QSize(80, 30))
         self.pushButtonTaskScheduler.setCheckable(True)
         self.pushButtonTaskScheduler.setObjectName("pushButtonTaskScheduler")
         self.buttonGroup.addButton(self.pushButtonTaskScheduler)
@@ -83,6 +99,10 @@ class Ui_MainWindow(object):
         self.pushButtonInsights = QtWidgets.QPushButton(parent=self.frameHeader)
         self.pushButtonInsights.setStyleSheet("font: 14pt \"Palatino Linotype\";\n"
 "font-weight: bold;")
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap(":/nen/images/kinhlup.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonInsights.setIcon(icon4)
+        self.pushButtonInsights.setIconSize(QtCore.QSize(80, 30))
         self.pushButtonInsights.setCheckable(True)
         self.pushButtonInsights.setObjectName("pushButtonInsights")
         self.buttonGroup.addButton(self.pushButtonInsights)
@@ -131,11 +151,11 @@ class Ui_MainWindow(object):
         self.label_77 = QtWidgets.QLabel(parent=self.cardTask)
         self.label_77.setMaximumSize(QtCore.QSize(600, 50))
         self.label_77.setStyleSheet("QLabel {\n"
-"    font: bold 22pt \"Palatino Linotype\"; /* Chỉnh font chữ to và in đậm */\n"
-"    color:rgb(33, 0, 0); /* Màu nâu đất nung đậm, rất hợp với viền khung */\n"
-"    background-color: transparent; /* Nền trong suốt để tệp với màu khung */\n"
-"    qproperty-alignment: AlignCenter; /* Lệnh ép chữ tự động căn giữa khung */\n"
-"    padding-bottom: 5px; /* Đẩy chữ lên một chút cho thoáng */\n"
+"    font: bold 22pt \"Palatino Linotype\"; \n"
+"    color: #8B5A2B; \n"
+"    background-color: transparent; \n"
+"    qproperty-alignment: AlignCenter;\n"
+"    padding-bottom: 5px; \n"
 "}")
         self.label_77.setObjectName("label_77")
         self.verticalLayout_33.addWidget(self.label_77)
@@ -146,7 +166,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.label_14.sizePolicy().hasHeightForWidth())
         self.label_14.setSizePolicy(sizePolicy)
         self.label_14.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.label_14.setStyleSheet(" font: bold 22pt \"Palatino Linotype\"; ")
+        self.label_14.setStyleSheet("font: bold 18pt \"Palatino Linotype\";\n"
+"background-color:transparent;\n"
+"color:black;")
         self.label_14.setAlignment(QtCore.Qt.AlignmentFlag.AlignBottom|QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.label_14.setObjectName("label_14")
         self.verticalLayout_33.addWidget(self.label_14)
@@ -158,14 +180,14 @@ class Ui_MainWindow(object):
         self.label_78 = QtWidgets.QLabel(parent=self.cardTask)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
-        font.setPointSize(20)
+        font.setPointSize(18)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
         self.label_78.setFont(font)
-        self.label_78.setStyleSheet("font:  bold 20pt \"Palatino Linotype\";\n"
+        self.label_78.setStyleSheet("font: bold 18pt \"Palatino Linotype\";\n"
 "background-color:transparent;\n"
-"")
+"color:black;")
         self.label_78.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_78.setObjectName("label_78")
         self.verticalLayout_31.addWidget(self.label_78)
@@ -175,18 +197,20 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
-        font.setBold(False)
+        font.setBold(True)
         font.setItalic(False)
-        font.setWeight(50)
+        font.setWeight(75)
         self.labelTaskPending.setFont(font)
-        self.labelTaskPending.setStyleSheet("font: 18pt \"Palatino Linotype\";\n"
-"background-color:transparent")
+        self.labelTaskPending.setStyleSheet("font: bold 18pt \"Palatino Linotype\";\n"
+"background-color:transparent;\n"
+"color:black;")
         self.labelTaskPending.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.labelTaskPending.setObjectName("labelTaskPending")
         self.horizontalLayout_18.addWidget(self.labelTaskPending)
         self.label_79 = QtWidgets.QLabel(parent=self.cardTask)
         self.label_79.setStyleSheet("font: bold 18pt \"Palatino Linotype\";\n"
-"background-color:transparent")
+"background-color:transparent;\n"
+"color:black;")
         self.label_79.setObjectName("label_79")
         self.horizontalLayout_18.addWidget(self.label_79)
         self.verticalLayout_31.addLayout(self.horizontalLayout_18)
@@ -196,18 +220,20 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
         font.setPointSize(18)
-        font.setBold(False)
+        font.setBold(True)
         font.setItalic(False)
-        font.setWeight(50)
+        font.setWeight(75)
         self.labelTaskOverdue.setFont(font)
-        self.labelTaskOverdue.setStyleSheet("font: 18pt \"Palatino Linotype\";\n"
-"background-color:transparent")
+        self.labelTaskOverdue.setStyleSheet("font: bold 18pt \"Palatino Linotype\";\n"
+"background-color:transparent;\n"
+"color:black;")
         self.labelTaskOverdue.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.labelTaskOverdue.setObjectName("labelTaskOverdue")
         self.horizontalLayout_19.addWidget(self.labelTaskOverdue)
         self.label_84 = QtWidgets.QLabel(parent=self.cardTask)
         self.label_84.setStyleSheet("font: bold 18pt \"Palatino Linotype\";\n"
-"background-color:transparent")
+"background-color:transparent;\n"
+"color:black;")
         self.label_84.setObjectName("label_84")
         self.horizontalLayout_19.addWidget(self.label_84)
         self.verticalLayout_31.addLayout(self.horizontalLayout_19)
@@ -220,9 +246,9 @@ class Ui_MainWindow(object):
 "border-radius: 10px;\n"
 "color: rgb(170, 65, 23);\n"
 "padding: 6px;")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/nen/images/news.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButtonViewTask.setIcon(icon)
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap(":/nen/images/news.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonViewTask.setIcon(icon5)
         self.pushButtonViewTask.setIconSize(QtCore.QSize(40, 40))
         self.pushButtonViewTask.setObjectName("pushButtonViewTask")
         self.verticalLayout_32.addWidget(self.pushButtonViewTask)
@@ -265,11 +291,11 @@ class Ui_MainWindow(object):
         self.label_74 = QtWidgets.QLabel(parent=self.cardAcademic)
         self.label_74.setMaximumSize(QtCore.QSize(600, 40))
         self.label_74.setStyleSheet("QLabel {\n"
-"    font: bold 22pt \"Palatino Linotype\"; /* Chỉnh font chữ to và in đậm */\n"
-"    color: #8B5A2B; /* Màu nâu đất nung đậm, rất hợp với viền khung */\n"
-"    background-color: transparent; /* Nền trong suốt để tệp với màu khung */\n"
-"    qproperty-alignment: AlignCenter; /* Lệnh ép chữ tự động căn giữa khung */\n"
-"    padding-bottom: 5px; /* Đẩy chữ lên một chút cho thoáng */\n"
+"    font: bold 22pt \"Palatino Linotype\"; \n"
+"    color: #8B5A2B; \n"
+"    background-color: transparent; \n"
+"    qproperty-alignment: AlignCenter;\n"
+"    padding-bottom: 5px; \n"
 "}")
         self.label_74.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_74.setObjectName("label_74")
@@ -281,7 +307,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.label_6.sizePolicy().hasHeightForWidth())
         self.label_6.setSizePolicy(sizePolicy)
         self.label_6.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.label_6.setStyleSheet(" font: bold 22pt \"Palatino Linotype\"; ")
+        self.label_6.setStyleSheet("font: bold 18pt \"Palatino Linotype\";\n"
+"background-color:transparent;\n"
+"color:black;")
         self.label_6.setAlignment(QtCore.Qt.AlignmentFlag.AlignBottom|QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.label_6.setObjectName("label_6")
         self.verticalLayout_26.addWidget(self.label_6)
@@ -291,13 +319,15 @@ class Ui_MainWindow(object):
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
         self.label_82 = QtWidgets.QLabel(parent=self.cardAcademic)
         self.label_82.setStyleSheet("font: bold 18pt \"Palatino Linotype\";\n"
-"background-color:transparent")
+"background-color:transparent;\n"
+"color:black;")
         self.label_82.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_82.setObjectName("label_82")
         self.horizontalLayout_6.addWidget(self.label_82)
         self.labelGPA = QtWidgets.QLabel(parent=self.cardAcademic)
-        self.labelGPA.setStyleSheet("font: 18pt \"Palatino Linotype\";\n"
-"background-color:transparent")
+        self.labelGPA.setStyleSheet("font: bold 18pt \"Palatino Linotype\";\n"
+"background-color:transparent;\n"
+"color:black;")
         self.labelGPA.setObjectName("labelGPA")
         self.horizontalLayout_6.addWidget(self.labelGPA)
         self.verticalLayout_25.addLayout(self.horizontalLayout_6)
@@ -305,13 +335,15 @@ class Ui_MainWindow(object):
         self.horizontalLayout_15.setObjectName("horizontalLayout_15")
         self.label_83 = QtWidgets.QLabel(parent=self.cardAcademic)
         self.label_83.setStyleSheet("font: bold 18pt \"Palatino Linotype\";\n"
-"background-color:transparent")
+"background-color:transparent;\n"
+"color:black;")
         self.label_83.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_83.setObjectName("label_83")
         self.horizontalLayout_15.addWidget(self.label_83)
         self.labelGrade = QtWidgets.QLabel(parent=self.cardAcademic)
-        self.labelGrade.setStyleSheet("font: 18pt \"Palatino Linotype\";\n"
-"background-color:transparent")
+        self.labelGrade.setStyleSheet("font: bold 18pt \"Palatino Linotype\";\n"
+"background-color:transparent;\n"
+"color:black;")
         self.labelGrade.setObjectName("labelGrade")
         self.horizontalLayout_15.addWidget(self.labelGrade)
         self.verticalLayout_25.addLayout(self.horizontalLayout_15)
@@ -324,9 +356,9 @@ class Ui_MainWindow(object):
 "border-radius: 10px;\n"
 "color: rgb(170, 65, 23);\n"
 "padding: 6px;")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/nen/images/magnifying-glass.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButtonViewDetail.setIcon(icon1)
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap(":/nen/images/magnifying-glass.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonViewDetail.setIcon(icon6)
         self.pushButtonViewDetail.setIconSize(QtCore.QSize(40, 40))
         self.pushButtonViewDetail.setObjectName("pushButtonViewDetail")
         self.verticalLayout_26.addWidget(self.pushButtonViewDetail)
@@ -372,7 +404,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_30.addWidget(self.label_71)
         self.label_10 = QtWidgets.QLabel(parent=self.cardmanage)
         self.label_10.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.label_10.setStyleSheet(" font: bold 22pt \"Palatino Linotype\"; ")
+        self.label_10.setStyleSheet("font: bold 18pt \"Palatino Linotype\";\n"
+"background-color:transparent;\n"
+"color:black;")
         self.label_10.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_10.setObjectName("label_10")
         self.verticalLayout_30.addWidget(self.label_10)
@@ -385,13 +419,14 @@ class Ui_MainWindow(object):
         self.label_72 = QtWidgets.QLabel(parent=self.cardmanage)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
-        font.setPointSize(19)
+        font.setPointSize(18)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
         self.label_72.setFont(font)
-        self.label_72.setStyleSheet("font:  bold 19pt \"Palatino Linotype\";\n"
-"background-color:transparent;")
+        self.label_72.setStyleSheet("font: bold 18pt \"Palatino Linotype\";\n"
+"background-color:transparent;\n"
+"color:black;")
         self.label_72.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_72.setObjectName("label_72")
         self.verticalLayout_27.addWidget(self.label_72)
@@ -399,13 +434,15 @@ class Ui_MainWindow(object):
         self.horizontalLayout_17.setObjectName("horizontalLayout_17")
         self.label_73 = QtWidgets.QLabel(parent=self.cardmanage)
         self.label_73.setStyleSheet("font: bold 18pt \"Palatino Linotype\";\n"
-"background-color:transparent")
+"background-color:transparent;\n"
+"color:black;")
         self.label_73.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_73.setObjectName("label_73")
         self.horizontalLayout_17.addWidget(self.label_73)
         self.labelTotal = QtWidgets.QLabel(parent=self.cardmanage)
-        self.labelTotal.setStyleSheet("font: 18pt \"Palatino Linotype\";\n"
-"background-color:transparent")
+        self.labelTotal.setStyleSheet("font: bold 18pt \"Palatino Linotype\";\n"
+"background-color:transparent;\n"
+"color:black;")
         self.labelTotal.setObjectName("labelTotal")
         self.horizontalLayout_17.addWidget(self.labelTotal)
         self.verticalLayout_27.addLayout(self.horizontalLayout_17)
@@ -419,9 +456,9 @@ class Ui_MainWindow(object):
 "border-radius: 10px;\n"
 "color: rgb(170, 65, 23);\n"
 "padding: 6px;")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/nen/images/calculator.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButtonManageFinances.setIcon(icon2)
+        icon7 = QtGui.QIcon()
+        icon7.addPixmap(QtGui.QPixmap(":/nen/images/calculator.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonManageFinances.setIcon(icon7)
         self.pushButtonManageFinances.setIconSize(QtCore.QSize(40, 40))
         self.pushButtonManageFinances.setDefault(False)
         self.pushButtonManageFinances.setObjectName("pushButtonManageFinances")
@@ -451,11 +488,11 @@ class Ui_MainWindow(object):
         self.label_80 = QtWidgets.QLabel(parent=self.cardCalender)
         self.label_80.setMaximumSize(QtCore.QSize(600, 50))
         self.label_80.setStyleSheet("QLabel {\n"
-"    font: bold 22pt \"Palatino Linotype\"; /* Chỉnh font chữ to và in đậm */\n"
-"    color:rgb(33, 0, 0); /* Màu nâu đất nung đậm, rất hợp với viền khung */\n"
-"    background-color: transparent; /* Nền trong suốt để tệp với màu khung */\n"
-"    qproperty-alignment: AlignCenter; /* Lệnh ép chữ tự động căn giữa khung */\n"
-"    padding-bottom: 5px; /* Đẩy chữ lên một chút cho thoáng */\n"
+"    font: bold 22pt \"Palatino Linotype\"; \n"
+"    color: #8B5A2B; \n"
+"    background-color: transparent; \n"
+"    qproperty-alignment: AlignCenter;\n"
+"    padding-bottom: 5px; \n"
 "}")
         self.label_80.setObjectName("label_80")
         self.verticalLayout_36.addWidget(self.label_80)
@@ -466,7 +503,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.label_13.sizePolicy().hasHeightForWidth())
         self.label_13.setSizePolicy(sizePolicy)
         self.label_13.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.label_13.setStyleSheet(" font: bold 22pt \"Palatino Linotype\"; ")
+        self.label_13.setStyleSheet("font: bold 18pt \"Palatino Linotype\";\n"
+"background-color:transparent;\n"
+"color:black;")
         self.label_13.setAlignment(QtCore.Qt.AlignmentFlag.AlignBottom|QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.label_13.setObjectName("label_13")
         self.verticalLayout_36.addWidget(self.label_13)
@@ -475,20 +514,21 @@ class Ui_MainWindow(object):
         self.label_81 = QtWidgets.QLabel(parent=self.cardCalender)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
-        font.setPointSize(20)
+        font.setPointSize(18)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
         self.label_81.setFont(font)
-        self.label_81.setStyleSheet("font:  bold 20pt \"Palatino Linotype\";\n"
+        self.label_81.setStyleSheet("font: bold 18pt \"Palatino Linotype\";\n"
 "background-color:transparent;\n"
-"")
+"color:black;")
         self.label_81.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_81.setObjectName("label_81")
         self.verticalLayout_35.addWidget(self.label_81)
         self.labelComingEvent = QtWidgets.QLabel(parent=self.cardCalender)
-        self.labelComingEvent.setStyleSheet("font: 16pt \"Palatino Linotype\";\n"
-"background-color:transparent")
+        self.labelComingEvent.setStyleSheet("font: 18pt \"Palatino Linotype\";\n"
+"background-color:transparent;\n"
+"color:black;")
         self.labelComingEvent.setObjectName("labelComingEvent")
         self.verticalLayout_35.addWidget(self.labelComingEvent)
         self.pushButtonViewCalendar = QtWidgets.QPushButton(parent=self.cardCalender)
@@ -499,9 +539,9 @@ class Ui_MainWindow(object):
 "border-radius: 10px;\n"
 "color: rgb(170, 65, 23);\n"
 "padding: 6px;")
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(":/nen/images/calendar.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButtonViewCalendar.setIcon(icon3)
+        icon8 = QtGui.QIcon()
+        icon8.addPixmap(QtGui.QPixmap(":/nen/images/calendar.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonViewCalendar.setIcon(icon8)
         self.pushButtonViewCalendar.setIconSize(QtCore.QSize(40, 40))
         self.pushButtonViewCalendar.setObjectName("pushButtonViewCalendar")
         self.verticalLayout_35.addWidget(self.pushButtonViewCalendar)
@@ -545,10 +585,22 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setContentsMargins(-1, 5, -1, -1)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.groupBox_4 = QtWidgets.QGroupBox(parent=self.groupBox)
+        self.groupBox_4.setTitle("")
         self.groupBox_4.setObjectName("groupBox_4")
-        self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.groupBox_4)
-        self.verticalLayout_7.setContentsMargins(-1, 5, -1, -1)
+        self.verticalLayout_28 = QtWidgets.QVBoxLayout(self.groupBox_4)
+        self.verticalLayout_28.setObjectName("verticalLayout_28")
+        self.verticalLayout_7 = QtWidgets.QVBoxLayout()
         self.verticalLayout_7.setObjectName("verticalLayout_7")
+        self.pushButton_8 = QtWidgets.QPushButton(parent=self.groupBox_4)
+        self.pushButton_8.setStyleSheet("background-color:rgb(52, 85, 32);\n"
+"border-radius: 13px;\n"
+"border: 2px solid rgb(255, 255, 255);\n"
+"font: 75 16pt \"Palatino Linotype\";\n"
+"color:white;\n"
+"font-weight:bold;\n"
+" min-height: 30px; ")
+        self.pushButton_8.setObjectName("pushButton_8")
+        self.verticalLayout_7.addWidget(self.pushButton_8)
         self.formLayout = QtWidgets.QFormLayout()
         self.formLayout.setObjectName("formLayout")
         self.tNMNLabel = QtWidgets.QLabel(parent=self.groupBox_4)
@@ -617,50 +669,95 @@ class Ui_MainWindow(object):
         self.FinalLineEdit.setObjectName("FinalLineEdit")
         self.formLayout.setWidget(4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.FinalLineEdit)
         self.verticalLayout_7.addLayout(self.formLayout)
-        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.horizontalLayout_30 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_30.setObjectName("horizontalLayout_30")
         self.frame_4 = QtWidgets.QFrame(parent=self.groupBox_4)
+        self.frame_4.setStyleSheet("#frame_4 {\n"
+"    background-color:rgb(255, 229, 192);\n"
+"    border-radius: 20px;\n"
+"    border: 2px dashed rgb(130, 80, 9);\n"
+"    font: 75 14pt \"Palatino Linotype\";\n"
+"\n"
+"}\n"
+"\n"
+"")
         self.frame_4.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_4.setObjectName("frame_4")
-        self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.frame_4)
-        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.frame_4)
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.label_43 = QtWidgets.QLabel(parent=self.frame_4)
+        self.label_43.setMaximumSize(QtCore.QSize(80, 80))
+        self.label_43.setText("")
+        self.label_43.setPixmap(QtGui.QPixmap(":/nen/images/graduate.png"))
+        self.label_43.setScaledContents(True)
+        self.label_43.setObjectName("label_43")
+        self.horizontalLayout_4.addWidget(self.label_43)
         self.lblResult_3 = QtWidgets.QLabel(parent=self.frame_4)
         self.lblResult_3.setMaximumSize(QtCore.QSize(80, 50))
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
-        font.setPointSize(16)
-        font.setBold(False)
+        font.setPointSize(21)
+        font.setBold(True)
         font.setItalic(False)
-        font.setWeight(50)
+        font.setWeight(75)
         self.lblResult_3.setFont(font)
-        self.lblResult_3.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"color: rgb(223, 0, 0);")
+        self.lblResult_3.setStyleSheet("background-color: transparent; \n"
+"color:brown;\n"
+"font-weight:bold;\n"
+"border:none;\n"
+"font: bold 21pt \"Palatino Linotype\";")
         self.lblResult_3.setFrameShape(QtWidgets.QFrame.Shape.Box)
         self.lblResult_3.setLineWidth(1)
         self.lblResult_3.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.lblResult_3.setObjectName("lblResult_3")
-        self.horizontalLayout_5.addWidget(self.lblResult_3)
+        self.horizontalLayout_4.addWidget(self.lblResult_3)
         self.lineEditGPA = QtWidgets.QLineEdit(parent=self.frame_4)
         self.lineEditGPA.setMaximumSize(QtCore.QSize(80, 50))
-        self.lineEditGPA.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEditGPA.setStyleSheet("background-color: rgb(170, 108, 32);\n"
+"border-radius: 20px;\n"
+"color: white")
         self.lineEditGPA.setAlignment(QtCore.Qt.AlignmentFlag.AlignBottom|QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.lineEditGPA.setObjectName("lineEditGPA")
-        self.horizontalLayout_5.addWidget(self.lineEditGPA)
-        self.label_7 = QtWidgets.QLabel(parent=self.frame_4)
-        self.label_7.setMaximumSize(QtCore.QSize(110, 50))
-        self.label_7.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"color: rgb(223, 0, 0);")
+        self.horizontalLayout_4.addWidget(self.lineEditGPA)
+        self.horizontalLayout_30.addWidget(self.frame_4)
+        self.frame_10 = QtWidgets.QFrame(parent=self.groupBox_4)
+        self.frame_10.setStyleSheet("#frame_10 {\n"
+"    background-color:rgb(170, 103, 35);\n"
+"    border-radius: 20px;\n"
+"    border: 2px dashed rgb(5, 85, 5);\n"
+"    font: 75 14pt \"Palatino Linotype\";\n"
+"}")
+        self.frame_10.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame_10.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame_10.setObjectName("frame_10")
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.frame_10)
+        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
+        self.label_44 = QtWidgets.QLabel(parent=self.frame_10)
+        self.label_44.setMaximumSize(QtCore.QSize(80, 80))
+        self.label_44.setText("")
+        self.label_44.setPixmap(QtGui.QPixmap(":/nen/images/certificate.png"))
+        self.label_44.setScaledContents(True)
+        self.label_44.setObjectName("label_44")
+        self.horizontalLayout_5.addWidget(self.label_44)
+        self.label_7 = QtWidgets.QLabel(parent=self.frame_10)
+        self.label_7.setMaximumSize(QtCore.QSize(120, 50))
+        self.label_7.setStyleSheet("background-color: transparent; \n"
+"color:white;\n"
+"border:none;\n"
+"font: bold 21pt \"Palatino Linotype\";\n"
+"")
         self.label_7.setFrameShape(QtWidgets.QFrame.Shape.Box)
         self.label_7.setObjectName("label_7")
         self.horizontalLayout_5.addWidget(self.label_7)
-        self.lineEditXeploai = QtWidgets.QLineEdit(parent=self.frame_4)
-        self.lineEditXeploai.setMaximumSize(QtCore.QSize(110, 50))
-        self.lineEditXeploai.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEditXeploai = QtWidgets.QLineEdit(parent=self.frame_10)
+        self.lineEditXeploai.setMaximumSize(QtCore.QSize(100, 50))
+        self.lineEditXeploai.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-radius: 20px;")
         self.lineEditXeploai.setObjectName("lineEditXeploai")
         self.horizontalLayout_5.addWidget(self.lineEditXeploai)
-        self.horizontalLayout_4.addWidget(self.frame_4)
-        self.verticalLayout_7.addLayout(self.horizontalLayout_4)
+        self.horizontalLayout_30.addWidget(self.frame_10)
+        self.verticalLayout_7.addLayout(self.horizontalLayout_30)
         self.horizontalLayout_7 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_7.setObjectName("horizontalLayout_7")
         self.pushButtonCalculateGPA = QtWidgets.QPushButton(parent=self.groupBox_4)
@@ -669,9 +766,9 @@ class Ui_MainWindow(object):
 "border-radius: 10px;\n"
 "color: rgb(255, 247, 131)\n"
 "")
-        icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(":/nen/images/ic_cal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButtonCalculateGPA.setIcon(icon4)
+        icon9 = QtGui.QIcon()
+        icon9.addPixmap(QtGui.QPixmap(":/nen/images/ic_cal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonCalculateGPA.setIcon(icon9)
         self.pushButtonCalculateGPA.setIconSize(QtCore.QSize(40, 40))
         self.pushButtonCalculateGPA.setObjectName("pushButtonCalculateGPA")
         self.horizontalLayout_7.addWidget(self.pushButtonCalculateGPA)
@@ -681,22 +778,31 @@ class Ui_MainWindow(object):
 "border-radius: 10px;\n"
 "color: rgb(114, 57, 0)\n"
 "")
-        icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap(":/nen/images/ic_add.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButtonAddSubject.setIcon(icon5)
+        icon10 = QtGui.QIcon()
+        icon10.addPixmap(QtGui.QPixmap(":/nen/images/ic_add.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonAddSubject.setIcon(icon10)
         self.pushButtonAddSubject.setIconSize(QtCore.QSize(40, 40))
         self.pushButtonAddSubject.setObjectName("pushButtonAddSubject")
         self.horizontalLayout_7.addWidget(self.pushButtonAddSubject)
         self.verticalLayout_7.addLayout(self.horizontalLayout_7)
         self.label_8 = QtWidgets.QLabel(parent=self.groupBox_4)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Ignored, QtWidgets.QSizePolicy.Policy.Ignored)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_8.sizePolicy().hasHeightForWidth())
+        self.label_8.setSizePolicy(sizePolicy)
+        self.label_8.setMaximumSize(QtCore.QSize(700, 500))
+        self.label_8.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.label_8.setText("")
-        self.label_8.setPixmap(QtGui.QPixmap(":/nen/images/ic_hoa.png"))
-        self.label_8.setScaledContents(False)
+        self.label_8.setPixmap(QtGui.QPixmap(":/nen/images/nen_academic.jpg"))
+        self.label_8.setScaledContents(True)
         self.label_8.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_8.setObjectName("label_8")
         self.verticalLayout_7.addWidget(self.label_8)
+        self.verticalLayout_28.addLayout(self.verticalLayout_7)
         self.horizontalLayout_2.addWidget(self.groupBox_4)
         self.groupBox_5 = QtWidgets.QGroupBox(parent=self.groupBox)
+        self.groupBox_5.setTitle("")
         self.groupBox_5.setObjectName("groupBox_5")
         self.gridLayout_4 = QtWidgets.QGridLayout(self.groupBox_5)
         self.gridLayout_4.setObjectName("gridLayout_4")
@@ -706,7 +812,7 @@ class Ui_MainWindow(object):
 "background-color: rgb(255, 255, 255);\n"
 "")
         self.lineEditTimmon.setObjectName("lineEditTimmon")
-        self.gridLayout_4.addWidget(self.lineEditTimmon, 0, 0, 1, 1)
+        self.gridLayout_4.addWidget(self.lineEditTimmon, 1, 0, 1, 1)
         self.tableWidgetthongtinmon = QtWidgets.QTableWidget(parent=self.groupBox_5)
         self.tableWidgetthongtinmon.setStyleSheet("color:  rgb(170, 104, 46);\n"
 "font: 75 12pt \"Palatino Linotype\";\n"
@@ -730,7 +836,7 @@ class Ui_MainWindow(object):
         item = QtWidgets.QTableWidgetItem()
         item.setTextAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.tableWidgetthongtinmon.setHorizontalHeaderItem(4, item)
-        self.gridLayout_4.addWidget(self.tableWidgetthongtinmon, 1, 0, 1, 2)
+        self.gridLayout_4.addWidget(self.tableWidgetthongtinmon, 2, 0, 1, 2)
         self.horizontalLayout_9 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_9.setObjectName("horizontalLayout_9")
         self.pushButtonEdit = QtWidgets.QPushButton(parent=self.groupBox_5)
@@ -739,9 +845,9 @@ class Ui_MainWindow(object):
 "border-radius: 10px;\n"
 "color: rgb(255, 255, 255)\n"
 "")
-        icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap(":/nen/images/ic_pen.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButtonEdit.setIcon(icon6)
+        icon11 = QtGui.QIcon()
+        icon11.addPixmap(QtGui.QPixmap(":/nen/images/ic_pen.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonEdit.setIcon(icon11)
         self.pushButtonEdit.setObjectName("pushButtonEdit")
         self.horizontalLayout_9.addWidget(self.pushButtonEdit)
         self.pushButtonDelete = QtWidgets.QPushButton(parent=self.groupBox_5)
@@ -750,12 +856,22 @@ class Ui_MainWindow(object):
 "border-radius: 10px;\n"
 "color: rgb(255, 255, 255)\n"
 "")
-        icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap(":/nen/images/ic_delete.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButtonDelete.setIcon(icon7)
+        icon12 = QtGui.QIcon()
+        icon12.addPixmap(QtGui.QPixmap(":/nen/images/ic_delete.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonDelete.setIcon(icon12)
         self.pushButtonDelete.setObjectName("pushButtonDelete")
         self.horizontalLayout_9.addWidget(self.pushButtonDelete)
-        self.gridLayout_4.addLayout(self.horizontalLayout_9, 2, 0, 1, 2)
+        self.gridLayout_4.addLayout(self.horizontalLayout_9, 3, 0, 1, 2)
+        self.pushButton_7 = QtWidgets.QPushButton(parent=self.groupBox_5)
+        self.pushButton_7.setStyleSheet("background-color:rgb(52, 85, 32);\n"
+"border-radius: 13px;\n"
+"border: 2px solid rgb(255, 255, 255);\n"
+"font: 75 16pt \"Palatino Linotype\";\n"
+"color:white;\n"
+"font-weight:bold;\n"
+" min-height: 30px; ")
+        self.pushButton_7.setObjectName("pushButton_7")
+        self.gridLayout_4.addWidget(self.pushButton_7, 0, 0, 1, 1)
         self.horizontalLayout_2.addWidget(self.groupBox_5)
         self.verticalLayout_4.addWidget(self.groupBox)
         self.verticalLayout_6.addLayout(self.verticalLayout_4)
@@ -802,13 +918,15 @@ class Ui_MainWindow(object):
         self.verticalLayout_14 = QtWidgets.QVBoxLayout(self.frame_left_3)
         self.verticalLayout_14.setObjectName("verticalLayout_14")
         self.verticalLayout_15 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_15.setSpacing(14)
         self.verticalLayout_15.setObjectName("verticalLayout_15")
         self.frame_Add = QtWidgets.QFrame(parent=self.frame_left_3)
-        self.frame_Add.setStyleSheet("color: rgb(0, 0, 0);\n"
-"font: 12pt \"Palatino Linotype\";\n"
-"background-color: transparent; /* Xóa nền trắng/mờ */\n"
-"\n"
-"border: none;                 /* Xóa viền */  ")
+        self.frame_Add.setStyleSheet("#frame_Add {\n"
+"    background-color:rgb(52, 85, 32);\n"
+"    border-radius: 20px;\n"
+"    border: 2px dashed rgb(130, 80, 9);\n"
+"    font: 75 14pt \"Palatino Linotype\";\n"
+"}")
         self.frame_Add.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_Add.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_Add.setObjectName("frame_Add")
@@ -825,10 +943,10 @@ class Ui_MainWindow(object):
         self.label_32.setFont(font)
         self.label_32.setStyleSheet("color: rgb(0, 0, 0);\n"
 "font: 14pt \"Palatino Linotype\";\n"
-"color:  rgb(170, 104, 46);\n"
+"color:  white;\n"
 "background-color: transparent;\n"
 "\n"
-"border: none;               \n"
+"border: none;         \n"
 "font-weight:bold;")
         self.label_32.setObjectName("label_32")
         self.gridLayout_5.addWidget(self.label_32, 5, 0, 1, 1)
@@ -869,10 +987,10 @@ class Ui_MainWindow(object):
         self.label_33.setFont(font)
         self.label_33.setStyleSheet("color: rgb(0, 0, 0);\n"
 "font: 14pt \"Palatino Linotype\";\n"
-"color:  rgb(170, 104, 46);\n"
+"color:  white;\n"
 "background-color: transparent;\n"
 "\n"
-"border: none;               \n"
+"border: none;         \n"
 "font-weight:bold;")
         self.label_33.setObjectName("label_33")
         self.gridLayout_5.addWidget(self.label_33, 7, 0, 1, 2)
@@ -887,7 +1005,7 @@ class Ui_MainWindow(object):
         self.label_34.setStyleSheet("background-color: transparent; /* Xóa nền trắng/mờ */\n"
 "\n"
 "border: none;                 /* Xóa viền */    ; font-weight: bold;\n"
-"color: rgb(170, 65, 23);\n"
+"color: white;\n"
 "font-size: 20px;")
         self.label_34.setFrameShadow(QtWidgets.QFrame.Shadow.Plain)
         self.label_34.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
@@ -910,18 +1028,23 @@ class Ui_MainWindow(object):
         self.pushButtonAddExpense = QtWidgets.QPushButton(parent=self.frame_Add)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
-        font.setPointSize(12)
+        font.setPointSize(14)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
         self.pushButtonAddExpense.setFont(font)
-        self.pushButtonAddExpense.setStyleSheet("background-color: rgb(255, 255, 255);color:rgb(0, 0, 0);\n"
-"border: none;                 /* Xóa viền */    ; font-weight: bold;\n"
-"background-color: rgb(255, 255, 255);\n"
+        self.pushButtonAddExpense.setStyleSheet("font: 75 14pt \"Palatino Linotype\";\n"
+"font-weight:bold;\n"
+"background-color:rgb(255, 250, 192);\n"
+"color:brown;\n"
+"border-radius: 15px;     \n"
+"padding: 5px;\n"
+"/*border: 2px solid rgb(255, 250, 192);\n"
 "")
-        icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap(":/nen/images/ic_save.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButtonAddExpense.setIcon(icon8)
+        icon13 = QtGui.QIcon()
+        icon13.addPixmap(QtGui.QPixmap(":/nen/images/ic_save.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonAddExpense.setIcon(icon13)
+        self.pushButtonAddExpense.setIconSize(QtCore.QSize(25, 25))
         self.pushButtonAddExpense.setObjectName("pushButtonAddExpense")
         self.gridLayout_5.addWidget(self.pushButtonAddExpense, 9, 0, 1, 2)
         self.label_31 = QtWidgets.QLabel(parent=self.frame_Add)
@@ -934,7 +1057,7 @@ class Ui_MainWindow(object):
         self.label_31.setFont(font)
         self.label_31.setStyleSheet("color: rgb(0, 0, 0);\n"
 "font: 14pt \"Palatino Linotype\";\n"
-"color:  rgb(170, 104, 46);\n"
+"color:  white;\n"
 "background-color: transparent;\n"
 "\n"
 "border: none;         \n"
@@ -944,19 +1067,23 @@ class Ui_MainWindow(object):
         self.verticalLayout_15.addWidget(self.frame_Add)
         self.frame_List = QtWidgets.QFrame(parent=self.frame_left_3)
         self.frame_List.setMinimumSize(QtCore.QSize(300, 200))
-        self.frame_List.setStyleSheet("background-color: transparent; /* Xóa nền trắng/mờ */\n"
-"\n"
-"border: none;                 /* Xóa viền */   ")
+        self.frame_List.setStyleSheet("#frame_List {\n"
+"    background-color:rgba(255, 245, 190,210);\n"
+"    border-radius: 20px;\n"
+"    border: 2px dashed rgb(130, 80, 9);\n"
+"    font: 75 14pt \"Palatino Linotype\";\n"
+"}")
         self.frame_List.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_List.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_List.setObjectName("frame_List")
         self.verticalLayout_16 = QtWidgets.QVBoxLayout(self.frame_List)
         self.verticalLayout_16.setObjectName("verticalLayout_16")
         self.scrollArea = QtWidgets.QScrollArea(parent=self.frame_List)
+        self.scrollArea.setStyleSheet("")
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 472, 698))
+        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 466, 643))
         self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
         self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_11.setObjectName("verticalLayout_11")
@@ -1005,38 +1132,38 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.pushButton_delete = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents_3)
         self.pushButton_delete.setStyleSheet("QPushButton {\n"
-"    background-color:rgb(255, 0, 127); /* Màu tím đậm */\n"
-"    color: black;\n"
+"    background-color:rgb(52, 85, 32);; /* Màu tím đậm */\n"
+"    color: white;\n"
 "    border-radius: 10px;\n"
 "    padding: 5px 15px;\n"
 "    font-weight: bold;\n"
 "}\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(255, 85, 127); /* Sáng hơn khi di chuột vào */\n"
+"    background-color: rgb(143, 143, 0); /* Sáng hơn khi di chuột vào */\n"
 "}\n"
 "\n"
 "")
-        icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap("C:/Users/HP/Downloads/bin.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButton_delete.setIcon(icon9)
+        icon14 = QtGui.QIcon()
+        icon14.addPixmap(QtGui.QPixmap("C:/Users/HP/Downloads/bin.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButton_delete.setIcon(icon14)
         self.pushButton_delete.setIconSize(QtCore.QSize(20, 15))
         self.pushButton_delete.setObjectName("pushButton_delete")
         self.horizontalLayout_3.addWidget(self.pushButton_delete)
         self.pushButton_edit = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents_3)
         self.pushButton_edit.setStyleSheet("QPushButton {\n"
-"    background-color:rgb(0, 170, 255); \n"
-"    color: black;\n"
+" background-color:rgb(170, 103, 35);\n"
+"    color: white;\n"
 "    border-radius: 10px;\n"
 "    padding: 5px 15px;\n"
 "    font-weight: bold;\n"
 "}\n"
 "QPushButton:hover {\n"
-"    background-color: rgb(85, 170, 255); /* Sáng hơn khi di chuột vào */\n"
+"    background-color: rgb(204, 148, 84); /* Sáng hơn khi di chuột vào */\n"
 "}\n"
 "")
-        icon10 = QtGui.QIcon()
-        icon10.addPixmap(QtGui.QPixmap("C:/Users/HP/Downloads/edit.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButton_edit.setIcon(icon10)
+        icon15 = QtGui.QIcon()
+        icon15.addPixmap(QtGui.QPixmap("C:/Users/HP/Downloads/edit.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButton_edit.setIcon(icon15)
         self.pushButton_edit.setIconSize(QtCore.QSize(20, 15))
         self.pushButton_edit.setObjectName("pushButton_edit")
         self.horizontalLayout_3.addWidget(self.pushButton_edit)
@@ -1061,9 +1188,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_17.setObjectName("verticalLayout_17")
         self.frame_12 = QtWidgets.QFrame(parent=self.frame_right_3)
         self.frame_12.setMinimumSize(QtCore.QSize(100, 100))
-        self.frame_12.setStyleSheet("background-color:rgb(170, 103, 35); /* Xóa nền trắng/mờ */\n"
-"border: none;                 /* Xóa viền */    \n"
-"color: rgb(255, 255, 140);\n"
+        self.frame_12.setStyleSheet("#frame_12 {\n"
+"    background-color:rgb(170, 103, 35);\n"
+"    border-radius: 20px;\n"
+"    border: 2px dashed rgb(130, 80, 9);\n"
+"    font: 75 14pt \"Palatino Linotype\";\n"
+"}\n"
+"\n"
 "\n"
 "")
         self.frame_12.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
@@ -1110,16 +1241,16 @@ class Ui_MainWindow(object):
         self.horizontalLayout_14.addWidget(self.lineEditIncome)
         self.pushButton_addincome = QtWidgets.QPushButton(parent=self.frame_12)
         self.pushButton_addincome.setStyleSheet("QPushButton {\n"
-"   background-color:rgb(52, 85, 32);\n"
+"   background-color:rgb(255, 217, 1);\n"
 "border-radius: 13px;\n"
 "border: 2px solid rgb(255, 255, 255);\n"
-"font: 75 15pt \"Palatino Linotype\";\n"
-"color:white;\n"
+"font: bold 13pt \"Palatino Linotype\";\n"
+"color:brown;\n"
 "font_weight:bold;\n"
 " min-height: 30px; \n"
 "}\n"
 "QPushButton:hover {\n"
-"    background-color:rgb(254, 219, 130); /* Sáng hơn khi di chuột vào */\n"
+"    background-color:rgb(255, 170, 0); /* Sáng hơn khi di chuột vào */\n"
 "}\n"
 "")
         self.pushButton_addincome.setObjectName("pushButton_addincome")
@@ -1142,8 +1273,13 @@ class Ui_MainWindow(object):
         self.verticalLayout_9 = QtWidgets.QVBoxLayout()
         self.verticalLayout_9.setObjectName("verticalLayout_9")
         self.frame_5 = QtWidgets.QFrame(parent=self.frame_content_right)
-        self.frame_5.setStyleSheet("background-color:rgba(255, 247, 198,210); /* Xóa nền trắng/mờ */\n"
-"border: none;                 /* Xóa viền */    ")
+        self.frame_5.setStyleSheet("#frame_5 {\n"
+"    background-color:rgba(255, 247, 198,210); \n"
+"    border-radius: 20px;\n"
+"    border: 2px dashed rgb(130, 80, 9);\n"
+"    font: 75 14pt \"Palatino Linotype\";\n"
+"}\n"
+"")
         self.frame_5.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_5.setObjectName("frame_5")
@@ -1216,9 +1352,9 @@ class Ui_MainWindow(object):
 "border: none;                 /* Xóa viền */    ; font-weight: bold;\n"
 "")
         self.pushButtonsearch_3.setText("")
-        icon11 = QtGui.QIcon()
-        icon11.addPixmap(QtGui.QPixmap(":/nen/images/ic_search.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButtonsearch_3.setIcon(icon11)
+        icon16 = QtGui.QIcon()
+        icon16.addPixmap(QtGui.QPixmap(":/nen/images/ic_search.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonsearch_3.setIcon(icon16)
         self.pushButtonsearch_3.setIconSize(QtCore.QSize(30, 30))
         self.pushButtonsearch_3.setObjectName("pushButtonsearch_3")
         self.horizontalLayout_16.addWidget(self.pushButtonsearch_3)
@@ -1350,7 +1486,7 @@ class Ui_MainWindow(object):
 " min-height: 30px; \n"
 "\n"
 "")
-        self.pushButtonNew.setIcon(icon5)
+        self.pushButtonNew.setIcon(icon10)
         self.pushButtonNew.setIconSize(QtCore.QSize(40, 40))
         self.pushButtonNew.setObjectName("pushButtonNew")
         self.horizontalLayout_12.addWidget(self.pushButtonNew)
@@ -1363,9 +1499,9 @@ class Ui_MainWindow(object):
 " min-height: 30px; \n"
 "\n"
 "")
-        icon12 = QtGui.QIcon()
-        icon12.addPixmap(QtGui.QPixmap(":/nen/images/ic_luu.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButtonSave.setIcon(icon12)
+        icon17 = QtGui.QIcon()
+        icon17.addPixmap(QtGui.QPixmap(":/nen/images/ic_luu.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButtonSave.setIcon(icon17)
         self.pushButtonSave.setIconSize(QtCore.QSize(40, 40))
         self.pushButtonSave.setObjectName("pushButtonSave")
         self.horizontalLayout_12.addWidget(self.pushButtonSave)
@@ -1378,7 +1514,7 @@ class Ui_MainWindow(object):
 " min-height: 30px; \n"
 "\n"
 "")
-        self.pushButtonDeleteTask.setIcon(icon7)
+        self.pushButtonDeleteTask.setIcon(icon12)
         self.pushButtonDeleteTask.setIconSize(QtCore.QSize(40, 40))
         self.pushButtonDeleteTask.setObjectName("pushButtonDeleteTask")
         self.horizontalLayout_12.addWidget(self.pushButtonDeleteTask)
@@ -1404,9 +1540,9 @@ class Ui_MainWindow(object):
 "color:white;\n"
 "font_weight:bold;\n"
 " min-height: 30px; ")
-        icon13 = QtGui.QIcon()
-        icon13.addPixmap(QtGui.QPixmap(":/nen/images/bee.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButton_2.setIcon(icon13)
+        icon18 = QtGui.QIcon()
+        icon18.addPixmap(QtGui.QPixmap(":/nen/images/bee.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButton_2.setIcon(icon18)
         self.pushButton_2.setIconSize(QtCore.QSize(40, 30))
         self.pushButton_2.setObjectName("pushButton_2")
         self.gridLayout_3.addWidget(self.pushButton_2, 0, 1, 1, 3)
@@ -1609,9 +1745,7 @@ class Ui_MainWindow(object):
 "color:white;\n"
 "font_weight:bold;\n"
 " min-height: 30px; ")
-        icon14 = QtGui.QIcon()
-        icon14.addPixmap(QtGui.QPixmap(":/nen/images/note.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButton_3.setIcon(icon14)
+        self.pushButton_3.setIcon(icon3)
         self.pushButton_3.setIconSize(QtCore.QSize(40, 30))
         self.pushButton_3.setObjectName("pushButton_3")
         self.gridLayout_10.addWidget(self.pushButton_3, 0, 0, 1, 1)
@@ -1766,9 +1900,9 @@ class Ui_MainWindow(object):
 "border-radius: 15px;     \n"
 "padding: 5px;\n"
 "border: 2px solid rgb(255, 255, 251);")
-        icon15 = QtGui.QIcon()
-        icon15.addPixmap(QtGui.QPixmap(":/nen/images/duck.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButton_5.setIcon(icon15)
+        icon19 = QtGui.QIcon()
+        icon19.addPixmap(QtGui.QPixmap(":/nen/images/duck.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButton_5.setIcon(icon19)
         self.pushButton_5.setIconSize(QtCore.QSize(45, 35))
         self.pushButton_5.setObjectName("pushButton_5")
         self.gridLayout_11.addWidget(self.pushButton_5, 0, 0, 1, 3)
@@ -1787,9 +1921,9 @@ class Ui_MainWindow(object):
 "color:rgb(255, 255, 255);\n"
 "font-weight:bold;\n"
 "")
-        icon16 = QtGui.QIcon()
-        icon16.addPixmap(QtGui.QPixmap(":/nen/images/xuat.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.xuatfileexcel.setIcon(icon16)
+        icon20 = QtGui.QIcon()
+        icon20.addPixmap(QtGui.QPixmap(":/nen/images/xuat.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.xuatfileexcel.setIcon(icon20)
         self.xuatfileexcel.setIconSize(QtCore.QSize(25, 20))
         self.xuatfileexcel.setObjectName("xuatfileexcel")
         self.gridLayout_11.addWidget(self.xuatfileexcel, 5, 0, 1, 3)
@@ -1946,9 +2080,9 @@ class Ui_MainWindow(object):
 "    min-height: 25px;    \n"
 "}\n"
 "")
-        icon17 = QtGui.QIcon()
-        icon17.addPixmap(QtGui.QPixmap(":/nen/images/bongden.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButton.setIcon(icon17)
+        icon21 = QtGui.QIcon()
+        icon21.addPixmap(QtGui.QPixmap(":/nen/images/bongden.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButton.setIcon(icon21)
         self.pushButton.setIconSize(QtCore.QSize(30, 25))
         self.pushButton.setObjectName("pushButton")
         self.gridLayout_12.addWidget(self.pushButton, 5, 0, 1, 2)
@@ -1990,9 +2124,7 @@ class Ui_MainWindow(object):
 "border-radius: 15px;     \n"
 "padding: 5px;\n"
 "border: 2px solid rgb(255, 255, 255);")
-        icon18 = QtGui.QIcon()
-        icon18.addPixmap(QtGui.QPixmap(":/nen/images/kinhlup.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButton_6.setIcon(icon18)
+        self.pushButton_6.setIcon(icon4)
         self.pushButton_6.setIconSize(QtCore.QSize(40, 20))
         self.pushButton_6.setObjectName("pushButton_6")
         self.gridLayout_12.addWidget(self.pushButton_6, 0, 0, 1, 2)
@@ -2012,7 +2144,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -2050,7 +2182,7 @@ class Ui_MainWindow(object):
         self.labelComingEvent.setText(_translate("MainWindow", "_ _ _ _ "))
         self.pushButtonViewCalendar.setText(_translate("MainWindow", "View Calendar"))
         self.label.setText(_translate("MainWindow", "ACADEMIC HUB"))
-        self.groupBox_4.setTitle(_translate("MainWindow", "Add New Subject"))
+        self.pushButton_8.setText(_translate("MainWindow", "Add new subjects"))
         self.tNMNLabel.setText(_translate("MainWindow", "Tên môn"))
         self.sTNChLabel.setText(_translate("MainWindow", "Số tín chỉ"))
         self.iMQuTrNhLabel.setText(_translate("MainWindow", "Điểm quá trình"))
@@ -2060,7 +2192,6 @@ class Ui_MainWindow(object):
         self.label_7.setText(_translate("MainWindow", "Xếp Loại:"))
         self.pushButtonCalculateGPA.setText(_translate("MainWindow", "Calculate GPA"))
         self.pushButtonAddSubject.setText(_translate("MainWindow", "Add Subject"))
-        self.groupBox_5.setTitle(_translate("MainWindow", "Subject List"))
         self.lineEditTimmon.setText(_translate("MainWindow", "Tìm kiếm môn học..."))
         item = self.tableWidgetthongtinmon.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "Tên môn"))
@@ -2074,6 +2205,7 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Cuối kì"))
         self.pushButtonEdit.setText(_translate("MainWindow", "Edit"))
         self.pushButtonDelete.setText(_translate("MainWindow", "Delete"))
+        self.pushButton_7.setText(_translate("MainWindow", "Subject List"))
         self.label_9.setText(_translate("MainWindow", "FINANCE MANAGEMENT"))
         self.label_32.setText(_translate("MainWindow", "Số tiền"))
         self.comboBoxLoaigia.setItemText(0, _translate("MainWindow", "Ăn uống"))

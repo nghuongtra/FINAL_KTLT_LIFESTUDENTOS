@@ -65,6 +65,16 @@ font-weight: bold;</string>
          <property name="text">
           <string>Overview</string>
          </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/nen/images/bieudo.png</normaloff>:/nen/images/bieudo.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>150</width>
+           <height>30</height>
+          </size>
+         </property>
          <property name="checkable">
           <bool>true</bool>
          </property>
@@ -85,6 +95,16 @@ font-weight: bold;</string>
          <property name="text">
           <string>Academic Hub</string>
          </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/nen/images/books.png</normaloff>:/nen/images/books.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>80</width>
+           <height>30</height>
+          </size>
+         </property>
          <property name="checkable">
           <bool>true</bool>
          </property>
@@ -101,6 +121,16 @@ font-weight: bold;</string>
          </property>
          <property name="text">
           <string>Finance Management</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/nen/images/vi_tien.png</normaloff>:/nen/images/vi_tien.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>80</width>
+           <height>30</height>
+          </size>
          </property>
          <property name="checkable">
           <bool>true</bool>
@@ -119,6 +149,16 @@ font-weight: bold;</string>
          <property name="text">
           <string>Task Scheduler</string>
          </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/nen/images/note.png</normaloff>:/nen/images/note.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>80</width>
+           <height>30</height>
+          </size>
+         </property>
          <property name="checkable">
           <bool>true</bool>
          </property>
@@ -135,6 +175,16 @@ font-weight: bold;</string>
          </property>
          <property name="text">
           <string>Insights</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources.qrc">
+           <normaloff>:/nen/images/kinhlup.png</normaloff>:/nen/images/kinhlup.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>80</width>
+           <height>30</height>
+          </size>
          </property>
          <property name="checkable">
           <bool>true</bool>
@@ -154,7 +204,7 @@ font-weight: bold;</string>
 background-color:transparent</string>
       </property>
       <property name="currentIndex">
-       <number>4</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="pageOverview">
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -224,11 +274,11 @@ font: 12pt &quot;Segoe UI&quot;;</string>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">QLabel {
-    font: bold 22pt &quot;Palatino Linotype&quot;; /* Chỉnh font chữ to và in đậm */
-    color:rgb(33, 0, 0); /* Màu nâu đất nung đậm, rất hợp với viền khung */
-    background-color: transparent; /* Nền trong suốt để tệp với màu khung */
-    qproperty-alignment: AlignCenter; /* Lệnh ép chữ tự động căn giữa khung */
-    padding-bottom: 5px; /* Đẩy chữ lên một chút cho thoáng */
+    font: bold 22pt &quot;Palatino Linotype&quot;; 
+    color: #8B5A2B; 
+    background-color: transparent; 
+    qproperty-alignment: AlignCenter;
+    padding-bottom: 5px; 
 }</string>
                     </property>
                     <property name="text">
@@ -251,7 +301,9 @@ font: 12pt &quot;Segoe UI&quot;;</string>
                      </size>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true"> font: bold 22pt &quot;Palatino Linotype&quot;; </string>
+                     <string notr="true">font: bold 18pt &quot;Palatino Linotype&quot;;
+background-color:transparent;
+color:black;</string>
                     </property>
                     <property name="text">
                      <string>--------------------------------------------------</string>
@@ -273,16 +325,16 @@ font: 12pt &quot;Segoe UI&quot;;</string>
                         <property name="font">
                          <font>
                           <family>Palatino Linotype</family>
-                          <pointsize>20</pointsize>
+                          <pointsize>18</pointsize>
                           <weight>75</weight>
                           <italic>false</italic>
                           <bold>true</bold>
                          </font>
                         </property>
                         <property name="styleSheet">
-                         <string notr="true">font:  bold 20pt &quot;Palatino Linotype&quot;;
+                         <string notr="true">font: bold 18pt &quot;Palatino Linotype&quot;;
 background-color:transparent;
-</string>
+color:black;</string>
                         </property>
                         <property name="text">
                          <string>Tasks Pending</string>
@@ -300,14 +352,15 @@ background-color:transparent;
                            <font>
                             <family>Palatino Linotype</family>
                             <pointsize>18</pointsize>
-                            <weight>50</weight>
+                            <weight>75</weight>
                             <italic>false</italic>
-                            <bold>false</bold>
+                            <bold>true</bold>
                            </font>
                           </property>
                           <property name="styleSheet">
-                           <string notr="true">font: 18pt &quot;Palatino Linotype&quot;;
-background-color:transparent</string>
+                           <string notr="true">font: bold 18pt &quot;Palatino Linotype&quot;;
+background-color:transparent;
+color:black;</string>
                           </property>
                           <property name="text">
                            <string>0</string>
@@ -321,7 +374,8 @@ background-color:transparent</string>
                          <widget class="QLabel" name="label_79">
                           <property name="styleSheet">
                            <string notr="true">font: bold 18pt &quot;Palatino Linotype&quot;;
-background-color:transparent</string>
+background-color:transparent;
+color:black;</string>
                           </property>
                           <property name="text">
                            <string>Tasks Pending</string>
@@ -338,14 +392,15 @@ background-color:transparent</string>
                            <font>
                             <family>Palatino Linotype</family>
                             <pointsize>18</pointsize>
-                            <weight>50</weight>
+                            <weight>75</weight>
                             <italic>false</italic>
-                            <bold>false</bold>
+                            <bold>true</bold>
                            </font>
                           </property>
                           <property name="styleSheet">
-                           <string notr="true">font: 18pt &quot;Palatino Linotype&quot;;
-background-color:transparent</string>
+                           <string notr="true">font: bold 18pt &quot;Palatino Linotype&quot;;
+background-color:transparent;
+color:black;</string>
                           </property>
                           <property name="text">
                            <string>0</string>
@@ -359,7 +414,8 @@ background-color:transparent</string>
                          <widget class="QLabel" name="label_84">
                           <property name="styleSheet">
                            <string notr="true">font: bold 18pt &quot;Palatino Linotype&quot;;
-background-color:transparent</string>
+background-color:transparent;
+color:black;</string>
                           </property>
                           <property name="text">
                            <string>Tasks Overdue</string>
@@ -478,11 +534,11 @@ padding: 6px;</string>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">QLabel {
-    font: bold 22pt &quot;Palatino Linotype&quot;; /* Chỉnh font chữ to và in đậm */
-    color: #8B5A2B; /* Màu nâu đất nung đậm, rất hợp với viền khung */
-    background-color: transparent; /* Nền trong suốt để tệp với màu khung */
-    qproperty-alignment: AlignCenter; /* Lệnh ép chữ tự động căn giữa khung */
-    padding-bottom: 5px; /* Đẩy chữ lên một chút cho thoáng */
+    font: bold 22pt &quot;Palatino Linotype&quot;; 
+    color: #8B5A2B; 
+    background-color: transparent; 
+    qproperty-alignment: AlignCenter;
+    padding-bottom: 5px; 
 }</string>
                     </property>
                     <property name="text">
@@ -508,7 +564,9 @@ padding: 6px;</string>
                      </size>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true"> font: bold 22pt &quot;Palatino Linotype&quot;; </string>
+                     <string notr="true">font: bold 18pt &quot;Palatino Linotype&quot;;
+background-color:transparent;
+color:black;</string>
                     </property>
                     <property name="text">
                      <string>--------------------------------------------------</string>
@@ -526,7 +584,8 @@ padding: 6px;</string>
                        <widget class="QLabel" name="label_82">
                         <property name="styleSheet">
                          <string notr="true">font: bold 18pt &quot;Palatino Linotype&quot;;
-background-color:transparent</string>
+background-color:transparent;
+color:black;</string>
                         </property>
                         <property name="text">
                          <string>GPA:</string>
@@ -539,8 +598,9 @@ background-color:transparent</string>
                       <item>
                        <widget class="QLabel" name="labelGPA">
                         <property name="styleSheet">
-                         <string notr="true">font: 18pt &quot;Palatino Linotype&quot;;
-background-color:transparent</string>
+                         <string notr="true">font: bold 18pt &quot;Palatino Linotype&quot;;
+background-color:transparent;
+color:black;</string>
                         </property>
                         <property name="text">
                          <string>_____</string>
@@ -555,7 +615,8 @@ background-color:transparent</string>
                        <widget class="QLabel" name="label_83">
                         <property name="styleSheet">
                          <string notr="true">font: bold 18pt &quot;Palatino Linotype&quot;;
-background-color:transparent</string>
+background-color:transparent;
+color:black;</string>
                         </property>
                         <property name="text">
                          <string>Grade:</string>
@@ -568,8 +629,9 @@ background-color:transparent</string>
                       <item>
                        <widget class="QLabel" name="labelGrade">
                         <property name="styleSheet">
-                         <string notr="true">font: 18pt &quot;Palatino Linotype&quot;;
-background-color:transparent</string>
+                         <string notr="true">font: bold 18pt &quot;Palatino Linotype&quot;;
+background-color:transparent;
+color:black;</string>
                         </property>
                         <property name="text">
                          <string>______</string>
@@ -701,7 +763,9 @@ padding: 6px;</string>
                      </size>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true"> font: bold 22pt &quot;Palatino Linotype&quot;; </string>
+                     <string notr="true">font: bold 18pt &quot;Palatino Linotype&quot;;
+background-color:transparent;
+color:black;</string>
                     </property>
                     <property name="text">
                      <string>--------------------------------------------------</string>
@@ -722,15 +786,16 @@ padding: 6px;</string>
                           <property name="font">
                            <font>
                             <family>Palatino Linotype</family>
-                            <pointsize>19</pointsize>
+                            <pointsize>18</pointsize>
                             <weight>75</weight>
                             <italic>false</italic>
                             <bold>true</bold>
                            </font>
                           </property>
                           <property name="styleSheet">
-                           <string notr="true">font:  bold 19pt &quot;Palatino Linotype&quot;;
-background-color:transparent;</string>
+                           <string notr="true">font: bold 18pt &quot;Palatino Linotype&quot;;
+background-color:transparent;
+color:black;</string>
                           </property>
                           <property name="text">
                            <string>This Month's Expenses</string>
@@ -746,7 +811,8 @@ background-color:transparent;</string>
                            <widget class="QLabel" name="label_73">
                             <property name="styleSheet">
                              <string notr="true">font: bold 18pt &quot;Palatino Linotype&quot;;
-background-color:transparent</string>
+background-color:transparent;
+color:black;</string>
                             </property>
                             <property name="text">
                              <string>Total:</string>
@@ -759,8 +825,9 @@ background-color:transparent</string>
                           <item>
                            <widget class="QLabel" name="labelTotal">
                             <property name="styleSheet">
-                             <string notr="true">font: 18pt &quot;Palatino Linotype&quot;;
-background-color:transparent</string>
+                             <string notr="true">font: bold 18pt &quot;Palatino Linotype&quot;;
+background-color:transparent;
+color:black;</string>
                             </property>
                             <property name="text">
                              <string>_________</string>
@@ -853,11 +920,11 @@ padding: 6px;</string>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">QLabel {
-    font: bold 22pt &quot;Palatino Linotype&quot;; /* Chỉnh font chữ to và in đậm */
-    color:rgb(33, 0, 0); /* Màu nâu đất nung đậm, rất hợp với viền khung */
-    background-color: transparent; /* Nền trong suốt để tệp với màu khung */
-    qproperty-alignment: AlignCenter; /* Lệnh ép chữ tự động căn giữa khung */
-    padding-bottom: 5px; /* Đẩy chữ lên một chút cho thoáng */
+    font: bold 22pt &quot;Palatino Linotype&quot;; 
+    color: #8B5A2B; 
+    background-color: transparent; 
+    qproperty-alignment: AlignCenter;
+    padding-bottom: 5px; 
 }</string>
                     </property>
                     <property name="text">
@@ -880,7 +947,9 @@ padding: 6px;</string>
                      </size>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true"> font: bold 22pt &quot;Palatino Linotype&quot;; </string>
+                     <string notr="true">font: bold 18pt &quot;Palatino Linotype&quot;;
+background-color:transparent;
+color:black;</string>
                     </property>
                     <property name="text">
                      <string>--------------------------------------------------</string>
@@ -897,16 +966,16 @@ padding: 6px;</string>
                       <property name="font">
                        <font>
                         <family>Palatino Linotype</family>
-                        <pointsize>20</pointsize>
+                        <pointsize>18</pointsize>
                         <weight>75</weight>
                         <italic>false</italic>
                         <bold>true</bold>
                        </font>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">font:  bold 20pt &quot;Palatino Linotype&quot;;
+                       <string notr="true">font: bold 18pt &quot;Palatino Linotype&quot;;
 background-color:transparent;
-</string>
+color:black;</string>
                       </property>
                       <property name="text">
                        <string>Today's Highlights</string>
@@ -919,8 +988,9 @@ background-color:transparent;
                     <item>
                      <widget class="QLabel" name="labelComingEvent">
                       <property name="styleSheet">
-                       <string notr="true">font: 16pt &quot;Palatino Linotype&quot;;
-background-color:transparent</string>
+                       <string notr="true">font: 18pt &quot;Palatino Linotype&quot;;
+background-color:transparent;
+color:black;</string>
                       </property>
                       <property name="text">
                        <string>_ _ _ _ </string>
@@ -1025,293 +1095,403 @@ border: 2px solid rgb(255, 250, 192);</string>
              <item>
               <widget class="QGroupBox" name="groupBox_4">
                <property name="title">
-                <string>Add New Subject</string>
+                <string/>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_7">
-                <property name="topMargin">
-                 <number>5</number>
-                </property>
+               <layout class="QVBoxLayout" name="verticalLayout_28">
                 <item>
-                 <layout class="QFormLayout" name="formLayout">
-                  <item row="0" column="0">
-                   <widget class="QLabel" name="tNMNLabel">
-                    <property name="styleSheet">
-                     <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
-color:  rgb(170, 96, 44);
-border: none;    
-font-weight:bold;</string>
-                    </property>
-                    <property name="text">
-                     <string>Tên môn</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="0" column="1">
-                   <widget class="QLineEdit" name="NameLineEdit">
-                    <property name="styleSheet">
-                     <string notr="true">
-font: 12pt &quot;Palatino Linotype&quot;;
-background-color: rgb(255, 255, 255);</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QLabel" name="sTNChLabel">
-                    <property name="styleSheet">
-                     <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
-color:  rgb(170, 96, 44);
-border: none;    
-font-weight:bold;</string>
-                    </property>
-                    <property name="text">
-                     <string>Số tín chỉ</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="1">
-                   <widget class="QLineEdit" name="CreditLineEdit">
-                    <property name="styleSheet">
-                     <string notr="true">
-font: 12pt &quot;Palatino Linotype&quot;;
-background-color: rgb(255, 255, 255);</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="0">
-                   <widget class="QLabel" name="iMQuTrNhLabel">
-                    <property name="styleSheet">
-                     <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
-color:  rgb(170, 96, 44);
-border: none;    
-font-weight:bold;</string>
-                    </property>
-                    <property name="text">
-                     <string>Điểm quá trình</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="1">
-                   <widget class="QLineEdit" name="ProcessLineEdit">
-                    <property name="styleSheet">
-                     <string notr="true">
-font: 12pt &quot;Palatino Linotype&quot;;
-background-color: rgb(255, 255, 255);</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="3" column="0">
-                   <widget class="QLabel" name="iMGiAKLabel">
-                    <property name="styleSheet">
-                     <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
-color:  rgb(170, 96, 44);
-border: none;    
-font-weight:bold;</string>
-                    </property>
-                    <property name="text">
-                     <string>Điểm giữa kỳ</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="3" column="1">
-                   <widget class="QLineEdit" name="MidtermLineEdit">
-                    <property name="styleSheet">
-                     <string notr="true">
-font: 12pt &quot;Palatino Linotype&quot;;
-background-color: rgb(255, 255, 255);</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="4" column="0">
-                   <widget class="QLabel" name="iMCuIKLabel">
-                    <property name="styleSheet">
-                     <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
-color:  rgb(170, 96, 44);
-border: none;    
-font-weight:bold;</string>
-                    </property>
-                    <property name="text">
-                     <string>Điểm cuối kỳ</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="4" column="1">
-                   <widget class="QLineEdit" name="FinalLineEdit">
-                    <property name="styleSheet">
-                     <string notr="true">
-font: 12pt &quot;Palatino Linotype&quot;;
-background-color: rgb(255, 255, 255);</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_4">
+                 <layout class="QVBoxLayout" name="verticalLayout_7">
                   <item>
-                   <widget class="QFrame" name="frame_4">
-                    <property name="frameShape">
-                     <enum>QFrame::StyledPanel</enum>
+                   <widget class="QPushButton" name="pushButton_8">
+                    <property name="styleSheet">
+                     <string notr="true">background-color:rgb(52, 85, 32);
+border-radius: 13px;
+border: 2px solid rgb(255, 255, 255);
+font: 75 16pt &quot;Palatino Linotype&quot;;
+color:white;
+font-weight:bold;
+ min-height: 30px; </string>
                     </property>
-                    <property name="frameShadow">
-                     <enum>QFrame::Raised</enum>
+                    <property name="text">
+                     <string>Add new subjects</string>
                     </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout_5">
-                     <item>
-                      <widget class="QLabel" name="lblResult_3">
-                       <property name="maximumSize">
-                        <size>
-                         <width>80</width>
-                         <height>50</height>
-                        </size>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <family>Palatino Linotype</family>
-                         <pointsize>16</pointsize>
-                         <weight>50</weight>
-                         <italic>false</italic>
-                         <bold>false</bold>
-                        </font>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(223, 0, 0);</string>
-                       </property>
-                       <property name="frameShape">
-                        <enum>QFrame::Box</enum>
-                       </property>
-                       <property name="lineWidth">
-                        <number>1</number>
-                       </property>
-                       <property name="text">
-                        <string> GPA:</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLineEdit" name="lineEditGPA">
-                       <property name="maximumSize">
-                        <size>
-                         <width>80</width>
-                         <height>50</height>
-                        </size>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">background-color: rgb(255, 255, 255);</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignBottom|Qt::AlignHCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_7">
-                       <property name="maximumSize">
-                        <size>
-                         <width>110</width>
-                         <height>50</height>
-                        </size>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(223, 0, 0);</string>
-                       </property>
-                       <property name="frameShape">
-                        <enum>QFrame::Box</enum>
-                       </property>
-                       <property name="text">
-                        <string>Xếp Loại:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLineEdit" name="lineEditXeploai">
-                       <property name="maximumSize">
-                        <size>
-                         <width>110</width>
-                         <height>50</height>
-                        </size>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">background-color: rgb(255, 255, 255);</string>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
                    </widget>
                   </item>
-                 </layout>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_7">
                   <item>
-                   <widget class="QPushButton" name="pushButtonCalculateGPA">
-                    <property name="styleSheet">
-                     <string notr="true">background-color:rgb(170, 65, 23);
+                   <layout class="QFormLayout" name="formLayout">
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="tNMNLabel">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
+color:  rgb(170, 96, 44);
+border: none;    
+font-weight:bold;</string>
+                      </property>
+                      <property name="text">
+                       <string>Tên môn</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <widget class="QLineEdit" name="NameLineEdit">
+                      <property name="styleSheet">
+                       <string notr="true">
+font: 12pt &quot;Palatino Linotype&quot;;
+background-color: rgb(255, 255, 255);</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QLabel" name="sTNChLabel">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
+color:  rgb(170, 96, 44);
+border: none;    
+font-weight:bold;</string>
+                      </property>
+                      <property name="text">
+                       <string>Số tín chỉ</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QLineEdit" name="CreditLineEdit">
+                      <property name="styleSheet">
+                       <string notr="true">
+font: 12pt &quot;Palatino Linotype&quot;;
+background-color: rgb(255, 255, 255);</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QLabel" name="iMQuTrNhLabel">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
+color:  rgb(170, 96, 44);
+border: none;    
+font-weight:bold;</string>
+                      </property>
+                      <property name="text">
+                       <string>Điểm quá trình</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="1">
+                     <widget class="QLineEdit" name="ProcessLineEdit">
+                      <property name="styleSheet">
+                       <string notr="true">
+font: 12pt &quot;Palatino Linotype&quot;;
+background-color: rgb(255, 255, 255);</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="0">
+                     <widget class="QLabel" name="iMGiAKLabel">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
+color:  rgb(170, 96, 44);
+border: none;    
+font-weight:bold;</string>
+                      </property>
+                      <property name="text">
+                       <string>Điểm giữa kỳ</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="1">
+                     <widget class="QLineEdit" name="MidtermLineEdit">
+                      <property name="styleSheet">
+                       <string notr="true">
+font: 12pt &quot;Palatino Linotype&quot;;
+background-color: rgb(255, 255, 255);</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="0">
+                     <widget class="QLabel" name="iMCuIKLabel">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
+color:  rgb(170, 96, 44);
+border: none;    
+font-weight:bold;</string>
+                      </property>
+                      <property name="text">
+                       <string>Điểm cuối kỳ</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="1">
+                     <widget class="QLineEdit" name="FinalLineEdit">
+                      <property name="styleSheet">
+                       <string notr="true">
+font: 12pt &quot;Palatino Linotype&quot;;
+background-color: rgb(255, 255, 255);</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_30">
+                    <item>
+                     <widget class="QFrame" name="frame_4">
+                      <property name="styleSheet">
+                       <string notr="true">#frame_4 {
+    background-color:rgb(255, 229, 192);
+    border-radius: 20px;
+    border: 2px dashed rgb(130, 80, 9);
+    font: 75 14pt &quot;Palatino Linotype&quot;;
+
+}
+
+</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_4">
+                       <item>
+                        <widget class="QLabel" name="label_43">
+                         <property name="maximumSize">
+                          <size>
+                           <width>80</width>
+                           <height>80</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="pixmap">
+                          <pixmap resource="../resources.qrc">:/nen/images/graduate.png</pixmap>
+                         </property>
+                         <property name="scaledContents">
+                          <bool>true</bool>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="lblResult_3">
+                         <property name="maximumSize">
+                          <size>
+                           <width>80</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Palatino Linotype</family>
+                           <pointsize>21</pointsize>
+                           <weight>75</weight>
+                           <italic>false</italic>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: transparent; 
+color:brown;
+font-weight:bold;
+border:none;
+font: bold 21pt &quot;Palatino Linotype&quot;;</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::Box</enum>
+                         </property>
+                         <property name="lineWidth">
+                          <number>1</number>
+                         </property>
+                         <property name="text">
+                          <string> GPA:</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="lineEditGPA">
+                         <property name="maximumSize">
+                          <size>
+                           <width>80</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(170, 108, 32);
+border-radius: 20px;
+color: white</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_10">
+                      <property name="styleSheet">
+                       <string notr="true">#frame_10 {
+    background-color:rgb(170, 103, 35);
+    border-radius: 20px;
+    border: 2px dashed rgb(5, 85, 5);
+    font: 75 14pt &quot;Palatino Linotype&quot;;
+}</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_5">
+                       <item>
+                        <widget class="QLabel" name="label_44">
+                         <property name="maximumSize">
+                          <size>
+                           <width>80</width>
+                           <height>80</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="pixmap">
+                          <pixmap resource="../resources.qrc">:/nen/images/certificate.png</pixmap>
+                         </property>
+                         <property name="scaledContents">
+                          <bool>true</bool>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_7">
+                         <property name="maximumSize">
+                          <size>
+                           <width>120</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: transparent; 
+color:white;
+border:none;
+font: bold 21pt &quot;Palatino Linotype&quot;;
+</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::Box</enum>
+                         </property>
+                         <property name="text">
+                          <string>Xếp Loại:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="lineEditXeploai">
+                         <property name="maximumSize">
+                          <size>
+                           <width>100</width>
+                           <height>50</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 20px;</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_7">
+                    <item>
+                     <widget class="QPushButton" name="pushButtonCalculateGPA">
+                      <property name="styleSheet">
+                       <string notr="true">background-color:rgb(170, 65, 23);
 border: 2px solid rgb(255, 247, 131);
 border-radius: 10px;
 color: rgb(255, 247, 131)
 </string>
-                    </property>
-                    <property name="text">
-                     <string>Calculate GPA</string>
-                    </property>
-                    <property name="icon">
-                     <iconset resource="../resources.qrc">
-                      <normaloff>:/nen/images/ic_cal.png</normaloff>:/nen/images/ic_cal.png</iconset>
-                    </property>
-                    <property name="iconSize">
-                     <size>
-                      <width>40</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QPushButton" name="pushButtonAddSubject">
-                    <property name="styleSheet">
-                     <string notr="true">background-color:rgb(255, 247, 131);
+                      </property>
+                      <property name="text">
+                       <string>Calculate GPA</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources.qrc">
+                        <normaloff>:/nen/images/ic_cal.png</normaloff>:/nen/images/ic_cal.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pushButtonAddSubject">
+                      <property name="styleSheet">
+                       <string notr="true">background-color:rgb(255, 247, 131);
 border: 2px solid rgb(170, 65, 23);
 border-radius: 10px;
 color: rgb(114, 57, 0)
 </string>
+                      </property>
+                      <property name="text">
+                       <string>Add Subject</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources.qrc">
+                        <normaloff>:/nen/images/ic_add.png</normaloff>:/nen/images/ic_add.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>40</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_8">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>700</width>
+                      <height>500</height>
+                     </size>
+                    </property>
+                    <property name="layoutDirection">
+                     <enum>Qt::LeftToRight</enum>
                     </property>
                     <property name="text">
-                     <string>Add Subject</string>
+                     <string/>
                     </property>
-                    <property name="icon">
-                     <iconset resource="../resources.qrc">
-                      <normaloff>:/nen/images/ic_add.png</normaloff>:/nen/images/ic_add.png</iconset>
+                    <property name="pixmap">
+                     <pixmap resource="../resources.qrc">:/nen/images/nen_academic.jpg</pixmap>
                     </property>
-                    <property name="iconSize">
-                     <size>
-                      <width>40</width>
-                      <height>40</height>
-                     </size>
+                    <property name="scaledContents">
+                     <bool>true</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
                     </property>
                    </widget>
                   </item>
                  </layout>
-                </item>
-                <item>
-                 <widget class="QLabel" name="label_8">
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="pixmap">
-                   <pixmap resource="../resources.qrc">:/nen/images/ic_hoa.png</pixmap>
-                  </property>
-                  <property name="scaledContents">
-                   <bool>false</bool>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignCenter</set>
-                  </property>
-                 </widget>
                 </item>
                </layout>
               </widget>
@@ -1319,10 +1499,10 @@ color: rgb(114, 57, 0)
              <item>
               <widget class="QGroupBox" name="groupBox_5">
                <property name="title">
-                <string>Subject List</string>
+                <string/>
                </property>
                <layout class="QGridLayout" name="gridLayout_4">
-                <item row="0" column="0">
+                <item row="1" column="0">
                  <widget class="QLineEdit" name="lineEditTimmon">
                   <property name="styleSheet">
                    <string notr="true">color:  rgb(170, 104, 46);
@@ -1335,7 +1515,7 @@ background-color: rgb(255, 255, 255);
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="0" colspan="2">
+                <item row="2" column="0" colspan="2">
                  <widget class="QTableWidget" name="tableWidgetthongtinmon">
                   <property name="styleSheet">
                    <string notr="true">color:  rgb(170, 104, 46);
@@ -1385,7 +1565,7 @@ background-color: rgb(255, 255, 255);</string>
                   </column>
                  </widget>
                 </item>
-                <item row="2" column="0" colspan="2">
+                <item row="3" column="0" colspan="2">
                  <layout class="QHBoxLayout" name="horizontalLayout_9">
                   <item>
                    <widget class="QPushButton" name="pushButtonEdit">
@@ -1424,6 +1604,22 @@ color: rgb(255, 255, 255)
                    </widget>
                   </item>
                  </layout>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QPushButton" name="pushButton_7">
+                  <property name="styleSheet">
+                   <string notr="true">background-color:rgb(52, 85, 32);
+border-radius: 13px;
+border: 2px solid rgb(255, 255, 255);
+font: 75 16pt &quot;Palatino Linotype&quot;;
+color:white;
+font-weight:bold;
+ min-height: 30px; </string>
+                  </property>
+                  <property name="text">
+                   <string>Subject List</string>
+                  </property>
+                 </widget>
                 </item>
                </layout>
               </widget>
@@ -1502,14 +1698,18 @@ border: 2px solid rgb(255, 250, 192);</string>
              <layout class="QVBoxLayout" name="verticalLayout_14" stretch="1">
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_15">
+                <property name="spacing">
+                 <number>14</number>
+                </property>
                 <item>
                  <widget class="QFrame" name="frame_Add">
                   <property name="styleSheet">
-                   <string notr="true">color: rgb(0, 0, 0);
-font: 12pt &quot;Palatino Linotype&quot;;
-background-color: transparent; /* Xóa nền trắng/mờ */
-
-border: none;                 /* Xóa viền */  </string>
+                   <string notr="true">#frame_Add {
+    background-color:rgb(52, 85, 32);
+    border-radius: 20px;
+    border: 2px dashed rgb(130, 80, 9);
+    font: 75 14pt &quot;Palatino Linotype&quot;;
+}</string>
                   </property>
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
@@ -1544,10 +1744,10 @@ border: none;                 /* Xóa viền */  </string>
                      <property name="styleSheet">
                       <string notr="true">color: rgb(0, 0, 0);
 font: 14pt &quot;Palatino Linotype&quot;;
-color:  rgb(170, 104, 46);
+color:  white;
 background-color: transparent;
 
-border: none;               
+border: none;         
 font-weight:bold;</string>
                      </property>
                      <property name="text">
@@ -1628,10 +1828,10 @@ background-color: rgb(255, 255, 255);</string>
                      <property name="styleSheet">
                       <string notr="true">color: rgb(0, 0, 0);
 font: 14pt &quot;Palatino Linotype&quot;;
-color:  rgb(170, 104, 46);
+color:  white;
 background-color: transparent;
 
-border: none;               
+border: none;         
 font-weight:bold;</string>
                      </property>
                      <property name="text">
@@ -1654,7 +1854,7 @@ font-weight:bold;</string>
                       <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
 
 border: none;                 /* Xóa viền */    ; font-weight: bold;
-color: rgb(170, 65, 23);
+color: white;
 font-size: 20px;</string>
                      </property>
                      <property name="frameShadow">
@@ -1693,16 +1893,20 @@ background-color: rgb(255, 255, 255);
                      <property name="font">
                       <font>
                        <family>Palatino Linotype</family>
-                       <pointsize>12</pointsize>
+                       <pointsize>14</pointsize>
                        <weight>75</weight>
                        <italic>false</italic>
                        <bold>true</bold>
                       </font>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">background-color: rgb(255, 255, 255);color:rgb(0, 0, 0);
-border: none;                 /* Xóa viền */    ; font-weight: bold;
-background-color: rgb(255, 255, 255);
+                      <string notr="true">font: 75 14pt &quot;Palatino Linotype&quot;;
+font-weight:bold;
+background-color:rgb(255, 250, 192);
+color:brown;
+border-radius: 15px;     
+padding: 5px;
+/*border: 2px solid rgb(255, 250, 192);
 </string>
                      </property>
                      <property name="text">
@@ -1711,6 +1915,12 @@ background-color: rgb(255, 255, 255);
                      <property name="icon">
                       <iconset resource="../resources.qrc">
                        <normaloff>:/nen/images/ic_save.png</normaloff>:/nen/images/ic_save.png</iconset>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>25</width>
+                       <height>25</height>
+                      </size>
                      </property>
                     </widget>
                    </item>
@@ -1728,7 +1938,7 @@ background-color: rgb(255, 255, 255);
                      <property name="styleSheet">
                       <string notr="true">color: rgb(0, 0, 0);
 font: 14pt &quot;Palatino Linotype&quot;;
-color:  rgb(170, 104, 46);
+color:  white;
 background-color: transparent;
 
 border: none;         
@@ -1751,9 +1961,12 @@ font-weight:bold;</string>
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
-
-border: none;                 /* Xóa viền */   </string>
+                   <string notr="true">#frame_List {
+    background-color:rgba(255, 245, 190,210);
+    border-radius: 20px;
+    border: 2px dashed rgb(130, 80, 9);
+    font: 75 14pt &quot;Palatino Linotype&quot;;
+}</string>
                   </property>
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
@@ -1764,6 +1977,9 @@ border: none;                 /* Xóa viền */   </string>
                   <layout class="QVBoxLayout" name="verticalLayout_16">
                    <item>
                     <widget class="QScrollArea" name="scrollArea">
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
                      <property name="widgetResizable">
                       <bool>true</bool>
                      </property>
@@ -1772,8 +1988,8 @@ border: none;                 /* Xóa viền */   </string>
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>472</width>
-                        <height>698</height>
+                        <width>466</width>
+                        <height>632</height>
                        </rect>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -1862,14 +2078,14 @@ font: 10pt &quot;Palatino Linotype&quot;;
                           <widget class="QPushButton" name="pushButton_delete">
                            <property name="styleSheet">
                             <string notr="true">QPushButton {
-    background-color:rgb(255, 0, 127); /* Màu tím đậm */
-    color: black;
+    background-color:rgb(52, 85, 32);; /* Màu tím đậm */
+    color: white;
     border-radius: 10px;
     padding: 5px 15px;
     font-weight: bold;
 }
 QPushButton:hover {
-    background-color: rgb(255, 85, 127); /* Sáng hơn khi di chuột vào */
+    background-color: rgb(143, 143, 0); /* Sáng hơn khi di chuột vào */
 }
 
 </string>
@@ -1893,14 +2109,14 @@ QPushButton:hover {
                           <widget class="QPushButton" name="pushButton_edit">
                            <property name="styleSheet">
                             <string notr="true">QPushButton {
-    background-color:rgb(0, 170, 255); 
-    color: black;
+ background-color:rgb(170, 103, 35);
+    color: white;
     border-radius: 10px;
     padding: 5px 15px;
     font-weight: bold;
 }
 QPushButton:hover {
-    background-color: rgb(85, 170, 255); /* Sáng hơn khi di chuột vào */
+    background-color: rgb(204, 148, 84); /* Sáng hơn khi di chuột vào */
 }
 </string>
                            </property>
@@ -1959,9 +2175,13 @@ QPushButton:hover {
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">background-color:rgb(170, 103, 35); /* Xóa nền trắng/mờ */
-border: none;                 /* Xóa viền */    
-color: rgb(255, 255, 140);
+                 <string notr="true">#frame_12 {
+    background-color:rgb(170, 103, 35);
+    border-radius: 20px;
+    border: 2px dashed rgb(130, 80, 9);
+    font: 75 14pt &quot;Palatino Linotype&quot;;
+}
+
 
 </string>
                 </property>
@@ -2034,16 +2254,16 @@ color: #333333;
                     <widget class="QPushButton" name="pushButton_addincome">
                      <property name="styleSheet">
                       <string notr="true">QPushButton {
-   background-color:rgb(52, 85, 32);
+   background-color:rgb(255, 217, 1);
 border-radius: 13px;
 border: 2px solid rgb(255, 255, 255);
-font: 75 15pt &quot;Palatino Linotype&quot;;
-color:white;
+font: bold 13pt &quot;Palatino Linotype&quot;;
+color:brown;
 font_weight:bold;
  min-height: 30px; 
 }
 QPushButton:hover {
-    background-color:rgb(254, 219, 130); /* Sáng hơn khi di chuột vào */
+    background-color:rgb(255, 170, 0); /* Sáng hơn khi di chuột vào */
 }
 </string>
                      </property>
@@ -2080,8 +2300,13 @@ color: rgb(82, 65, 173);
                      <item>
                       <widget class="QFrame" name="frame_5">
                        <property name="styleSheet">
-                        <string notr="true">background-color:rgba(255, 247, 198,210); /* Xóa nền trắng/mờ */
-border: none;                 /* Xóa viền */    </string>
+                        <string notr="true">#frame_5 {
+    background-color:rgba(255, 247, 198,210); 
+    border-radius: 20px;
+    border: 2px dashed rgb(130, 80, 9);
+    font: 75 14pt &quot;Palatino Linotype&quot;;
+}
+</string>
                        </property>
                        <property name="frameShape">
                         <enum>QFrame::StyledPanel</enum>
