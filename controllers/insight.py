@@ -229,23 +229,23 @@ class InsightController:
 
             # Logic: Tiêu quá 2 trăm/tháng là cảnh báo
             bi_lo_tay = False
-            if chitieu_thang_nay > 2000000:
+            if chitieu_thang_nay > 3500000:
                 bi_lo_tay = True
 
-            tip_tietkiem = ["Tách riêng 2 ví: 1 Tiêu dùng - 1 Tiết kiệm. Đừng để chung!",
-                            "Chia nhỏ ngân sách: Đặt hạn mức theo Tuần thay vì Tháng.",
-                            "Quy tắc 24h: Tự hỏi bản thân cần hay muốn? và chờ 1-2 ngày trước khi mua.",
+            tip_tietkiem = ["Tách riêng 2 ví: 1 tiêu dùng - 1 tiết kiệm. Đừng để chung!",
+                            "Chia nhỏ ngân sách: Đặt hạn mức theo tuần thay vì tháng.",
+                            "Quy tắc 24h: Tự hỏi bản thân cần hay muốn? Và chờ 1-2 ngày trước khi mua.",
                             " Ưu tiên cơm nhà: Vừa an toàn, sạch sẽ lại vừa tiết kiệm.",
                             "Ghi chép chi vặt: Trà sữa, ship đồ ăn chính là thủ phạm gây cháy túi!",
-                            "Đừng quên quyền năng thẻ Sinh Viên: Giảm giá khắp mọi nơi!",
+                            "Đừng quên quyền năng thẻ sinh viên: Giảm giá khắp mọi nơi!",
                             "Quẹt thẻ thì sướng, trả tiền mặt mới thấy xót. Hãy dùng tiền mặt!"]
 
             tip_caithien = [
                 "Hổng kiến thức khiến GPA thấp. Hãy ôn lại cơ bản ngay!",
-                "Thử Pomodoro: 25 phút Học - 5 phút Nghỉ.",
+                "Thử Pomodoro: 25 phút Học - 5 phút nghỉ.",
                 "Đừng ngại hỏi giảng viên hoặc bạn bè khi chưa hiểu bài.",
                 "Tập trung tuyệt đối: Tắt thông báo điện thoại khi đang học.",
-                "Ghi chép thông minh: Sử dụng sơ đồ tư duy (Mindmap) để hệ thống bài học.",
+                "Ghi chép thông minh: Sử dụng sơ đồ tư duy (mindmap) để hệ thống bài học.",
                 "Đừng học vẹt! Hãy hiểu rõ bản chất vấn đề!!",
                 "Review lại bài ngay sau khi học xong giúp nhớ lâu gấp 3 lần!!",
                 "Phương pháp Feynman: Thử giảng lại kiến thức cho người khác để hiểu sâu hơn!"
