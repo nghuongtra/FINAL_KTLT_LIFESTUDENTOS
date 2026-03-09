@@ -5,35 +5,54 @@
             "Name": "Mary",
             "UserName": "mary",
             "Password": "1234",
-            "Phonenumber": "0356142189"
+            "Phonenumber": "0356142189",
+            "createdAt": null,
+            "lastLogin": "14:10 - 09/03/2026"
         },
         {
             "Id": "2",
             "Name": "Peter",
             "UserName": "peter",
             "Password": "1234",
-            "Phonenumber": "0769412117"
+            "Phonenumber": "0769412117",
+            "createdAt": null,
+            "lastLogin": null
         },
         {
             "Id": "3",
             "Name": "John",
             "UserName": "john",
             "Password": "1234",
-            "Phonenumber": "0123456789"
+            "Phonenumber": "0123456789",
+            "createdAt": null,
+            "lastLogin": null
         },
         {
             "Id": "4",
             "Name": "Cook",
             "UserName": "cook",
             "Password": "1234",
-            "Phonenumber": "0987654321"
+            "Phonenumber": "0987654321",
+            "createdAt": null,
+            "lastLogin": null
         },
         {
             "Id": "5",
             "Name": "Bright",
             "UserName": "bright",
             "Password": "1234",
-            "Phonenumber": "0845362412"
+            "Phonenumber": "0845362412",
+            "createdAt": null,
+            "lastLogin": null
+        },
+        {
+            "Id": 6,
+            "Name": "huongtra",
+            "UserName": "huongtra",
+            "Password": "12344",
+            "Phonenumber": null,
+            "createdAt": "15:29 - 09/03/2026",
+            "lastLogin": "22:38 - 09/03/2026"
         }
     ]
 }

@@ -76,6 +76,7 @@
     <file>images/books.png</file>
   </qresource>
   <qresource prefix="login">
+    <file>images/ic_traodoi.png</file>
     <file>images/anger.png</file>
     <file>images/anhnendep.png</file>
     <file>images/hihi.png</file>

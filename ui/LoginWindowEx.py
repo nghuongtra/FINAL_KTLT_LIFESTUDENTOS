@@ -1,3 +1,5 @@
+import datetime
+
 from PyQt6.QtWidgets import QMessageBox, QMainWindow
 
 import json
@@ -40,6 +42,16 @@ class LoginWindowEx(Ui_MainWindow):
     def process_login(self, setText=None):
         uid=self.lineEditUserName.text()
         pwd=self.lineEditPassword.text()
+        if uid == "admin" and pwd == "123457":
+            from ui.AdminWindowEx import AdminWindowEx
+
+            self.admin_window = QMainWindow()
+            self.admin_ui = AdminWindowEx()
+            self.admin_ui.setupUi(self.admin_window)
+
+            self.MainWindow.close()
+            self.admin_window.show()
+            return
         le = Users()
         le.import_json("../datasets/users.json")
         usr=le.login(uid,pwd)
@@ -48,6 +60,9 @@ class LoginWindowEx(Ui_MainWindow):
             self.msg.setText("Tên đăng nhập hoặc mật khẩu không chính xác!")
             self.msg.show()
         else:
+            # CẬP NHẬT LAST LOGIN
+            usr.lastLogin = datetime.datetime.now().strftime("%H:%M - %d/%m/%Y")
+            le.export_json("../datasets/users.json")
             # CHỈ LƯU KHI ĐĂNG NHẬP THÀNH CÔNG
             file_path = "../datasets/remember_me.json"
             if self.radioButtonSaveLogin.isChecked():

@@ -102,6 +102,7 @@ class TaskController:
             item = self.view.listWidgetTask.item(index)
             if item.checkState() == Qt.CheckState.Checked:
                 self.tasks.removeByIndex(index)
+                self.view.listWidgetTask.takeItem(index)
         self.selectedTask = None
         self.showTasksIntoQListWidget()
         self.tasks.export_json(self.file_task)
