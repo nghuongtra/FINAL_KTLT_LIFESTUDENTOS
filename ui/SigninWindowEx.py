@@ -32,6 +32,7 @@ class SigninWindowEx(Ui_MainWindow):
         name = self.lineEditname.text()
         uid = self.lineEditusername.text()
         pwd = self.lineEditpass.text()
+        phone = self.lineEditPhoneNumber.text()
 
         if name == "" or uid == "" or pwd == "":
             msg = QMessageBox()
@@ -47,7 +48,7 @@ class SigninWindowEx(Ui_MainWindow):
         # 2. Tạo ID mới (bằng cách lấy số lượng hiện tại + 1)
         new_id = len(all_users.list) + 1
         created_at = datetime.datetime.now().strftime("%H:%M - %d/%m/%Y")
-        new_user = User(new_id, name, uid, pwd, None, created_at, None)
+        new_user = User(new_id, name, uid, pwd, phone, created_at, None)
 
         # 3. Thêm vào danh sách và xuất ra file JSON
         all_users.add_item(new_user)
