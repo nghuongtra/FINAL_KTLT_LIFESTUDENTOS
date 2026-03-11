@@ -1167,7 +1167,8 @@ font-weight:bold;</string>
                       <property name="styleSheet">
                        <string notr="true">
 font: 12pt &quot;Palatino Linotype&quot;;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+color: black;</string>
                       </property>
                      </widget>
                     </item>
@@ -1189,7 +1190,8 @@ font-weight:bold;</string>
                       <property name="styleSheet">
                        <string notr="true">
 font: 12pt &quot;Palatino Linotype&quot;;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+color: black;</string>
                       </property>
                      </widget>
                     </item>
@@ -1209,7 +1211,7 @@ font-weight:bold;</string>
                     <item row="2" column="1">
                      <widget class="QLineEdit" name="ProcessLineEdit">
                       <property name="styleSheet">
-                       <string notr="true">
+                       <string notr="true">color: black;
 font: 12pt &quot;Palatino Linotype&quot;;
 background-color: rgb(255, 255, 255);</string>
                       </property>
@@ -1231,7 +1233,7 @@ font-weight:bold;</string>
                     <item row="3" column="1">
                      <widget class="QLineEdit" name="MidtermLineEdit">
                       <property name="styleSheet">
-                       <string notr="true">
+                       <string notr="true">color: black;
 font: 12pt &quot;Palatino Linotype&quot;;
 background-color: rgb(255, 255, 255);</string>
                       </property>
@@ -1253,7 +1255,7 @@ font-weight:bold;</string>
                     <item row="4" column="1">
                      <widget class="QLineEdit" name="FinalLineEdit">
                       <property name="styleSheet">
-                       <string notr="true">
+                       <string notr="true">color: black;
 font: 12pt &quot;Palatino Linotype&quot;;
 background-color: rgb(255, 255, 255);</string>
                       </property>
@@ -1351,10 +1353,11 @@ font: bold 21pt &quot;Palatino Linotype&quot;;</string>
                          <property name="styleSheet">
                           <string notr="true">background-color: rgb(170, 108, 32);
 border-radius: 20px;
-color: white</string>
+color: white;
+font-weight:bold;</string>
                          </property>
                          <property name="alignment">
-                          <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                          <set>Qt::AlignCenter</set>
                          </property>
                         </widget>
                        </item>
@@ -1430,7 +1433,12 @@ font: bold 21pt &quot;Palatino Linotype&quot;;
                          </property>
                          <property name="styleSheet">
                           <string notr="true">background-color: rgb(255, 255, 255);
-border-radius: 20px;</string>
+border-radius: 20px;
+color: brown;
+font-weight:bold;</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
                          </property>
                         </widget>
                        </item>
@@ -2019,8 +2027,8 @@ font-weight:bold;</string>
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>272</width>
-                        <height>199</height>
+                        <width>205</width>
+                        <height>135</height>
                        </rect>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -4007,7 +4015,7 @@ border: 2px solid rgb(255, 255, 255);</string>
      <x>0</x>
      <y>0</y>
      <width>1549</width>
-     <height>26</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>
