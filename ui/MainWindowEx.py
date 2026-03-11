@@ -56,6 +56,7 @@ class MainWindowEx(Ui_MainWindow):
         self.pushButtonManageFinances.clicked.connect(self.overview_controller.process_managefinance)
         self.pushButtonViewCalendar.clicked.connect(self.overview_controller.process_calendar)
         self.pushButtonViewTask.clicked.connect(self.overview_controller.process_task)
+        self.pushButtonGopy.clicked.connect(self.overview_controller.openFB)
         #Phần của tab task
         self.pushButtonNew.clicked.connect(self.task_controller.processNew)
         self.pushButtonSave.clicked.connect(self.task_controller.processSave)

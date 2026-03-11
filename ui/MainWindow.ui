@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1437</width>
-    <height>1117</height>
+    <width>1549</width>
+    <height>1206</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -66,7 +66,7 @@ font-weight: bold;</string>
           <string>Overview</string>
          </property>
          <property name="icon">
-          <iconset resource="../resources.qrc">
+          <iconset resource="../FINAL_KTLT/resources.qrc">
            <normaloff>:/nen/images/bieudo.png</normaloff>:/nen/images/bieudo.png</iconset>
          </property>
          <property name="iconSize">
@@ -96,7 +96,7 @@ font-weight: bold;</string>
           <string>Academic Hub</string>
          </property>
          <property name="icon">
-          <iconset resource="../resources.qrc">
+          <iconset resource="../FINAL_KTLT/resources.qrc">
            <normaloff>:/nen/images/books.png</normaloff>:/nen/images/books.png</iconset>
          </property>
          <property name="iconSize">
@@ -123,7 +123,7 @@ font-weight: bold;</string>
           <string>Finance Management</string>
          </property>
          <property name="icon">
-          <iconset resource="../resources.qrc">
+          <iconset resource="../FINAL_KTLT/resources.qrc">
            <normaloff>:/nen/images/vi_tien.png</normaloff>:/nen/images/vi_tien.png</iconset>
          </property>
          <property name="iconSize">
@@ -150,7 +150,7 @@ font-weight: bold;</string>
           <string>Task Scheduler</string>
          </property>
          <property name="icon">
-          <iconset resource="../resources.qrc">
+          <iconset resource="../FINAL_KTLT/resources.qrc">
            <normaloff>:/nen/images/note.png</normaloff>:/nen/images/note.png</iconset>
          </property>
          <property name="iconSize">
@@ -177,7 +177,7 @@ font-weight: bold;</string>
           <string>Insights</string>
          </property>
          <property name="icon">
-          <iconset resource="../resources.qrc">
+          <iconset resource="../FINAL_KTLT/resources.qrc">
            <normaloff>:/nen/images/kinhlup.png</normaloff>:/nen/images/kinhlup.png</iconset>
          </property>
          <property name="iconSize">
@@ -204,7 +204,7 @@ font-weight: bold;</string>
 background-color:transparent</string>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="pageOverview">
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -252,7 +252,7 @@ font: 12pt &quot;Segoe UI&quot;;</string>
                    <string/>
                   </property>
                   <property name="pixmap">
-                   <pixmap resource="../resources.qrc">:/nen/images/cute10.png</pixmap>
+                   <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/cute10.png</pixmap>
                   </property>
                   <property name="scaledContents">
                    <bool>true</bool>
@@ -446,7 +446,7 @@ padding: 6px;</string>
                        <string>View Tasks</string>
                       </property>
                       <property name="icon">
-                       <iconset resource="../resources.qrc">
+                       <iconset resource="../FINAL_KTLT/resources.qrc">
                         <normaloff>:/nen/images/news.png</normaloff>:/nen/images/news.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -509,7 +509,7 @@ padding: 6px;</string>
                    <string/>
                   </property>
                   <property name="pixmap">
-                   <pixmap resource="../resources.qrc">:/nen/images/cute7.png</pixmap>
+                   <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/cute7.png</pixmap>
                   </property>
                   <property name="scaledContents">
                    <bool>true</bool>
@@ -662,7 +662,7 @@ padding: 6px;</string>
                      <string>View Details</string>
                     </property>
                     <property name="icon">
-                     <iconset resource="../resources.qrc">
+                     <iconset resource="../FINAL_KTLT/resources.qrc">
                       <normaloff>:/nen/images/magnifying-glass.png</normaloff>:/nen/images/magnifying-glass.png</iconset>
                     </property>
                     <property name="iconSize">
@@ -712,7 +712,7 @@ padding: 6px;</string>
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="../resources.qrc">:/nen/images/cute9.png</pixmap>
+                 <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/cute9.png</pixmap>
                 </property>
                 <property name="scaledContents">
                  <bool>true</bool>
@@ -860,7 +860,7 @@ padding: 6px;</string>
                        <string>Manage Finances</string>
                       </property>
                       <property name="icon">
-                       <iconset resource="../resources.qrc">
+                       <iconset resource="../FINAL_KTLT/resources.qrc">
                         <normaloff>:/nen/images/calculator.png</normaloff>:/nen/images/calculator.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -1017,7 +1017,7 @@ padding: 6px;</string>
                        <string>View Calendar</string>
                       </property>
                       <property name="icon">
-                       <iconset resource="../resources.qrc">
+                       <iconset resource="../FINAL_KTLT/resources.qrc">
                         <normaloff>:/nen/images/calendar.png</normaloff>:/nen/images/calendar.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -1038,6 +1038,37 @@ padding: 6px;</string>
             </widget>
            </item>
           </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonGopy">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(118, 80, 59);
+color: rgb(255, 255, 255);
+font: 75 14pt &quot;Palatino Linotype&quot;;
+border-radius: 10px;
+border: 1px solid white
+</string>
+          </property>
+          <property name="text">
+           <string>Góp ý về ứng dụng hoặc trao đổi với Admin tại đây</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../FINAL_KTLT/resources.qrc">
+            <normaloff>:/login/images/ic_traodoi.png</normaloff>:/login/images/ic_traodoi.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
          </widget>
         </item>
        </layout>
@@ -1264,7 +1295,7 @@ background-color: rgb(255, 255, 255);</string>
                           <string/>
                          </property>
                          <property name="pixmap">
-                          <pixmap resource="../resources.qrc">:/nen/images/graduate.png</pixmap>
+                          <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/graduate.png</pixmap>
                          </property>
                          <property name="scaledContents">
                           <bool>true</bool>
@@ -1359,7 +1390,7 @@ color: white</string>
                           <string/>
                          </property>
                          <property name="pixmap">
-                          <pixmap resource="../resources.qrc">:/nen/images/certificate.png</pixmap>
+                          <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/certificate.png</pixmap>
                          </property>
                          <property name="scaledContents">
                           <bool>true</bool>
@@ -1423,7 +1454,7 @@ color: rgb(255, 247, 131)
                        <string>Calculate GPA</string>
                       </property>
                       <property name="icon">
-                       <iconset resource="../resources.qrc">
+                       <iconset resource="../FINAL_KTLT/resources.qrc">
                         <normaloff>:/nen/images/ic_cal.png</normaloff>:/nen/images/ic_cal.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -1447,7 +1478,7 @@ color: rgb(114, 57, 0)
                        <string>Add Subject</string>
                       </property>
                       <property name="icon">
-                       <iconset resource="../resources.qrc">
+                       <iconset resource="../FINAL_KTLT/resources.qrc">
                         <normaloff>:/nen/images/ic_add.png</normaloff>:/nen/images/ic_add.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -1481,7 +1512,7 @@ color: rgb(114, 57, 0)
                      <string/>
                     </property>
                     <property name="pixmap">
-                     <pixmap resource="../resources.qrc">:/nen/images/nen_academic.jpg</pixmap>
+                     <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/nen_academic.jpg</pixmap>
                     </property>
                     <property name="scaledContents">
                      <bool>true</bool>
@@ -1580,7 +1611,7 @@ color: rgb(255, 255, 255)
                      <string>Edit</string>
                     </property>
                     <property name="icon">
-                     <iconset resource="../resources.qrc">
+                     <iconset resource="../FINAL_KTLT/resources.qrc">
                       <normaloff>:/nen/images/ic_pen.png</normaloff>:/nen/images/ic_pen.png</iconset>
                     </property>
                    </widget>
@@ -1598,7 +1629,7 @@ color: rgb(255, 255, 255)
                      <string>Delete</string>
                     </property>
                     <property name="icon">
-                     <iconset resource="../resources.qrc">
+                     <iconset resource="../FINAL_KTLT/resources.qrc">
                       <normaloff>:/nen/images/ic_delete.png</normaloff>:/nen/images/ic_delete.png</iconset>
                     </property>
                    </widget>
@@ -1913,7 +1944,7 @@ padding: 5px;
                       <string>Add Expense</string>
                      </property>
                      <property name="icon">
-                      <iconset resource="../resources.qrc">
+                      <iconset resource="../FINAL_KTLT/resources.qrc">
                        <normaloff>:/nen/images/ic_save.png</normaloff>:/nen/images/ic_save.png</iconset>
                      </property>
                      <property name="iconSize">
@@ -1988,8 +2019,8 @@ font-weight:bold;</string>
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>466</width>
-                        <height>632</height>
+                        <width>446</width>
+                        <height>533</height>
                        </rect>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -2439,7 +2470,7 @@ border: none;                 /* Xóa viền */    ; font-weight: bold;
                         <string/>
                        </property>
                        <property name="icon">
-                        <iconset resource="../resources.qrc">
+                        <iconset resource="../FINAL_KTLT/resources.qrc">
                          <normaloff>:/nen/images/ic_search.png</normaloff>:/nen/images/ic_search.png</iconset>
                        </property>
                        <property name="iconSize">
@@ -2555,7 +2586,7 @@ border: none;                 /* Xóa viền */    ; font-weight: bold;
                          <string/>
                         </property>
                         <property name="pixmap">
-                         <pixmap resource="../resources.qrc">:/nen/images/maugradient.png</pixmap>
+                         <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/maugradient.png</pixmap>
                         </property>
                         <property name="scaledContents">
                          <bool>true</bool>
@@ -2703,7 +2734,7 @@ font_weight:bold;
                  <string>New</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="../resources.qrc">
+                 <iconset resource="../FINAL_KTLT/resources.qrc">
                   <normaloff>:/nen/images/ic_add.png</normaloff>:/nen/images/ic_add.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -2730,7 +2761,7 @@ font_weight:bold;
                  <string>Save</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="../resources.qrc">
+                 <iconset resource="../FINAL_KTLT/resources.qrc">
                   <normaloff>:/nen/images/ic_luu.png</normaloff>:/nen/images/ic_luu.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -2757,7 +2788,7 @@ font_weight:bold;
                  <string>Delete</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="../resources.qrc">
+                 <iconset resource="../FINAL_KTLT/resources.qrc">
                   <normaloff>:/nen/images/ic_delete.png</normaloff>:/nen/images/ic_delete.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -2809,7 +2840,7 @@ font_weight:bold;
                  <string>Chi tiết việc cần làm</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="../resources.qrc">
+                 <iconset resource="../FINAL_KTLT/resources.qrc">
                   <normaloff>:/nen/images/bee.png</normaloff>:/nen/images/bee.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -2966,7 +2997,7 @@ color: rgb(0, 0, 255);</string>
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="../resources.qrc">:/nen/images/banchan.png</pixmap>
+                 <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/banchan.png</pixmap>
                 </property>
                 <property name="scaledContents">
                  <bool>true</bool>
@@ -2985,7 +3016,7 @@ color: rgb(0, 0, 255);</string>
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="../resources.qrc">:/nen/images/khunglong.png</pixmap>
+                 <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/khunglong.png</pixmap>
                 </property>
                 <property name="scaledContents">
                  <bool>true</bool>
@@ -3004,7 +3035,7 @@ color: rgb(0, 0, 255);</string>
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="../resources.qrc">:/nen/images/deadline.png</pixmap>
+                 <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/deadline.png</pixmap>
                 </property>
                 <property name="scaledContents">
                  <bool>true</bool>
@@ -3023,7 +3054,7 @@ color: rgb(0, 0, 255);</string>
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="../resources.qrc">:/nen/images/clock.png</pixmap>
+                 <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/clock.png</pixmap>
                 </property>
                 <property name="scaledContents">
                  <bool>true</bool>
@@ -3042,7 +3073,7 @@ color: rgb(0, 0, 255);</string>
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="../resources.qrc">:/nen/images/status.png</pixmap>
+                 <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/status.png</pixmap>
                 </property>
                 <property name="scaledContents">
                  <bool>true</bool>
@@ -3099,7 +3130,7 @@ color: rgb(0, 0, 255);</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="../resources.qrc">:/nen/images/ic_study.jpg</pixmap>
+                    <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/ic_study.jpg</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -3112,7 +3143,7 @@ color: rgb(0, 0, 255);</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="../resources.qrc">:/nen/images/ic_hoc.jpg</pixmap>
+                    <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/ic_hoc.jpg</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -3146,7 +3177,7 @@ color: rgb(0, 0, 255);</string>
                    <string/>
                   </property>
                   <property name="pixmap">
-                   <pixmap resource="../resources.qrc">:/nen/images/hamster.png</pixmap>
+                   <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/hamster.png</pixmap>
                   </property>
                   <property name="scaledContents">
                    <bool>true</bool>
@@ -3165,7 +3196,7 @@ color: rgb(0, 0, 255);</string>
                    <string/>
                   </property>
                   <property name="pixmap">
-                   <pixmap resource="../resources.qrc">:/nen/images/thohong.png</pixmap>
+                   <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/thohong.png</pixmap>
                   </property>
                   <property name="scaledContents">
                    <bool>true</bool>
@@ -3184,7 +3215,7 @@ color: rgb(0, 0, 255);</string>
                    <string/>
                   </property>
                   <property name="pixmap">
-                   <pixmap resource="../resources.qrc">:/nen/images/meohoa.png</pixmap>
+                   <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/meohoa.png</pixmap>
                   </property>
                   <property name="scaledContents">
                    <bool>true</bool>
@@ -3203,7 +3234,7 @@ color: rgb(0, 0, 255);</string>
                    <string/>
                   </property>
                   <property name="pixmap">
-                   <pixmap resource="../resources.qrc">:/nen/images/hamster.png</pixmap>
+                   <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/hamster.png</pixmap>
                   </property>
                   <property name="scaledContents">
                    <bool>true</bool>
@@ -3222,7 +3253,7 @@ color: rgb(0, 0, 255);</string>
                    <string/>
                   </property>
                   <property name="pixmap">
-                   <pixmap resource="../resources.qrc">:/nen/images/meocam.png</pixmap>
+                   <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/meocam.png</pixmap>
                   </property>
                   <property name="scaledContents">
                    <bool>true</bool>
@@ -3246,7 +3277,7 @@ font_weight:bold;
                  <string>Danh sách việc cần làm</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="../resources.qrc">
+                 <iconset resource="../FINAL_KTLT/resources.qrc">
                   <normaloff>:/nen/images/note.png</normaloff>:/nen/images/note.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -3464,7 +3495,7 @@ border: 1px solid #FAD6A5;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="../resources.qrc">:/nen/images/dog.png</pixmap>
+                    <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/dog.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -3483,7 +3514,7 @@ border: 1px solid #FAD6A5;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="../resources.qrc">:/nen/images/bieudo.png</pixmap>
+                    <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/bieudo.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -3502,7 +3533,7 @@ border: 1px solid #FAD6A5;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="../resources.qrc">:/nen/images/vi_tien.png</pixmap>
+                    <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/vi_tien.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -3524,7 +3555,7 @@ border: 2px solid rgb(255, 255, 251);</string>
                     <string>OVERSIGHT</string>
                    </property>
                    <property name="icon">
-                    <iconset resource="../resources.qrc">
+                    <iconset resource="../FINAL_KTLT/resources.qrc">
                      <normaloff>:/nen/images/duck.png</normaloff>:/nen/images/duck.png</iconset>
                    </property>
                    <property name="iconSize">
@@ -3565,7 +3596,7 @@ font-weight:bold;
                     <string>Xuất file Excel/CSV danh sách </string>
                    </property>
                    <property name="icon">
-                    <iconset resource="../resources.qrc">
+                    <iconset resource="../FINAL_KTLT/resources.qrc">
                      <normaloff>:/nen/images/xuat.png</normaloff>:/nen/images/xuat.png</iconset>
                    </property>
                    <property name="iconSize">
@@ -3591,7 +3622,7 @@ font-weight:bold;
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="../resources.qrc">:/nen/images/nen_insight.png</pixmap>
+                 <pixmap resource="../FINAL_KTLT/resources.qrc">:/nen/images/nen_insight.png</pixmap>
                 </property>
                 <property name="scaledContents">
                  <bool>true</bool>
@@ -3855,7 +3886,7 @@ color:rgb(170, 97, 23);</string>
                  <string>TIPS HÀNH ĐỘNG</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="../resources.qrc">
+                 <iconset resource="../FINAL_KTLT/resources.qrc">
                   <normaloff>:/nen/images/bongden.png</normaloff>:/nen/images/bongden.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -3934,7 +3965,7 @@ border: 2px solid rgb(255, 255, 255);</string>
                  <string>INSIGHT</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="../resources.qrc">
+                 <iconset resource="../FINAL_KTLT/resources.qrc">
                   <normaloff>:/nen/images/kinhlup.png</normaloff>:/nen/images/kinhlup.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -3975,14 +4006,15 @@ border: 2px solid rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1437</width>
-     <height>18</height>
+     <width>1549</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
+  <include location="../FINAL_KTLT/resources.qrc"/>
   <include location="../resources.qrc"/>
  </resources>
  <connections/>

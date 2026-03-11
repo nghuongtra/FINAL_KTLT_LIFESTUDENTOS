@@ -1,4 +1,8 @@
 import datetime
+import json
+import os
+
+from PyQt6.QtWidgets import QDialog, QVBoxLayout, QLabel, QTextEdit, QPushButton, QHBoxLayout, QMessageBox, QInputDialog
 
 from model.comingevents import Upcomingevents
 
@@ -65,3 +69,97 @@ class OverviewController:
             self.view.labelTaskOverdue.setStyleSheet("color: red; font-weight: bold;")
         else:
             self.view.labelTaskOverdue.setStyleSheet("color: green;")
+    def openFB(self):
+        # 1. Khởi tạo QDialog tùy chỉnh thay vì dùng hàm tĩnh
+        dialog = QDialog(self.view.MainWindow)
+        dialog.setWindowTitle("Góp ý / Liên hệ Admin")
+        dialog.resize(400, 250)
+
+        # 2. Áp dụng đoạn CSS của bạn (Tôi đổi QPlainTextEdit thành QTextEdit cho đồng bộ)
+        dialog.setStyleSheet("""
+                QDialog{
+                    background-color:#FFF4CC;
+                }
+
+                QLabel{
+                    font-size:14px;
+                    color:#5A3E1B;
+                    font-weight: bold;
+                }
+
+                QTextEdit{
+                    background-color:white;
+                    border:2px solid #E6B800;
+                    border-radius:6px;
+                    padding: 5px;
+                    font-size: 13px;
+                    color: black;
+                }
+
+                QPushButton{
+                    background-color:#E6B800;
+                    color:white;
+                    padding:6px 15px;
+                    border-radius:6px;
+                    font-weight: bold;
+                    min-width: 80px;
+                }
+
+                QPushButton:hover{
+                    background-color:#d4a500;
+                }
+                """)
+
+        # 3. Tạo bố cục (Layout)
+        layout = QVBoxLayout(dialog)
+
+        label = QLabel("Nhập nội dung góp ý của bạn:")
+        layout.addWidget(label)
+
+        text_edit = QTextEdit()
+        layout.addWidget(text_edit)
+
+        btn_layout = QHBoxLayout()
+        btn_ok = QPushButton("Gửi Góp Ý")
+        btn_cancel = QPushButton("Hủy")
+
+        btn_layout.addStretch()
+        btn_layout.addWidget(btn_ok)
+        btn_layout.addWidget(btn_cancel)
+        layout.addLayout(btn_layout)
+
+        # 4. Gắn sự kiện nút bấm
+        btn_ok.clicked.connect(dialog.accept)
+        btn_cancel.clicked.connect(dialog.reject)
+
+        # 5. Mở hộp thoại và lưu data nếu bấm OK
+        if dialog.exec() == QDialog.DialogCode.Accepted:
+            text = text_edit.toPlainText()
+            if text.strip():
+                self.save_feedback(text.strip())
+
+    def save_feedback(self, content):
+        feedback_file = "../datasets/feedbacks.json"
+        if not os.path.exists(feedback_file):
+            with open(feedback_file, "w", encoding="utf-8") as f:
+                json.dump({"feedbacks": []}, f)
+        with open(feedback_file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        now = datetime.datetime.now().strftime("%H:%M - %d/%m/%Y")
+        username = getattr(self.view, "current_acc", "Unknown_User")
+
+        new_feedback = {
+            "username": username,
+            "time": now,
+            "content": content
+        }
+        data["feedbacks"].append(new_feedback)
+
+        # 4. Ghi đè lại vào file JSON
+        with open(feedback_file, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=4)
+        QMessageBox.information(
+            self.view.MainWindow,
+            "Thành công",
+            "Cảm ơn bạn đã gửi góp ý cho Admin!"
+        )

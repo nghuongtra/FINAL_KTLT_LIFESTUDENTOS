@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>638</width>
+    <width>643</width>
     <height>524</height>
    </rect>
   </property>
@@ -322,7 +322,7 @@ color: rgb(112, 56, 0);
      <string/>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEditpass_2">
+   <widget class="QLineEdit" name="lineEditPhoneNumber">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -373,7 +373,7 @@ color: rgb(112, 56, 0);
    <zorder>label_9</zorder>
    <zorder>label_10</zorder>
    <zorder>label_11</zorder>
-   <zorder>lineEditpass_2</zorder>
+   <zorder>lineEditPhoneNumber</zorder>
    <zorder>label_12</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -381,7 +381,7 @@ color: rgb(112, 56, 0);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>638</width>
+     <width>643</width>
      <height>26</height>
     </rect>
    </property>

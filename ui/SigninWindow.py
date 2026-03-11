@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(638, 524)
+        MainWindow.resize(643, 524)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(parent=self.centralwidget)
@@ -125,12 +125,12 @@ class Ui_MainWindow(object):
 "")
         self.label_11.setText("")
         self.label_11.setObjectName("label_11")
-        self.lineEditpass_2 = QtWidgets.QLineEdit(parent=self.centralwidget)
-        self.lineEditpass_2.setGeometry(QtCore.QRect(100, 360, 211, 31))
-        self.lineEditpass_2.setStyleSheet("border-radius: 10px; border: 1px solid gray\n"
+        self.lineEditPhoneNumber = QtWidgets.QLineEdit(parent=self.centralwidget)
+        self.lineEditPhoneNumber.setGeometry(QtCore.QRect(100, 360, 211, 31))
+        self.lineEditPhoneNumber.setStyleSheet("border-radius: 10px; border: 1px solid gray\n"
 "")
-        self.lineEditpass_2.setText("")
-        self.lineEditpass_2.setObjectName("lineEditpass_2")
+        self.lineEditPhoneNumber.setText("")
+        self.lineEditPhoneNumber.setObjectName("lineEditPhoneNumber")
         self.label_12 = QtWidgets.QLabel(parent=self.centralwidget)
         self.label_12.setGeometry(QtCore.QRect(100, 320, 261, 51))
         self.label_12.setStyleSheet("font: 11pt \"Palatino Linotype\";\n"
@@ -153,11 +153,11 @@ class Ui_MainWindow(object):
         self.label_9.raise_()
         self.label_10.raise_()
         self.label_11.raise_()
-        self.lineEditpass_2.raise_()
+        self.lineEditPhoneNumber.raise_()
         self.label_12.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 638, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 643, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
