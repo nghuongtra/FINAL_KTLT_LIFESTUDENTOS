@@ -5,25 +5,18 @@
             "Name": "Mary",
             "UserName": "mary",
             "Password": "1234",
-            "Phonenumber": "0356142189",
+            "PhoneNumber": "0356142189",
+            "Email": "",
             "createdAt": null,
             "lastLogin": "14:10 - 09/03/2026"
-        },
-        {
-            "Id": "2",
-            "Name": "Peter",
-            "UserName": "peter",
-            "Password": "1234",
-            "Phonenumber": "0769412117",
-            "createdAt": null,
-            "lastLogin": null
         },
         {
             "Id": "3",
             "Name": "John",
             "UserName": "john",
             "Password": "1234",
-            "Phonenumber": "0123456789",
+            "PhoneNumber": "0123456789",
+            "Email": "",
             "createdAt": null,
             "lastLogin": null
         },
@@ -32,7 +25,8 @@
             "Name": "Cook",
             "UserName": "cook",
             "Password": "1234",
-            "Phonenumber": "0987654321",
+            "PhoneNumber": "0987654321",
+            "Email": "",
             "createdAt": null,
             "lastLogin": null
         },
@@ -41,7 +35,8 @@
             "Name": "Bright",
             "UserName": "bright",
             "Password": "1234",
-            "Phonenumber": "0845362412",
+            "PhoneNumber": "0845362412",
+            "Email": "",
             "createdAt": null,
             "lastLogin": null
         },
@@ -50,7 +45,8 @@
             "Name": "huongtra",
             "UserName": "huongtra",
             "Password": "12344",
-            "Phonenumber": "02140",
+            "PhoneNumber": "02140",
+            "Email": "",
             "createdAt": "15:29 - 09/03/2026",
             "lastLogin": "23:59 - 09/03/2026"
         },
@@ -59,18 +55,20 @@
             "Name": "truc",
             "UserName": "truc",
             "Password": "123",
-            "Phonenumber": "0115545",
+            "PhoneNumber": "0115545",
+            "Email": "",
             "createdAt": "00:06 - 10/03/2026",
-            "lastLogin": "19:29 - 11/03/2026"
+            "lastLogin": "15:40 - 11/03/2026"
         },
         {
-            "Id": 8,
-            "Name": "Ngọc ",
-            "UserName": "Nọc Nọc",
-            "Password": "ngoc123456789",
-            "Phonenumber": "0339595587",
-            "createdAt": "19:50 - 11/03/2026",
-            "lastLogin": "19:55 - 11/03/2026"
+            "Id": 11,
+            "Name": "truccute",
+            "UserName": "panda",
+            "Password": "00000",
+            "PhoneNumber": "0769412117",
+            "Email": "ntthuytrucnt3@gmail.com",
+            "createdAt": "16:50 - 11/03/2026",
+            "lastLogin": "23:01 - 11/03/2026"
         }
     ]
 }

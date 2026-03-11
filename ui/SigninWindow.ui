@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>643</width>
-    <height>524</height>
+    <width>527</width>
+    <height>472</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
       <x>0</x>
       <y>0</y>
       <width>641</width>
-      <height>471</height>
+      <height>481</height>
      </rect>
     </property>
     <property name="text">
@@ -37,31 +37,14 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>130</y>
-      <width>261</width>
-      <height>271</height>
+      <y>120</y>
+      <width>251</width>
+      <height>311</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(254, 243, 213);
 border-radius: 10px; border: 1px solid gray</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEditname">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>180</y>
-      <width>211</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-radius: 10px; border: 1px solid gray
-</string>
     </property>
     <property name="text">
      <string/>
@@ -85,28 +68,11 @@ color: rgb(112, 56, 0);
      <string>Your name:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEditusername">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>240</y>
-      <width>211</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-radius: 10px; border: 1px solid gray
-</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>210</y>
+      <y>200</y>
       <width>81</width>
       <height>31</height>
      </rect>
@@ -120,34 +86,11 @@ color: rgb(112, 56, 0);
      <string>Usename:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEditpass">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>300</y>
-      <width>211</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-radius: 10px; border: 1px solid gray
-</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Normal</enum>
-    </property>
-    <property name="clearButtonEnabled">
-     <bool>false</bool>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>270</y>
+      <y>250</y>
       <width>81</width>
       <height>31</height>
      </rect>
@@ -322,30 +265,13 @@ color: rgb(112, 56, 0);
      <string/>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEditPhoneNumber">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>360</y>
-      <width>211</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-radius: 10px; border: 1px solid gray
-</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>320</y>
+      <y>300</y>
       <width>261</width>
-      <height>51</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -357,15 +283,115 @@ color: rgb(112, 56, 0);
      <string>Your phone number:</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>360</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
+color: rgb(112, 56, 0);
+</string>
+    </property>
+    <property name="text">
+     <string>Email: </string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditname">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>180</y>
+      <width>211</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px; border: 1px solid gray
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditusername">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>230</y>
+      <width>211</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px; border: 1px solid gray
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditpass">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>280</y>
+      <width>211</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px; border: 1px solid gray
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditPhoneNumber">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>340</y>
+      <width>211</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px; border: 1px solid gray
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditusername_8">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>390</y>
+      <width>211</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px; border: 1px solid gray
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>label_7</zorder>
    <zorder>label_4</zorder>
-   <zorder>lineEditpass</zorder>
    <zorder>label_6</zorder>
    <zorder>label_2</zorder>
-   <zorder>lineEditname</zorder>
    <zorder>label_3</zorder>
-   <zorder>lineEditusername</zorder>
    <zorder>label_5</zorder>
    <zorder>pushButtonsave</zorder>
    <zorder>pushButtonexit</zorder>
@@ -373,16 +399,21 @@ color: rgb(112, 56, 0);
    <zorder>label_9</zorder>
    <zorder>label_10</zorder>
    <zorder>label_11</zorder>
-   <zorder>lineEditPhoneNumber</zorder>
    <zorder>label_12</zorder>
+   <zorder>label_13</zorder>
+   <zorder>lineEditname</zorder>
+   <zorder>lineEditusername</zorder>
+   <zorder>lineEditpass</zorder>
+   <zorder>lineEditPhoneNumber</zorder>
+   <zorder>lineEditusername_8</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>643</width>
-     <height>26</height>
+     <width>527</width>
+     <height>18</height>
     </rect>
    </property>
   </widget>

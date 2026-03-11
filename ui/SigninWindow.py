@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'D:\nam1\FINAL_KTLT\ui\SigninWindow.ui'
+# Form implementation generated from reading ui file 'ui/SigninWindow.ui'
 #
 # Created by: PyQt6 UI code generator 6.10.2
 #
@@ -12,55 +12,35 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(643, 524)
+        MainWindow.resize(527, 472)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(0, 0, 641, 471))
+        self.label.setGeometry(QtCore.QRect(0, 0, 641, 481))
         self.label.setText("")
         self.label.setPixmap(QtGui.QPixmap(":/login/images/anhnendep.png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.label_4 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(80, 130, 261, 271))
+        self.label_4.setGeometry(QtCore.QRect(80, 120, 251, 311))
         self.label_4.setStyleSheet("background-color: rgb(254, 243, 213);\n"
 "border-radius: 10px; border: 1px solid gray")
         self.label_4.setText("")
         self.label_4.setObjectName("label_4")
-        self.lineEditname = QtWidgets.QLineEdit(parent=self.centralwidget)
-        self.lineEditname.setGeometry(QtCore.QRect(100, 180, 211, 31))
-        self.lineEditname.setStyleSheet("border-radius: 10px; border: 1px solid gray\n"
-"")
-        self.lineEditname.setText("")
-        self.lineEditname.setObjectName("lineEditname")
         self.label_3 = QtWidgets.QLabel(parent=self.centralwidget)
         self.label_3.setGeometry(QtCore.QRect(100, 150, 111, 31))
         self.label_3.setStyleSheet("font: 11pt \"Palatino Linotype\";\n"
 "color: rgb(112, 56, 0);\n"
 "")
         self.label_3.setObjectName("label_3")
-        self.lineEditusername = QtWidgets.QLineEdit(parent=self.centralwidget)
-        self.lineEditusername.setGeometry(QtCore.QRect(100, 240, 211, 31))
-        self.lineEditusername.setStyleSheet("border-radius: 10px; border: 1px solid gray\n"
-"")
-        self.lineEditusername.setText("")
-        self.lineEditusername.setObjectName("lineEditusername")
         self.label_5 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_5.setGeometry(QtCore.QRect(100, 210, 81, 31))
+        self.label_5.setGeometry(QtCore.QRect(100, 200, 81, 31))
         self.label_5.setStyleSheet("font: 11pt \"Palatino Linotype\";\n"
 "color: rgb(112, 56, 0);\n"
 "")
         self.label_5.setObjectName("label_5")
-        self.lineEditpass = QtWidgets.QLineEdit(parent=self.centralwidget)
-        self.lineEditpass.setGeometry(QtCore.QRect(100, 300, 211, 31))
-        self.lineEditpass.setStyleSheet("border-radius: 10px; border: 1px solid gray\n"
-"")
-        self.lineEditpass.setText("")
-        self.lineEditpass.setEchoMode(QtWidgets.QLineEdit.EchoMode.Normal)
-        self.lineEditpass.setClearButtonEnabled(False)
-        self.lineEditpass.setObjectName("lineEditpass")
         self.label_6 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_6.setGeometry(QtCore.QRect(100, 270, 81, 31))
+        self.label_6.setGeometry(QtCore.QRect(100, 250, 81, 31))
         self.label_6.setStyleSheet("font: 11pt \"Palatino Linotype\";\n"
 "color: rgb(112, 56, 0);\n"
 "")
@@ -125,27 +105,54 @@ class Ui_MainWindow(object):
 "")
         self.label_11.setText("")
         self.label_11.setObjectName("label_11")
-        self.lineEditPhoneNumber = QtWidgets.QLineEdit(parent=self.centralwidget)
-        self.lineEditPhoneNumber.setGeometry(QtCore.QRect(100, 360, 211, 31))
-        self.lineEditPhoneNumber.setStyleSheet("border-radius: 10px; border: 1px solid gray\n"
-"")
-        self.lineEditPhoneNumber.setText("")
-        self.lineEditPhoneNumber.setObjectName("lineEditPhoneNumber")
         self.label_12 = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label_12.setGeometry(QtCore.QRect(100, 320, 261, 51))
+        self.label_12.setGeometry(QtCore.QRect(100, 300, 261, 41))
         self.label_12.setStyleSheet("font: 11pt \"Palatino Linotype\";\n"
 "color: rgb(112, 56, 0);\n"
 "")
         self.label_12.setObjectName("label_12")
+        self.label_13 = QtWidgets.QLabel(parent=self.centralwidget)
+        self.label_13.setGeometry(QtCore.QRect(100, 360, 81, 31))
+        self.label_13.setStyleSheet("font: 11pt \"Palatino Linotype\";\n"
+"color: rgb(112, 56, 0);\n"
+"")
+        self.label_13.setObjectName("label_13")
+        self.lineEditname = QtWidgets.QLineEdit(parent=self.centralwidget)
+        self.lineEditname.setGeometry(QtCore.QRect(100, 180, 211, 21))
+        self.lineEditname.setStyleSheet("border-radius: 10px; border: 1px solid gray\n"
+"")
+        self.lineEditname.setText("")
+        self.lineEditname.setObjectName("lineEditname")
+        self.lineEditusername = QtWidgets.QLineEdit(parent=self.centralwidget)
+        self.lineEditusername.setGeometry(QtCore.QRect(100, 230, 211, 21))
+        self.lineEditusername.setStyleSheet("border-radius: 10px; border: 1px solid gray\n"
+"")
+        self.lineEditusername.setText("")
+        self.lineEditusername.setObjectName("lineEditusername")
+        self.lineEditpass = QtWidgets.QLineEdit(parent=self.centralwidget)
+        self.lineEditpass.setGeometry(QtCore.QRect(100, 280, 211, 21))
+        self.lineEditpass.setStyleSheet("border-radius: 10px; border: 1px solid gray\n"
+"")
+        self.lineEditpass.setText("")
+        self.lineEditpass.setObjectName("lineEditpass")
+        self.lineEditPhoneNumber = QtWidgets.QLineEdit(parent=self.centralwidget)
+        self.lineEditPhoneNumber.setGeometry(QtCore.QRect(100, 340, 211, 21))
+        self.lineEditPhoneNumber.setStyleSheet("border-radius: 10px; border: 1px solid gray\n"
+"")
+        self.lineEditPhoneNumber.setText("")
+        self.lineEditPhoneNumber.setObjectName("lineEditPhoneNumber")
+        self.lineEditusername_8 = QtWidgets.QLineEdit(parent=self.centralwidget)
+        self.lineEditusername_8.setGeometry(QtCore.QRect(100, 390, 211, 21))
+        self.lineEditusername_8.setStyleSheet("border-radius: 10px; border: 1px solid gray\n"
+"")
+        self.lineEditusername_8.setText("")
+        self.lineEditusername_8.setObjectName("lineEditusername_8")
         self.label.raise_()
         self.label_7.raise_()
         self.label_4.raise_()
-        self.lineEditpass.raise_()
         self.label_6.raise_()
         self.label_2.raise_()
-        self.lineEditname.raise_()
         self.label_3.raise_()
-        self.lineEditusername.raise_()
         self.label_5.raise_()
         self.pushButtonsave.raise_()
         self.pushButtonexit.raise_()
@@ -153,11 +160,16 @@ class Ui_MainWindow(object):
         self.label_9.raise_()
         self.label_10.raise_()
         self.label_11.raise_()
-        self.lineEditPhoneNumber.raise_()
         self.label_12.raise_()
+        self.label_13.raise_()
+        self.lineEditname.raise_()
+        self.lineEditusername.raise_()
+        self.lineEditpass.raise_()
+        self.lineEditPhoneNumber.raise_()
+        self.lineEditusername_8.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 643, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 527, 18))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
@@ -177,3 +189,14 @@ class Ui_MainWindow(object):
         self.pushButtonexit.setText(_translate("MainWindow", "Exit"))
         self.label_10.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:11pt; color:#bb3e5d;\">Nhớ lưu !!</span></p></body></html>"))
         self.label_12.setText(_translate("MainWindow", "Your phone number:"))
+        self.label_13.setText(_translate("MainWindow", "Email: "))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec())

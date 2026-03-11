@@ -1,75 +1,71 @@
 from PyQt6.QtWidgets import QMessageBox, QMainWindow
-
 from ui.ForgetPassWindow import Ui_MainWindow
+from model.auth_handler import AuthManager
 
 
 class ForgetPassWindowEx(Ui_MainWindow):
-    def setupUi(self, MainWindow):
-        super().setupUi(MainWindow)
-        self.MainWindow = MainWindow
-        self.setupSignalAndSlots()
+   def setupUi(self, MainWindow):
+       super().setupUi(MainWindow)
+       self.MainWindow = MainWindow
+       self.auth = AuthManager()  # Khởi tạo bộ máy gửi mail
+       self.setupSignalAndSlots()
 
-    def show(self):
-        self.MainWindow.show()
 
-    def setupSignalAndSlots(self):
-        self.pushButtonsubmit.clicked.connect(self.process_password)
+   def show(self):
+       self.MainWindow.show()
 
-    def process_password(self):
-        phonenumber = self.lineEditfriend.text().strip()
 
-        if phonenumber == "":
-            msg = QMessageBox()
-            msg.setWindowTitle("Thông báo")
-            msg.setText("Vui lòng nhập thông tin để lấy mật khẩu!")
-            msg.exec()
-            return
+   def setupSignalAndSlots(self):
+       self.pushButtonsubmit.clicked.connect(self.process_password)
 
-        from model.users import Users
-        all_users = Users()
 
-        try:
-            all_users.import_json("../datasets/users.json")
-        except Exception as e:
-            print(f"Lỗi đọc file: {e}")
-            return
+   def process_password(self):
+       phone_input = self.lineEditfriend.text().strip()
 
-        # 1. Tạo một danh sách để chứa tất cả các user khớp điều kiện
-            # 1. Tạo một danh sách để chứa tất cả các user khớp điều kiện
-        found_users_list = []
-        for user in all_users.list:
-            if str(user.Phonenumber).strip() == phonenumber:
-                found_users_list.append(user)
 
-        # 2. Kiểm tra xem danh sách có dữ liệu không
-        if len(found_users_list) > 0:
-            # 3. Duyệt danh sách để nối chuỗi thông tin của tất cả tài khoản
-            message_text = f"Tìm thấy {len(found_users_list)} tài khoản có cùng số điện thoại:\n\n"
+       if phone_input == "":
+           QMessageBox.warning(self.MainWindow, "Thông báo", "Vui lòng nhập số điện thoại!")
+           return
 
-            for i, user in enumerate(found_users_list, 1):
-                message_text += f"Tài khoản {i}:\n"
-                message_text += f" ➤ Username: {user.UserName}\n"
-                message_text += f" ➤ Password: {user.Password}\n"
-                message_text += "-" * 20 + "\n"
 
-            msg = QMessageBox()
-            msg.setWindowTitle("Thông tin tài khoản")
-            msg.setText(message_text)
-            msg.exec()
+       from model.users import Users
+       all_users = Users()
+       all_users.import_json("../datasets/users.json")
 
-            self.go_back_to_login()
-        else:
-            msg = QMessageBox()
-            msg.setWindowTitle("Lỗi")
-            msg.setText("Không tìm thấy tài khoản nào trùng với số điện thoại này!")
-            msg.exec()
 
-    def go_back_to_login(self):
-        from ui.LoginWindowEx import LoginWindowEx
+       # 1. Tìm user khớp SĐT
+       found_user = next((u for u in all_users.list if str(u.PhoneNumber).strip() == phone_input), None)
 
-        self.login_window = QMainWindow()
-        self.login_ui = LoginWindowEx()
-        self.login_ui.setupUi(self.login_window)
 
-        self.MainWindow.close()  # Đóng cửa sổ quên mật khẩu hiện tại
-        self.login_window.show()  # Mở cửa sổ đăng nhập
+       if found_user:
+           #Kiểm tra xem user có email không
+           if not found_user.Email:
+               QMessageBox.critical(self.MainWindow, "Lỗi", "Tài khoản này chưa đăng ký Email!")
+               return
+
+
+           success = self.auth.send_password_to_mail(
+               found_user.Email,
+               found_user.Name,
+               found_user.Password
+           )
+
+
+           if success:
+               QMessageBox.information(self.MainWindow, "Thành công",
+                                       f"Mật khẩu đã được gửi đến email: {found_user.Email}")
+               self.go_back_to_login()
+           else:
+               QMessageBox.critical(self.MainWindow, "Lỗi", "Không thể gửi email!")
+       else:
+           QMessageBox.warning(self.MainWindow, "Lỗi", "Số điện thoại không tồn tại trong hệ thống!")
+
+
+   def go_back_to_login(self):
+       from ui.LoginWindowEx import LoginWindowEx
+       self.login_window = QMainWindow()
+       self.login_ui = LoginWindowEx()
+       self.login_ui.setupUi(self.login_window)
+       self.MainWindow.close()
+       self.login_window.show()
+

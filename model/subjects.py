@@ -32,7 +32,8 @@ class Subjects(MyCollections):
           with open(self.filename, encoding='utf-8') as json_file:
               data = json.load(json_file)
               for i in data['subjects']:
-                  sub = Subject(i["Subname"], int(i["credit"]),
+                  sub = Subject(i["Subname"],
+                                (i["credit"]),
                       float(i["scoreProcess"]), float(i["scoreMidterm"]), float(i["scoreFinal"]))
                   self.list.append(sub)
       except FileNotFoundError:
