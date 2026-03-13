@@ -1,1 +1,30 @@
-[]
+[
+    {
+        "ngay": "13/03/2026",
+        "khoan_chi": "Ăn joli",
+        "so_tien": 145000,
+        "danh_muc": "Ăn uống",
+        "ghi_chu": ""
+    },
+    {
+        "ngay": "13/03/2026",
+        "khoan_chi": "mua sách KTVM",
+        "so_tien": 30000,
+        "danh_muc": "Học tập",
+        "ghi_chu": ""
+    },
+    {
+        "ngay": "13/03/2026",
+        "khoan_chi": "đổ xăng",
+        "so_tien": 77000,
+        "danh_muc": "Đi lại",
+        "ghi_chu": ""
+    },
+    {
+        "ngay": "13/03/2026",
+        "khoan_chi": "Mua kem nền mới",
+        "so_tien": 350000,
+        "danh_muc": "Mua sắm",
+        "ghi_chu": ""
+    }
+]

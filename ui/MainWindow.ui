@@ -204,7 +204,7 @@ font-weight: bold;</string>
 background-color:transparent</string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="pageOverview">
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -1738,7 +1738,7 @@ border: 2px solid rgb(255, 250, 192);</string>
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_15">
                 <property name="spacing">
-                 <number>14</number>
+                 <number>11</number>
                 </property>
                 <item>
                  <widget class="QFrame" name="frame_Add">
@@ -1957,8 +1957,8 @@ padding: 5px;
                      </property>
                      <property name="iconSize">
                       <size>
-                       <width>25</width>
-                       <height>25</height>
+                       <width>23</width>
+                       <height>23</height>
                       </size>
                      </property>
                     </widget>
@@ -2014,6 +2014,12 @@ font-weight:bold;</string>
                    <enum>QFrame::Raised</enum>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_16">
+                   <property name="spacing">
+                    <number>3</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
                    <item>
                     <widget class="QScrollArea" name="scrollArea">
                      <property name="styleSheet">
@@ -2027,8 +2033,8 @@ font-weight:bold;</string>
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>205</width>
-                        <height>135</height>
+                        <width>466</width>
+                        <height>732</height>
                        </rect>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -2338,6 +2344,12 @@ color: rgb(82, 65, 173);
                     <layout class="QVBoxLayout" name="verticalLayout_9">
                      <item>
                       <widget class="QFrame" name="frame_5">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>0</height>
+                        </size>
+                       </property>
                        <property name="styleSheet">
                         <string notr="true">#frame_5 {
     background-color:rgba(255, 247, 198,210); 
@@ -2353,8 +2365,8 @@ color: rgb(82, 65, 173);
                        <property name="frameShadow">
                         <enum>QFrame::Raised</enum>
                        </property>
-                       <layout class="QGridLayout" name="gridLayout">
-                        <item row="0" column="0" colspan="2">
+                       <layout class="QVBoxLayout" name="verticalLayout_34">
+                        <item>
                          <widget class="QLabel" name="label_36">
                           <property name="font">
                            <font>
@@ -2379,55 +2391,84 @@ border-color: transparent;</string>
                           </property>
                          </widget>
                         </item>
-                        <item row="1" column="1">
-                         <widget class="QLabel" name="label_total_3">
-                          <property name="styleSheet">
-                           <string notr="true">background-color:transparent;
-border-color: transparent;
-color: rgb(145, 93, 47);</string>
-                          </property>
-                          <property name="text">
-                           <string>4,800,000đ</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item row="2" column="0" colspan="2">
-                         <widget class="QLabel" name="label_tanggiam">
-                          <property name="styleSheet">
-                           <string notr="true">color: rgb(85, 49, 4);
-background-color:transparent;
-border-color: transparent;</string>
-                          </property>
-                          <property name="text">
-                           <string>Tăng 1.500.00đ so với tháng trước</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item row="1" column="0">
-                         <widget class="QLabel" name="label_24">
-                          <property name="font">
-                           <font>
-                            <family>Palatino Linotype</family>
-                            <pointsize>16</pointsize>
-                            <weight>75</weight>
-                            <italic>false</italic>
-                            <bold>true</bold>
-                           </font>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">background-color:transparent;
+                        <item>
+                         <layout class="QHBoxLayout" name="horizontalLayout_32">
+                          <item>
+                           <widget class="QLabel" name="label_24">
+                            <property name="font">
+                             <font>
+                              <family>Palatino Linotype</family>
+                              <pointsize>16</pointsize>
+                              <weight>75</weight>
+                              <italic>false</italic>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
 border-color: transparent;
 color:  rgb(170, 104, 46);</string>
-                          </property>
-                          <property name="text">
-                           <string>Total:</string>
-                          </property>
-                         </widget>
+                            </property>
+                            <property name="text">
+                             <string>Total:</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_total_3">
+                            <property name="styleSheet">
+                             <string notr="true">background-color:transparent;
+border-color: transparent;
+color: rgb(145, 93, 47);</string>
+                            </property>
+                            <property name="text">
+                             <string>4,800,000đ</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </item>
+                        <item>
+                         <layout class="QHBoxLayout" name="horizontalLayout_31">
+                          <item>
+                           <widget class="QLabel" name="label_tanggiam">
+                            <property name="styleSheet">
+                             <string notr="true">color: rgb(85, 49, 4);
+background-color:transparent;
+border-color: transparent;</string>
+                            </property>
+                            <property name="text">
+                             <string>Tăng 1.500.00đ so với tháng trước</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
                         </item>
                        </layout>
                       </widget>
                      </item>
                     </layout>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_BieuDo">
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+    background-color:rgb(85, 85, 0); /* Màu tím đậm */
+    color: white;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: rgb(143, 143, 0); /* Sáng hơn khi di chuột vào */
+}
+
+</string>
+                     </property>
+                     <property name="text">
+                      <string>Xem biểu đồ chi tiêu</string>
+                     </property>
+                    </widget>
                    </item>
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_16">

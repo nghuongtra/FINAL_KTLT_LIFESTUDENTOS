@@ -938,7 +938,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_14 = QtWidgets.QVBoxLayout(self.frame_left_3)
         self.verticalLayout_14.setObjectName("verticalLayout_14")
         self.verticalLayout_15 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_15.setSpacing(14)
+        self.verticalLayout_15.setSpacing(11)
         self.verticalLayout_15.setObjectName("verticalLayout_15")
         self.frame_Add = QtWidgets.QFrame(parent=self.frame_left_3)
         self.frame_Add.setStyleSheet("#frame_Add {\n"
@@ -1064,7 +1064,7 @@ class Ui_MainWindow(object):
         icon14 = QtGui.QIcon()
         icon14.addPixmap(QtGui.QPixmap(":/nen/images/ic_save.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.pushButtonAddExpense.setIcon(icon14)
-        self.pushButtonAddExpense.setIconSize(QtCore.QSize(25, 25))
+        self.pushButtonAddExpense.setIconSize(QtCore.QSize(23, 23))
         self.pushButtonAddExpense.setObjectName("pushButtonAddExpense")
         self.gridLayout_5.addWidget(self.pushButtonAddExpense, 9, 0, 1, 2)
         self.label_31 = QtWidgets.QLabel(parent=self.frame_Add)
@@ -1097,13 +1097,15 @@ class Ui_MainWindow(object):
         self.frame_List.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_List.setObjectName("frame_List")
         self.verticalLayout_16 = QtWidgets.QVBoxLayout(self.frame_List)
+        self.verticalLayout_16.setContentsMargins(-1, 0, -1, -1)
+        self.verticalLayout_16.setSpacing(3)
         self.verticalLayout_16.setObjectName("verticalLayout_16")
         self.scrollArea = QtWidgets.QScrollArea(parent=self.frame_List)
         self.scrollArea.setStyleSheet("")
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 205, 135))
+        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 466, 732))
         self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
         self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_11.setObjectName("verticalLayout_11")
@@ -1293,6 +1295,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_9 = QtWidgets.QVBoxLayout()
         self.verticalLayout_9.setObjectName("verticalLayout_9")
         self.frame_5 = QtWidgets.QFrame(parent=self.frame_content_right)
+        self.frame_5.setMinimumSize(QtCore.QSize(0, 0))
         self.frame_5.setStyleSheet("#frame_5 {\n"
 "    background-color:rgba(255, 247, 198,210); \n"
 "    border-radius: 20px;\n"
@@ -1303,8 +1306,8 @@ class Ui_MainWindow(object):
         self.frame_5.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_5.setObjectName("frame_5")
-        self.gridLayout = QtWidgets.QGridLayout(self.frame_5)
-        self.gridLayout.setObjectName("gridLayout")
+        self.verticalLayout_34 = QtWidgets.QVBoxLayout(self.frame_5)
+        self.verticalLayout_34.setObjectName("verticalLayout_34")
         self.label_36 = QtWidgets.QLabel(parent=self.frame_5)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
@@ -1319,19 +1322,9 @@ class Ui_MainWindow(object):
 "border-color: transparent;")
         self.label_36.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_36.setObjectName("label_36")
-        self.gridLayout.addWidget(self.label_36, 0, 0, 1, 2)
-        self.label_total_3 = QtWidgets.QLabel(parent=self.frame_5)
-        self.label_total_3.setStyleSheet("background-color:transparent;\n"
-"border-color: transparent;\n"
-"color: rgb(145, 93, 47);")
-        self.label_total_3.setObjectName("label_total_3")
-        self.gridLayout.addWidget(self.label_total_3, 1, 1, 1, 1)
-        self.label_tanggiam = QtWidgets.QLabel(parent=self.frame_5)
-        self.label_tanggiam.setStyleSheet("color: rgb(85, 49, 4);\n"
-"background-color:transparent;\n"
-"border-color: transparent;")
-        self.label_tanggiam.setObjectName("label_tanggiam")
-        self.gridLayout.addWidget(self.label_tanggiam, 2, 0, 1, 2)
+        self.verticalLayout_34.addWidget(self.label_36)
+        self.horizontalLayout_32 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_32.setObjectName("horizontalLayout_32")
         self.label_24 = QtWidgets.QLabel(parent=self.frame_5)
         font = QtGui.QFont()
         font.setFamily("Palatino Linotype")
@@ -1344,9 +1337,40 @@ class Ui_MainWindow(object):
 "border-color: transparent;\n"
 "color:  rgb(170, 104, 46);")
         self.label_24.setObjectName("label_24")
-        self.gridLayout.addWidget(self.label_24, 1, 0, 1, 1)
+        self.horizontalLayout_32.addWidget(self.label_24)
+        self.label_total_3 = QtWidgets.QLabel(parent=self.frame_5)
+        self.label_total_3.setStyleSheet("background-color:transparent;\n"
+"border-color: transparent;\n"
+"color: rgb(145, 93, 47);")
+        self.label_total_3.setObjectName("label_total_3")
+        self.horizontalLayout_32.addWidget(self.label_total_3)
+        self.verticalLayout_34.addLayout(self.horizontalLayout_32)
+        self.horizontalLayout_31 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_31.setObjectName("horizontalLayout_31")
+        self.label_tanggiam = QtWidgets.QLabel(parent=self.frame_5)
+        self.label_tanggiam.setStyleSheet("color: rgb(85, 49, 4);\n"
+"background-color:transparent;\n"
+"border-color: transparent;")
+        self.label_tanggiam.setObjectName("label_tanggiam")
+        self.horizontalLayout_31.addWidget(self.label_tanggiam)
+        self.verticalLayout_34.addLayout(self.horizontalLayout_31)
         self.verticalLayout_9.addWidget(self.frame_5)
         self.verticalLayout_10.addLayout(self.verticalLayout_9)
+        self.pushButton_BieuDo = QtWidgets.QPushButton(parent=self.frame_content_right)
+        self.pushButton_BieuDo.setStyleSheet("QPushButton {\n"
+"    background-color:rgb(85, 85, 0); /* Màu tím đậm */\n"
+"    color: white;\n"
+"    border-radius: 10px;\n"
+"    padding: 5px 15px;\n"
+"    font-weight: bold;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(143, 143, 0); /* Sáng hơn khi di chuột vào */\n"
+"}\n"
+"\n"
+"")
+        self.pushButton_BieuDo.setObjectName("pushButton_BieuDo")
+        self.verticalLayout_10.addWidget(self.pushButton_BieuDo)
         self.horizontalLayout_16 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_16.setObjectName("horizontalLayout_16")
         self.lineEdittimkhoanchi_3 = QtWidgets.QLineEdit(parent=self.frame_content_right)
@@ -2164,7 +2188,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -2257,9 +2281,10 @@ class Ui_MainWindow(object):
         self.lineEditIncome.setPlaceholderText(_translate("MainWindow", "Nhập thu nhập mới"))
         self.pushButton_addincome.setText(_translate("MainWindow", "Add Income"))
         self.label_36.setText(_translate("MainWindow", "<html><head/><body><p align=\"justify\"><span style=\" font-weight:600;\">Expense Summary</span></p></body></html>"))
+        self.label_24.setText(_translate("MainWindow", "Total:"))
         self.label_total_3.setText(_translate("MainWindow", "4,800,000đ"))
         self.label_tanggiam.setText(_translate("MainWindow", "Tăng 1.500.00đ so với tháng trước"))
-        self.label_24.setText(_translate("MainWindow", "Total:"))
+        self.pushButton_BieuDo.setText(_translate("MainWindow", "Xem biểu đồ chi tiêu"))
         self.lineEdittimkhoanchi_3.setPlaceholderText(_translate("MainWindow", "Tìm kiếm khoản chi..."))
         self.comboBoxsapxep_2.setItemText(1, _translate("MainWindow", "Tăng dần"))
         self.comboBoxsapxep_2.setItemText(2, _translate("MainWindow", "Giảm dần"))

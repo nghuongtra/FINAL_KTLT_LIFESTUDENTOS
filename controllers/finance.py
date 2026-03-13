@@ -4,6 +4,14 @@ import os
 
 from PyQt6.QtWidgets import QMessageBox, QTableWidgetItem
 
+#_______Vẽ Biểu đồ____________________________________________-
+# 1. Thêm QDialog, QVBoxLayout của PyQt6:
+from PyQt6.QtWidgets import QMessageBox, QTableWidgetItem, QDialog, QVBoxLayout
+
+# 2. Thêm thư viện matplotlib và công cụ nhúng vào Qt:
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg as FigureCanvas
+#____________________________________________-
 from model.balances import Balances
 from model.expense import Expense
 from model.expenses import Expenses
@@ -36,6 +44,9 @@ class FinanceController:
         # --- Delete + edit---
         self.view.pushButton_delete.clicked.connect(self.process_delete)
         self.view.pushButton_edit.clicked.connect(self.process_edit)
+        #_______________Vẽ biểu đồ____
+        self.view.pushButton_BieuDo.clicked.connect(self.show_pie_chart)
+
         self.original_btn_style = self.view.pushButtonAddExpense.styleSheet()
         # Lưu lại chữ gốc ("+ Add Expense")
         self.original_btn_text= self.view.pushButtonAddExpense.text()
@@ -296,3 +307,79 @@ class FinanceController:
                     }
                 """)
         self.view.lineEditKhoanchi.setFocus()
+
+    # PHẦN V: XỬ LÝ VẼ BIỂU ĐỒ TRÒN BẰNG MATPLOTLIB (Đã đổi màu theo tone app)
+    def show_pie_chart(self):
+        # ĐỊNH NGHĨA TÔNG MÀU APP (Màu be ấm áp)
+        # Lấy cảm hứng từ màu nền của các card
+        app_bg_color = '#FBF3E4'
+
+        # ĐỊNH NGHĨA MÀU VĂN BẢN (Nâu đậm ấm)
+        app_text_color = '#5D4037'
+
+        # ĐỊNH NGHĨA BẢNG MÀU MIẾNG GHÉP (Màu pastel ấm, hài hòa)
+        # Danh sách 6 màu pastel tông ấm
+        app_colors = [
+            '#E5A88B',  # Pastel Orange
+            '#E8D595',  # Pastel Yellow
+            '#A3D1A3',  # Pastel Green
+            '#A4C6DE',  # Pastel Blue
+            '#C1B4D8',  # Pastel Purple
+            '#E6A8A8',  # Pastel Pink
+        ]
+
+        # 1. Tính tổng tiền theo từng danh mục (Giữ nguyên logic dữ liệu)
+        category_totals = {}
+        total_amount = 0
+
+        for item in self.expense_manager.items:
+            cat = item.danh_muc
+            category_totals[cat] = category_totals.get(cat, 0) + item.so_tien
+            total_amount += item.so_tien
+
+        if total_amount == 0:
+            QMessageBox.information(self.view.MainWindow, "Thông báo", "Chưa có dữ liệu chi tiêu để vẽ biểu đồ!")
+            return
+
+        # 2. Chuẩn bị dữ liệu cho matplotlib (Giữ nguyên)
+        labels = []
+        sizes = []
+        for cat, amount in category_totals.items():
+            if amount > 0:
+                labels.append(cat)
+                sizes.append(amount)
+
+        # 3. Tạo cửa sổ Popup (QDialog) và bố cục (Giữ nguyên)
+        dialog = QDialog(self.view.MainWindow)
+        dialog.setWindowTitle("Biểu Đồ Phân Tích Chi Tiêu")
+        dialog.resize(700, 500)
+        layout = QVBoxLayout()
+        dialog.setLayout(layout)
+
+        # 4. Dùng Matplotlib để vẽ biểu đồ VỚI MÀU SẮC MỚI
+        # Tạo Figure (bức tranh) và Axes (trục tọa độ)
+        fig, ax = plt.subplots(figsize=(6, 6))
+
+        # --- ĐỔI MÀU NỀN CỦA FIGURE VÀ AXES ---
+        fig.set_facecolor(app_bg_color)
+        ax.set_facecolor(app_bg_color)
+
+        # --- ĐỔI MÀU TIÊU ĐỀ ---
+        ax.set_title("TỶ LỆ CHI TIÊU THEO DANH MỤC", fontsize=14,
+                     fontweight='bold', pad=20, color=app_text_color)
+
+        # --- VẼ BIỂU ĐỒ VỚI BẢNG MÀU APP ---
+        ax.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90,
+               colors=app_colors,  # Sử dụng bảng màu ấm mới
+               wedgeprops={'edgecolor': app_text_color},  # Thêm viền nâu mỏng cho sắc nét
+               textprops={'color': app_text_color, 'fontsize': 10})  # Đổi màu chữ label
+
+        # Đảm bảo biểu đồ tròn vo (Giữ nguyên)
+        ax.axis('equal')
+
+        # 5. Nhúng cái "Bức tranh" (Figure) của matplotlib vào PyQt6 (Giữ nguyên)
+        canvas = FigureCanvas(fig)
+        layout.addWidget(canvas)
+
+        # Hiển thị cửa sổ popup lên (Giữ nguyên)
+        dialog.exec()
