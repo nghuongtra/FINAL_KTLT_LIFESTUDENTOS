@@ -43,7 +43,7 @@ class SigninWindowEx(Ui_MainWindow):
        uid = self.lineEditusername.text()
        pwd = self.lineEditpass.text()
        phone = self.lineEditPhoneNumber.text()
-       email = self.lineEditEmail.text().strip()
+       email = self.lineEditusername_8.text().strip()
 
 
        if name == "" or uid == "" or pwd == "":

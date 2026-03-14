@@ -32,7 +32,7 @@ padding: 5px;
 border: 2px solid rgb(255, 250, 192);</string>
       </property>
       <property name="text">
-       <string>ADMIN DASBOARD</string>
+       <string>ADMIN DASHBOARD</string>
       </property>
       <property name="icon">
        <iconset resource="../resources.qrc">
@@ -248,6 +248,16 @@ QTableWidget, QTableWidget::viewport {
            </column>
            <column>
             <property name="text">
+             <string>Số điện thoại</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Gmail</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
              <string>Created At</string>
             </property>
             <property name="font">
@@ -324,12 +334,12 @@ QTableWidget, QTableWidget::viewport {
              <string>Phạm Ngọc</string>
             </property>
            </item>
-           <item row="0" column="2">
+           <item row="0" column="4">
             <property name="text">
              <string>20/11/2025</string>
             </property>
            </item>
-           <item row="0" column="3">
+           <item row="0" column="5">
             <property name="text">
              <string>8/3/2026</string>
             </property>
@@ -408,7 +418,7 @@ font-weight:bold;
      <x>0</x>
      <y>0</y>
      <width>881</width>
-     <height>18</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

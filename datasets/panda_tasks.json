@@ -1,1 +1,39 @@
-{"tasks": []}
+{
+    "tasks": [
+        {
+            "title": "trộm chó",
+            "content": "trộm chó về nựng",
+            "deadline": "2026-01-01",
+            "deadlinetime": "08:00:00",
+            "isfinish": false
+        },
+        {
+            "title": "làm bài tập",
+            "content": "bài tập toán",
+            "deadline": "2026-08-01",
+            "deadlinetime": "08:00:00",
+            "isfinish": false
+        },
+        {
+            "title": "lau ghế",
+            "content": "lau bộ bàn ghế rồng bay phượng múa",
+            "deadline": "2026-02-28",
+            "deadlinetime": "08:00:00",
+            "isfinish": false
+        },
+        {
+            "title": "lau nhà",
+            "content": "lau nhà sạch đến mức có thể soi gương",
+            "deadline": "2027-03-28",
+            "deadlinetime": "08:00:00",
+            "isfinish": true
+        },
+        {
+            "title": "tu tiên",
+            "content": "trùng sinh tôi gia nhập môn phái cái bang",
+            "deadline": "2026-03-15",
+            "deadlinetime": "10:00:00",
+            "isfinish": false
+        }
+    ]
+}

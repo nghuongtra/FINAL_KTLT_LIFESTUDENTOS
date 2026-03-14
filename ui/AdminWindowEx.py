@@ -67,14 +67,19 @@ class AdminWindowEx(Ui_MainWindow):
             self.tableWidgetAdmin.insertRow(row_index)
             user_id = str(user.get("Id", ""))
             username = str(user.get("UserName", ""))
+            phone = str(
+                user.get("PhoneNumber", ""))
+            email = str(user.get("Email", ""))
             created_at = str(user.get("createdAt", "N/A"))
             last_login = str(user.get("lastLogin", "N/A"))
             realtime_activity = self.get_realtime_recent_activity(username)
             self.tableWidgetAdmin.setItem(row_index, 0, QTableWidgetItem(user_id))
             self.tableWidgetAdmin.setItem(row_index, 1, QTableWidgetItem(username))
-            self.tableWidgetAdmin.setItem(row_index, 2, QTableWidgetItem(created_at))
-            self.tableWidgetAdmin.setItem(row_index, 3, QTableWidgetItem(last_login))
-            self.tableWidgetAdmin.setItem(row_index, 4, QTableWidgetItem(realtime_activity))
+            self.tableWidgetAdmin.setItem(row_index, 2, QTableWidgetItem(phone))
+            self.tableWidgetAdmin.setItem(row_index, 3, QTableWidgetItem(email))
+            self.tableWidgetAdmin.setItem(row_index, 4, QTableWidgetItem(created_at))
+            self.tableWidgetAdmin.setItem(row_index, 5, QTableWidgetItem(last_login))
+            self.tableWidgetAdmin.setItem(row_index, 6, QTableWidgetItem(realtime_activity))
     def loadFeedbacks(self):
         self.listWidgetContact.clear()
         feedback_file = "../datasets/feedbacks.json"
