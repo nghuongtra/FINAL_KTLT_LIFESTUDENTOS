@@ -15,14 +15,15 @@ class OverviewController:
     def process_viewdetail(self):
         total_credits = 0
         total_weighted_score_10 = 0
+
         for item in self.view.sub_manager.list:
-                credit = int(item.credit)
-                score_final = float(item.scoreFinal)
-                total_credits += credit
-                total_weighted_score_10 += (score_final * credit)
+            credit = float(item.credit)
+            score_final = (float(item.scoreProcess) * 0.2) + (float(item.scoreMidterm) * 0.3) + (float(item.scoreFinal) * 0.5)
+            total_credits += credit
+            total_weighted_score_10 += (score_final * credit)
         if total_credits > 0:
             avgScore = total_weighted_score_10 / total_credits
-            gpa_4 = (avgScore/ 10) * 4
+            gpa_4 = (avgScore / 10) * 4
 
             self.view.labelGPA.setText(f"{gpa_4:.2f}")
             self.view.labelGrade.setText(f"{avgScore:.2f}")
