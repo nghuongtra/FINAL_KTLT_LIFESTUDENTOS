@@ -131,11 +131,12 @@ color: rgb(112, 56, 0);
 color: rgb(255, 255, 255);
 font: 75 10pt &quot;Palatino Linotype&quot;;
 border-radius: 10px;
-border: 1px solid white
+border: 1px solid white;
+font-weight:bold;
 </string>
     </property>
     <property name="text">
-     <string/>
+     <string>Submit</string>
     </property>
     <property name="icon">
      <iconset>
@@ -156,7 +157,7 @@ border: 1px solid white
      <x>0</x>
      <y>0</y>
      <width>556</width>
-     <height>26</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>

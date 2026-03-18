@@ -68,7 +68,7 @@
             "PhoneNumber": "0769412117",
             "Email": "ntthuytrucnt3@gmail.com",
             "createdAt": "16:50 - 11/03/2026",
-            "lastLogin": "20:34 - 14/03/2026"
+            "lastLogin": "21:44 - 14/03/2026"
         },
         {
             "Id": "8",
@@ -88,16 +88,6 @@
             "PhoneNumber": "123456",
             "Email": "heluuu@gmail.com",
             "createdAt": "14:06 - 14/03/2026",
-            "lastLogin": null
-        },
-        {
-            "Id": 10,
-            "Name": "hhhh",
-            "UserName": "hhh",
-            "Password": "111",
-            "PhoneNumber": "0987654321",
-            "Email": "hhhh@gmail.com",
-            "createdAt": "20:34 - 14/03/2026",
             "lastLogin": null
         }
     ]
