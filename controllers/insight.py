@@ -64,7 +64,7 @@ class InsightController:
         fig, ax = plt.subplots(figsize=(4, 1.5), dpi=100)
         fig.patch.set_alpha(0)
         ax.set_facecolor('none')
-        x = ["Kỳ trước", "Kỳ này"]
+        x = ["Trước", "Hiện tại"]
         y = [gpa_cu, gpa_hien_tai]
         color = '#27ae60' if gpa_hien_tai >= gpa_cu else '#c0392b'
         ax.plot(x, y, marker='o', color=color, linewidth=2.5, markersize=8)
