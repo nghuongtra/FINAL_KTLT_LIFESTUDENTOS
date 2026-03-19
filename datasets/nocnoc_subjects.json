@@ -1,18 +1,11 @@
 {
     "subjects": [
         {
-            "Subname": "kinh tế vi mô",
-            "credit": 3,
-            "scoreProcess": 7.0,
-            "scoreMidterm": 8.0,
-            "scoreFinal": 9.0
-        },
-        {
             "Subname": "toán kinh tế",
             "credit": "4",
-            "scoreProcess": "8",
-            "scoreMidterm": "9",
-            "scoreFinal": "5"
+            "scoreProcess": 8.0,
+            "scoreMidterm": 9.0,
+            "scoreFinal": 5.0
         }
     ]
 }

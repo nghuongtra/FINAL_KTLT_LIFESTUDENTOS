@@ -1,3 +1,4 @@
+import json
 import os
 
 from PyQt6.QtWidgets import QMessageBox, QTableWidgetItem
@@ -72,6 +73,24 @@ class AcademicController:
                                "Số tín chỉ và điểm số phải là định dạng số hợp lệ!")
 
    def process_add_subject(self):
+       try:
+           tong_tin_chi = 0
+           tong_diem = 0.0
+           for mon in self.view.sub_manager.list:
+               tin_chi = float(mon.credit)
+               diem_so = (float(mon.scoreProcess) * 0.2) + (float(mon.scoreMidterm) * 0.3) + (
+                           float(mon.scoreFinal) * 0.5)
+               tong_tin_chi += tin_chi
+               tong_diem += (diem_so * tin_chi)
+           gpa_cu = 0.0
+           if tong_tin_chi > 0:
+               gpa_cu = tong_diem / tong_tin_chi
+           path = f"../datasets/{self.current_acc}_gpa_user.json"
+           with open(path, "w", encoding="utf-8") as f:
+               json.dump({"gpa_ky_truoc": gpa_cu}, f, indent=4)
+       except Exception as e:
+           pass
+
        Subname = self.view.NameLineEdit.text()
        credit = self.view.CreditLineEdit.text()
        process = self.view.ProcessLineEdit.text()
@@ -117,6 +136,24 @@ class AcademicController:
            pass
 
    def process_edit_subject(self):
+       try:
+           tong_tin_chi = 0
+           tong_diem = 0.0
+           for mon in self.view.sub_manager.list:
+               tin_chi = float(mon.credit)
+               diem_so = (float(mon.scoreProcess) * 0.2) + (float(mon.scoreMidterm) * 0.3) + (
+                           float(mon.scoreFinal) * 0.5)
+               tong_tin_chi += tin_chi
+               tong_diem += (diem_so * tin_chi)
+           gpa_cu = 0.0
+           if tong_tin_chi > 0:
+               gpa_cu = tong_diem / tong_tin_chi
+           path = f"../datasets/{self.current_acc}_gpa_user.json"
+           with open(path, "w", encoding="utf-8") as f:
+               json.dump({"gpa_ky_truoc": gpa_cu}, f, indent=4)
+       except Exception as e:
+           pass
+
        Subname = self.view.NameLineEdit.text()
        if Subname == "":
            QMessageBox.warning(self.view.MainWindow, "Lỗi", "Vui lòng chọn môn cần sửa!")
@@ -142,6 +179,24 @@ class AcademicController:
        QMessageBox.information(self.view.MainWindow, "Thông báo", f"Đã cập nhật thông tin môn {Subname}!")
 
    def process_delete_subject(self):
+       try:
+           tong_tin_chi = 0
+           tong_diem = 0.0
+           for mon in self.view.sub_manager.list:
+               tin_chi = float(mon.credit)
+               diem_so = (float(mon.scoreProcess) * 0.2) + (float(mon.scoreMidterm) * 0.3) + (
+                           float(mon.scoreFinal) * 0.5)
+               tong_tin_chi += tin_chi
+               tong_diem += (diem_so * tin_chi)
+           gpa_cu = 0.0
+           if tong_tin_chi > 0:
+               gpa_cu = tong_diem / tong_tin_chi
+           path = f"../datasets/{self.current_acc}_gpa_user.json"
+           with open(path, "w", encoding="utf-8") as f:
+               json.dump({"gpa_ky_truoc": gpa_cu}, f, indent=4)
+       except Exception as e:
+           pass
+
        Subname = self.view.NameLineEdit.text()
        if Subname == "":
            QMessageBox.critical(self.view.MainWindow, "Lỗi xóa", "Bạn phải chọn một môn học để xóa!")

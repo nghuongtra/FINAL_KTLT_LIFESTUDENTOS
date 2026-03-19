@@ -48,7 +48,13 @@ class InsightController:
 
     def lay_gpa_ky_truoc(self):
         path = f"../datasets/{self.current_acc}_gpa_user.json"
-        if not os.path.exists(path): return 0.0
+        # Nếu file KHÔNG TỒN TẠI -> Tự động tạo luôn file mới với điểm 0.0
+        if not os.path.exists(path):
+            du_lieu_mac_dinh = {"gpa_ky_truoc": 0.0}
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(du_lieu_mac_dinh, f, indent=4)
+            return 0.0  # Trả về 0.0 cho lần chạy đầu tiên
+
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
             return float(data.get("gpa_ky_truoc", 0.0))
@@ -62,16 +68,21 @@ class InsightController:
         y = [gpa_cu, gpa_hien_tai]
         color = '#27ae60' if gpa_hien_tai >= gpa_cu else '#c0392b'
         ax.plot(x, y, marker='o', color=color, linewidth=2.5, markersize=8)
+
+        khoang_cach = 0.5
+        ax.set_ylim(min(y) - khoang_cach, max(y) + khoang_cach)
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
         ax.spines['bottom'].set_visible(False)
         ax.spines['left'].set_visible(False)
         ax.get_yaxis().set_visible(False)
+
         for i, v in enumerate(y):
-            ax.text(i, v + 0.1, f"{v:.2f}", ha='center', color=color, fontweight='bold')
+            ax.text(i, v + 0.15, f"{v:.2f}", ha='center', color=color, fontweight='bold')
         plt.tight_layout()
         buf = io.BytesIO()
-        plt.savefig(buf, format='png', transparent=True)
+
+        plt.savefig(buf, format='png', transparent=True, bbox_inches='tight')
         plt.close(fig)
         buf.seek(0)
         qimg = QImage.fromData(buf.getvalue())
