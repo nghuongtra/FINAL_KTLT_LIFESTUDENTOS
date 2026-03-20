@@ -2,7 +2,6 @@ import datetime
 import io
 import json
 import os
-import random
 
 import pandas as pd
 from PyQt6.QtCore import Qt
@@ -119,10 +118,10 @@ class InsightController:
             gpa_cu = self.lay_gpa_ky_truoc()
             chenh_lech = GPA - gpa_cu
             if chenh_lech >= 0:
-                text = f"↑ Tăng {chenh_lech:.2f} so với kỳ trước"
+                text = f"↑ Tăng {chenh_lech:.2f} so với lần cập nhật trước"
                 color = "green"
             else:
-                text = f"↓ Giảm {abs(chenh_lech):.2f} so với kỳ trước"
+                text = f"↓ Giảm {abs(chenh_lech):.2f} so với lần cập nhật trước"
                 color = "red"
             self.view.number1_2.setText(text)
             self.view.number1_2.setStyleSheet(f"color: {color}; font-weight: bold; font-size: 12px;")
@@ -174,50 +173,176 @@ class InsightController:
                     self.view.topspending.setScaledContents(True)
 ####################### PHẦN TIPS & LỜI KHUYÊN #######################
             chitieu_thang_nay = tong_tien_chi_tieu
-            #Tiêu quá 3 triệu rưỡi/tháng là cảnh báo
-            bi_lo_tay = False
-            if chitieu_thang_nay > 3500000:
-                bi_lo_tay = True
-            tip_tietkiem = ["Tách riêng 2 ví: 1 tiêu dùng - 1 tiết kiệm. Đừng để chung!","Chia nhỏ ngân sách: Đặt hạn mức theo tuần thay vì tháng.","Quy tắc 24h: Tự hỏi bản thân cần hay muốn? Và chờ 1-2 ngày trước khi mua."," Ưu tiên cơm nhà: Vừa an toàn, sạch sẽ lại vừa tiết kiệm.","Ghi chép chi vặt: Trà sữa, ship đồ ăn chính là thủ phạm gây cháy túi!","Đừng quên quyền năng thẻ sinh viên: Giảm giá khắp mọi nơi!","Quẹt thẻ thì sướng, trả tiền mặt mới thấy xót. Hãy dùng tiền mặt!"]
+            so_du = self.view.balance_manager.current_balance
 
-            tip_caithien = ["Hổng kiến thức khiến GPA thấp. Hãy ôn lại cơ bản ngay!","Thử Pomodoro: 25 phút Học - 5 phút nghỉ.","Đừng ngại hỏi giảng viên hoặc bạn bè khi chưa hiểu bài.","Tập trung tuyệt đối: Tắt thông báo điện thoại khi đang học.","Ghi chép thông minh: Sử dụng sơ đồ tư duy (mindmap) để hệ thống bài học.","Đừng học vẹt! Hãy hiểu rõ bản chất vấn đề!!","Review lại bài ngay sau khi học xong giúp nhớ lâu gấp 3 lần!!","Phương pháp Feynman: Thử giảng lại kiến thức cho người khác để hiểu sâu hơn!"]
-
-            tip_hoctot = ["Phong độ rất tốt! Hãy duy trì thói quen hiện tại.","Đừng quên cân bằng giữa học và chơi để tránh Burn-out.","Bạn có thể bắt đầu tìm kiếm học bổng hoặc tham gia nghiên cứu.","Hãy thử thách bản thân với các môn học khó hơn.","Chia sẻ kiến thức với bạn bè cũng là cách để ôn bài hiệu quả.","Chuẩn bị sớm cho các chứng chỉ ngoại ngữ hoặc kỹ năng mềm.","Giữ sức khỏe! Ngủ đủ giấc giúp não bộ hoạt động tối ưu."]
-
-            nhanxet = ""
-            tips = ""
-            ghichu = ""
-            # Logic chọn lời khuyên
-            if GPA >= 8.0 and bi_lo_tay is False:
-                nhanxet = "Xuất sắc! Học giỏi - Tài chính vững!"
-                self.view.advice_2.setStyleSheet("background-color:#63A693; color:black; font-weight:bold;")
-                tips = random.choice(tip_hoctot)
-                ghichu = "NOTE: AN TOÀN"
-                self.view.shortcomment_2.setStyleSheet("background-color:#63A693; color:white; font-weight:bold;")
-            elif GPA >= 8.0 and bi_lo_tay is True:
-                nhanxet = "Học tốt! Nhưng xài tiền hơi lố."
-                self.view.advice_2.setStyleSheet("background-color:#FDFD96; color:black; font-weight:bold;")
-                tips = random.choice(tip_tietkiem)
-                ghichu = "NOTE: CẢNH BÁO"
-                self.view.shortcomment_2.setStyleSheet("background-color:#FFCAA1; color:black; font-weight:bold;")
-            elif GPA < 8.0 and bi_lo_tay is False:
-                if GPA >= 6.5:
-                    nhanxet = "Học lực Khá! Tài chính ổn."
+            # --- 1. XỬ LÝ TÀI CHÍNH ---
+            if so_du <= 0:
+                if chitieu_thang_nay > 0:
+                    ap_luc_tai_chinh = float('inf')
+                    muc_chi_tieu = "BAO_DONG"
                 else:
-                    nhanxet = "Cảnh báo học tập!"
-                self.view.advice_2.setStyleSheet("background-color:#FDFD96; color:black; font-weight:bold;")
-                tips = random.choice(tip_caithien)
-                ghichu = "NOTE: CẢNH BÁO"
-                self.view.shortcomment_2.setStyleSheet("background-color:#FFCAA1; color:black; font-weight:bold;")
-            elif GPA < 8.0 and bi_lo_tay is True:
-                nhanxet = "BÁO ĐỘNG ĐỎ: Tiền và Điểm đều nguy cấp!"
-                self.view.advice_2.setStyleSheet("background-color:#FF6961; color:white; font-weight:bold;")
-                tips = random.choice(tip_tietkiem)
-                ghichu = "NOTE: BÁO ĐỘNG ĐỎ"
-                self.view.shortcomment_2.setStyleSheet("background-color:#FF6961; color:white; font-weight:bold;")
+                    ap_luc_tai_chinh = 0.0
+                    muc_chi_tieu = "THIEU_DU_LIEU_TC"
+            else:
+                ap_luc_tai_chinh = chitieu_thang_nay / so_du
+                if ap_luc_tai_chinh > 1.5:
+                    muc_chi_tieu = "BAO_DONG"
+                elif ap_luc_tai_chinh > 0.7:
+                    muc_chi_tieu = "CANH_BAO"
+                else:
+                    muc_chi_tieu = "AN_TOAN"
+
+            # --- 2. XỬ LÝ HỌC THUẬT & XU HƯỚNG ---
+            if GPA >= 8.0:
+                muc_gpa = "XUAT_SAC"
+            elif GPA >= 6.5:
+                muc_gpa = "KHA"
+            elif GPA >= 5.0:
+                muc_gpa = "TRUNG_BINH"
+            else:
+                muc_gpa = "NGUY_HIEM"
+
+            gpa_cu = self.lay_gpa_ky_truoc()
+            gpa_trend = GPA - gpa_cu if gpa_cu > 0 else 0
+            trend_msg = ""
+            gpa_penalty = 0
+            is_rewarded = False
+
+
+            if gpa_cu > 0:
+                if gpa_trend <= -1.0:
+                    gpa_penalty = 1  # Chỉ phạt 1 bậc thay vì 2
+                    trend_msg = "⚠️ PHONG ĐỘ SỤT GIẢM: Bạn đang mất đà học tập nghiêm trọng so với kỳ trước!"
+                elif gpa_trend <= -0.5:
+                    gpa_penalty = 0  # Không phạt bậc, nhưng cảnh báo bằng lời
+                    trend_msg = "📉 LƯU Ý: Điểm số có dấu hiệu đi xuống, hãy cẩn thận!"
+                elif gpa_trend >= 0.5:
+                    is_rewarded = True
+                    trend_msg = "📈 TÍCH CỰC: Điểm số đang bứt phá rất ấn tượng!"
+
+            # Dùng Tuple (Immutable) thay vì List để tối ưu bộ nhớ & an toàn dữ liệu
+            LEVELS = ("NGUY_HIEM", "TRUNG_BINH", "KHA", "XUAT_SAC")
+            current_idx = LEVELS.index(muc_gpa)
+            effective_idx = max(0, current_idx - gpa_penalty)
+            muc_gpa_effective = LEVELS[effective_idx]
+
+            # --- 3. MA TRẬN QUYẾT ĐỊNH (Exhaustive Semantic Handling) ---
+            nhanxet, tips, ghichu = "", "", ""
+            color_bg, color_text = "#FFFFFF", "black"
+
+            # Case 0: Trống trơn dữ liệu
+            if tong_tin_chi_tich_luy == 0 and muc_chi_tieu == "THIEU_DU_LIEU_TC":
+                nhanxet = "Chào mừng! Hệ thống đang chờ dữ liệu từ bạn."
+                tips = "Hãy cập nhật điểm số và chi phí để kích hoạt AI Phân tích."
+                ghichu = "CHƯA CÓ DATA"
+                color_bg = "#E0E0E0"
+
+            # Case 1: Nguy hiểm
+            elif muc_gpa_effective == "NGUY_HIEM":
+                color_bg, color_text = "#FF6961", "white"
+                ghichu = "CỨU GẤP (RỚT MÔN)"
+                if muc_chi_tieu == "BAO_DONG":
+                    nhanxet = "THẢM HỌA KÉP: Rớt môn và Cạn kiệt tài chính!"
+                    tips = "Tình trạng báo động tối đa. Ngưng chi giải trí, ưu tiên đóng tiền học lại!"
+                elif muc_chi_tieu == "THIEU_DU_LIEU_TC":
+                    nhanxet = "Nguy cơ rớt môn cực cao! (Chưa rõ tài chính)"
+                    tips = "Hãy cập nhật ví tiền. Khóa cửa phòng và ôn lại toàn bộ kiến thức gốc ngay!"
+                elif muc_chi_tieu == "CANH_BAO":
+                    nhanxet = "GPA báo động đỏ, tài chính cũng hao hụt nhanh!"
+                    tips = "Dành toàn bộ thời gian và ngân sách còn lại cho việc học lại/thi lại."
+                else:  # AN_TOAN
+                    nhanxet = "Nguy cơ rớt môn cực cao! (Tài chính tạm ổn)"
+                    tips = "Bạn còn tiền, hãy đăng ký lớp tăng cường. Bắt tay vào học ngay!"
+
+            # Case 2: Trung Bình
+            elif muc_gpa_effective == "TRUNG_BINH":
+                color_bg = "#FFCAA1"
+                ghichu = "CẦN CỐ GẮNG"
+                if muc_chi_tieu == "BAO_DONG":
+                    nhanxet = "Điểm lẹt đẹt, ví tiền lại chạm đáy!"
+                    tips = "Cắt giảm ăn ngoài và nghiêm túc lập thời gian biểu học tập mỗi tối."
+                elif muc_chi_tieu == "THIEU_DU_LIEU_TC":
+                    nhanxet = "Học lực trung bình (Hệ thống chưa rõ tài chính)."
+                    tips = "Cập nhật dòng tiền ngay. Đồng thời, thiết lập kỷ luật học tập để cải thiện điểm số."
+                elif muc_chi_tieu == "CANH_BAO":
+                    nhanxet = "Học lực trung bình, chi tiêu bắt đầu rủi ro."
+                    tips = "Cẩn thận! Hạn chế tiêu xài để phòng hờ chi phí thi lại/học lại."
+                else:  # AN_TOAN
+                    nhanxet = "Tài chính an toàn, nhưng điểm số cần bứt phá."
+                    tips = "Dùng số dư tài chính mua thêm tài liệu để tối ưu hiệu suất học nhé."
+
+            # Case 3: Khá
+            elif muc_gpa_effective == "KHA":
+                is_low_kha = (GPA < 7.0)
+                if muc_chi_tieu == "BAO_DONG":
+                    color_bg = "#FDFD96"
+                    nhanxet = "Điểm Khá, nhưng tài chính đang mất kiểm soát!"
+                    tips = "Dừng ngay việc mua sắm bốc đồng. Học phí kỳ tới có thể là gánh nặng đấy."
+                    ghichu = "SIẾT CHI TIÊU"
+                elif muc_chi_tieu == "THIEU_DU_LIEU_TC":
+                    color_bg = "#A1E8AF"
+                    nhanxet = "Điểm Khá ổn (Hệ thống chưa rõ tài chính)."
+                    tips = "Nhớ cập nhật chi tiêu nhé. Về học tập, thử học nhóm để củng cố kiến thức vững hơn."
+                    ghichu = "CHỜ DATA TÀI CHÍNH"
+                elif muc_chi_tieu == "CANH_BAO":
+                    color_bg = "#FDFD96"
+                    nhanxet = "Học khá ổn, nhưng ví tiền hao hụt hơi nhanh."
+                    tips = "Áp dụng quy tắc 24h trước khi quyết định mua món đồ tiếp theo."
+                    ghichu = "CHÚ Ý TÀI CHÍNH"
+                else:  # AN_TOAN
+                    color_bg = "#A1E8AF"
+                    ghichu = "ỔN ĐỊNH"
+                    if is_low_kha:
+                        nhanxet = "Đạt mức Khá, nhưng điểm số chưa thực sự vững vàng."
+                        tips = "Chỉ cần xao nhãng là rớt xuống Trung Bình. Thử nhóm học tập để củng cố kiến thức."
+                    else:
+                        nhanxet = "Bạn đang duy trì mức Khá rất an toàn."
+                        tips = "Thử thách bản thân với một bài tập khó hơn để lấy đà lên 8.0+ xem sao!"
+
+            # Case 4: Xuất Sắc
+            else:
+                if muc_chi_tieu == "BAO_DONG":
+                    color_bg = "#FDFD96"
+                    nhanxet = "Học cực giỏi! Nhưng đang vung tay quá trán."
+                    tips = "Đừng biến thành tích thành lý do để tiêu sạch tiền. Trích 20% cất đi ngay."
+                    ghichu = "CẢNH BÁO VÍ TIỀN"
+                elif muc_chi_tieu == "THIEU_DU_LIEU_TC":
+                    color_bg = "#63A693";
+                    color_text = "white"
+                    nhanxet = "Học cực giỏi! (Hệ thống chưa rõ tài chính)."
+                    tips = "Đừng quên ghi chép chi tiêu để quản lý tài chính xuất sắc như cách bạn học nhé!"
+                    ghichu = "XUẤT SẮC"
+                elif muc_chi_tieu == "CANH_BAO":
+                    color_bg = "#A1E8AF"
+                    nhanxet = "Thành tích tuyệt vời, tài chính ở mức vừa vặn."
+                    tips = "Không có gì để chê, nhưng nếu tiết kiệm được thêm một chút thì sẽ hoàn hảo hơn."
+                    ghichu = "KHÁ TỐT"
+                else:  # AN_TOAN
+                    color_bg = "#63A693";
+                    color_text = "white"
+                    nhanxet = "Hoàn hảo! Học thủ khoa - Quản lý tiền như chuyên gia!"
+                    tips = "Top 1% server! Hãy duy trì lối sống kỷ luật này và lan tỏa cho bạn bè nhé."
+                    ghichu = "RẤT AN TOÀN"
+
+            # --- 4. Gắn thêm Reward & Xử lý UX UI ---
+            if is_rewarded:
+                if muc_gpa_effective != "XUAT_SAC":
+                    ghichu += " | ĐANG BỨT PHÁ 🚀"
+                # Thêm lời động viên cực mạnh nếu có trend tốt
+                tips += "\n🔥 Phong độ đang lên! Giữ vững đà này, bạn sẽ sớm chinh phục mốc điểm cao hơn!"
+
+            # Đóng gói Trend Message bằng vách ngăn (Divider) để text không bị dính chùm
+            if trend_msg:
+                tips += f"\n -- \n{trend_msg}"
+
+            # --- 5. RENDER UI ---
             self.view.advice_2.setText(nhanxet)
+            self.view.advice_2.setStyleSheet(f"background-color:{color_bg}; color:{color_text}; font-weight:bold;")
             self.view.input_tips.setText(tips)
-            self.view.shortcomment_2.setText(ghichu)
+            self.view.shortcomment_2.setText(f"NOTE: {ghichu}")
+            self.view.shortcomment_2.setStyleSheet(f"background-color:{color_bg}; color:{color_text}; font-weight:bold;")
+
+        # QUAN TRỌNG: Đây là đoạn Catch Error lúc nãy bị bạn xóa mất do copy đè
         except Exception as e:
             print(f"LỖI NGHIÊM TRỌNG TRONG UPDATE INSIGHT: {e}")
             import traceback

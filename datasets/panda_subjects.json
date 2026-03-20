@@ -3,30 +3,37 @@
         {
             "Subname": "kinh tế vi mô",
             "credit": "3",
-            "scoreProcess": "8",
-            "scoreMidterm": "9",
-            "scoreFinal": "9"
+            "scoreProcess": 8.0,
+            "scoreMidterm": 9.0,
+            "scoreFinal": 9.0
         },
         {
             "Subname": "nền tảng ",
             "credit": "3",
-            "scoreProcess": "7",
-            "scoreMidterm": "8",
-            "scoreFinal": "9"
+            "scoreProcess": 7.0,
+            "scoreMidterm": 8.0,
+            "scoreFinal": 9.0
         },
         {
             "Subname": "Toán kinh tế",
             "credit": "4",
-            "scoreProcess": "9",
-            "scoreMidterm": "9",
-            "scoreFinal": "7.5"
+            "scoreProcess": 9.0,
+            "scoreMidterm": 9.0,
+            "scoreFinal": 7.5
         },
         {
             "Subname": "năng lực số",
             "credit": "3",
-            "scoreProcess": "6",
-            "scoreMidterm": "6",
-            "scoreFinal": "6"
+            "scoreProcess": 6.0,
+            "scoreMidterm": 6.0,
+            "scoreFinal": 6.0
+        },
+        {
+            "Subname": "Tư duy lập trình",
+            "credit": "3",
+            "scoreProcess": "8",
+            "scoreMidterm": "9",
+            "scoreFinal": "4"
         }
     ]
 }

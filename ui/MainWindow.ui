@@ -7,8 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>1549</width>
-    <height>1206</height>
+    <height>1231</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>100</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -204,7 +210,7 @@ font-weight: bold;</string>
 background-color:transparent</string>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="pageOverview">
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -2033,8 +2039,8 @@ font-weight:bold;</string>
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>466</width>
-                        <height>732</height>
+                        <width>446</width>
+                        <height>572</height>
                        </rect>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -3686,6 +3692,12 @@ font-weight:bold;
            </item>
            <item>
             <widget class="QFrame" name="frame_9">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>100</height>
+              </size>
+             </property>
              <property name="styleSheet">
               <string notr="true">#frame_9 {
     font: 14pt &quot;Palatino Linotype&quot;;
@@ -3700,100 +3712,50 @@ font-weight:bold;
              <property name="frameShadow">
               <enum>QFrame::Raised</enum>
              </property>
-             <layout class="QGridLayout" name="gridLayout_12">
-              <item row="2" column="1" rowspan="3">
-               <widget class="QFrame" name="money_sta_2">
+             <layout class="QGridLayout" name="gridLayout">
+              <item row="0" column="0" colspan="2">
+               <widget class="QPushButton" name="pushButton_6">
                 <property name="styleSheet">
-                 <string notr="true">#money_sta_2 {
-border-radius: 20px;                  
-font: 8pt &quot;Palatino Linotype&quot;;
-background-color: rgb(255, 250, 231);
-}</string>
+                 <string notr="true">font: 75 14pt &quot;Palatino Linotype&quot;;
+font-weight:bold;
+background-color:#9A7B4F;
+color:rgb(255, 255, 255);
+border-radius: 15px;     
+padding: 5px;
+border: 2px solid rgb(255, 255, 255);</string>
                 </property>
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                <property name="text">
+                 <string>INSIGHT</string>
                 </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                <property name="icon">
+                 <iconset resource="../resources.qrc">
+                  <normaloff>:/nen/images/kinhlup.png</normaloff>:/nen/images/kinhlup.png</iconset>
                 </property>
-                <layout class="QVBoxLayout" name="verticalLayout_12">
-                 <item>
-                  <widget class="QLabel" name="topspending_2">
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>40</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Palatino Linotype</family>
-                     <pointsize>12</pointsize>
-                     <weight>75</weight>
-                     <italic>false</italic>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">#topspending_2{
-font: 12pt &quot;Palatino Linotype&quot;;
-color: rgb(134, 67, 0);
-font-weight: bold;
-}
-</string>
-                   </property>
-                   <property name="text">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Top Spending:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="topspending">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>300</width>
-                     <height>150</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>300</width>
-                     <height>300</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="number2_2">
-                   <property name="styleSheet">
-                    <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
-font-weight: bold; /* In đậm lên luôn */
-color: black;</string>
-                   </property>
-                   <property name="text">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;45%&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
+                <property name="iconSize">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
                </widget>
               </item>
-              <item row="2" column="0" rowspan="3">
+              <item row="1" column="0" colspan="2">
+               <widget class="QLabel" name="advice_2">
+                <property name="styleSheet">
+                 <string notr="true">
+background-color:rgba(255, 245, 190,210);
+    border-radius: 20px;
+    border: 2px solid rgba(254, 255, 167);
+    font: 75 12pt &quot;Palatino Linotype&quot;;
+font-weight:bold;
+</string>
+                </property>
+                <property name="text">
+                 <string> Học tốt nha! Mà xài tiền hơi lố rồi</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
                <widget class="QFrame" name="gpa_sta_2">
                 <property name="styleSheet">
                  <string notr="true">
@@ -3917,7 +3879,99 @@ color:rgb(170, 97, 23);</string>
                 </layout>
                </widget>
               </item>
-              <item row="5" column="0" colspan="2">
+              <item row="2" column="1">
+               <widget class="QFrame" name="money_sta_2">
+                <property name="styleSheet">
+                 <string notr="true">#money_sta_2 {
+border-radius: 20px;                  
+font: 8pt &quot;Palatino Linotype&quot;;
+background-color: rgb(255, 250, 231);
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_12">
+                 <item>
+                  <widget class="QLabel" name="topspending_2">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Palatino Linotype</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <italic>false</italic>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">#topspending_2{
+font: 12pt &quot;Palatino Linotype&quot;;
+color: rgb(134, 67, 0);
+font-weight: bold;
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Top Spending:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="topspending">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>300</width>
+                     <height>150</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>300</width>
+                     <height>300</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="number2_2">
+                   <property name="styleSheet">
+                    <string notr="true">font: 11pt &quot;Palatino Linotype&quot;;
+font-weight: bold; /* In đậm lên luôn */
+color: black;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;45%&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="3" column="0" colspan="2">
                <widget class="QPushButton" name="pushButton">
                 <property name="styleSheet">
                  <string notr="true">#pushButton {
@@ -3946,28 +4000,24 @@ color:rgb(170, 97, 23);</string>
                 </property>
                </widget>
               </item>
-              <item row="1" column="0" colspan="2">
-               <widget class="QLabel" name="advice_2">
-                <property name="styleSheet">
-                 <string notr="true">
-background-color:rgba(255, 245, 190,210);
-    border-radius: 20px;
-    border: 2px solid rgba(254, 255, 167);
-    font: 75 12pt &quot;Palatino Linotype&quot;;
-font-weight:bold;
-</string>
-                </property>
-                <property name="text">
-                 <string> Học tốt nha! Mà xài tiền hơi lố rồi</string>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="0" colspan="2">
+              <item row="4" column="0" colspan="2">
                <widget class="QTextEdit" name="input_tips">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>70</height>
+                 </size>
+                </property>
                 <property name="maximumSize">
                  <size>
-                  <width>1000</width>
-                  <height>60</height>
+                  <width>16777215</width>
+                  <height>100</height>
                  </size>
                 </property>
                 <property name="font">
@@ -3996,32 +4046,6 @@ font-size:12pt
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Palatino Linotype'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Linotype';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="0" colspan="2">
-               <widget class="QPushButton" name="pushButton_6">
-                <property name="styleSheet">
-                 <string notr="true">font: 75 14pt &quot;Palatino Linotype&quot;;
-font-weight:bold;
-background-color:#9A7B4F;
-color:rgb(255, 255, 255);
-border-radius: 15px;     
-padding: 5px;
-border: 2px solid rgb(255, 255, 255);</string>
-                </property>
-                <property name="text">
-                 <string>INSIGHT</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="../resources.qrc">
-                  <normaloff>:/nen/images/kinhlup.png</normaloff>:/nen/images/kinhlup.png</iconset>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
                 </property>
                </widget>
               </item>
@@ -4056,7 +4080,7 @@ border: 2px solid rgb(255, 255, 255);</string>
      <x>0</x>
      <y>0</y>
      <width>1549</width>
-     <height>18</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
