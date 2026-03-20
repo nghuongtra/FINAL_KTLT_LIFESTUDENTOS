@@ -31,7 +31,8 @@ class AdminWindowEx(Ui_MainWindow):
 
         self.loadUsersToTable(users_list)
     def getUserData(self):
-        data = json.load(open('../datasets/users.json'))
+        with open('../datasets/users.json', 'r', encoding='utf-8') as file:
+            data = json.load(file)
         users_list = data.get("users", [])
         return users_list
 
