@@ -1,7 +1,6 @@
 import datetime
 import os
 
-# Gom toàn bộ import của PyQt6 lại cho gọn
 from PyQt6.QtWidgets import QMessageBox, QTableWidgetItem, QDialog, QVBoxLayout
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg as FigureCanvas
@@ -22,7 +21,6 @@ class FinanceController:
         self.file_expense = f"../datasets/{self.current_acc}_expenses.json"
         self.file_balance = f"../datasets/{self.current_acc}_balance.json"
 
-        # Khởi tạo file nếu chưa tồn tại
         if not os.path.exists(self.file_expense):
             with open(self.file_expense, "w", encoding="utf-8") as f: f.write("[]")
         if not os.path.exists(self.file_balance):
@@ -31,27 +29,23 @@ class FinanceController:
         self.expense_manager.load_json(self.file_expense)
         self.balance_manager.load_json(self.file_balance)
 
-        # Khởi tạo giao diện ban đầu
         self.TAB3_REFRESH_ALL_UI()
 
-        # Kết nối Signal & Slot
         self.view.pushButton_delete.clicked.connect(self.process_delete)
         self.view.pushButton_edit.clicked.connect(self.process_edit)
         self.view.pushButton_BieuDo.clicked.connect(self.show_pie_chart)
 
-        # Lưu lại style và text gốc của nút Add Expense
         self.original_btn_style = self.view.pushButtonAddExpense.styleSheet()
         self.original_btn_text = self.view.pushButtonAddExpense.text()
 
     # =====================================================================
-    # HÀM BỔ TRỢ: GOM CÁC BƯỚC CẬP NHẬT GIAO DIỆN VÀO 1 CHỖ CHO TỐI ƯU
+    # GOM TOÀN BỘ CÁC BƯỚC CẬP NHẬT GIAO DIỆN VÀO 1 CHỖ CHO TỐI ƯU
     # =====================================================================
     def TAB3_REFRESH_ALL_UI(self):
         self.TAB3_UPDATE_TABLE_EXPENSE()
         self.TAB3_UPDATE_BALANCE_UI()
         self.TAB3_UPDATE_TOTAL_AND_COMPARE()
         self.TAB3_PROCESS_RIGHT_TABLE()
-
     # =====================================================================
     # PHẦN I: ADD EXPENSE VÀ HIỂN THỊ
     # =====================================================================
@@ -74,20 +68,17 @@ class FinanceController:
             # --- TRẠNG THÁI SỬA (EDIT) ---
             if self.editing_index is not None:
                 old_item = self.expense_manager.items[self.editing_index]
-                self.balance_manager.current_balance += old_item.so_tien - tien  # Hoàn tiền cũ, trừ tiền mới
-
+                self.balance_manager.current_balance += old_item.so_tien - tien
                 # Cập nhật thông tin
                 old_item.khoan_chi = ten
                 old_item.so_tien = tien
                 old_item.danh_muc = loai
                 old_item.ghi_chu = ghi_chu
-
                 # Reset giao diện nút bấm
                 self.editing_index = None
                 self.view.pushButtonAddExpense.setText(self.original_btn_text)
                 self.view.pushButtonAddExpense.setStyleSheet(self.original_btn_style)
                 msg = "Đã cập nhật khoản chi!"
-
             # --- TRẠNG THÁI THÊM MỚI (ADD) ---
             else:
                 new_item = Expense(ten, tien, loai, ghi_chu)
@@ -109,12 +100,11 @@ class FinanceController:
     def TAB3_UPDATE_TABLE_EXPENSE(self):
         table = self.view.tableExpenselist_3
         table.setRowCount(0)
-        # Các khoản chi mới nhất hiển thị lên trên cùng
         for row_index, item in enumerate(reversed(self.expense_manager.items)):
             table.insertRow(row_index)
             table.setItem(row_index, 0, QTableWidgetItem(str(item.ngay)))
             table.setItem(row_index, 1, QTableWidgetItem(str(item.khoan_chi)))
-            table.setItem(row_index, 2, QTableWidgetItem(f"{item.so_tien:,}"))  # Dùng f-string cho gọn
+            table.setItem(row_index, 2, QTableWidgetItem(f"{item.so_tien:,}"))
             table.setItem(row_index, 3, QTableWidgetItem(str(item.danh_muc)))
             table.setItem(row_index, 4, QTableWidgetItem(str(item.ghi_chu)))
 
@@ -186,7 +176,6 @@ class FinanceController:
     # =====================================================================
     def TAB3_PROCESS_RIGHT_TABLE(self):
         current_list = self.expense_manager.items.copy()
-
         # Lọc theo keyword
         keyword = self.view.lineEdittimkhoanchi_3.text().strip()
         if keyword:
@@ -246,7 +235,6 @@ class FinanceController:
                 self.expense_manager.export_json(self.file_expense)
                 self.balance_manager.export_json(self.file_balance)
 
-                # Gọi 1 hàm duy nhất thay vì 4 hàm rời rạc
                 self.TAB3_REFRESH_ALL_UI()
                 QMessageBox.information(self.view.MainWindow, "Thành công", "Đã xóa và hoàn tiền!")
 
@@ -267,7 +255,6 @@ class FinanceController:
         self.editing_index = real_index
         item = self.expense_manager.items[real_index]
 
-        # Đẩy dữ liệu lên UI
         self.view.lineEditKhoanchi.setText(item.khoan_chi)
         self.view.lineEditGiatri.setText(str(item.so_tien))
         self.view.comboBoxLoaigia.setCurrentText(item.danh_muc)
