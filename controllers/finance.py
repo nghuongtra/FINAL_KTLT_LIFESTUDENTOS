@@ -67,6 +67,9 @@ class FinanceController:
 
         try:
             tien = int(tien_str.replace(".", "").replace(",", ""))
+            if tien <= 0:
+                QMessageBox.warning(self.view.MainWindow, "Lỗi nhập liệu", "Vui lòng nhập số tiền lớn hơn 0!")
+                return
 
             # --- TRẠNG THÁI SỬA (EDIT) ---
             if self.editing_index is not None:
@@ -132,6 +135,9 @@ class FinanceController:
         if not tien_nhap: return
         try:
             tien = int(tien_nhap.replace(".", "").replace(",", ""))
+            if tien <= 0:
+                QMessageBox.warning(self.view.MainWindow, "Lỗi nhập liệu", "Vui lòng nhập số tiền lớn hơn 0!")
+                return
             self.balance_manager.current_balance += tien
             self.balance_manager.export_json(self.file_balance)
 
