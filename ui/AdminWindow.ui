@@ -386,7 +386,7 @@ font-weight:bold;
          </property>
          <property name="icon">
           <iconset resource="../resources.qrc">
-           <normaloff>:/admin/images/chicken.png</normaloff>:/admin/images/chicken.png</iconset>
+           <normaloff>:/admin/images/duck.png</normaloff>:/admin/images/duck.png</iconset>
          </property>
          <property name="iconSize">
           <size>

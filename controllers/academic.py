@@ -78,7 +78,7 @@ class AcademicController:
            tong_diem = 0.0
            for mon in self.view.sub_manager.list:
                tin_chi = float(mon.credit)
-               diem_so = (float(mon.scoreProcess) * 0.2) + (float(mon.scoreMidterm) * 0.3) + (
+               diem_so = (float(mon.scoreProcess) * 0.3) + (float(mon.scoreMidterm) * 0.2) + (
                            float(mon.scoreFinal) * 0.5)
                tong_tin_chi += tin_chi
                tong_diem += (diem_so * tin_chi)
@@ -141,7 +141,7 @@ class AcademicController:
            tong_diem = 0.0
            for mon in self.view.sub_manager.list:
                tin_chi = float(mon.credit)
-               diem_so = (float(mon.scoreProcess) * 0.2) + (float(mon.scoreMidterm) * 0.3) + (
+               diem_so = (float(mon.scoreProcess) * 0.3) + (float(mon.scoreMidterm) * 0.2) + (
                            float(mon.scoreFinal) * 0.5)
                tong_tin_chi += tin_chi
                tong_diem += (diem_so * tin_chi)
@@ -184,7 +184,7 @@ class AcademicController:
            tong_diem = 0.0
            for mon in self.view.sub_manager.list:
                tin_chi = float(mon.credit)
-               diem_so = (float(mon.scoreProcess) * 0.2) + (float(mon.scoreMidterm) * 0.3) + (
+               diem_so = (float(mon.scoreProcess) * 0.3) + (float(mon.scoreMidterm) * 0.2) + (
                            float(mon.scoreFinal) * 0.5)
                tong_tin_chi += tin_chi
                tong_diem += (diem_so * tin_chi)

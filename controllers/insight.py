@@ -95,7 +95,7 @@ class InsightController:
             danh_sach = self.view.sub_manager.list
             for mon in danh_sach:
                 tin_chi = float(mon.credit)
-                diem_so =(float(mon.scoreProcess) * 0.2) + (float(mon.scoreMidterm) * 0.3) + (float(mon.scoreFinal) * 0.5)
+                diem_so =(float(mon.scoreProcess) * 0.3) + (float(mon.scoreMidterm) * 0.2) + (float(mon.scoreFinal) * 0.5)
                 tong_tin_chi_tich_luy += tin_chi
                 tong_diem_tich_luy += (diem_so * tin_chi)
             GPA = 0.0

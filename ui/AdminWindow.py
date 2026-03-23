@@ -212,7 +212,9 @@ class Ui_MainWindow(object):
 "color:white;\n"
 "font-weight:bold;\n"
 " min-height: 30px; ")
-        self.pushButton_3.setIcon(icon)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(":/admin/images/duck.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.pushButton_3.setIcon(icon2)
         self.pushButton_3.setIconSize(QtCore.QSize(40, 40))
         self.pushButton_3.setObjectName("pushButton_3")
         self.verticalLayout.addWidget(self.pushButton_3)

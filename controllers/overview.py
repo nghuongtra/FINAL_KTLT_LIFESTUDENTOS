@@ -18,7 +18,7 @@ class OverviewController:
 
         for item in self.view.sub_manager.list:
             credit = float(item.credit)
-            score_final = (float(item.scoreProcess) * 0.2) + (float(item.scoreMidterm) * 0.3) + (float(item.scoreFinal) * 0.5)
+            score_final = (float(item.scoreProcess) * 0.3) + (float(item.scoreMidterm) * 0.2) + (float(item.scoreFinal) * 0.5)
             total_credits += credit
             total_weighted_score_10 += (score_final * credit)
         if total_credits > 0:

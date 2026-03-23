@@ -2039,8 +2039,8 @@ font-weight:bold;</string>
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>446</width>
-                        <height>572</height>
+                        <width>205</width>
+                        <height>135</height>
                        </rect>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -3961,7 +3961,7 @@ font-weight: bold; /* In đậm lên luôn */
 color: black;</string>
                    </property>
                    <property name="text">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;45%&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;0%&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -4080,7 +4080,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1549</width>
-     <height>26</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>

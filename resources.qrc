@@ -88,6 +88,7 @@
     <file>images/thoaihong.png</file>
   </qresource>
   <qresource prefix="admin">
+    <file>images/duck.png</file>
     <file>images/background_admin.png</file>
     <file>images/list.png</file>
     <file>images/log.png</file>
