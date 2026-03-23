@@ -9,7 +9,7 @@ class Subject:
 
    def tinh_diem_gpa(self):
        # Công thức tính GPA hệ 10: (QT*0.2 + GK*0.3 + CK*0.5)
-       dtb = (self.scoreProcess * 0.2) + (self.scoreMidterm * 0.3) + (self.scoreFinal * 0.5)
+       dtb = (self.scoreProcess * 0.3) + (self.scoreMidterm * 0.2) + (self.scoreFinal * 0.5)
        return round(dtb, 2)
 
 
