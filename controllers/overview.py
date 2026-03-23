@@ -5,6 +5,8 @@ import os
 from PyQt6.QtWidgets import QDialog, QVBoxLayout, QLabel, QTextEdit, QPushButton, QHBoxLayout, QMessageBox, QInputDialog
 
 from model.comingevents import Upcomingevents
+from model.feedback import Feedback
+from model.feedbacks import Feedbacks
 
 
 class OverviewController:
@@ -141,24 +143,15 @@ class OverviewController:
 
     def save_feedback(self, content):
         feedback_file = "../datasets/feedbacks.json"
-        if not os.path.exists(feedback_file):
-            with open(feedback_file, "w", encoding="utf-8") as f:
-                json.dump({"feedbacks": []}, f)
-        with open(feedback_file, "r", encoding="utf-8") as f:
-            data = json.load(f)
         now = datetime.datetime.now().strftime("%H:%M - %d/%m/%Y")
         username = getattr(self.view, "current_acc", "Unknown_User")
+        feedback_manager = Feedbacks()
+        if os.path.exists(feedback_file):
+            feedback_manager.import_json(feedback_file)
+        new_feedback = Feedback(username=username, time=now, content=content)
+        feedback_manager.add_item(new_feedback)
+        feedback_manager.export_json(feedback_file)
 
-        new_feedback = {
-            "username": username,
-            "time": now,
-            "content": content
-        }
-        data["feedbacks"].append(new_feedback)
-
-        # 4. Ghi đè lại vào file JSON
-        with open(feedback_file, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=4)
         QMessageBox.information(
             self.view.MainWindow,
             "Thành công",
