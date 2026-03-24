@@ -108,7 +108,7 @@ class InsightController:
            danh_sach = self.view.sub_manager.list
            for mon in danh_sach:
                tin_chi = float(mon.credit)
-               diem_so =(float(mon.scoreProcess) * 0.2) + (float(mon.scoreMidterm) * 0.3) + (float(mon.scoreFinal) * 0.5)
+               diem_so =(float(mon.scoreProcess) * 0.3) + (float(mon.scoreMidterm) * 0.2) + (float(mon.scoreFinal) * 0.5)
                tong_tin_chi_tich_luy += tin_chi
                tong_diem_tich_luy += (diem_so * tin_chi)
            GPA = 0.0
@@ -127,7 +127,6 @@ class InsightController:
            text_tiendo = f"{phan_tram_tiendo:.2f}%"
            self.view.lineEditInputTienDo.setText(text_tiendo)
            self.view.lineEditInputTienDo.setReadOnly(True)
-
 
            # So sánh GPA cũ
            gpa_cu = self.layGPAKyTruoc()
@@ -243,14 +242,12 @@ class InsightController:
                    trend_msg = "📈 TÍCH CỰC: Điểm số đang bứt phá rất ấn tượng!"
 
 
-           # Dùng Tuple (Immutable) thay vì List để tối ưu bộ nhớ & an toàn dữ liệu
            LEVELS = ("NGUY_HIEM", "TRUNG_BINH", "KHA", "XUAT_SAC")
            current_idx = LEVELS.index(muc_gpa)
            effective_idx = max(0, current_idx - gpa_penalty)
            muc_gpa_effective = LEVELS[effective_idx]
 
 
-           # --- 3. MA TRẬN QUYẾT ĐỊNH (Exhaustive Semantic Handling) ---
            nhanxet, tips, ghichu = "", "", ""
            color_bg, color_text = "#FFFFFF", "black"
 
@@ -358,24 +355,17 @@ class InsightController:
            if is_rewarded:
                if muc_gpa_effective != "XUAT_SAC":
                    ghichu += " | ĐANG BỨT PHÁ 🚀"
-               # Thêm lời động viên cực mạnh nếu có trend tốt
                tips += "\n🔥 Phong độ đang lên! Giữ vững đà này, bạn sẽ sớm chinh phục mốc điểm cao hơn!"
 
-
-           # Đóng gói Trend Message bằng vách ngăn (Divider) để text không bị dính chùm
            if trend_msg:
                tips += f"\n -- \n{trend_msg}"
 
-
-           # --- 5. RENDER UI ---
            self.view.advice_2.setText(nhanxet)
            self.view.advice_2.setStyleSheet(f"background-color:{color_bg}; color:{color_text}; font-weight:bold;")
            self.view.input_tips.setText(tips)
            self.view.shortcomment_2.setText(f"NOTE: {ghichu}")
            self.view.shortcomment_2.setStyleSheet(f"background-color:{color_bg}; color:{color_text}; font-weight:bold;")
 
-
-       # QUAN TRỌNG: Đây là đoạn Catch Error lúc nãy bị bạn xóa mất do copy đè
        except Exception as e:
            print(f"LỖI NGHIÊM TRỌNG TRONG UPDATE INSIGHT: {e}")
            import traceback
@@ -400,7 +390,6 @@ class InsightController:
 
 
    def lay_du_lieu_oversight(self):
-       # Giao diện Qt đã nạp xong thì cứ thế mà gọi thẳng ra thôi, không cần check gì cả!
        val_gpa = self.view.lineEditInputGPA.text()
        val_tiendo = self.view.lineEditInputTienDo.text()
        val_vitien = self.view.lineEditInputTienDo_2.text()
