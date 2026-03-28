@@ -1194,7 +1194,7 @@ font: bold 14pt;</string>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QComboBox" name="comboBox_4">
+                   <widget class="QComboBox" name="comboboxcautrucdiem">
                     <property name="styleSheet">
                      <string notr="true">color: rgb(0, 0, 0);
 font: 12pt &quot;Palatino Linotype&quot;;
@@ -1250,7 +1250,7 @@ font: bold 14pt;</string>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="NameLineEdit">
+                   <widget class="QLineEdit" name="txttenmon">
                     <property name="styleSheet">
                      <string notr="true">
 font: 12pt &quot;Palatino Linotype&quot;;
@@ -1280,7 +1280,7 @@ font: bold 14pt;</string>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="CreditLineEdit">
+                   <widget class="QLineEdit" name="txtsotinchi">
                     <property name="styleSheet">
                      <string notr="true">
 font: 12pt &quot;Palatino Linotype&quot;;
@@ -1415,7 +1415,7 @@ font: bold 14pt;</string>
                        <number>2</number>
                       </property>
                       <item>
-                       <widget class="QLineEdit" name="ProcessLineEdit">
+                       <widget class="QLineEdit" name="txtcot1">
                         <property name="styleSheet">
                          <string notr="true">color: black;
 font: 12pt &quot;Palatino Linotype&quot;;
@@ -1424,7 +1424,7 @@ background-color: rgb(255, 255, 255);</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLineEdit" name="ProcessLineEdit_2">
+                       <widget class="QLineEdit" name="txttrongso1">
                         <property name="styleSheet">
                          <string notr="true">color: black;
 font: 12pt &quot;Palatino Linotype&quot;;
@@ -1433,7 +1433,7 @@ background-color: rgb(255, 255, 255);</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLineEdit" name="ProcessLineEdit_3">
+                       <widget class="QLineEdit" name="txtdiem1">
                         <property name="styleSheet">
                          <string notr="true">color: black;
 font: 12pt &quot;Palatino Linotype&quot;;
@@ -1442,7 +1442,7 @@ background-color: rgb(255, 255, 255);</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="pushButton_9">
+                       <widget class="QPushButton" name="btnxoa1">
                         <property name="styleSheet">
                          <string notr="true">QPushButton {
     background-color: #e74c3c; /* Màu đỏ chủ đạo */
@@ -1486,7 +1486,7 @@ QPushButton:pressed {
                        <number>2</number>
                       </property>
                       <item>
-                       <widget class="QLineEdit" name="MidtermLineEdit">
+                       <widget class="QLineEdit" name="txtcot2">
                         <property name="styleSheet">
                          <string notr="true">color: black;
 font: 12pt &quot;Palatino Linotype&quot;;
@@ -1495,7 +1495,7 @@ background-color: rgb(255, 255, 255);</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLineEdit" name="MidtermLineEdit_2">
+                       <widget class="QLineEdit" name="txttrongso2">
                         <property name="styleSheet">
                          <string notr="true">color: black;
 font: 12pt &quot;Palatino Linotype&quot;;
@@ -1504,7 +1504,7 @@ background-color: rgb(255, 255, 255);</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLineEdit" name="MidtermLineEdit_3">
+                       <widget class="QLineEdit" name="txtdiem2">
                         <property name="styleSheet">
                          <string notr="true">color: black;
 font: 12pt &quot;Palatino Linotype&quot;;
@@ -1513,7 +1513,7 @@ background-color: rgb(255, 255, 255);</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="pushButton_10">
+                       <widget class="QPushButton" name="btnxoa2">
                         <property name="styleSheet">
                          <string notr="true">QPushButton {
     background-color: #e74c3c; /* Màu đỏ chủ đạo */
@@ -1557,7 +1557,7 @@ QPushButton:pressed {
                        <number>2</number>
                       </property>
                       <item>
-                       <widget class="QLineEdit" name="FinalLineEdit_2">
+                       <widget class="QLineEdit" name="txtcot3">
                         <property name="styleSheet">
                          <string notr="true">color: black;
 font: 12pt &quot;Palatino Linotype&quot;;
@@ -1566,7 +1566,7 @@ background-color: rgb(255, 255, 255);</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLineEdit" name="FinalLineEdit_3">
+                       <widget class="QLineEdit" name="txttrongso3">
                         <property name="styleSheet">
                          <string notr="true">color: black;
 font: 12pt &quot;Palatino Linotype&quot;;
@@ -1575,7 +1575,7 @@ background-color: rgb(255, 255, 255);</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLineEdit" name="FinalLineEdit_4">
+                       <widget class="QLineEdit" name="txtdiem3">
                         <property name="styleSheet">
                          <string notr="true">color: black;
 font: 12pt &quot;Palatino Linotype&quot;;
@@ -1584,7 +1584,7 @@ background-color: rgb(255, 255, 255);</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="pushButton_11">
+                       <widget class="QPushButton" name="btnxoa3">
                         <property name="styleSheet">
                          <string notr="true">QPushButton {
     background-color: #e74c3c; /* Màu đỏ chủ đạo */
@@ -1660,7 +1660,7 @@ font-weight:bold;</string>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="iMQuTrNhLabel_7">
+                     <widget class="QLabel" name="labletongtrongso">
                       <property name="styleSheet">
                        <string notr="true">QLabel {
     background-color: #e74c3c; /* Đỏ cảnh báo */
@@ -1692,7 +1692,7 @@ font-weight:bold;</string>
                    </spacer>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="pushButton_12">
+                   <widget class="QPushButton" name="btnthemcotdiemmoi">
                     <property name="maximumSize">
                      <size>
                       <width>250</width>
@@ -1728,7 +1728,7 @@ QPushButton:pressed {
                  </layout>
                 </item>
                 <item>
-                 <widget class="QLabel" name="iMQuTrNhLabel_8">
+                 <widget class="QLabel" name="lablethongbao">
                   <property name="styleSheet">
                    <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
 color:  rgb(189, 0, 0);
@@ -2526,8 +2526,8 @@ font-weight:bold;</string>
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>466</width>
-                        <height>734</height>
+                        <width>205</width>
+                        <height>135</height>
                        </rect>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_11">

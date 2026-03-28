@@ -633,19 +633,19 @@ class Ui_MainWindow(object):
 "font: bold 14pt;")
         self.tNMNLabel_2.setObjectName("tNMNLabel_2")
         self.horizontalLayout_42.addWidget(self.tNMNLabel_2)
-        self.comboBox_4 = QtWidgets.QComboBox(parent=self.groupBox_4)
-        self.comboBox_4.setStyleSheet("color: rgb(0, 0, 0);\n"
+        self.comboboxcautrucdiem = QtWidgets.QComboBox(parent=self.groupBox_4)
+        self.comboboxcautrucdiem.setStyleSheet("color: rgb(0, 0, 0);\n"
 "font: 12pt \"Palatino Linotype\";\n"
 "color:  rgb(170, 104, 46);\n"
 "background-color: rgb(255, 255, 255);\n"
 "")
-        self.comboBox_4.setObjectName("comboBox_4")
-        self.comboBox_4.addItem("")
-        self.comboBox_4.addItem("")
-        self.comboBox_4.addItem("")
-        self.comboBox_4.addItem("")
-        self.comboBox_4.addItem("")
-        self.horizontalLayout_42.addWidget(self.comboBox_4)
+        self.comboboxcautrucdiem.setObjectName("comboboxcautrucdiem")
+        self.comboboxcautrucdiem.addItem("")
+        self.comboboxcautrucdiem.addItem("")
+        self.comboboxcautrucdiem.addItem("")
+        self.comboboxcautrucdiem.addItem("")
+        self.comboboxcautrucdiem.addItem("")
+        self.horizontalLayout_42.addWidget(self.comboboxcautrucdiem)
         self.horizontalLayout_42.setStretch(0, 1)
         self.horizontalLayout_42.setStretch(1, 6)
         self.verticalLayout_37.addLayout(self.horizontalLayout_42)
@@ -659,13 +659,13 @@ class Ui_MainWindow(object):
 "font: bold 14pt;")
         self.tNMNLabel.setObjectName("tNMNLabel")
         self.horizontalLayout_39.addWidget(self.tNMNLabel)
-        self.NameLineEdit = QtWidgets.QLineEdit(parent=self.groupBox_4)
-        self.NameLineEdit.setStyleSheet("\n"
+        self.txttenmon = QtWidgets.QLineEdit(parent=self.groupBox_4)
+        self.txttenmon.setStyleSheet("\n"
 "font: 12pt \"Palatino Linotype\";\n"
 "background-color: rgb(255, 255, 255);\n"
 "color: black;")
-        self.NameLineEdit.setObjectName("NameLineEdit")
-        self.horizontalLayout_39.addWidget(self.NameLineEdit)
+        self.txttenmon.setObjectName("txttenmon")
+        self.horizontalLayout_39.addWidget(self.txttenmon)
         self.horizontalLayout_39.setStretch(0, 2)
         self.horizontalLayout_39.setStretch(1, 6)
         self.verticalLayout_37.addLayout(self.horizontalLayout_39)
@@ -679,13 +679,13 @@ class Ui_MainWindow(object):
 "font: bold 14pt;")
         self.sTNChLabel.setObjectName("sTNChLabel")
         self.horizontalLayout_40.addWidget(self.sTNChLabel)
-        self.CreditLineEdit = QtWidgets.QLineEdit(parent=self.groupBox_4)
-        self.CreditLineEdit.setStyleSheet("\n"
+        self.txtsotinchi = QtWidgets.QLineEdit(parent=self.groupBox_4)
+        self.txtsotinchi.setStyleSheet("\n"
 "font: 12pt \"Palatino Linotype\";\n"
 "background-color: rgb(255, 255, 255);\n"
 "color: black;")
-        self.CreditLineEdit.setObjectName("CreditLineEdit")
-        self.horizontalLayout_40.addWidget(self.CreditLineEdit)
+        self.txtsotinchi.setObjectName("txtsotinchi")
+        self.horizontalLayout_40.addWidget(self.txtsotinchi)
         self.horizontalLayout_40.setStretch(0, 2)
         self.horizontalLayout_40.setStretch(1, 6)
         self.verticalLayout_37.addLayout(self.horizontalLayout_40)
@@ -748,26 +748,26 @@ class Ui_MainWindow(object):
         self.horizontalLayout_33 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_33.setSpacing(2)
         self.horizontalLayout_33.setObjectName("horizontalLayout_33")
-        self.ProcessLineEdit = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
-        self.ProcessLineEdit.setStyleSheet("color: black;\n"
+        self.txtcot1 = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
+        self.txtcot1.setStyleSheet("color: black;\n"
 "font: 12pt \"Palatino Linotype\";\n"
 "background-color: rgb(255, 255, 255);")
-        self.ProcessLineEdit.setObjectName("ProcessLineEdit")
-        self.horizontalLayout_33.addWidget(self.ProcessLineEdit)
-        self.ProcessLineEdit_2 = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
-        self.ProcessLineEdit_2.setStyleSheet("color: black;\n"
+        self.txtcot1.setObjectName("txtcot1")
+        self.horizontalLayout_33.addWidget(self.txtcot1)
+        self.txttrongso1 = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
+        self.txttrongso1.setStyleSheet("color: black;\n"
 "font: 12pt \"Palatino Linotype\";\n"
 "background-color: rgb(255, 255, 255);")
-        self.ProcessLineEdit_2.setObjectName("ProcessLineEdit_2")
-        self.horizontalLayout_33.addWidget(self.ProcessLineEdit_2)
-        self.ProcessLineEdit_3 = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
-        self.ProcessLineEdit_3.setStyleSheet("color: black;\n"
+        self.txttrongso1.setObjectName("txttrongso1")
+        self.horizontalLayout_33.addWidget(self.txttrongso1)
+        self.txtdiem1 = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
+        self.txtdiem1.setStyleSheet("color: black;\n"
 "font: 12pt \"Palatino Linotype\";\n"
 "background-color: rgb(255, 255, 255);")
-        self.ProcessLineEdit_3.setObjectName("ProcessLineEdit_3")
-        self.horizontalLayout_33.addWidget(self.ProcessLineEdit_3)
-        self.pushButton_9 = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents)
-        self.pushButton_9.setStyleSheet("QPushButton {\n"
+        self.txtdiem1.setObjectName("txtdiem1")
+        self.horizontalLayout_33.addWidget(self.txtdiem1)
+        self.btnxoa1 = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents)
+        self.btnxoa1.setStyleSheet("QPushButton {\n"
 "    background-color: #e74c3c; /* Màu đỏ chủ đạo */\n"
 "    color: white;              /* Chữ màu trắng */\n"
 "    border: none;              /* Bỏ viền mặc định */\n"
@@ -787,34 +787,34 @@ class Ui_MainWindow(object):
 "}")
         icon10 = QtGui.QIcon()
         icon10.addPixmap(QtGui.QPixmap(":/nen/images/ic_delete.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButton_9.setIcon(icon10)
-        self.pushButton_9.setIconSize(QtCore.QSize(20, 15))
-        self.pushButton_9.setObjectName("pushButton_9")
-        self.horizontalLayout_33.addWidget(self.pushButton_9)
+        self.btnxoa1.setIcon(icon10)
+        self.btnxoa1.setIconSize(QtCore.QSize(20, 15))
+        self.btnxoa1.setObjectName("btnxoa1")
+        self.horizontalLayout_33.addWidget(self.btnxoa1)
         self.verticalLayout_7.addLayout(self.horizontalLayout_33)
         self.horizontalLayout_34 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_34.setSpacing(2)
         self.horizontalLayout_34.setObjectName("horizontalLayout_34")
-        self.MidtermLineEdit = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
-        self.MidtermLineEdit.setStyleSheet("color: black;\n"
+        self.txtcot2 = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
+        self.txtcot2.setStyleSheet("color: black;\n"
 "font: 12pt \"Palatino Linotype\";\n"
 "background-color: rgb(255, 255, 255);")
-        self.MidtermLineEdit.setObjectName("MidtermLineEdit")
-        self.horizontalLayout_34.addWidget(self.MidtermLineEdit)
-        self.MidtermLineEdit_2 = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
-        self.MidtermLineEdit_2.setStyleSheet("color: black;\n"
+        self.txtcot2.setObjectName("txtcot2")
+        self.horizontalLayout_34.addWidget(self.txtcot2)
+        self.txttrongso2 = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
+        self.txttrongso2.setStyleSheet("color: black;\n"
 "font: 12pt \"Palatino Linotype\";\n"
 "background-color: rgb(255, 255, 255);")
-        self.MidtermLineEdit_2.setObjectName("MidtermLineEdit_2")
-        self.horizontalLayout_34.addWidget(self.MidtermLineEdit_2)
-        self.MidtermLineEdit_3 = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
-        self.MidtermLineEdit_3.setStyleSheet("color: black;\n"
+        self.txttrongso2.setObjectName("txttrongso2")
+        self.horizontalLayout_34.addWidget(self.txttrongso2)
+        self.txtdiem2 = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
+        self.txtdiem2.setStyleSheet("color: black;\n"
 "font: 12pt \"Palatino Linotype\";\n"
 "background-color: rgb(255, 255, 255);")
-        self.MidtermLineEdit_3.setObjectName("MidtermLineEdit_3")
-        self.horizontalLayout_34.addWidget(self.MidtermLineEdit_3)
-        self.pushButton_10 = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents)
-        self.pushButton_10.setStyleSheet("QPushButton {\n"
+        self.txtdiem2.setObjectName("txtdiem2")
+        self.horizontalLayout_34.addWidget(self.txtdiem2)
+        self.btnxoa2 = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents)
+        self.btnxoa2.setStyleSheet("QPushButton {\n"
 "    background-color: #e74c3c; /* Màu đỏ chủ đạo */\n"
 "    color: white;              /* Chữ màu trắng */\n"
 "    border: none;              /* Bỏ viền mặc định */\n"
@@ -832,34 +832,34 @@ class Ui_MainWindow(object):
 "QPushButton:pressed {\n"
 "    background-color: #a53125; /* Màu đỏ tối nhất để tạo cảm giác nhấn */\n"
 "}")
-        self.pushButton_10.setIcon(icon10)
-        self.pushButton_10.setIconSize(QtCore.QSize(20, 15))
-        self.pushButton_10.setObjectName("pushButton_10")
-        self.horizontalLayout_34.addWidget(self.pushButton_10)
+        self.btnxoa2.setIcon(icon10)
+        self.btnxoa2.setIconSize(QtCore.QSize(20, 15))
+        self.btnxoa2.setObjectName("btnxoa2")
+        self.horizontalLayout_34.addWidget(self.btnxoa2)
         self.verticalLayout_7.addLayout(self.horizontalLayout_34)
         self.horizontalLayout_35 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_35.setSpacing(2)
         self.horizontalLayout_35.setObjectName("horizontalLayout_35")
-        self.FinalLineEdit_2 = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
-        self.FinalLineEdit_2.setStyleSheet("color: black;\n"
+        self.txtcot3 = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
+        self.txtcot3.setStyleSheet("color: black;\n"
 "font: 12pt \"Palatino Linotype\";\n"
 "background-color: rgb(255, 255, 255);")
-        self.FinalLineEdit_2.setObjectName("FinalLineEdit_2")
-        self.horizontalLayout_35.addWidget(self.FinalLineEdit_2)
-        self.FinalLineEdit_3 = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
-        self.FinalLineEdit_3.setStyleSheet("color: black;\n"
+        self.txtcot3.setObjectName("txtcot3")
+        self.horizontalLayout_35.addWidget(self.txtcot3)
+        self.txttrongso3 = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
+        self.txttrongso3.setStyleSheet("color: black;\n"
 "font: 12pt \"Palatino Linotype\";\n"
 "background-color: rgb(255, 255, 255);")
-        self.FinalLineEdit_3.setObjectName("FinalLineEdit_3")
-        self.horizontalLayout_35.addWidget(self.FinalLineEdit_3)
-        self.FinalLineEdit_4 = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
-        self.FinalLineEdit_4.setStyleSheet("color: black;\n"
+        self.txttrongso3.setObjectName("txttrongso3")
+        self.horizontalLayout_35.addWidget(self.txttrongso3)
+        self.txtdiem3 = QtWidgets.QLineEdit(parent=self.scrollAreaWidgetContents)
+        self.txtdiem3.setStyleSheet("color: black;\n"
 "font: 12pt \"Palatino Linotype\";\n"
 "background-color: rgb(255, 255, 255);")
-        self.FinalLineEdit_4.setObjectName("FinalLineEdit_4")
-        self.horizontalLayout_35.addWidget(self.FinalLineEdit_4)
-        self.pushButton_11 = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents)
-        self.pushButton_11.setStyleSheet("QPushButton {\n"
+        self.txtdiem3.setObjectName("txtdiem3")
+        self.horizontalLayout_35.addWidget(self.txtdiem3)
+        self.btnxoa3 = QtWidgets.QPushButton(parent=self.scrollAreaWidgetContents)
+        self.btnxoa3.setStyleSheet("QPushButton {\n"
 "    background-color: #e74c3c; /* Màu đỏ chủ đạo */\n"
 "    color: white;              /* Chữ màu trắng */\n"
 "    border: none;              /* Bỏ viền mặc định */\n"
@@ -877,10 +877,10 @@ class Ui_MainWindow(object):
 "QPushButton:pressed {\n"
 "    background-color: #a53125; /* Màu đỏ tối nhất để tạo cảm giác nhấn */\n"
 "}")
-        self.pushButton_11.setIcon(icon10)
-        self.pushButton_11.setIconSize(QtCore.QSize(20, 15))
-        self.pushButton_11.setObjectName("pushButton_11")
-        self.horizontalLayout_35.addWidget(self.pushButton_11)
+        self.btnxoa3.setIcon(icon10)
+        self.btnxoa3.setIconSize(QtCore.QSize(20, 15))
+        self.btnxoa3.setObjectName("btnxoa3")
+        self.horizontalLayout_35.addWidget(self.btnxoa3)
         self.verticalLayout_7.addLayout(self.horizontalLayout_35)
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.verticalLayout_7.addItem(spacerItem)
@@ -898,8 +898,8 @@ class Ui_MainWindow(object):
 "font-weight:bold;")
         self.iMQuTrNhLabel_6.setObjectName("iMQuTrNhLabel_6")
         self.horizontalLayout_37.addWidget(self.iMQuTrNhLabel_6)
-        self.iMQuTrNhLabel_7 = QtWidgets.QLabel(parent=self.groupBox_4)
-        self.iMQuTrNhLabel_7.setStyleSheet("QLabel {\n"
+        self.labletongtrongso = QtWidgets.QLabel(parent=self.groupBox_4)
+        self.labletongtrongso.setStyleSheet("QLabel {\n"
 "    background-color: #e74c3c; /* Đỏ cảnh báo */\n"
 "    color: white;              /* Chữ trắng */\n"
 "    border-radius: 12px;       /* Bo góc lớn (khoảng bằng 1/2 chiều cao) để tạo hình bầu dục */\n"
@@ -907,14 +907,14 @@ class Ui_MainWindow(object):
 "    font-weight: bold;         \n"
 "    font-size: 14px;           /* Chữ to rõ ràng */\n"
 "}")
-        self.iMQuTrNhLabel_7.setObjectName("iMQuTrNhLabel_7")
-        self.horizontalLayout_37.addWidget(self.iMQuTrNhLabel_7)
+        self.labletongtrongso.setObjectName("labletongtrongso")
+        self.horizontalLayout_37.addWidget(self.labletongtrongso)
         self.horizontalLayout_38.addLayout(self.horizontalLayout_37)
         spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_38.addItem(spacerItem1)
-        self.pushButton_12 = QtWidgets.QPushButton(parent=self.groupBox_4)
-        self.pushButton_12.setMaximumSize(QtCore.QSize(250, 16777215))
-        self.pushButton_12.setStyleSheet("/* Trạng thái bình thường */\n"
+        self.btnthemcotdiemmoi = QtWidgets.QPushButton(parent=self.groupBox_4)
+        self.btnthemcotdiemmoi.setMaximumSize(QtCore.QSize(250, 16777215))
+        self.btnthemcotdiemmoi.setStyleSheet("/* Trạng thái bình thường */\n"
 "QPushButton {\n"
 "    background-color: #2e8b57; /* Màu xanh lá (SeaGreen) nhã nhặn, hợp với theme Academic */\n"
 "    color: white;              /* Chữ màu trắng */\n"
@@ -933,16 +933,16 @@ class Ui_MainWindow(object):
 "QPushButton:pressed {\n"
 "    background-color: #228b22; /* Màu xanh tối lại tạo cảm giác chân thực khi nhấn */\n"
 "}")
-        self.pushButton_12.setObjectName("pushButton_12")
-        self.horizontalLayout_38.addWidget(self.pushButton_12)
+        self.btnthemcotdiemmoi.setObjectName("btnthemcotdiemmoi")
+        self.horizontalLayout_38.addWidget(self.btnthemcotdiemmoi)
         self.verticalLayout_37.addLayout(self.horizontalLayout_38)
-        self.iMQuTrNhLabel_8 = QtWidgets.QLabel(parent=self.groupBox_4)
-        self.iMQuTrNhLabel_8.setStyleSheet("background-color: transparent; /* Xóa nền trắng/mờ */\n"
+        self.lablethongbao = QtWidgets.QLabel(parent=self.groupBox_4)
+        self.lablethongbao.setStyleSheet("background-color: transparent; /* Xóa nền trắng/mờ */\n"
 "color:  rgb(189, 0, 0);\n"
 "border: none;    \n"
 "font-weight:bold;")
-        self.iMQuTrNhLabel_8.setObjectName("iMQuTrNhLabel_8")
-        self.verticalLayout_37.addWidget(self.iMQuTrNhLabel_8)
+        self.lablethongbao.setObjectName("lablethongbao")
+        self.verticalLayout_37.addWidget(self.lablethongbao)
         self.horizontalLayout_30 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_30.setSpacing(2)
         self.horizontalLayout_30.setObjectName("horizontalLayout_30")
@@ -1356,7 +1356,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 466, 734))
+        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 205, 135))
         self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
         self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_11.setObjectName("verticalLayout_11")
@@ -2487,24 +2487,24 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "ACADEMIC HUB"))
         self.pushButton_8.setText(_translate("MainWindow", "Add new subjects"))
         self.tNMNLabel_2.setText(_translate("MainWindow", "Cấu trúc điểm:"))
-        self.comboBox_4.setItemText(0, _translate("MainWindow", "Mẫu 1: 30-20-50"))
-        self.comboBox_4.setItemText(1, _translate("MainWindow", "Mẫu 2: 20-30-50"))
-        self.comboBox_4.setItemText(2, _translate("MainWindow", "Mẫu 3: 50-50"))
-        self.comboBox_4.setItemText(3, _translate("MainWindow", "Mẫu 4: 30-70"))
-        self.comboBox_4.setItemText(4, _translate("MainWindow", "Tùy chỉnh..."))
+        self.comboboxcautrucdiem.setItemText(0, _translate("MainWindow", "Mẫu 1: 30-20-50"))
+        self.comboboxcautrucdiem.setItemText(1, _translate("MainWindow", "Mẫu 2: 20-30-50"))
+        self.comboboxcautrucdiem.setItemText(2, _translate("MainWindow", "Mẫu 3: 50-50"))
+        self.comboboxcautrucdiem.setItemText(3, _translate("MainWindow", "Mẫu 4: 30-70"))
+        self.comboboxcautrucdiem.setItemText(4, _translate("MainWindow", "Tùy chỉnh..."))
         self.tNMNLabel.setText(_translate("MainWindow", "Tên môn"))
         self.sTNChLabel.setText(_translate("MainWindow", "Số tín chỉ"))
         self.iMQuTrNhLabel_2.setText(_translate("MainWindow", "Thành phần điểm tùy chỉnh( Tên, Trọng số %, Điểm)"))
         self.iMQuTrNhLabel_3.setText(_translate("MainWindow", "[Tên cột]"))
         self.iMQuTrNhLabel_4.setText(_translate("MainWindow", "[Trọng số%]"))
         self.iMQuTrNhLabel_5.setText(_translate("MainWindow", "[Điểm]"))
-        self.pushButton_9.setText(_translate("MainWindow", "Xóa"))
-        self.pushButton_10.setText(_translate("MainWindow", "Xóa"))
-        self.pushButton_11.setText(_translate("MainWindow", "Xóa"))
+        self.btnxoa1.setText(_translate("MainWindow", "Xóa"))
+        self.btnxoa2.setText(_translate("MainWindow", "Xóa"))
+        self.btnxoa3.setText(_translate("MainWindow", "Xóa"))
         self.iMQuTrNhLabel_6.setText(_translate("MainWindow", "Tổng trọng số %:"))
-        self.iMQuTrNhLabel_7.setText(_translate("MainWindow", "0"))
-        self.pushButton_12.setText(_translate("MainWindow", "+ Thêm cột điểm mới"))
-        self.iMQuTrNhLabel_8.setText(_translate("MainWindow", "Chưa có dữ liệu. Vui lòng nhập!"))
+        self.labletongtrongso.setText(_translate("MainWindow", "0"))
+        self.btnthemcotdiemmoi.setText(_translate("MainWindow", "+ Thêm cột điểm mới"))
+        self.lablethongbao.setText(_translate("MainWindow", "Chưa có dữ liệu. Vui lòng nhập!"))
         self.lblResult_3.setText(_translate("MainWindow", " GPA:"))
         self.label_7.setText(_translate("MainWindow", "Xếp Loại:"))
         self.pushButtonCalculateGPA.setText(_translate("MainWindow", "Calculate GPA"))

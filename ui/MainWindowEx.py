@@ -19,8 +19,8 @@ class MainWindowEx(Ui_MainWindow):
 #TAB 2:
        self.academic_controller = AcademicController(self)
        self.academic_controller.current_acc = self.current_acc
-       self.academic_controller.setup()
-       self.sub_manager = self.academic_controller.sub_manager
+       # Đổi đuôi thành ds_mon_hoc để khớp với file academic.py mới nhé:
+       self.sub_manager = self.academic_controller.ds_mon_hoc
 #TAB 3
        self.finance_controller = FinanceController(self)
 
@@ -75,12 +75,12 @@ class MainWindowEx(Ui_MainWindow):
 
 
 #TAB 2:
-       self.pushButtonCalculateGPA.clicked.connect(self.academic_controller.process_calculate_gpa)
-       self.pushButtonAddSubject.clicked.connect(self.academic_controller.process_add_subject)
-       self.pushButtonEdit.clicked.connect(self.academic_controller.process_edit_subject)
-       self.pushButtonDelete.clicked.connect(self.academic_controller.process_delete_subject)
-       self.tableWidgetthongtinmon.itemSelectionChanged.connect(self.academic_controller.process_selection)
-       self.lineEditTimmon.textChanged.connect(self.academic_controller.search_subject)
+       # self.pushButtonCalculateGPA.clicked.connect(self.academic_controller.process_calculate_gpa)
+       # self.pushButtonAddSubject.clicked.connect(self.academic_controller.process_add_subject)
+       # self.pushButtonEdit.clicked.connect(self.academic_controller.process_edit_subject)
+       # self.pushButtonDelete.clicked.connect(self.academic_controller.process_delete_subject)
+       # self.tableWidgetthongtinmon.itemSelectionChanged.connect(self.academic_controller.process_selection)
+       # self.lineEditTimmon.textChanged.connect(self.academic_controller.search_subject)
        self.tableWidgetthongtinmon.setEditTriggers(QtWidgets.QAbstractItemView.EditTrigger.NoEditTriggers)
 
 
