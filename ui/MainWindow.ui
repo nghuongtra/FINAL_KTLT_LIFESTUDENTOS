@@ -210,7 +210,7 @@ font-weight: bold;</string>
 background-color:transparent</string>
       </property>
       <property name="currentIndex">
-       <number>4</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="pageOverview">
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -1125,7 +1125,7 @@ border: 2px solid rgb(255, 250, 192);</string>
             <property name="title">
              <string/>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,1">
              <property name="topMargin">
               <number>5</number>
              </property>
@@ -1134,147 +1134,621 @@ border: 2px solid rgb(255, 250, 192);</string>
                <property name="title">
                 <string/>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_28">
+               <layout class="QVBoxLayout" name="verticalLayout_37">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <item>
-                 <layout class="QVBoxLayout" name="verticalLayout_7">
-                  <item>
-                   <widget class="QPushButton" name="pushButton_8">
-                    <property name="styleSheet">
-                     <string notr="true">background-color:rgb(52, 85, 32);
+                 <widget class="QPushButton" name="pushButton_8">
+                  <property name="styleSheet">
+                   <string notr="true">background-color:rgb(52, 85, 32);
 border-radius: 13px;
 border: 2px solid rgb(255, 255, 255);
 font: 75 16pt &quot;Palatino Linotype&quot;;
 color:white;
 font-weight:bold;
  min-height: 30px; </string>
+                  </property>
+                  <property name="text">
+                   <string>Add new subjects</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_42" stretch="1,6">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="tNMNLabel_2">
+                    <property name="font">
+                     <font>
+                      <family>Palatino Linotype</family>
+                      <pointsize>14</pointsize>
+                      <weight>75</weight>
+                      <italic>false</italic>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
+color:  rgb(170, 96, 44);
+border: none;    
+font: bold 14pt;</string>
                     </property>
                     <property name="text">
-                     <string>Add new subjects</string>
+                     <string>Cấu trúc điểm:</string>
                     </property>
                    </widget>
                   </item>
                   <item>
-                   <layout class="QFormLayout" name="formLayout">
-                    <item row="0" column="0">
-                     <widget class="QLabel" name="tNMNLabel">
-                      <property name="styleSheet">
-                       <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
+                   <widget class="QComboBox" name="comboBox_4">
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(0, 0, 0);
+font: 12pt &quot;Palatino Linotype&quot;;
+color:  rgb(170, 104, 46);
+background-color: rgb(255, 255, 255);
+</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>Mẫu 1: 30-20-50</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Mẫu 2: 20-30-50</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Mẫu 3: 50-50</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Mẫu 4: 30-70</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Tùy chỉnh...</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_39" stretch="2,6">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="tNMNLabel">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
 color:  rgb(170, 96, 44);
 border: none;    
-font-weight:bold;</string>
-                      </property>
-                      <property name="text">
-                       <string>Tên môn</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="0" column="1">
-                     <widget class="QLineEdit" name="NameLineEdit">
-                      <property name="styleSheet">
-                       <string notr="true">
+font: bold 14pt;</string>
+                    </property>
+                    <property name="text">
+                     <string>Tên môn</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="NameLineEdit">
+                    <property name="styleSheet">
+                     <string notr="true">
 font: 12pt &quot;Palatino Linotype&quot;;
 background-color: rgb(255, 255, 255);
 color: black;</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="0">
-                     <widget class="QLabel" name="sTNChLabel">
-                      <property name="styleSheet">
-                       <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_40" stretch="2,6">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="sTNChLabel">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
 color:  rgb(170, 96, 44);
 border: none;    
-font-weight:bold;</string>
-                      </property>
-                      <property name="text">
-                       <string>Số tín chỉ</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="1">
-                     <widget class="QLineEdit" name="CreditLineEdit">
-                      <property name="styleSheet">
-                       <string notr="true">
+font: bold 14pt;</string>
+                    </property>
+                    <property name="text">
+                     <string>Số tín chỉ</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="CreditLineEdit">
+                    <property name="styleSheet">
+                     <string notr="true">
 font: 12pt &quot;Palatino Linotype&quot;;
 background-color: rgb(255, 255, 255);
 color: black;</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="2" column="0">
-                     <widget class="QLabel" name="iMQuTrNhLabel">
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QLabel" name="iMQuTrNhLabel_2">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
+color:  rgb(170, 96, 44);
+border: none;    
+font-weight:bold;</string>
+                  </property>
+                  <property name="text">
+                   <string>Thành phần điểm tùy chỉnh( Tên, Trọng số %, Điểm)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_41" stretch="10,1">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_36">
+                    <property name="spacing">
+                     <number>4</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="iMQuTrNhLabel_3">
                       <property name="styleSheet">
                        <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
 color:  rgb(170, 96, 44);
 border: none;    
-font-weight:bold;</string>
+font: bold 14pt;</string>
                       </property>
                       <property name="text">
-                       <string>Điểm quá trình</string>
+                       <string>[Tên cột]</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
                       </property>
                      </widget>
                     </item>
-                    <item row="2" column="1">
-                     <widget class="QLineEdit" name="ProcessLineEdit">
-                      <property name="styleSheet">
-                       <string notr="true">color: black;
-font: 12pt &quot;Palatino Linotype&quot;;
-background-color: rgb(255, 255, 255);</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="3" column="0">
-                     <widget class="QLabel" name="iMGiAKLabel">
+                    <item>
+                     <widget class="QLabel" name="iMQuTrNhLabel_4">
                       <property name="styleSheet">
                        <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
 color:  rgb(170, 96, 44);
 border: none;    
-font-weight:bold;</string>
+font: bold 14pt;</string>
                       </property>
                       <property name="text">
-                       <string>Điểm giữa kỳ</string>
+                       <string>[Trọng số%]</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
                       </property>
                      </widget>
                     </item>
-                    <item row="3" column="1">
-                     <widget class="QLineEdit" name="MidtermLineEdit">
-                      <property name="styleSheet">
-                       <string notr="true">color: black;
-font: 12pt &quot;Palatino Linotype&quot;;
-background-color: rgb(255, 255, 255);</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="4" column="0">
-                     <widget class="QLabel" name="iMCuIKLabel">
+                    <item>
+                     <widget class="QLabel" name="iMQuTrNhLabel_5">
                       <property name="styleSheet">
                        <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
 color:  rgb(170, 96, 44);
 border: none;    
-font-weight:bold;</string>
+font: bold 14pt;</string>
                       </property>
                       <property name="text">
-                       <string>Điểm cuối kỳ</string>
+                       <string>[Điểm]</string>
                       </property>
-                     </widget>
-                    </item>
-                    <item row="4" column="1">
-                     <widget class="QLineEdit" name="FinalLineEdit">
-                      <property name="styleSheet">
-                       <string notr="true">color: black;
-font: 12pt &quot;Palatino Linotype&quot;;
-background-color: rgb(255, 255, 255);</string>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
                       </property>
                      </widget>
                     </item>
                    </layout>
                   </item>
                   <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_30">
+                   <widget class="QLabel" name="label_45">
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QScrollArea" name="scrollArea_2">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>150</height>
+                   </size>
+                  </property>
+                  <property name="widgetResizable">
+                   <bool>true</bool>
+                  </property>
+                  <widget class="QWidget" name="scrollAreaWidgetContents">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>748</width>
+                     <height>373</height>
+                    </rect>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_7">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
                     <item>
-                     <widget class="QFrame" name="frame_4">
+                     <layout class="QHBoxLayout" name="horizontalLayout_33">
+                      <property name="spacing">
+                       <number>2</number>
+                      </property>
+                      <item>
+                       <widget class="QLineEdit" name="ProcessLineEdit">
+                        <property name="styleSheet">
+                         <string notr="true">color: black;
+font: 12pt &quot;Palatino Linotype&quot;;
+background-color: rgb(255, 255, 255);</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="ProcessLineEdit_2">
+                        <property name="styleSheet">
+                         <string notr="true">color: black;
+font: 12pt &quot;Palatino Linotype&quot;;
+background-color: rgb(255, 255, 255);</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="ProcessLineEdit_3">
+                        <property name="styleSheet">
+                         <string notr="true">color: black;
+font: 12pt &quot;Palatino Linotype&quot;;
+background-color: rgb(255, 255, 255);</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="pushButton_9">
+                        <property name="styleSheet">
+                         <string notr="true">QPushButton {
+    background-color: #e74c3c; /* Màu đỏ chủ đạo */
+    color: white;              /* Chữ màu trắng */
+    border: none;              /* Bỏ viền mặc định */
+    border-radius: 4px;        /* Bo tròn góc 4 pixel */
+    padding: 4px 10px;         /* Khoảng cách chữ và viền (trên/dưới 4px, trái/phải 10px) */
+    font: 14pt &quot;Palatino Linotype&quot;;
+}
+
+/* Hiệu ứng khi di chuột (Hover) vào nút */
+QPushButton:hover {
+    background-color: #c0392b; /* Màu đỏ đậm hơn một chút */
+}
+
+/* Hiệu ứng khi click (Press) vào nút */
+QPushButton:pressed {
+    background-color: #a53125; /* Màu đỏ tối nhất để tạo cảm giác nhấn */
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>Xóa</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="../resources.qrc">
+                          <normaloff>:/nen/images/ic_delete.png</normaloff>:/nen/images/ic_delete.png</iconset>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>20</width>
+                          <height>15</height>
+                         </size>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_34">
+                      <property name="spacing">
+                       <number>2</number>
+                      </property>
+                      <item>
+                       <widget class="QLineEdit" name="MidtermLineEdit">
+                        <property name="styleSheet">
+                         <string notr="true">color: black;
+font: 12pt &quot;Palatino Linotype&quot;;
+background-color: rgb(255, 255, 255);</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="MidtermLineEdit_2">
+                        <property name="styleSheet">
+                         <string notr="true">color: black;
+font: 12pt &quot;Palatino Linotype&quot;;
+background-color: rgb(255, 255, 255);</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="MidtermLineEdit_3">
+                        <property name="styleSheet">
+                         <string notr="true">color: black;
+font: 12pt &quot;Palatino Linotype&quot;;
+background-color: rgb(255, 255, 255);</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="pushButton_10">
+                        <property name="styleSheet">
+                         <string notr="true">QPushButton {
+    background-color: #e74c3c; /* Màu đỏ chủ đạo */
+    color: white;              /* Chữ màu trắng */
+    border: none;              /* Bỏ viền mặc định */
+    border-radius: 4px;        /* Bo tròn góc 4 pixel */
+    padding: 4px 10px;         /* Khoảng cách chữ và viền (trên/dưới 4px, trái/phải 10px) */
+    font: 14pt &quot;Palatino Linotype&quot;;
+}
+
+/* Hiệu ứng khi di chuột (Hover) vào nút */
+QPushButton:hover {
+    background-color: #c0392b; /* Màu đỏ đậm hơn một chút */
+}
+
+/* Hiệu ứng khi click (Press) vào nút */
+QPushButton:pressed {
+    background-color: #a53125; /* Màu đỏ tối nhất để tạo cảm giác nhấn */
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>Xóa</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="../resources.qrc">
+                          <normaloff>:/nen/images/ic_delete.png</normaloff>:/nen/images/ic_delete.png</iconset>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>20</width>
+                          <height>15</height>
+                         </size>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_35">
+                      <property name="spacing">
+                       <number>2</number>
+                      </property>
+                      <item>
+                       <widget class="QLineEdit" name="FinalLineEdit_2">
+                        <property name="styleSheet">
+                         <string notr="true">color: black;
+font: 12pt &quot;Palatino Linotype&quot;;
+background-color: rgb(255, 255, 255);</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="FinalLineEdit_3">
+                        <property name="styleSheet">
+                         <string notr="true">color: black;
+font: 12pt &quot;Palatino Linotype&quot;;
+background-color: rgb(255, 255, 255);</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="FinalLineEdit_4">
+                        <property name="styleSheet">
+                         <string notr="true">color: black;
+font: 12pt &quot;Palatino Linotype&quot;;
+background-color: rgb(255, 255, 255);</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="pushButton_11">
+                        <property name="styleSheet">
+                         <string notr="true">QPushButton {
+    background-color: #e74c3c; /* Màu đỏ chủ đạo */
+    color: white;              /* Chữ màu trắng */
+    border: none;              /* Bỏ viền mặc định */
+    border-radius: 4px;        /* Bo tròn góc 4 pixel */
+    padding: 4px 10px;         /* Khoảng cách chữ và viền (trên/dưới 4px, trái/phải 10px) */
+    font: 14pt &quot;Palatino Linotype&quot;;
+}
+
+/* Hiệu ứng khi di chuột (Hover) vào nút */
+QPushButton:hover {
+    background-color: #c0392b; /* Màu đỏ đậm hơn một chút */
+}
+
+/* Hiệu ứng khi click (Press) vào nút */
+QPushButton:pressed {
+    background-color: #a53125; /* Màu đỏ tối nhất để tạo cảm giác nhấn */
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>Xóa</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="../resources.qrc">
+                          <normaloff>:/nen/images/ic_delete.png</normaloff>:/nen/images/ic_delete.png</iconset>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>20</width>
+                          <height>15</height>
+                         </size>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <spacer name="verticalSpacer_2">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_38">
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_37">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="iMQuTrNhLabel_6">
                       <property name="styleSheet">
-                       <string notr="true">#frame_4 {
+                       <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
+color:  rgb(170, 96, 44);
+border: none;    
+font-weight:bold;</string>
+                      </property>
+                      <property name="text">
+                       <string>Tổng trọng số %:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="iMQuTrNhLabel_7">
+                      <property name="styleSheet">
+                       <string notr="true">QLabel {
+    background-color: #e74c3c; /* Đỏ cảnh báo */
+    color: white;              /* Chữ trắng */
+    border-radius: 12px;       /* Bo góc lớn (khoảng bằng 1/2 chiều cao) để tạo hình bầu dục */
+    padding: 4px 16px;         /* Kéo dài chiều ngang ra một chút */
+    font-weight: bold;         
+    font-size: 14px;           /* Chữ to rõ ràng */
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>0</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_12">
+                    <property name="maximumSize">
+                     <size>
+                      <width>250</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">/* Trạng thái bình thường */
+QPushButton {
+    background-color: #2e8b57; /* Màu xanh lá (SeaGreen) nhã nhặn, hợp với theme Academic */
+    color: white;              /* Chữ màu trắng */
+    border: none;              /* Bỏ viền mặc định */
+    border-radius: 5px;        /* Bo góc nhẹ cho mềm mại */
+    padding: 6px 15px;         /* Khoảng cách chữ và viền cho nút bấm thoải mái */
+    font: bold 15pt;         /* In đậm chữ */
+}
+
+/* Hiệu ứng khi lướt chuột qua (Hover) */
+QPushButton:hover {
+    background-color: #3cb371; /* Màu xanh sáng hơn một chút để báo hiệu có thể bấm */
+}
+
+/* Hiệu ứng khi click nhấn xuống (Pressed) */
+QPushButton:pressed {
+    background-color: #228b22; /* Màu xanh tối lại tạo cảm giác chân thực khi nhấn */
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>+ Thêm cột điểm mới</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QLabel" name="iMQuTrNhLabel_8">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: transparent; /* Xóa nền trắng/mờ */
+color:  rgb(189, 0, 0);
+border: none;    
+font-weight:bold;</string>
+                  </property>
+                  <property name="text">
+                   <string>Chưa có dữ liệu. Vui lòng nhập!</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_30">
+                  <property name="spacing">
+                   <number>2</number>
+                  </property>
+                  <item>
+                   <widget class="QFrame" name="frame_4">
+                    <property name="styleSheet">
+                     <string notr="true">#frame_4 {
     background-color:rgb(255, 229, 192);
     border-radius: 20px;
     border: 2px dashed rgb(130, 80, 9);
@@ -1283,260 +1757,273 @@ background-color: rgb(255, 255, 255);</string>
 }
 
 </string>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
-                      </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_4">
-                       <item>
-                        <widget class="QLabel" name="label_43">
-                         <property name="maximumSize">
-                          <size>
-                           <width>80</width>
-                           <height>80</height>
-                          </size>
-                         </property>
-                         <property name="text">
-                          <string/>
-                         </property>
-                         <property name="pixmap">
-                          <pixmap resource="../resources.qrc">:/nen/images/graduate.png</pixmap>
-                         </property>
-                         <property name="scaledContents">
-                          <bool>true</bool>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QLabel" name="lblResult_3">
-                         <property name="maximumSize">
-                          <size>
-                           <width>80</width>
-                           <height>50</height>
-                          </size>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <family>Palatino Linotype</family>
-                           <pointsize>21</pointsize>
-                           <weight>75</weight>
-                           <italic>false</italic>
-                           <bold>true</bold>
-                          </font>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">background-color: transparent; 
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_4">
+                     <property name="spacing">
+                      <number>2</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="label_43">
+                       <property name="maximumSize">
+                        <size>
+                         <width>50</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="pixmap">
+                        <pixmap resource="../resources.qrc">:/nen/images/graduate.png</pixmap>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="lblResult_3">
+                       <property name="maximumSize">
+                        <size>
+                         <width>80</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Palatino Linotype</family>
+                         <pointsize>15</pointsize>
+                         <weight>75</weight>
+                         <italic>false</italic>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: transparent; 
 color:brown;
 font-weight:bold;
 border:none;
-font: bold 21pt &quot;Palatino Linotype&quot;;</string>
-                         </property>
-                         <property name="frameShape">
-                          <enum>QFrame::Box</enum>
-                         </property>
-                         <property name="lineWidth">
-                          <number>1</number>
-                         </property>
-                         <property name="text">
-                          <string> GPA:</string>
-                         </property>
-                         <property name="alignment">
-                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QLineEdit" name="lineEditGPA">
-                         <property name="maximumSize">
-                          <size>
-                           <width>80</width>
-                           <height>50</height>
-                          </size>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">background-color: rgb(170, 108, 32);
+font: bold 15pt &quot;Palatino Linotype&quot;;</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::Box</enum>
+                       </property>
+                       <property name="lineWidth">
+                        <number>1</number>
+                       </property>
+                       <property name="text">
+                        <string> GPA:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="lineEditGPA">
+                       <property name="maximumSize">
+                        <size>
+                         <width>80</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: rgb(170, 108, 32);
 border-radius: 20px;
 color: white;
 font-weight:bold;</string>
-                         </property>
-                         <property name="alignment">
-                          <set>Qt::AlignCenter</set>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QFrame" name="frame_10">
-                      <property name="styleSheet">
-                       <string notr="true">#frame_10 {
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_10">
+                    <property name="styleSheet">
+                     <string notr="true">#frame_10 {
     background-color:rgb(170, 103, 35);
     border-radius: 20px;
     border: 2px dashed rgb(5, 85, 5);
     font: 75 14pt &quot;Palatino Linotype&quot;;
 }</string>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
-                      </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_5">
-                       <item>
-                        <widget class="QLabel" name="label_44">
-                         <property name="maximumSize">
-                          <size>
-                           <width>80</width>
-                           <height>80</height>
-                          </size>
-                         </property>
-                         <property name="text">
-                          <string/>
-                         </property>
-                         <property name="pixmap">
-                          <pixmap resource="../resources.qrc">:/nen/images/certificate.png</pixmap>
-                         </property>
-                         <property name="scaledContents">
-                          <bool>true</bool>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QLabel" name="label_7">
-                         <property name="maximumSize">
-                          <size>
-                           <width>120</width>
-                           <height>50</height>
-                          </size>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">background-color: transparent; 
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_5">
+                     <property name="spacing">
+                      <number>2</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="label_44">
+                       <property name="maximumSize">
+                        <size>
+                         <width>50</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="pixmap">
+                        <pixmap resource="../resources.qrc">:/nen/images/certificate.png</pixmap>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_7">
+                       <property name="maximumSize">
+                        <size>
+                         <width>120</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: transparent; 
 color:white;
 border:none;
-font: bold 21pt &quot;Palatino Linotype&quot;;
+font: bold 15pt &quot;Palatino Linotype&quot;;
 </string>
-                         </property>
-                         <property name="frameShape">
-                          <enum>QFrame::Box</enum>
-                         </property>
-                         <property name="text">
-                          <string>Xếp Loại:</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QLineEdit" name="lineEditXeploai">
-                         <property name="maximumSize">
-                          <size>
-                           <width>100</width>
-                           <height>50</height>
-                          </size>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">background-color: rgb(255, 255, 255);
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::Box</enum>
+                       </property>
+                       <property name="text">
+                        <string>Xếp Loại:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="lineEditXeploai">
+                       <property name="maximumSize">
+                        <size>
+                         <width>100</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: rgb(255, 255, 255);
 border-radius: 20px;
 color: brown;
 font-weight:bold;</string>
-                         </property>
-                         <property name="alignment">
-                          <set>Qt::AlignCenter</set>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                   </layout>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
                   </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_7">
+                  <property name="spacing">
+                   <number>2</number>
+                  </property>
                   <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_7">
-                    <item>
-                     <widget class="QPushButton" name="pushButtonCalculateGPA">
-                      <property name="styleSheet">
-                       <string notr="true">background-color:rgb(170, 65, 23);
+                   <widget class="QPushButton" name="pushButtonCalculateGPA">
+                    <property name="styleSheet">
+                     <string notr="true">background-color:rgb(170, 65, 23);
 border: 2px solid rgb(255, 247, 131);
 border-radius: 10px;
 color: rgb(255, 247, 131)
 </string>
-                      </property>
-                      <property name="text">
-                       <string>Calculate GPA</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="../resources.qrc">
-                        <normaloff>:/nen/images/ic_cal.png</normaloff>:/nen/images/ic_cal.png</iconset>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>40</width>
-                        <height>40</height>
-                       </size>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QPushButton" name="pushButtonAddSubject">
-                      <property name="styleSheet">
-                       <string notr="true">background-color:rgb(255, 247, 131);
+                    </property>
+                    <property name="text">
+                     <string>Calculate GPA</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../resources.qrc">
+                      <normaloff>:/nen/images/ic_cal.png</normaloff>:/nen/images/ic_cal.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>25</width>
+                      <height>25</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButtonAddSubject">
+                    <property name="styleSheet">
+                     <string notr="true">background-color:rgb(255, 247, 131);
 border: 2px solid rgb(170, 65, 23);
 border-radius: 10px;
 color: rgb(114, 57, 0)
 </string>
-                      </property>
-                      <property name="text">
-                       <string>Add Subject</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="../resources.qrc">
-                        <normaloff>:/nen/images/ic_add.png</normaloff>:/nen/images/ic_add.png</iconset>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>40</width>
-                        <height>40</height>
-                       </size>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="label_8">
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>700</width>
-                      <height>500</height>
-                     </size>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
                     </property>
                     <property name="text">
-                     <string/>
+                     <string>Add Subject</string>
                     </property>
-                    <property name="pixmap">
-                     <pixmap resource="../resources.qrc">:/nen/images/nen_academic.jpg</pixmap>
+                    <property name="icon">
+                     <iconset resource="../resources.qrc">
+                      <normaloff>:/nen/images/ic_add.png</normaloff>:/nen/images/ic_add.png</iconset>
                     </property>
-                    <property name="scaledContents">
-                     <bool>true</bool>
-                    </property>
-                    <property name="alignment">
-                     <set>Qt::AlignCenter</set>
+                    <property name="iconSize">
+                     <size>
+                      <width>25</width>
+                      <height>25</height>
+                     </size>
                     </property>
                    </widget>
                   </item>
                  </layout>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_4">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
                 </item>
                </layout>
               </widget>
@@ -1547,19 +2034,6 @@ color: rgb(114, 57, 0)
                 <string/>
                </property>
                <layout class="QGridLayout" name="gridLayout_4">
-                <item row="1" column="0">
-                 <widget class="QLineEdit" name="lineEditTimmon">
-                  <property name="styleSheet">
-                   <string notr="true">color:  rgb(170, 104, 46);
-font: 12pt &quot;Palatino Linotype&quot;;
-background-color: rgb(255, 255, 255);
-</string>
-                  </property>
-                  <property name="text">
-                   <string>Tìm kiếm môn học...</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="2" column="0" colspan="2">
                  <widget class="QTableWidget" name="tableWidgetthongtinmon">
                   <property name="styleSheet">
@@ -1663,6 +2137,19 @@ font-weight:bold;
                   </property>
                   <property name="text">
                    <string>Subject List</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLineEdit" name="lineEditTimmon">
+                  <property name="styleSheet">
+                   <string notr="true">color:  rgb(170, 104, 46);
+font: 12pt &quot;Palatino Linotype&quot;;
+background-color: rgb(255, 255, 255);
+</string>
+                  </property>
+                  <property name="text">
+                   <string>Tìm kiếm môn học...</string>
                   </property>
                  </widget>
                 </item>
@@ -2039,8 +2526,8 @@ font-weight:bold;</string>
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>205</width>
-                        <height>135</height>
+                        <width>466</width>
+                        <height>734</height>
                        </rect>
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -4087,7 +4574,6 @@ p, li { white-space: pre-wrap; }
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="../resources.qrc"/>
   <include location="../resources.qrc"/>
   <include location="../FINAL_KTLT/resources.qrc"/>
  </resources>
